@@ -31,30 +31,36 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
   --purp:  #7a6aaa;
   --pink:  #a86a88;
   --r:6px;
+  --jhdr:  #2a5038;
+  --jhdr2: #3a6848;
 }
 
 /* ── LAYOUT ── */
-#app{display:flex;flex-direction:column;width:100vw;height:100vh;}
-#hdr{height:48px;min-height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:var(--bg2);border-bottom:1px solid var(--line);flex-shrink:0;}
-#body{display:flex;flex:1;min-height:0;overflow:hidden;}
-#sb{width:224px;min-width:224px;background:var(--bg2);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;}
-#mapwrap{flex:1;position:relative;overflow:hidden;min-height:0;}
+#app{display:flex;flex-direction:column;width:100vw;height:100vh;overflow:hidden;}
+#hdr{height:48px;min-height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:var(--jhdr);border-bottom:1px solid rgba(0,0,0,.25);flex-shrink:0;}
+#pill-bar{height:40px;min-height:40px;display:flex;align-items:center;gap:4px;padding:0 12px;background:var(--bg2);border-bottom:1px solid var(--line);flex-shrink:0;overflow:hidden;}
+#body{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;}
+#sb{display:none;}
+#mapwrap{flex:none;height:42vh;min-height:180px;position:relative;overflow:hidden;}
 #map{position:absolute;inset:0;}
+#journal{flex:1;overflow-y:auto;background:var(--bg);}
+#journal::-webkit-scrollbar{width:4px;}
+#journal::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px;}
 
 /* ── HEADER ── */
-.htitle{font-family:"DM Serif Display",serif;font-size:16px;color:var(--hi);display:flex;align-items:center;gap:9px;}
-.htitle em{font-style:italic;color:var(--acc);}
+.htitle{font-family:"DM Serif Display",serif;font-size:16px;color:#e8f2ea;display:flex;align-items:center;gap:9px;}
+.htitle em{font-style:italic;color:#a8d4b4;}
 
 /* ── COUNTRY SELECTOR ── */
 #country-sel{position:relative;}
 #country-btn{
   display:flex;align-items:center;gap:6px;
-  background:var(--bg3);border:1px solid var(--line);border-radius:20px;
-  padding:4px 10px;font-family:"DM Sans",sans-serif;font-size:12px;color:var(--hi);
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;
+  padding:4px 10px;font-family:"DM Sans",sans-serif;font-size:12px;color:#e8f2ea;
   cursor:pointer;transition:all .12s;
 }
-#country-btn:hover{border-color:var(--muted);}
-#country-btn .cv{font-size:8px;color:var(--muted);margin-left:2px;}
+#country-btn:hover{border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.18);}
+#country-btn .cv{font-size:8px;color:rgba(255,255,255,.55);margin-left:2px;}
 #country-menu{
   position:absolute;top:calc(100% + 6px);left:0;
   background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);
@@ -76,12 +82,12 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
   #country-menu{min-width:130px;}
   .cm-item{padding:8px 12px;font-size:12px;}
 }
-.hpill{background:var(--bg3);color:var(--mid);border:1px solid var(--line);font-family:"DM Mono",monospace;font-size:9px;padding:2px 8px;border-radius:20px;}
+.hpill{background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.18);font-family:"DM Mono",monospace;font-size:9px;padding:2px 8px;border-radius:20px;}
 .hright{display:flex;align-items:center;gap:8px;}
-#hcount{font-family:"DM Mono",monospace;font-size:9px;color:var(--muted);}
-#theme-btn{background:var(--bg3);border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-family:"DM Mono",monospace;font-size:9px;color:var(--mid);cursor:pointer;transition:all .12s;}
-#theme-btn:hover{color:var(--hi);border-color:var(--muted);}
-#suggest-btn{background:var(--acc2);border:1px solid var(--acc);border-radius:20px;padding:3px 12px;font-family:"DM Mono",monospace;font-size:9px;color:var(--hi);cursor:pointer;transition:all .12s;}
+#hcount{font-family:"DM Mono",monospace;font-size:9px;color:rgba(255,255,255,.5);}
+#theme-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:3px 10px;font-family:"DM Mono",monospace;font-size:9px;color:rgba(255,255,255,.75);cursor:pointer;transition:all .12s;}
+#theme-btn:hover{background:rgba(255,255,255,.18);color:#fff;}
+#suggest-btn{background:var(--acc2);border:1px solid var(--acc);border-radius:20px;padding:3px 12px;font-family:"DM Mono",monospace;font-size:9px;color:#fff;cursor:pointer;transition:all .12s;}
 #suggest-btn:hover{background:var(--acc);}
 
 /* ── SUGGEST MODAL ── */
@@ -461,6 +467,61 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
   #sheet-places, #sheet-filters { display: flex; flex-direction: column; }
 }
 
+/* ── PILL BAR ── */
+#pill-bar-pills{display:flex;align-items:center;gap:3px;flex-shrink:0;overflow:hidden;}
+.jpill{font-family:"DM Mono",monospace;font-size:8px;padding:3px 7px;border-radius:20px;border:1px solid var(--line);color:var(--muted);cursor:pointer;text-transform:uppercase;letter-spacing:.03em;transition:all .12s;white-space:nowrap;flex-shrink:0;}
+.jpill.on{color:var(--hi);border-color:var(--bg4);background:var(--bg4);}
+.jpill:hover{color:var(--text);border-color:var(--muted);}
+.pb-sep{width:1px;height:18px;background:var(--line);flex-shrink:0;margin:0 4px;}
+#srch-wrap{position:relative;display:flex;align-items:center;margin-left:auto;flex-shrink:0;}
+#srch-wrap input{background:var(--bg3);border:1px solid var(--line);border-radius:20px;color:var(--hi);font-family:"DM Sans",sans-serif;font-size:11px;padding:4px 10px 4px 26px;outline:none;width:170px;transition:width .18s;}
+#srch-wrap input:focus{border-color:var(--muted);width:210px;}
+#srch-wrap input::placeholder{color:var(--muted);}
+.srch-icon{position:absolute;left:10px;color:var(--muted);font-size:11px;pointer-events:none;z-index:1;}
+#srch-dd{position:absolute;top:calc(100% + 6px);right:0;width:260px;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:600;display:none;overflow:hidden;}
+#srch-dd.vis{display:block;}
+.sd-item{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;transition:background .1s;border-bottom:1px solid rgba(0,0,0,.04);}
+.sd-item:hover{background:var(--bg3);}
+.sd-item:last-child{border-bottom:none;}
+.sd-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.sd-name{font-size:11px;font-weight:500;color:var(--hi);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.sd-meta{font-family:"DM Mono",monospace;font-size:8px;color:var(--muted);flex-shrink:0;}
+
+/* ── JOURNAL ── */
+.journal-inner{padding:10px 14px 24px;}
+.ja-section{margin-bottom:18px;}
+.ja-area{font-family:"DM Serif Display",serif;font-size:13px;font-style:italic;color:var(--hi);margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:6px;}
+.ja-area-count{font-family:"DM Mono",monospace;font-size:8px;font-style:normal;color:var(--muted);}
+.ja-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.jcard{padding:8px 10px;background:var(--bg2);border:.5px solid var(--line);border-radius:var(--r);cursor:pointer;transition:all .12s;}
+.jcard:hover{border-color:var(--muted);background:var(--bg3);}
+.jcard.sel{border-color:var(--acc);background:var(--bg3);border-width:1px;}
+.jc-top{display:flex;align-items:center;gap:4px;margin-bottom:2px;}
+.jc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.jc-name{font-size:11px;font-weight:500;color:var(--hi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.jc-meta{font-family:"DM Mono",monospace;font-size:8px;color:var(--muted);}
+.jc-community{font-family:"DM Mono",monospace;font-size:7px;color:var(--gold);background:rgba(184,151,74,.1);border:1px solid rgba(184,151,74,.25);border-radius:8px;padding:1px 4px;display:inline-block;margin-top:2px;}
+
+/* ── MAP LABELS ── */
+.nhbr-lbl{background:rgba(42,80,56,.84);color:#e8f4ec;font-family:"DM Mono",monospace;font-size:9px;font-weight:500;padding:3px 8px;border-radius:10px;white-space:nowrap;pointer-events:none;border:1px solid rgba(42,80,56,.4);box-shadow:0 1px 4px rgba(0,0,0,.3);}
+.monument-lbl{background:rgba(28,28,30,.78);color:#e8e4de;font-family:"DM Mono",monospace;font-size:8px;padding:2px 7px;border-radius:8px;white-space:nowrap;pointer-events:none;border:1px solid rgba(255,255,255,.08);}
+
+/* Tablet (481-768px): journal visible, no mobile chrome */
+@media (max-width: 768px) {
+  #pill-bar{height:auto;min-height:36px;padding:4px 8px;flex-wrap:wrap;overflow:visible;}
+  #mapwrap{flex:none !important;height:36vh !important;}
+  .ja-grid{grid-template-columns:1fr;}
+  #tab-bar{display:none !important;}
+  #sheet-places,#sheet-filters{display:none !important;}
+}
+/* Phone (≤480px): journal hidden, map fills, tab bar active */
+@media (max-width: 480px) {
+  #journal{display:none !important;}
+  #mapwrap{flex:1 !important;height:auto !important;}
+  #tab-bar{display:flex !important;}
+  #sheet-places,#sheet-filters{display:flex !important;flex-direction:column;}
+}
+
 </style>
 </head>
 <body>
@@ -490,10 +551,21 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
     </div>
   </div>
 
+  <!-- PILL BAR -->
+  <div id="pill-bar">
+    <div id="pill-bar-pills"></div>
+    <div class="pb-sep"></div>
+    <div id="srch-wrap">
+      <span class="srch-icon">⌕</span>
+      <input id="qj" type="text" placeholder="Search places…" autocomplete="off">
+      <div id="srch-dd"></div>
+    </div>
+  </div>
+
   <!-- BODY -->
   <div id="body">
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR (hidden, kept for JS filter state) -->
     <div id="sb">
 
       <div class="ss">
@@ -573,6 +645,12 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
         <div id="rlist"></div>
       </div>
     </div>
+
+    <!-- JOURNAL -->
+    <div id="journal">
+      <div class="journal-inner" id="journal-inner"></div>
+    </div>
+
   </div>
 </div>
 
@@ -1155,6 +1233,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
         _id: r.id
       }));
       buildMarkers(); renderList();
+      if (typeof renderJournal === 'function') renderJournal();
       if (typeof window._renderAreaOptions === 'function') window._renderAreaOptions();
       if (typeof window._renderListMobile === 'function') window._renderListMobile();
     } catch (e) {
@@ -1611,7 +1690,20 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     // Rebuild markers + lists
     buildMarkers();
     renderList();
+    renderJournal();
+    buildNeighbourhoodLabels();
+    buildMonuments();
     if (typeof window._renderListMobile === 'function') window._renderListMobile();
+
+    // Sync journal pills with activeFilters
+    document.querySelectorAll('.jpill[data-jcat]').forEach(p => {
+      const cat = p.getAttribute('data-jcat');
+      p.classList.toggle('on', cat === 'ALL' || activeFilters.has(cat));
+    });
+
+    // Reset journal search input
+    const qjEl = document.getElementById('qj');
+    if (qjEl) { qjEl.value = ''; document.getElementById('srch-dd').classList.remove('vis'); }
 
     // Reload community recs scoped to this country
     loadCommunityRecs();
@@ -1650,6 +1742,149 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     }
   };
 
+  // ── NEIGHBOURHOOD LABELS ─────────────────────────────────────────────
+  const NHBR_LABELS_KR = [
+    {lat:37.5700,lng:126.9782,label:"Jongno"},
+    {lat:37.5631,lng:126.9858,label:"Myeongdong"},
+    {lat:37.5563,lng:126.9236,label:"Hongdae"},
+    {lat:37.5614,lng:126.9279,label:"Yeonam"},
+    {lat:37.5448,lng:127.0557,label:"Seongsu"},
+    {lat:37.5341,lng:127.0003,label:"Hannam"},
+    {lat:37.4979,lng:127.0276,label:"Gangnam"},
+    {lat:37.5276,lng:127.0286,label:"Apgujeong"},
+    {lat:37.5663,lng:126.9905,label:"Euljiro"},
+    {lat:37.5550,lng:126.9374,label:"Sinchon"},
+    {lat:37.5748,lng:126.9769,label:"Gwanghwamun"},
+    {lat:37.5668,lng:127.0085,label:"Dongdaemun"},
+    {lat:37.5603,lng:126.9963,label:"Chungmuro"},
+    {lat:37.5787,lng:126.9846,label:"Insadong"},
+    {lat:37.5347,lng:126.9947,label:"Itaewon"},
+  ];
+  let nhbrLayers = [];
+  function buildNeighbourhoodLabels() {
+    nhbrLayers.forEach(l => map.removeLayer(l));
+    nhbrLayers = [];
+    if (currentCountry !== 'kr') return;
+    NHBR_LABELS_KR.forEach(nb => {
+      const lbl = L.marker([nb.lat, nb.lng], {
+        icon: L.divIcon({html:'<div class="nhbr-lbl">'+nb.label+'</div>',className:'',iconAnchor:[0,8]}),
+        interactive: false, zIndexOffset: -100
+      }).addTo(map);
+      nhbrLayers.push(lbl);
+    });
+  }
+
+  // ── MONUMENT MARKERS ────────────────────────────────────────────────────
+  const MONUMENTS_KR = [
+    {lat:37.5796,lng:126.9770,label:"Gyeongbokgung Palace"},
+    {lat:37.5512,lng:126.9882,label:"N Seoul Tower"},
+    {lat:37.5126,lng:127.1025,label:"Lotte World Tower"},
+    {lat:37.5795,lng:126.9910,label:"Changdeokgung"},
+    {lat:37.5245,lng:126.9800,label:"National Museum"},
+    {lat:37.5748,lng:126.9769,label:"Gwanghwamun Square"},
+    {lat:37.5665,lng:127.0093,label:"DDP"},
+    {lat:37.5652,lng:127.0481,label:"Bongeunsa Temple"},
+    {lat:37.5361,lng:126.9776,label:"War Memorial"},
+    {lat:37.5121,lng:127.0596,label:"COEX"},
+    {lat:37.5178,lng:127.1038,label:"Lotte World"},
+  ];
+  let monumentLayers = [];
+  function buildMonuments() {
+    monumentLayers.forEach(l => map.removeLayer(l));
+    monumentLayers = [];
+    if (currentCountry !== 'kr') return;
+    MONUMENTS_KR.forEach(m => {
+      const lbl = L.marker([m.lat, m.lng], {
+        icon: L.divIcon({html:'<div class="monument-lbl">★ '+m.label+'</div>',className:'',iconAnchor:[0,8]}),
+        interactive: false, zIndexOffset: -50
+      }).addTo(map);
+      monumentLayers.push(lbl);
+    });
+  }
+
+  // ── JOURNAL RENDER ───────────────────────────────────────────────────────
+  const AREA_ORDER = ['Seoul','Jongno','Myeongdong','Hongdae','Yeonam','Seongsu','Hannam','Itaewon','Gangnam','Apgujeong','Incheon','Gangwon','Busan','Daejeon','Akihabara','Tokyo','Harajuku','Nakano','Da\'an','Ximen','Alishan','Bishkek'];
+  function renderJournal() {
+    const el = document.getElementById('journal-inner');
+    if (!el) return;
+    const q = document.getElementById('q').value.toLowerCase();
+    const places = allPlaces().filter(p => {
+      if (!activeFilters.has(p.c)) return false;
+      if (activeDayFilter && p.day !== activeDayFilter) return false;
+      if (activeAreaFilter && p.area !== activeAreaFilter) return false;
+      if (q && !p.n.toLowerCase().includes(q) && !(p.area||'').toLowerCase().includes(q)
+              && !(p.d||'').toLowerCase().includes(q) && !(p.tags||[]).some(t=>t.includes(q))) return false;
+      return true;
+    });
+    if (!places.length) {
+      el.innerHTML = '<div style="padding:32px 14px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7">No places match this filter.<br><span style="font-size:11px">Try clearing the search or selecting different categories.</span></div>';
+      return;
+    }
+    const byArea = {};
+    places.forEach(p => { const a = p.area||'Other'; (byArea[a]=byArea[a]||[]).push(p); });
+    const areas = Object.keys(byArea).sort((a,b) => {
+      const ia = AREA_ORDER.indexOf(a), ib = AREA_ORDER.indexOf(b);
+      if (ia<0 && ib<0) return a.localeCompare(b);
+      if (ia<0) return 1; if (ib<0) return -1;
+      return ia - ib;
+    });
+    el.innerHTML = areas.map(area => {
+      const items = byArea[area];
+      return '<div class="ja-section">'+
+        '<div class="ja-area">'+esc(area)+' <span class="ja-area-count">'+items.length+'</span></div>'+
+        '<div class="ja-grid">'+items.map(p => {
+          const gi = allPlaces().indexOf(p);
+          const cfg = CC[p.c]||{color:'#888'};
+          return '<div class="jcard" data-gi="'+gi+'" onclick="focusJCard('+gi+')">'+
+            '<div class="jc-top"><span class="jc-dot" style="background:'+cfg.color+'"></span>'+
+            '<span class="jc-name">'+esc(p.n)+'</span></div>'+
+            '<div class="jc-meta">'+esc(p.c)+(p.day?' · '+esc(p.day):'')+
+            (p.isCommunity?'</div><div class="jc-community">✨ '+esc(p.contributor):'')+'</div></div>';
+        }).join('')+'</div></div>';
+    }).join('');
+  }
+  window.focusJCard = function(gi) {
+    const p = allPlaces()[gi];
+    if (!p) return;
+    map.flyTo([p.lat, p.lng], 15, {duration:0.8});
+    document.querySelectorAll('.jcard').forEach(c => c.classList.remove('sel'));
+    const el = document.querySelector('.jcard[data-gi="'+gi+'"]');
+    if (el) { el.classList.add('sel'); el.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+    setTimeout(() => { const m = markers.find(m => m._i === gi); if (m) { selectM(m); openInfo(p, gi); } }, 700);
+  };
+
+  // ── AUTOCOMPLETE ─────────────────────────────────────────────────────────
+  function showAutocomplete(q) {
+    const dd = document.getElementById('srch-dd');
+    if (!q || q.length < 1) { dd.classList.remove('vis'); return; }
+    const ql = q.toLowerCase();
+    const matches = allPlaces().filter(p =>
+      p.n.toLowerCase().includes(ql) || (p.area||'').toLowerCase().includes(ql) || (p.d||'').toLowerCase().includes(ql)
+    ).slice(0, 8);
+    if (!matches.length) { dd.classList.remove('vis'); return; }
+    dd.innerHTML = matches.map(p => {
+      const gi = allPlaces().indexOf(p);
+      const cfg = CC[p.c]||{color:'#888'};
+      return '<div class="sd-item" onclick="selectAutocomplete('+gi+')">'+
+        '<div class="sd-dot" style="background:'+cfg.color+'"></div>'+
+        '<div class="sd-name">'+esc(p.n)+'</div>'+
+        '<div class="sd-meta">'+esc(p.area)+'</div></div>';
+    }).join('');
+    dd.classList.add('vis');
+  }
+  window.selectAutocomplete = function(gi) {
+    const p = allPlaces()[gi];
+    if (!p) return;
+    const qjEl = document.getElementById('qj');
+    if (qjEl) qjEl.value = p.n;
+    document.getElementById('q').value = p.n;
+    document.getElementById('q').dispatchEvent(new Event('input'));
+    document.getElementById('srch-dd').classList.remove('vis');
+    renderJournal();
+    map.flyTo([p.lat, p.lng], 15, {duration:0.8});
+    setTimeout(() => { const m = markers.find(m => m._i === gi); if (m) { selectM(m); openInfo(p, gi); } }, 700);
+  };
+
   // ── START ─────────────────────────────────────────────────────────────
   document.querySelector('.cm-item[data-c="kr"]').classList.add('active');
   document.getElementById('hpill').textContent = P.length + ' places';
@@ -1658,10 +1893,76 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   renderHousingZones();
   buildMarkers();
   renderList();
+  renderJournal();
+  buildNeighbourhoodLabels();
+  buildMonuments();
+  toggleZones(true);
+  document.getElementById('bAll').classList.remove('on');
+  document.getElementById('bZone').classList.add('on');
   window._allPlaces = allPlaces;
   window._renderDayOptions = renderDayOptions;
   window._renderAreaOptions = renderAreaOptions;
   window._renderHousingZones = renderHousingZones;
+
+  // ── JOURNAL PILL BAR ──────────────────────────────────────────────────
+  const pillBarEl = document.getElementById('pill-bar-pills');
+  if (pillBarEl) {
+    const allJPill = document.createElement('div');
+    allJPill.className = 'jpill on';
+    allJPill.setAttribute('data-jcat','ALL');
+    allJPill.textContent = 'ALL';
+    allJPill.onclick = () => {
+      Object.keys(CC).forEach(c => activeFilters.add(c));
+      window._activeFilters = activeFilters;
+      document.querySelectorAll('.jpill').forEach(p => p.classList.add('on'));
+      document.querySelectorAll('#pills .pill').forEach(p => p.classList.add('on'));
+      buildMarkers(); renderList(); renderJournal();
+    };
+    pillBarEl.appendChild(allJPill);
+    Object.keys(CC).forEach(cat => {
+      const div = document.createElement('div');
+      div.className = 'jpill on';
+      div.setAttribute('data-jcat', cat);
+      div.textContent = cat === 'DayTrip' ? 'Day Trip' : cat;
+      div.onclick = () => {
+        if (activeFilters.has(cat)) { activeFilters.delete(cat); div.classList.remove('on'); }
+        else { activeFilters.add(cat); div.classList.add('on'); }
+        const mLabel = cat === 'DayTrip' ? 'Day Trip' : cat;
+        const mobileEl = document.getElementById('pills-m');
+        if (mobileEl) Array.from(mobileEl.children).forEach(mp => { if(mp.textContent===mLabel) mp.classList.toggle('on',activeFilters.has(cat)); });
+        Array.from(document.querySelectorAll('#pills .pill')).forEach(dp => { if(dp.textContent===mLabel) dp.classList.toggle('on',activeFilters.has(cat)); });
+        buildMarkers(); renderList(); renderJournal();
+      };
+      pillBarEl.appendChild(div);
+    });
+  }
+
+  // ── JOURNAL SEARCH ────────────────────────────────────────────────────
+  const qjEl = document.getElementById('qj');
+  if (qjEl) {
+    qjEl.addEventListener('input', () => {
+      document.getElementById('q').value = qjEl.value;
+      document.getElementById('q').dispatchEvent(new Event('input'));
+      showAutocomplete(qjEl.value);
+      renderJournal();
+    });
+    qjEl.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.getElementById('srch-dd').classList.remove('vis');
+        qjEl.value = '';
+        document.getElementById('q').value = '';
+        document.getElementById('q').dispatchEvent(new Event('input'));
+        renderJournal();
+      }
+      if (e.key === 'Enter') document.getElementById('srch-dd').classList.remove('vis');
+    });
+    document.addEventListener('click', e => {
+      if (!document.getElementById('srch-wrap').contains(e.target)) {
+        document.getElementById('srch-dd').classList.remove('vis');
+      }
+    });
+  }
+
   loadCommunityRecs();
 })();
 
