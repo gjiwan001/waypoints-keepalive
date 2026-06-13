@@ -503,8 +503,8 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#faf6f0;color:#5
 .jc-community{font-family:"DM Mono",monospace;font-size:7px;color:var(--gold);background:rgba(184,151,74,.1);border:1px solid rgba(184,151,74,.25);border-radius:8px;padding:1px 4px;display:inline-block;margin-top:2px;}
 
 /* ── MAP LABELS ── */
-.nhbr-lbl{background:rgba(42,80,56,.84);color:#e8f4ec;font-family:"DM Mono",monospace;font-size:9px;font-weight:500;padding:3px 8px;border-radius:10px;white-space:nowrap;pointer-events:none;border:1px solid rgba(42,80,56,.4);box-shadow:0 1px 4px rgba(0,0,0,.3);}
-.monument-lbl{background:rgba(28,28,30,.78);color:#e8e4de;font-family:"DM Mono",monospace;font-size:8px;padding:2px 7px;border-radius:8px;white-space:nowrap;pointer-events:none;border:1px solid rgba(255,255,255,.08);}
+.nhbr-txt{font-family:"DM Sans",sans-serif;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(42,32,22,.72);text-shadow:0 0 3px rgba(255,255,255,1),0 0 8px rgba(255,255,255,.9),1px 1px 0 rgba(255,255,255,.8);white-space:nowrap;pointer-events:none;}
+.monument-lbl{background:rgba(28,28,30,.72);color:#e8e4de;font-family:"DM Mono",monospace;font-size:8px;padding:2px 7px;border-radius:8px;white-space:nowrap;pointer-events:none;border:1px solid rgba(255,255,255,.08);}
 
 /* Tablet (481-768px): journal visible, no mobile chrome */
 @media (max-width: 768px) {
@@ -1742,23 +1742,23 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     }
   };
 
-  // ── NEIGHBOURHOOD LABELS ─────────────────────────────────────────────
+  // ── NEIGHBOURHOOD OVERLAYS ───────────────────────────────────────────
   const NHBR_LABELS_KR = [
-    {lat:37.5700,lng:126.9782,label:"Jongno"},
-    {lat:37.5631,lng:126.9858,label:"Myeongdong"},
-    {lat:37.5563,lng:126.9236,label:"Hongdae"},
-    {lat:37.5614,lng:126.9279,label:"Yeonam"},
-    {lat:37.5448,lng:127.0557,label:"Seongsu"},
-    {lat:37.5341,lng:127.0003,label:"Hannam"},
-    {lat:37.4979,lng:127.0276,label:"Gangnam"},
-    {lat:37.5276,lng:127.0286,label:"Apgujeong"},
-    {lat:37.5663,lng:126.9905,label:"Euljiro"},
-    {lat:37.5550,lng:126.9374,label:"Sinchon"},
-    {lat:37.5748,lng:126.9769,label:"Gwanghwamun"},
-    {lat:37.5668,lng:127.0085,label:"Dongdaemun"},
-    {lat:37.5603,lng:126.9963,label:"Chungmuro"},
-    {lat:37.5787,lng:126.9846,label:"Insadong"},
-    {lat:37.5347,lng:126.9947,label:"Itaewon"},
+    {lat:37.5700,lng:126.9782,label:"Jongno",r:750},
+    {lat:37.5631,lng:126.9858,label:"Myeongdong",r:400},
+    {lat:37.5563,lng:126.9236,label:"Hongdae",r:720},
+    {lat:37.5614,lng:126.9279,label:"Yeonam",r:380},
+    {lat:37.5448,lng:127.0557,label:"Seongsu",r:600},
+    {lat:37.5318,lng:127.0038,label:"Hannam",r:560},
+    {lat:37.4979,lng:127.0276,label:"Gangnam",r:960},
+    {lat:37.5276,lng:127.0286,label:"Apgujeong",r:460},
+    {lat:37.5663,lng:126.9905,label:"Euljiro",r:440},
+    {lat:37.5550,lng:126.9374,label:"Sinchon",r:450},
+    {lat:37.5748,lng:126.9769,label:"Gwanghwamun",r:480},
+    {lat:37.5668,lng:127.0085,label:"Dongdaemun",r:560},
+    {lat:37.5603,lng:126.9963,label:"Chungmuro",r:360},
+    {lat:37.5787,lng:126.9846,label:"Insadong",r:360},
+    {lat:37.5368,lng:126.9920,label:"Itaewon",r:480},
   ];
   let nhbrLayers = [];
   function buildNeighbourhoodLabels() {
@@ -1766,8 +1766,24 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     nhbrLayers = [];
     if (currentCountry !== 'kr') return;
     NHBR_LABELS_KR.forEach(nb => {
+      // Area boundary — light dashed circle like Google Maps / Condos.ca
+      const circle = L.circle([nb.lat, nb.lng], {
+        radius: nb.r,
+        color: '#9a8c7a',
+        fillColor: '#c4b49a',
+        fillOpacity: 0.05,
+        weight: 1.5,
+        opacity: 0.45,
+        dashArray: '6 5',
+        interactive: false,
+      }).addTo(map);
+      nhbrLayers.push(circle);
+      // Floating text label — no background, just text with white glow
       const lbl = L.marker([nb.lat, nb.lng], {
-        icon: L.divIcon({html:'<div class="nhbr-lbl">'+nb.label+'</div>',className:'',iconAnchor:[0,8]}),
+        icon: L.divIcon({
+          html: '<div class="nhbr-txt">' + nb.label + '</div>',
+          className: '', iconAnchor: [0, 8]
+        }),
         interactive: false, zIndexOffset: -100
       }).addTo(map);
       nhbrLayers.push(lbl);
