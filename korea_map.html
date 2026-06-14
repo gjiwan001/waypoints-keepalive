@@ -98,10 +98,10 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #suggest-btn{background:var(--acc);border:none;border-radius:2px;padding:4px 14px;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;cursor:pointer;transition:all .15s;}
 #suggest-btn:hover{background:var(--acc2);}
 
-/* ── SUGGEST MODAL ── */
-#modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;display:none;align-items:center;justify-content:center;}
-#modal-overlay.vis{display:flex;}
-#modal{background:var(--bg2);border:1px solid var(--line);border-radius:10px;width:380px;max-width:92vw;max-height:88vh;overflow-y:auto;padding:20px 22px;}
+/* ── SUGGEST MODAL (left panel) ── */
+#modal-overlay{position:fixed;top:82px;left:0;bottom:0;width:390px;z-index:2000;display:none;pointer-events:none;}
+#modal-overlay.vis{display:block;}
+#modal{background:var(--bg2);border-right:1px solid var(--line);width:100%;height:100%;max-height:none;border-radius:0;overflow-y:auto;padding:20px 22px;pointer-events:all;box-shadow:6px 0 28px rgba(0,0,0,.35);}
 #modal::-webkit-scrollbar{width:4px;}
 #modal::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px;}
 #modal h2{font-family:"DM Serif Display",serif;font-size:18px;color:var(--hi);margin-bottom:4px;}
@@ -119,7 +119,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 .mrow{display:flex;gap:8px;}
 .mrow .mfield{flex:1;}
 
-/* ── LOCATION SEARCH (Nominatim) ── */
+/* ── LOCATION SEARCH (MapTiler Geocoding) ── */
 .loc-search{display:flex;gap:6px;margin-bottom:6px;}
 .loc-search input{flex:1;}
 #locsearch-btn{
@@ -193,7 +193,8 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 
 @media (max-width: 768px){
   #suggest-btn{font-size:9px;padding:4px 9px;}
-  #modal{width:92vw;padding:16px;}
+  #modal-overlay{width:100%;top:82px;}
+  #modal{width:100%;padding:16px;}
 }
 
 /* ── SIDEBAR SECTIONS ── */
@@ -804,7 +805,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
         <span id="pin-status-text">Search above, or click "Drop pin" then click the map</span>
         <button id="pin-btn" onclick="togglePinMode()">📍 Drop pin</button>
       </div>
-      <div class="loc-credit">Search powered by OpenStreetMap / Nominatim</div>
+      <div class="loc-credit">MapTiler · OpenStreetMap</div>
     </div>
 
     <div class="mfield">
@@ -1245,7 +1246,39 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     document.getElementById('modal-overlay').classList.add('vis');
   };
 
-  // ── LOCATION SEARCH (Nominatim / OpenStreetMap, free, no API key) ───────
+  // ── LOCATION SEARCH (MapTiler primary, Nominatim fallback for POIs) ──────
+  async function geocodeMaptiler(q, cfg) {
+    const url = 'https://api.maptiler.com/geocoding/' + encodeURIComponent(q) +
+      '.json?key=' + MT_KEY + '&country=' + cfg.cc + '&limit=5';
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return (data.features || []).map(f => ({
+      _src: 'maptiler',
+      lat: f.geometry.coordinates[1],
+      lon: f.geometry.coordinates[0],
+      name: f.text || (f.place_name || '').split(',')[0],
+      full: f.place_name || '',
+      kind: (f.place_type && f.place_type[0]) || ''
+    }));
+  }
+
+  async function geocodeNominatim(q, cfg) {
+    const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + encodeURIComponent(q) +
+      '&countrycodes=' + cfg.cc + '&viewbox=' + cfg.viewbox + '&bounded=1';
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const results = await res.json();
+    return results.map(r => ({
+      _src: 'nominatim',
+      lat: parseFloat(r.lat),
+      lon: parseFloat(r.lon),
+      name: r.display_name.split(',')[0],
+      full: r.display_name,
+      kind: r.type || ''
+    }));
+  }
+
   window.searchLocation = async function() {
     const q = document.getElementById('f-locsearch').value.trim();
     const resultsEl = document.getElementById('loc-results');
@@ -1255,20 +1288,17 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     resultsEl.innerHTML = '<div class="loc-result">Searching…</div>';
     try {
       const cfg = COUNTRIES[currentCountry];
-      const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + encodeURIComponent(q) +
-        '&countrycodes=' + cfg.cc + '&viewbox=' + cfg.viewbox + '&bounded=1';
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('search failed');
-      const results = await res.json();
+      let results = await geocodeMaptiler(q, cfg);
+      if (!results.length) results = await geocodeNominatim(q, cfg);
       if (!results.length) {
         resultsEl.innerHTML = '<div class="loc-result">No results — try a different search, or drop a pin manually.</div>';
         return;
       }
       resultsEl.innerHTML = results.map((r, i) =>
         '<div class="loc-result" onclick="selectLocationResult(' + i + ')">' +
-        '<span class="lr-name">' + esc(r.display_name.split(',')[0]) + '</span>' +
-        '<span class="lr-type">' + esc(r.type || '') + '</span><br>' +
-        '<span style="color:var(--muted)">' + esc(r.display_name) + '</span></div>'
+        '<span class="lr-name">' + esc(r.name) + '</span>' +
+        '<span class="lr-type">' + esc(r.kind) + '</span><br>' +
+        '<span style="color:var(--muted)">' + esc(r.full) + '</span></div>'
       ).join('');
       window._locResults = results;
     } catch (e) {
@@ -1280,14 +1310,14 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
   window.selectLocationResult = function(i) {
     const r = window._locResults[i];
-    setPin(parseFloat(r.lat), parseFloat(r.lon), true);
+    setPin(r.lat, r.lon, true);
     document.getElementById('loc-results').innerHTML = '';
     document.getElementById('f-locsearch').value = '';
     // Pre-fill name/area if empty
     const nameEl = document.getElementById('f-name');
     const areaEl = document.getElementById('f-area');
-    const parts = r.display_name.split(',').map(s => s.trim());
-    if (!nameEl.value) nameEl.value = parts[0];
+    const parts = r.full.split(',').map(s => s.trim());
+    if (!nameEl.value) nameEl.value = r.name;
     if (!areaEl.value && parts.length > 1) areaEl.value = parts.slice(1, 3).join(', ');
   };
 
@@ -1667,9 +1697,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       e.preventDefault(); document.getElementById('q').focus();
     }
   });
-  document.getElementById('modal-overlay').addEventListener('click', e => {
-    if (e.target.id === 'modal-overlay') closeSuggestModal();
-  });
+  // No click-outside close — modal is a left panel, map is visible alongside it
 
   // ── GLOBAL HELPERS ────────────────────────────────────────────────────
   window.setView = v => {
