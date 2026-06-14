@@ -1194,9 +1194,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   window._map = map;
 
-  let tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd', maxZoom: 19
+  let tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19, crossOrigin: 'anonymous'
   }).addTo(map);
   window._tileLayer = tileLayer;
   document.getElementById('map').classList.add('map-dark');
