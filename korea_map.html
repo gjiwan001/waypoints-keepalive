@@ -2011,7 +2011,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       if (!dragging) return;
       const topH = document.getElementById('hdr').offsetHeight + document.getElementById('pill-bar').offsetHeight;
       const newH = Math.max(80, Math.min(startH + (y - startY), window.innerHeight - topH - 80));
-      mw.style.height = newH + 'px';
+      mw.style.setProperty('height', newH + 'px', 'important');
       map.invalidateSize();
     }
     function endDrag() {
