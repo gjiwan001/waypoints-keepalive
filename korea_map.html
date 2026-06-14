@@ -1194,10 +1194,10 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   window._map = map;
 
-  const lightTile = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+  const lightTile = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
   let tileLayer = L.tileLayer(lightTile, {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd', maxZoom: 19
+    attribution: 'Tiles &copy; Esri',
+    maxZoom: 19
   }).addTo(map);
   window._tileLayer = tileLayer;
   document.getElementById('map').classList.add('map-dark');
