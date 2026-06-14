@@ -47,6 +47,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #sb{display:none;}
 #mapwrap{flex:none;height:42vh;min-height:180px;position:relative;overflow:hidden;}
 #map{position:absolute;inset:0;}
+#map.map-dark .leaflet-tile-pane{filter:invert(100%) hue-rotate(180deg) brightness(0.85) saturate(0.9);}
 #journal{flex:1;overflow-y:auto;background:var(--bg);}
 #journal::-webkit-scrollbar{width:4px;}
 #journal::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px;}
@@ -1193,13 +1194,13 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   window._map = map;
 
-  const darkTile = 'https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}{r}.png';
-  const lightTile = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-  let tileLayer = L.tileLayer(darkTile, {
+  const lightTile = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+  let tileLayer = L.tileLayer(lightTile, {
     attribution: '&copy; OpenStreetMap &copy; CARTO',
     subdomains: 'abcd', maxZoom: 19
   }).addTo(map);
   window._tileLayer = tileLayer;
+  document.getElementById('map').classList.add('map-dark');
 
   // ── PIN-DROP MODE ──────────────────────────────────────────────────────
   let pinMode = false;
@@ -1796,6 +1797,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     isDark = !isDark;
     document.getElementById('theme-btn').textContent = isDark ? 'Light' : 'Dark';
     const root = document.documentElement.style;
+    const mapEl = document.getElementById('map');
     if (isDark) {
       root.setProperty('--bg','#0a0907'); root.setProperty('--bg2','#141210');
       root.setProperty('--bg3','#1e1a16'); root.setProperty('--bg4','#2a241e');
@@ -1803,7 +1805,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       root.setProperty('--mid','#9a8e7e'); root.setProperty('--text','#c8bcaa');
       root.setProperty('--hi','#f0e8d8');
       document.body.style.background = '#0a0907';
-      window._tileLayer.setUrl(darkTile);
+      mapEl.classList.add('map-dark');
     } else {
       root.setProperty('--bg','#f7f3ed'); root.setProperty('--bg2','#ede8e0');
       root.setProperty('--bg3','#e2dbd0'); root.setProperty('--bg4','#d5ccc0');
@@ -1811,7 +1813,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       root.setProperty('--mid','#7a6e62'); root.setProperty('--text','#4a3e36');
       root.setProperty('--hi','#1e1610');
       document.body.style.background = '#f7f3ed';
-      window._tileLayer.setUrl(lightTile);
+      mapEl.classList.remove('map-dark');
     }
   };
 
