@@ -1125,8 +1125,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   if (typeof L === 'undefined') { setTimeout(init, 50); return; }
 
   // Map
-  const map = L.map('map', { zoomControl: true, preferCanvas: true })
+  const map = L.map('map', { zoomControl: false, preferCanvas: true })
     .setView([37.552, 126.992], 12);
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
   window._map = map;
 
   const darkTile = 'https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}{r}.png';
@@ -1782,12 +1783,28 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
         const name = el.tags?.name || '';
         if (!name.endsWith('구')) return;
         const label = GU_LABELS[name] || el.tags?.['name:en'] || name;
-        const outers = (el.members || []).filter(m => m.role === 'outer' && m.geometry?.length > 0);
+        const outers = (el.members || []).filter(m => m.role === 'outer' && m.geometry?.length > 1);
         if (!outers.length) return;
         try {
-          const ring = outers.flatMap(m => m.geometry.map(pt => [pt.lat, pt.lon]));
+          // Stitch ways in geographic order so the polygon doesn't self-intersect
+          const ways = outers.map(m => m.geometry.map(pt => [pt.lat, pt.lon]));
+          const ring = [...ways[0]];
+          const rem = ways.slice(1);
+          while (rem.length) {
+            const last = ring[ring.length - 1];
+            let bi = 0, rev = false, bd = Infinity;
+            rem.forEach((w, i) => {
+              const ds = (w[0][0]-last[0])**2 + (w[0][1]-last[1])**2;
+              const de = (w[w.length-1][0]-last[0])**2 + (w[w.length-1][1]-last[1])**2;
+              if (ds < bd) { bd = ds; bi = i; rev = false; }
+              if (de < bd) { bd = de; bi = i; rev = true; }
+            });
+            const nxt = rem.splice(bi, 1)[0];
+            if (rev) nxt.reverse();
+            ring.push(...nxt);
+          }
           const poly = L.polygon([ring], {
-            color: '#8a7c6a', fillColor: '#b0a488', fillOpacity: 0.07,
+            color: '#8a7c6a', fillOpacity: 0,
             weight: 2, opacity: 0.65, interactive: false
           }).addTo(map);
           nhbrLayers.push(poly);
@@ -1926,9 +1943,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   renderJournal();
   buildNeighbourhoodLabels();
   buildMonuments();
-  toggleZones(true);
-  document.getElementById('bAll').classList.remove('on');
-  document.getElementById('bZone').classList.add('on');
+  toggleZones(false);
+  document.getElementById('bAll').classList.add('on');
+  document.getElementById('bZone').classList.remove('on');
   window._allPlaces = allPlaces;
   window._renderDayOptions = renderDayOptions;
   window._renderAreaOptions = renderAreaOptions;
