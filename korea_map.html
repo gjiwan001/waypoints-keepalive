@@ -15,17 +15,17 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 
 /* ── VARIABLES ── */
 :root{
-  --bg:    #0a0907;
-  --bg2:   #141210;
-  --bg3:   #1e1a16;
-  --bg4:   #2a241e;
-  --line:  #2e2620;
-  --muted: #6b5f51;
-  --mid:   #9a8e7e;
-  --text:  #c8bcaa;
-  --hi:    #f0e8d8;
-  --acc:   #c9a06a;
-  --acc2:  #a87c48;
+  --bg:    #f0e8d8;
+  --bg2:   #e8dfc8;
+  --bg3:   #ddd4be;
+  --bg4:   #cfc5ac;
+  --line:  #c4b898;
+  --muted: #8a7a60;
+  --mid:   #5c4e38;
+  --text:  #2e2416;
+  --hi:    #1c1410;
+  --acc:   #2a5c6b;
+  --acc2:  #1e4452;
   --gold:  #c9a06a;
   --blue:  #4a7a9a;
   --green: #4a8b6e;
@@ -349,6 +349,9 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #pd-mode{display:flex;align-items:center;gap:2px;padding:0 8px;flex-shrink:0;border-left:1px solid var(--line);}
 .pdmb{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:3px 8px;border-radius:2px;border:none;background:none;transition:all .12s;}
 .pdmb.on{color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,transparent);}
+#pd-tod{display:flex;align-items:center;gap:2px;padding:0 8px;flex-shrink:0;border-left:1px solid var(--line);}
+.pdtod{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:3px 7px;border-radius:2px;border:none;background:none;transition:all .12s;}
+.pdtod.on{color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,transparent);}
 .pdmb:hover:not(.on){color:var(--text);}
 /* ── BROWSE MODE ── */
 .pt-area-hdr{font-family:var(--ui);font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:6px 14px 4px;background:var(--bg2);border-bottom:1px solid var(--line);border-top:1px solid var(--line);position:sticky;top:0;z-index:10;}
@@ -838,7 +841,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
     <div class="hright">
       <span id="hcount"></span>
       <button id="suggest-btn" onclick="openSuggestModal()">+ Suggest</button>
-      <button id="theme-btn" onclick="toggleTheme()">Light</button>
+      <button id="theme-btn" onclick="toggleTheme()">Dark</button>
     </div>
   </div>
 
@@ -943,6 +946,10 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
     <!-- PANEL BAR: day tabs + mode toggle -->
     <div id="panel-bar">
       <div id="pd-tabs"></div>
+      <div id="pd-tod">
+        <button class="pdtod on" onclick="setPanelTod('all')">All</button>
+        <button class="pdtod" onclick="setPanelTod('night')">Night</button>
+      </div>
       <div id="pd-mode">
         <button class="pdmb on" onclick="setPanelViewMode('browse')">Browse</button>
         <button class="pdmb" onclick="setPanelViewMode('trip')">Trip</button>
@@ -1411,7 +1418,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   const MT_KEY = 'LmkfFxigNeGevQDJzJkD';
   const darkTile  = `https://api.maptiler.com/maps/dataviz-dark/{z}/{x}/{y}.png?key=${MT_KEY}`;
   const lightTile = `https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=${MT_KEY}`;
-  let tileLayer = L.tileLayer(darkTile, {
+  let tileLayer = L.tileLayer(lightTile, {
     attribution: '&copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19
   }).addTo(map);
@@ -1689,6 +1696,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     allPlaces().forEach((p, i) => {
       if (!activeFilters.has(p.c)) return;
       if (activeDayFilter && !placeMatchesDay(p, activeDayFilter)) return;
+      if (!passesTodFilter(p)) return;
       if (activeAreaFilter && p.area !== activeAreaFilter) return;
       if (q && !p.n.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q)
              && !p.d.toLowerCase().includes(q) && !p.tags.some(t => t.includes(q))) return;
@@ -2037,7 +2045,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   });
 
   // ── THEME TOGGLE ───────────────────────────────────────────────────────
-  let isDark = true;
+  let isDark = false;
   window.toggleTheme = function () {
     isDark = !isDark;
     document.getElementById('theme-btn').textContent = isDark ? 'Light' : 'Dark';
@@ -2167,6 +2175,27 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   // ── PANEL SYSTEM ─────────────────────────────────────────────────────────
   window.panelDay = 'all';
   window.panelViewMode = 'browse';
+  window.panelTod = 'all';
+
+  function isNightPlace(p) {
+    return p.day === 'Evenings' ||
+      (p.tags && (p.tags.includes('night') || p.tags.includes('evening')));
+  }
+
+  function passesTodFilter(p) {
+    if (window.panelTod === 'night') return isNightPlace(p);
+    return p.day !== 'Evenings';
+  }
+
+  window.setPanelTod = function(tod) {
+    window.panelTod = tod;
+    document.querySelectorAll('.pdtod').forEach(function(b) {
+      b.classList.toggle('on', b.textContent.trim().toLowerCase() === tod);
+    });
+    buildMarkers();
+    renderList();
+    renderItinerary();
+  };
 
   const DAY_ORDER_SHARED = [
     'Day 1-2','Day 3-4','Day 5-6','Day 7-8',
@@ -2226,16 +2255,14 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
         label + ' <span class="pdt-cnt">' + dp.length + '</span>' +
         '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
     });
-    ['Evenings','Flexible'].forEach(function(label) {
-      if (label === 'Evenings' && !hasEvenings) return;
-      if (label === 'Flexible' && !hasFlexible) return;
-      const dp = places.filter(function(p){ return placeMatchesDay(p, label); });
+    if (hasFlexible) {
+      const dp = places.filter(function(p){ return p.day === 'Flexible' || !p.day; });
       const vis = dp.filter(function(p){ return isVisited(p); }).length;
       const pct = dp.length ? Math.round(vis / dp.length * 100) : 0;
-      html += '<button class="pdt' + (cur === label ? ' on' : '') + '" onclick="setPanelDay(\'' + label + '\')">' +
-        label + ' <span class="pdt-cnt">' + dp.length + '</span>' +
+      html += '<button class="pdt' + (cur === 'Flexible' ? ' on' : '') + '" onclick="setPanelDay(\'Flexible\')">' +
+        'Flexible <span class="pdt-cnt">' + dp.length + '</span>' +
         '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
-    });
+    }
     tabs.innerHTML = html;
   }
 
@@ -2266,7 +2293,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
               && !(p.d||'').toLowerCase().includes(q)) return false;
       return true;
     });
-    const filtered = places.filter(function(p) { return placeMatchesDay(p, window.panelDay); });
+    const filtered = places.filter(function(p) {
+      return placeMatchesDay(p, window.panelDay) && passesTodFilter(p);
+    });
     if (window.panelViewMode === 'trip') {
       renderTripMode(el, filtered);
     } else {
