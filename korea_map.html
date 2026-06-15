@@ -2156,31 +2156,63 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   function visitedKeyFor(p) { return p.n + '||' + (p.area || ''); }
   function isVisited(p) { return window.visitedSet ? window.visitedSet.has(visitedKeyFor(p)) : false; }
 
+  function placeMatchesDay(p, dayTab) {
+    if (dayTab === 'all') return true;
+    const d = p.day || 'Flexible';
+    if (dayTab === 'Evenings') return d === 'Evenings';
+    if (dayTab === 'Flexible') return d === 'Flexible';
+    const tabNum = parseInt(dayTab.replace('Day ', ''));
+    if (!tabNum) return false;
+    const nums = d.match(/\d+/g);
+    if (!nums) return false;
+    if (nums.length >= 2) {
+      return tabNum >= parseInt(nums[0]) && tabNum <= parseInt(nums[nums.length - 1]);
+    }
+    return parseInt(nums[0]) === tabNum;
+  }
+
   function buildPanelDayTabs() {
     const tabs = document.getElementById('pd-tabs');
     if (!tabs) return;
     const places = allPlaces().filter(function(p) { return activeFilters.has(p.c); });
-    const dayCounts = {};
+    const numSet = new Set();
+    var hasEvenings = false, hasFlexible = false;
     places.forEach(function(p) {
-      const d = p.day || '__none__';
-      if (!dayCounts[d]) dayCounts[d] = { total: 0, visited: 0 };
-      dayCounts[d].total++;
-      if (isVisited(p)) dayCounts[d].visited++;
+      const d = p.day || 'Flexible';
+      if (d === 'Evenings') { hasEvenings = true; return; }
+      if (d === 'Flexible') { hasFlexible = true; return; }
+      const nums = d.match(/\d+/g);
+      if (!nums) return;
+      if (nums.length >= 2) {
+        for (var n = parseInt(nums[0]); n <= parseInt(nums[nums.length-1]); n++) numSet.add(n);
+      } else {
+        numSet.add(parseInt(nums[0]));
+      }
     });
+    const dayNums = [...numSet].sort(function(a,b){return a-b;});
     const allVis = places.filter(function(p) { return isVisited(p); }).length;
     const allPct = places.length ? Math.round(allVis / places.length * 100) : 0;
-    const dayKeys = DAY_ORDER_SHARED.filter(function(d) { return dayCounts[d]; });
-    if (dayCounts['__none__']) dayKeys.push('__none__');
     const cur = window.panelDay;
     let html = '<button class="pdt' + (cur === 'all' ? ' on' : '') + '" onclick="setPanelDay(\'all\')">' +
       'All <span class="pdt-cnt">' + places.length + '</span>' +
       '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + allPct + '%"></div></div></button>';
-    dayKeys.forEach(function(d) {
-      const label = d === '__none__' ? 'No day' : d;
-      const cnt = dayCounts[d];
-      const pct = cnt.total ? Math.round(cnt.visited / cnt.total * 100) : 0;
-      html += '<button class="pdt' + (cur === d ? ' on' : '') + '" onclick="setPanelDay(\'' + d.replace(/'/g,"\\'") + '\')">' +
-        esc(label) + ' <span class="pdt-cnt">' + cnt.total + '</span>' +
+    dayNums.forEach(function(n) {
+      const label = 'Day ' + n;
+      const dp = places.filter(function(p){ return placeMatchesDay(p, label); });
+      const vis = dp.filter(function(p){ return isVisited(p); }).length;
+      const pct = dp.length ? Math.round(vis / dp.length * 100) : 0;
+      html += '<button class="pdt' + (cur === label ? ' on' : '') + '" onclick="setPanelDay(\'' + label + '\')">' +
+        label + ' <span class="pdt-cnt">' + dp.length + '</span>' +
+        '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
+    });
+    ['Evenings','Flexible'].forEach(function(label) {
+      if (label === 'Evenings' && !hasEvenings) return;
+      if (label === 'Flexible' && !hasFlexible) return;
+      const dp = places.filter(function(p){ return placeMatchesDay(p, label); });
+      const vis = dp.filter(function(p){ return isVisited(p); }).length;
+      const pct = dp.length ? Math.round(vis / dp.length * 100) : 0;
+      html += '<button class="pdt' + (cur === label ? ' on' : '') + '" onclick="setPanelDay(\'' + label + '\')">' +
+        label + ' <span class="pdt-cnt">' + dp.length + '</span>' +
         '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
     });
     tabs.innerHTML = html;
@@ -2210,14 +2242,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
               && !(p.d||'').toLowerCase().includes(q)) return false;
       return true;
     });
-    let filtered;
-    if (window.panelDay === 'all') {
-      filtered = places;
-    } else if (window.panelDay === '__none__') {
-      filtered = places.filter(function(p) { return !p.day; });
-    } else {
-      filtered = places.filter(function(p) { return (p.day || 'Flexible') === window.panelDay; });
-    }
+    const filtered = places.filter(function(p) { return placeMatchesDay(p, window.panelDay); });
     if (window.panelViewMode === 'trip') {
       renderTripMode(el, filtered);
     } else {
