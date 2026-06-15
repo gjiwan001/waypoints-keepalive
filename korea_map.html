@@ -1688,7 +1688,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     let n = 0;
     allPlaces().forEach((p, i) => {
       if (!activeFilters.has(p.c)) return;
-      if (activeDayFilter && p.day !== activeDayFilter) return;
+      if (activeDayFilter && !placeMatchesDay(p, activeDayFilter)) return;
       if (activeAreaFilter && p.area !== activeAreaFilter) return;
       if (q && !p.n.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q)
              && !p.d.toLowerCase().includes(q) && !p.tags.some(t => t.includes(q))) return;
@@ -1852,7 +1852,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     let shown = 0;
     allPlaces().forEach((p, i) => {
       if (!activeFilters.has(p.c)) return;
-      if (activeDayFilter && p.day !== activeDayFilter) return;
+      if (activeDayFilter && !placeMatchesDay(p, activeDayFilter)) return;
       if (activeAreaFilter && p.area !== activeAreaFilter) return;
       if (q && !p.n.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q)
               && !p.d.toLowerCase().includes(q) && !p.tags.some(t => t.includes(q))) return;
@@ -2241,6 +2241,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
   window.setPanelDay = function(day) {
     window.panelDay = day;
+    activeDayFilter = (day === 'all') ? '' : day;
+    buildMarkers();
+    renderList();
     renderItinerary();
   };
 
