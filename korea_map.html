@@ -47,7 +47,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #sb{display:none;}
 #mapwrap{flex:none;height:42vh;min-height:180px;position:relative;overflow:hidden;}
 #map{position:absolute;inset:0;}
-#journal{flex:1;overflow-y:auto;background:var(--bg);}
+#journal{flex:1;min-height:0;overflow-y:auto;background:var(--bg);}
 #journal::-webkit-scrollbar{width:4px;}
 #journal::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px;}
 
@@ -64,6 +64,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #country-btn:hover{border-color:rgba(58,12,24,.55) !important;color:#3A0C18 !important;}
 #country-btn .cv{color:rgba(58,12,24,.5) !important;}
 #hcount{color:rgba(58,12,24,.45);}
+#hdays-pill{display:inline-flex !important;}
 /* Pill-bar tab overrides */
 #pill-bar .jpill{color:rgba(58,12,24,.5);}
 #pill-bar .jpill.on{color:#3A0C18;}
@@ -764,7 +765,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
   #pill-bar-pills{flex-wrap:nowrap;flex-shrink:0;}
   #srch-wrap{display:none;}/* hide search bar on mobile, search via map tap */
   #mapwrap{flex:none !important;height:40vh !important;}
-  #journal{display:flex !important;flex-direction:column;}
+  #journal{display:block !important;}
   #panel-bar{display:flex !important;height:40px;min-height:40px;}
   #tab-bar{display:none !important;}
   #sheet-places,#sheet-filters{display:none !important;}
@@ -811,6 +812,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
         </div>
       </div>
       <span class="hpill" id="hpill">124 places</span>
+      <span class="hpill" id="hdays-pill"></span>
     </div>
     <div id="hwordmark">Waypoints</div>
     <div class="hright">
@@ -1976,6 +1978,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     document.getElementById('cflag').textContent = COUNTRIES[code].flag;
     document.getElementById('cname').textContent = COUNTRIES[code].label;
     document.getElementById('hpill').textContent = P.length + ' places';
+    updateDaysCount();
     document.querySelectorAll('.cm-item').forEach(el => el.classList.toggle('active', el.dataset.c === code));
     document.getElementById('country-menu').classList.remove('vis');
 
@@ -2580,9 +2583,23 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   };
 
   // ── START ─────────────────────────────────────────────────────────────
+  function updateDaysCount() {
+    const el = document.getElementById('hdays-pill');
+    if (!el) return;
+    let max = 0;
+    allPlaces().forEach(function(p) {
+      if (!p.day) return;
+      const nums = p.day.match(/\d+/g);
+      if (nums) nums.forEach(function(n) { max = Math.max(max, parseInt(n)); });
+    });
+    el.textContent = max ? max + ' days' : '';
+    el.style.display = max ? '' : 'none';
+  }
+
   window.visitedSet = new Set(JSON.parse(localStorage.getItem('wp_visited_kr') || '[]'));
   document.querySelector('.cm-item[data-c="kr"]').classList.add('active');
   document.getElementById('hpill').textContent = P.length + ' places';
+  updateDaysCount();
   renderDayOptions();
   renderAreaOptions();
   renderHousingZones();
