@@ -1,0 +1,386 @@
+Country,Place Name,Category,Neighbourhood / City,Description / Notes,Tags,Day,Lat,Lng
+Korea,Jongno,Neighbourhood,Seoul,#1 area for first-timers. Real Korea vibe. Historic transit hub. Quiet nights.,"stay,historic,transit",Day 1-2,37.5700,126.9782
+Korea,Myeongdong,Neighbourhood,Seoul,Tourist central. Street food. Airport bus stop. Safe at night. L7 Hotel rooftop.,"stay,street food,tourist",Day 1-2,37.5631,126.9858
+Korea,Hongdae,Neighbourhood,Seoul,"Young, energetic. Nightlife, restaurants, stores. ÅLAND & MUSINSA nearby. ★ Top pick.","stay,nightlife,★ top pick",Day 3,37.5563,126.9236
+Korea,Gangnam,Neighbourhood,Seoul,"Upscale. Shinsegae dept store, skincare clinics, fashion brands.","stay,upscale,shopping",Day 7-8,37.4979,127.0276
+Korea,Itaewon,Neighbourhood,Seoul,Expat-friendly. International dining. Boutique shopping. Close to Hannam.,"stay,expat,dining",Flexible,37.5347,126.9947
+Korea,Seongsu,Neighbourhood,Seoul,"THE coolest neighbourhood. Concept stores, creative energy. ★ Top pick.","stay,trendy,★ top pick",Day 5,37.5448,127.0557
+Korea,Hannam,Neighbourhood,Seoul,"Upscale boutiques. Citybreeze, Mardi Mercredi. ★ Top pick.","stay,upscale,boutique",Day 5,37.5341,127.0003
+Korea,Yeonam,Neighbourhood,Seoul,"Quiet alternative to Hongdae. Local cafés, cheaper food.","stay,quiet,cafes",Day 3,37.5614,126.9279
+Korea,Euljiro,Neighbourhood,Seoul,"Walkable from Myeongdong. Trendy, great restaurants.","stay,trendy",Day 1-2,37.5663,126.9905
+Korea,Sinchon,Neighbourhood,Seoul,Near Hongdae. Cheaper food and great bars.,"stay,budget,bars",Day 4 (night),37.5550,126.9374
+Korea,Apgujeong,Neighbourhood,Seoul,Luxury and streetwear hub. Worksout store.,"stay,luxury,streetwear",Day 7-8,37.5276,127.0286
+Korea,Incheon Airport,Transport,Incheon,Main airport. Airport Limousine bus to Seoul. Smart Pass to skip queues.,"airport,entry",Flexible,37.4602,126.4407
+Korea,Seoul Station,Transport,Seoul,AREX express from Incheon ~45 min nonstop.,"transit,train,arex",Day 1,37.5547,126.9706
+Korea,National Museum of Korea,Culture,Yongsan,Ichon Station Exit 2. Free entry (fee from 2027). Best souvenir shop in Seoul.,"museum,free,history",Flexible,37.5245,126.9800
+Korea,Hanok Village / Bukchon,Culture,Jongno,Historic winding streets. Granhand perfumery here. Beautiful walks.,"historic,walking,souvenir",Flexible,37.5787,126.9846
+Korea,Gwangjang Market,Culture,Jongno,Iconic traditional market. Street food and textiles.,"market,food,culture",Day 9,37.5697,126.9990
+Korea,Weave Suite Seoyu Parkside,Accommodation,Seoyu,"Premium serviced apartment. Han River terrace view. Co-working, yoga, housekeeping.","longstay,serviced,han river",Day 1,37.5382,126.9024
+Korea,LiveAnywhere Loft,Accommodation,Jongno,Near Gwangjang Market. 1 week+ stays. Seoul studios + Jeju beach houses.,"shortterm,rental,1week+",Flexible,37.5697,126.9995
+Korea,DNA Skin Clinic,Skincare,Gangnam,"Microneedling, RF, airjet treatments. English-speaking. Highly recommended.","clinic,skin,english",Day 7-8,37.5019,127.0262
+Korea,Optima Wellness Museum Pharmacy,Skincare,Gangnam,Pharmacy heaven near Gangnam. Skincare treatments.,"pharmacy,skincare",Day 7,37.4979,127.0300
+Korea,Seoulistique Skin,Skincare,Aeogae,Skin analysis + 8-step Astrodome facial. Book via Instagram DM.,"clinic,analysis,facial",Day 7-8,37.5499,126.9543
+Korea,Abijou Myeongdong,Skincare,Myeongdong,Affordable skin clinic. Great for foreigners. Personal care.,"clinic,affordable",Day 2,37.5631,126.9828
+Korea,Abijou Hongdae,Skincare,Hongdae,Less crowded Hongdae branch of Abijou.,"clinic,hongdae",Day 3-4,37.5553,126.9215
+Korea,Joa Pilates (ear seeding),Skincare,Seoul,Ear seeding therapy. Book via Instagram DM.,"wellness,ear seeding",Flexible,37.5150,127.0350
+Korea,NOMANUAL Flagship,Shopping,Seongsu,Elevated Korean streetwear. Top pick.,"streetwear,seongsu",Day 5-6,37.5435,127.0575
+Korea,thisisneverthat Seongsu,Shopping,Seongsu,Best Korean streetwear brand — multiple sources agree.,"streetwear,seongsu,★",Day 5-6,37.5445,127.0565
+Korea,Musinsa Standard Seongsu,Shopping,Seongsu,MUSINSA basics line flagship.,"musinsa,seongsu",Day 5-6,37.5440,127.0580
+Korea,LOW CLASSIC Seongsu,Shopping,Seongsu,Minimalist Korean womenswear.,"minimalist,seongsu",Day 5-6,37.5450,127.0560
+Korea,Beaker Seongsu,Shopping,Seongsu,Multi-brand select shop.,"multibrand,seongsu",Day 5-6,37.5438,127.0570
+Korea,ÅLAND Hongdae,Shopping,Hongdae,Multi-brand concept store.,"multibrand,hongdae",Day 3-4,37.5560,126.9230
+Korea,MUSINSA Hongdae,Shopping,Hongdae,Korean streetwear platform flagship.,"streetwear,musinsa,hongdae",Day 3-4,37.5557,126.9225
+Korea,Citybreeze Seoul,Shopping,Hannam,Seoul lifestyle concept store.,"lifestyle,hannam",Day 5-6,37.5335,127.0007
+Korea,Fucking Awesome Seoul,Shopping,Hannam,Skate / streetwear brand flagship.,"skate,streetwear,hannam",Day 5-6,37.5343,127.0013
+Korea,Mardi Mercredi Hannam,Shopping,Hannam,Casual creative Korean fashion brand.,"fashion,hannam",Flexible,37.5338,127.0018
+Korea,Granhand Perfumery,Shopping,Hanok Village,Custom perfumery. Name your bottle. Best Seoul souvenir.,"souvenir,perfume,custom",Day 7-8,37.5787,126.9850
+Korea,Shinsegae Gangnam (5F & 8F),Shopping,Gangnam,15 Korean fashion brands locals shop. Floors 5 & 8. Skip Myeongdong.,"dept store,local brands",Day 7-8,37.5050,127.0049
+Korea,Worksout Apgujeong,Shopping,Apgujeong,Streetwear store. Highly recommended.,"streetwear,apgujeong",Day 7-8,37.5280,127.0290
+Korea,Révdou (Moon Croissant),Food,Seoul,Multi-layer vanilla tahiti cream croissant. Hottest croissant in Seoul.,"bakery,croissant",Flexible,37.5565,126.9247
+Korea,The Truffle Bakery,Food,Seoul,Tissue bread — peel-apart crispy outside fluffy inside.,"bakery,bread",Flexible,37.5580,126.9800
+Korea,Bijeonstrol Yeonhui Roastery,Food,Yeonhui,Seasonal toast with butter. Great with coffee.,"bakery,toast",Flexible,37.5692,126.9201
+Korea,Amor Napoli,Food,Seoul,Fire-baked salt bread. Wood-fired. Crispy + chewy.,"bakery,salt bread",Flexible,37.5520,126.9220
+Korea,Belief Coffee Roasters,Food,Seoul,Apple cream bread — sells out instantly. Check baking schedule.,"bakery,coffee",Flexible,37.5540,126.9250
+Korea,Sokcho,DayTrip,Gangwon,Days 6-7. Gateway to Seoraksan National Park. Coastal city.,"itinerary,coastal",Day 10,38.2070,128.5918
+Korea,Seoraksan National Park,DayTrip,Gangwon,Dramatic mountain scenery. Day trip or overnight.,"nature,mountain,hiking",Day 10,38.1194,128.4656
+Korea,Gangneung,DayTrip,Gangwon,"Days 8-9. Beaches, historic homes. 2 hrs by KTX.","beach,historic,ktx",Day 11,37.7519,128.8760
+Korea,Gyeongju,DayTrip,N. Gyeongsang,"Days 10-12. Ancient temples, royal tombs. Korea's ancient capital.","ancient,temples,history",Day 12-13,35.8561,129.2245
+Korea,Busan,DayTrip,S. Gyeongsang,"Days 13-15. Seaside city, markets, beaches, parks.","beach,market,city",Day 10-11,35.1796,129.0756
+Korea,Hwangnyeongsan Beacon,DayTrip,Busan,Best viewpoint in Busan. Take Uber up. Burning red sunset city lights.,"viewpoint,busan,sunset",Flexible,35.1535,129.0755
+Korea,DMZ,DayTrip,Gyeonggi border,Demilitarized Zone tour. Book via Klook. Recommended last day.,"tour,history,klook",Day 13,37.9532,126.6612
+Korea,Nami Island,DayTrip,Gyeonggi,Day trip bookable on Klook.,"daytrip,nature",Day 9 (day trip),37.7916,127.5244
+Korea,Heyri Art Village,DayTrip,Gyeonggi,Half-day trip. Museums and Korean Folk Museum.,"art,museum,halfday",Day 9 (day trip),37.7660,126.7289
+Korea,Jeju Island,DayTrip,Jeju,Dreamy beach houses via LiveAnywhere. Side trip option.,"beach,island",Flexible,33.4996,126.5312
+Korea,The Air House Festival,Culture,Nami Island,"Eco-friendly house music festival in nature. May annually. 30+ friendly, kid/pet/vegan/foreigner-friendly. Sauna bus, yoga, live bands, disco aerobics, karaoke, camping. @the_airhouse","festival,music,30+,nami island",Flexible,37.7916,127.5244
+Korea,Cimer at Paradise City,Skincare,Incheon,Foreigner & tattoo-friendly spa complex near Incheon Airport. 100% stress-free jjimjilbang experience. Great pre/post-flight.,"jjimjilbang,tattoo-friendly,incheon,spa",Flexible,37.4959,126.4876
+Korea,숲속한방랜드 Forest Korean Bath,Skincare,Sinchon Seoul,Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest.,"jjimjilbang,sauna,sinchon,outdoor",Flexible,37.5550,126.9374
+Korea,아쿠아필드 Aquafield,Skincare,Goyang (suburban Seoul),Luxury jjimjilbang experience outside central Seoul. Worth the trip.,"jjimjilbang,luxury,suburban",Flexible,37.6650,126.7600
+Korea,Reclow Myeongdong Flagship,Shopping,Myeongdong Seoul,"Trendy affordable accessories — folding sunglasses, bags, rain boots. Open daily 10:30–23:00. 12 Myeong-dong 8-na-gil.","accessories,sunglasses,bags,myeongdong,affordable",Day 2,37.5605,126.9850
+Korea,Sam Sam Sam (쓰리쓰리쓰리),Food,Gwanghwamun Seoul,"American-style cozy bistro from Samcheong-dong, now in Gwanghwamun. Creative dishes only found in Korea. Naver: naver.me/Goivggyk","restaurant,bistro,gwanghwamun,creative",Flexible,37.5748,126.9769
+Korea,Kyobo Book Centre (교보문고),Culture,Gwanghwamun Seoul,"Korea's largest bookstore. K-stationery, stickers, music, unique souvenirs. Easy to lose hours here.","bookstore,souvenir,stationery,gwanghwamun",Day 9,37.5710,126.9769
+Korea,NYUNYU (뉴뉴),Shopping,Myeongdong Seoul,"Multi-story accessory heaven — thousands of earrings, necklaces, bags, hats at very affordable prices. Open late.","accessories,affordable,myeongdong,open late",Day 2,37.5628,126.9840
+Korea,Manhwa-bang / Comic Café (놀숲 Nolsoop),Culture,Hongdae Seoul,"Private pods with curtains, blankets, pillows. Order ramyeon to your pod. ~₩3,000–4,000/hr. Nolsoop (놀숲) & Beoltoon (벌툰) are the main chains. Near subway stations city-wide.","hidden gem,comic cafe,pods,manhwabang,relax",Flexible,37.5560,126.9236
+Korea,Yonghada Korean Medicine Clinic (용하다 한의원),Skincare,Myeongdong Seoul,"Myeongdong Station Exit 2. English/Japanese/Chinese/Spanish speaking. Cupping, acupuncture, ginseng injection, chuna therapy, facial lifting. Check-up ₩132,000. Healing Course C ₩242,000. @yonghadaclinic_en","clinic,acupuncture,cupping,ginseng,multilingual,myeongdong",Day 7-8,37.5608,126.9856
+Korea,Rolling Jay Hair Salon,Accommodation,Seoul,"Celebrity-level hair stylist. @rollingjay_siwon__ (women) & @rollingjay_siwon__men. Book via DM, Kakao ID: ruddo462, or Naver. naver.me/F9N4yI6L","hair salon,celebrity stylist,beauty,book via kakao",Flexible,37.5500,126.9250
+Korea,Vands Clinic Hongdae,Skincare,Hongdae Seoul,"Foreign-friendly clinic — rejuran, filler, botox. First stop for many on arrival. Also Myeongdong + Gangnam branches. @vands_myeongdong","clinic,rejuran,foreigner-friendly,hongdae",Day 3-4,37.5570,126.9220
+Korea,Vands Clinic Myeongdong,Skincare,Myeongdong Seoul,Foreign-friendly injectable clinic. Popular 30s crowd. @vands_myeongdong | Gangnam: @vands_myeongdong_gangnam_eng,"clinic,filler,botox,myeongdong",Day 2,37.5608,126.9856
+Korea,Eraser Clinic (Dr. Eraser),Skincare,Sinsa Gangnam Seoul,"Tune Liner — jawline contouring, no bruising, instant results. @dreraserclinic. Sinsa-dong Gangnam.","clinic,jawline,tune liner,gangnam",Day 7,37.5210,127.0220
+Korea,Inko Seoul (잉코서울),Skincare,Seoul,FREE skin analysis before Olive Young shopping. Skin age + type + 6 characteristics + customised routine. @inkoseoul_official,"skin analysis,free,olive young,routine",Day 7-8,37.5665,126.9780
+Korea,Jeil Grand Pharmacy (제일그랑약국),Skincare,Gangnam Seoul,Curated Korean pharmacy in Gangnam near clinics. @jeilgrand_pharmacy_global. Carries USOLAB + clinical skincare.,"pharmacy,gangnam,skincare",Day 7,37.5000,127.0250
+Korea,Olive Young — Free Skin Analysis,Skincare,Myeongdong Seoul,Free in-store skin analysis. Measurements + skin type + 6 characteristics + customised routine. Multiple Seoul locations.,"skin analysis,free,olive young,myeongdong",Day 7-8,37.5631,126.9858
+Korea,애리꼼닭발 (Aeri's Chicken Feet),Food,Wangsimni Seoul,"Viral spicy chicken feet. Wait ~1hr — grab ticket and come back. 📍3 Wangsimni-ro 22-gil, Doseon-dong, Seongdong-gu","restaurant,chicken feet,viral,local",Day 3-4,37.5597,127.0373
+Korea,Rain Report Café,Food,Seoul,Concept café where it rains 24/7 inside. Cosy any season. @rain.report,"cafe,concept,rain,unique",Day 3-4,37.5630,126.9830
+Korea,Korea Bakery World Cup Winner Bakery,Food,Daejeon,Bakery by Korea's Bakery World Cup team leader. Incredible textures and flavours. Day trip from Seoul.,"bakery,daejeon,world cup,day trip",Day 10 (day trip),36.3219,127.4194
+Korea,Scooper Gelato,Food,Seoul,Top trending café on Korean social media. @scooper_gelato,"cafe,gelato,trending",Day 3-4,37.5500,127.0400
+Korea,Pachamama Bakery,Food,Seoul,Trending café on Korean social media. @pachamama.bakery,"cafe,bakery,trending",Day 3-4,37.5540,126.9250
+Korea,House of Vinyl Yeonhui,Food,Yeonhui Seoul,Trending café. @houseofvinyl_yeonhui — Yeonhui near Hongdae.,"cafe,vinyl,yeonhui,trending",Day 3-4,37.5692,126.9201
+Korea,Crepeboy Seoul,Food,Seoul,Trending café. @crepeboyseoul,"cafe,crepe,trending",Day 3-4,37.5500,126.9220
+Korea,Friends and Yard,Food,Seoul,Trending café. @friends.and.yard,"cafe,trending",Day 3-4,37.5560,126.9250
+Korea,WAA Seoul,Food,Seongsu Seoul,Trending café on Korean social media. @waa.seoul,"cafe,trending,seongsu",Day 3-4,37.5450,127.0570
+Korea,Roofcat Cat Café Hongdae,Culture,Hongdae Seoul,Cat café in Hongdae. Admission includes unlimited self-serve tea + coffee. @roofcatme_hongdae,"cat cafe,hongdae,unique",Flexible,37.5570,126.9240
+Korea,Seoul Baseball (KBO League),Culture,Jamsil Seoul,"KBO baseball = full-on party. Beer, fried chicken, intense cheering. Nothing like it. DM @hungrypursuit 'SEOUL BASEBALL' for how to book.","baseball,kbo,party,jamsil,local",Day 2-3,37.5122,127.0719
+Korea,Workshop by Baskin Robbins,Culture,Nonhyeon-ro Gangnam Seoul,"World's first AI ice cream shop + lab. Flavours: wasabi, Cheetos, truffle. 📍201 Nonhyeon-ro, Gangnam. @baskinrobbinskorea","ice cream,ai,gangnam,unique",Day 7-8,37.5185,127.0340
+Korea,Jangsan Mountain Park (장산산림욕장),DayTrip,Busan,Very local park foreigners rarely visit. Walk or intense hike. Authentic Busan neighbourhood life.,"park,hiking,busan,local",Day 10-11,35.2100,129.1200
+Korea,Discover Seoul Pass,Transport,Seoul,"Multi-attraction + transit pass. Code KAY-SEOULPASS for ₩5,000 discount.","pass,transit,discount,tip",Flexible,37.5700,126.9820
+Korea,Lotte Hotel Seoul,Accommodation,Myeongdong Seoul,5-star hotel in Myeongdong. Great for first-timers. @lottehotelseoul,"hotel,5-star,myeongdong,luxury",Day 1-2,37.5637,126.9822
+Korea,JW Marriott Jeju,Accommodation,Jeju Island,Luxury hotel on Jeju. @JWmarriotjeju,"hotel,luxury,jeju,marriott",Day 12-13,33.2540,126.4120
+Korea,Eastern Medicine Hospital (한의원),Skincare,Seoul,"Traditional Korean medicine — cupping, herbal, acupuncture. Under $45/visit. Find via Naver Maps: 한의원","traditional medicine,cupping,acupuncture,affordable",Day 7-8,37.5560,126.9240
+Korea,Hair of Seoul,Skincare,Seoul,Hair clinic/salon. Cheaper than Turkey. @hairofseoul — DM/Kakao/Instagram for bookings.,"hair,salon,affordable",Flexible,37.5500,126.9820
+Korea,Park Jun Hair Salon (박준뷰티랩),Skincare,Seoul,15-step Korean hair spa. @parkjun2342 for booking.,"hair,salon,hair spa,luxury",Flexible,37.5560,126.9820
+Korea,Glowny,Shopping,Hannam Seoul,Contemporary independent boutique in Hannam-dong.,"boutique,hannam,fashion",Day 5-6,37.5350,127.0010
+Korea,Loeuvre (Hannam),Shopping,Hannam Seoul,Independent boutique in Hannam-dong.,"boutique,hannam",Day 5-6,37.5345,127.0015
+Korea,Folnua,Shopping,Hannam Seoul,Independent boutique in Hannam-dong.,"boutique,hannam",Day 5-6,37.5340,127.0020
+Korea,Muut,Shopping,Hannam Seoul,Independent boutique in Hannam-dong.,"boutique,hannam",Day 5-6,37.5345,127.0005
+Korea,Roman & You Seongsu,Shopping,Seongsu Seoul,Roman&You makeup Pink Office pop-up in Seongsu. @romandyou — check if running.,"popup,seongsu,makeup",Day 5-6,37.5445,127.0560
+Korea,Yonsei Pain Clinic,Skincare,Mapo Seoul,"@yonseian.painclinic — ANS test, X-ray, 3D AI posture, massage. Multiple creators for back/neck pain.","clinic,posture,back,neck",Day 7-8,37.5505,126.9250
+Korea,신사형통정형외과 Sinsa Hyeong Tong,Skincare,Sinsa Gangnam,"X-ray, treadmill body scan, posture analysis, back/neck treatment. Annual visits by one creator.","clinic,back,posture,gangnam",Day 7,37.5248,127.0198
+Korea,Stretch U Care,Skincare,Dogok Gangnam,"90-min full-body stretch. Completely resets you. @stretch_u_care_global. 📍408 510 Dogok-ro, Gangnam.","stretch,wellness,gangnam",Day 7,37.4967,127.0442
+Korea,Medione Medical Global,Skincare,Gangnam Seoul,Full body MRI scan. @medione_medical_global.,"mri,medical tourism,full body",Day 7-8,37.5000,127.0350
+Korea,Relieve Clinic,Skincare,Seoul,"Acne/breakout treatment. @relieve_clinic_ — 3rd visit, genuine use.","clinic,acne,breakout",Day 7-8,37.5580,126.9250
+Korea,APM Place (에이피엠),Shopping,Dongdaemun Seoul,"8-storey wholesale clothing. Open until 5am. Vendors ignore foreigners on wholesale floors — use Mimiline or NYUNYU inside instead (foreigner-friendly, card OK, tax-free).","shopping,wholesale,5am,dongdaemun",Day 9 (evening),37.5668,127.0085
+Korea,Tongin Market (통인시장),Food,Jongno Seoul,"Best street food. Coin-based tray system — exchange cash for coins, fill tray from multiple stalls. Solo-friendly. Near Gyeongbokgung.","market,streetfood,coins,jongno",Day 2,37.5793,126.9700
+Korea,Cheongnyangni Market,Food,Cheongnyangni Seoul,"Packed with locals, zero tourist energy. Deliberately hard to find on Google. DM @cutthelandline 'seoul eats' for exact address.","market,local,hidden,authentic",Day 9,37.5804,127.0479
+Korea,Chungmuro Neighbourhood,Neighbourhood,Jung-gu Seoul,"@dianainseoul recommends staying here. Between Myeongdong and Dongdaemun lines 3/4. Bustling, non-tourist, great transit hub.","neighbourhood,stay,transit,local",Day 1-2,37.5598,126.9973
+Korea,Bibiang Fragrances,Shopping,Hongdae Seoul,"Korean niche fragrance. Colline, Gureum, Rondo24 — Rondo24 is a repeat-buy. @bibiang_official","fragrance,rondo24,korean",Day 5-6,37.5500,126.9220
+Korea,Gentle Monster Flagship,Shopping,Apgujeong Seoul,Multi-storey Gentle Monster concept store. Art installation + eyewear experience.,"gentlemonster,flagship,art,eyewear",Flexible,37.5215,127.0266
+Korea,GOTO Mall Hongdae (고투몰),Shopping,Hongdae Seoul,"Underground mall beneath Hongdae. Affordable fashion, open late.","underground,mall,hongdae,affordable",Day 3-4,37.5563,126.9236
+Korea,Hyundai Seoul Department Store,Shopping,Yeouido Seoul,Curated Korean brands. Less touristy than Myeongdong stores.,"department store,yeouido,local brands",Day 6,37.5261,126.9269
+Korea,Tamburins Seongsu,Shopping,Seongsu Seoul,Korean fragrance + beauty brand. 📍316-7 Seongsu-dong 2-ga Seongdong-gu Seoul,"tamburins,fragrance,seongsu",Flexible,37.5448,127.0566
+Korea,Elorea,Shopping,Hannam Seoul,Korean niche fragrance. 📍737-1 Hannam-dong Yongsan-gu Seoul,"fragrance,hannam",Day 5-6,37.5335,127.0013
+Korea,Youssoful Hannam,Shopping,Hannam Seoul,Korean niche fragrance boutique. 📍744-4 Hannam-dong Yongsan-gu Seoul,"fragrance,hannam",Day 5-6,37.5340,127.0025
+Korea,Cosmic Mansion,Shopping,Jongno Seoul,Korean niche fragrance. 📍153-1 Changseong-dong Jongno-gu Seoul,"fragrance,jongno",Day 2,37.5793,126.9745
+Korea,Nonfiction Seongsu,Shopping,Seongsu Seoul,Korean niche fragrance. 📍16-33 Seongsu-dong 1-ga Seongdong-gu Seoul,"fragrance,seongsu",Day 5-6,37.5440,127.0555
+Korea,COMPILE,Culture,Hongdae Seoul,Nightlife venue. @01compile,"bar,nightlife,hongdae",Evenings,37.5578,126.9211
+Korea,ZuhZuh (저저),Culture,Hongdae Seoul,Bar/nightlife. @zuhzuh.kr,"bar,nightlife,hongdae",Evenings,37.5560,126.9198
+Korea,라스트춘선 홍대,Culture,Hongdae Seoul,Bar in Hongdae. @lastchunsun_hongdae,"bar,nightlife,hongdae",Day 4 (night),37.5555,126.9205
+Korea,Bar Eum,Culture,Hongdae Seoul,Bar/music venue. @ongroundmusicbar,"bar,music,nightlife",Evenings,37.5560,126.9215
+Korea,HIGHWAY Men's Hair,Skincare,Hongdae Seoul,Men's hair salon. @highway_menshair,"hair,salon,men,hongdae",Flexible,37.5558,126.9222
+Korea,Buramsan Mountain (불암산),DayTrip,Nowon Seoul,Best sunset viewpoint in Seoul per a Korean local. 40min hike. 📍Deokneung-ro 94-gil 73. Transit: Sanggye Station Exit 1.,"hiking,sunset,viewpoint,local,nature",Day 8,37.6580,127.0980
+Korea,Body + Color Analysis,Culture,Gangnam Seoul,"Personal style analysis — body type, color season, what collar/cut suits you. Book via Gangnam stylists/clinics.","style,color analysis,body type,personal",Day 7-8,37.5260,127.0280
+Korea,Gyeongdong Market,Culture,Jongno Seoul,"Walking tour with local guide @wookeunshin. Authentic neighbourhood market, Korean BBQ, real Seoul history. Much less touristy than Gwangjang.","market,tour,bbq,local guide,history",Flexible,37.5740,127.0230
+Korea,Spa Gogyeol (스파고결),Skincare,Seoul,"Korean lymphatic drainage facial — they absolutely snatch you up here. Immediate, intense results.","spa,facial,lymphatic drainage,skincare",Flexible,37.5665,126.9780
+Korea,Yonsei AN Pain Clinic,Skincare,Seoul,Non-skincare health assessment — full body wellness evaluation. Worth doing if interested in Korean medical tourism beyond aesthetics.,"medical,health,wellness,clinic",Flexible,37.5575,126.9368
+Korea,Seoul Menswear Spots (@rogerwh0),Shopping,Seoul,Best men's clothing spots in Seoul — includes Llege Official. Strong list from a creator who goes twice a year.,"menswear,fashion,shopping,korean brands",Flexible,37.5563,126.9236
+Korea,Salt Bread — Jayeondo Sogeumppang,Food,Seoul,"The original salt bread — buttery and crisp, nothing like the name implies. Will ruin you for other bread.","bread,bakery,must eat,salt bread",Flexible,37.5665,126.9780
+Korea,National Museum of Korea,Culture,Yongsan Seoul,"Free entry, world-class collection. Top 9 treasures worth seeing. Underrated by tourists who skip for palaces.","museum,history,free,culture",Day 5,37.5235,126.9801
+Korea,Alpaca World,DayTrip,Gangwon-do,Magical afternoon with alpacas in Gangwon-do. Perfect escape from Seoul in a mountain setting.,"alpacas,day trip,nature,gangwon",Flexible,37.7318,127.7195
+Korea,Gangnam Kyoja (강남교자),Food,Gangnam Seoul,Perennial favourite revisited twice a year. Known for kalguksu and mandu. Always worth the wait.,"noodles,mandu,gangnam,local favourite",Flexible,37.5048,127.0245
+Korea,Ttareungyi Seoul Public Bike,Transport,Seoul,"Seoul public bike — 'Seoul Bike' app, ~₩1,000 per rental, international cards OK. 1-hour hack: return within the hour for flat rate.","bike,transport,cheap,tip",Flexible,37.5665,126.9780
+Korea,Eunpyeong Hanok Village,Culture,Eunpyeong Seoul,"Free premium hanbok rental (1.5hrs) at Neonadeuri Center — skip expensive Bukchon rentals. Hidden, far less crowded. Walk-in works.","hanbok,hanok,hidden,local tip",Day 9,37.6355,126.9326
+Korea,Namsan Sky Forest Trail,DayTrip,Namsan Seoul,"Easy paved trail to N Seoul Tower — bus takes you to the start. Great for dates, solo runs, families. Go in the morning.","hiking,namsan,trail,nature",Flexible,37.5513,126.9882
+Korea,Discover Seoul Pass,Transport,Seoul,"Best tourism pass for Seoul. Code SYLVIA-SEOULPASS for ₩5,000 off. Covers major attractions and transport.","pass,tip,transport,discount",Day 1,37.5665,126.9780
+Korea,Vinyl Bar Circuit — Seoul,Culture,Seoul,"Bars playing vinyl records or scheduled DJs: Silly Aperitivo, Osem Seoul, Culsec Seoul, Nega Iso, Hills and Europa, FFF Samgakji.","vinyl,bars,music,nightlife",Evenings,37.5665,126.9780
+Korea,Noryangjin Fish Market,Food,Noryangjin Seoul,Better than Gwangjang according to locals — crispy fried peppers and fresh seafood you will still be thinking about.,"fish market,seafood,noryangjin,local tip",Flexible,37.5138,126.9413
+Korea,Bukhansan Mountain Hike,DayTrip,Bukhansan Seoul,Challenging hike with stunning views over Seoul. Budget a full day. One of the best outdoor experiences within the city limits.,"hiking,bukhansan,nature,day trip",Flexible,37.6592,126.9772
+Korea,Unni Guide Clinic Center,Skincare,Gangnam Seoul,Korean-local pricing guaranteed (4M+ reviews via Unni app). Free Anua gift set when booking ahead. 498 Gangnam-daero.,"clinic,skincare,gangnam,medical tourism,local pricing",Flexible,37.5004,127.0246
+Korea,Jeju Island,DayTrip,Jeju,"The Hawaii of Korea — volcanic landscapes, citrus orchards, black sand beaches. Stay in Aewol (west/sunset) or Hallim (beach). Seongsan sunrise, Hallasan hike, Udo Island day trip.","jeju,island,nature,day trip,hiking",Flexible,33.4996,126.5312
+Korea,AREX All-Stop Train — Incheon,Transport,Incheon,"Take the All-Stop (not Express): 66 min, ₩4,950, stops at Hongdae where most travelers stay. Express is 43 min to Seoul Station only.","airport,transport,arex,tip,incheon",Day 1,37.4562,126.7052
+Korea,Hwangnyeong-san Lookout — Busan,DayTrip,Busan,"Best single thing to do in Busan — Hwangnyeongsan Beacon (황령산 봉수대). Uber most of the way up, short walk to the lookout. ★ Top pick.","busan,hiking,viewpoint,★ top pick",Flexible,35.1410,129.0498
+Korea,Gonlun Mountain Hang Gliding — Pohang,DayTrip,Pohang,Gollyunsan Mountain hang gliding site. Unique activity outside the Seoul/Busan circuit.,"pohang,hang gliding,adventure,day trip",Flexible,36.1022,129.3868
+Korea,Seoul Medical Tourism Circuit,Skincare,Gangnam Seoul,"Full cost breakdown with no gatekeeping: Yonsei AN Pain Clinic, Medione Full Body MRI Scan, V&S Clinic Global (Rejuran, Juvelook, Thermage).","medical tourism,rejuran,thermage,gangnam,skincare",Flexible,37.5004,127.0246
+Korea,ACME DE LA VIE Seongsu Showroom,Shopping,Seongsu,Premium Korean streetwear showroom,seongsu,Day 5-6,37.5447,127.0558
+Korea,AREX Train — Incheon to Seoul,Transport,Incheon,"Two trains from airport: Express (43 min, ₩11,000, Seoul Station only) vs All-Stop (66 min, ₩4,950, stops at Hongdae). Most solo travelers should take the All-Stop to Hongdae.",,Day 1,37.4562,126.7052
+Korea,Abijou Hongdae Branch,Skincare,Hongdae,Less crowded than Myeongdong branch; less personal but still good service,hongdae,Day 3-4,37.5559,126.9231
+Korea,Abijou Myeongdong Branch (명동점),Skincare,Myeongdong,Affordable skin clinic; great for foreigners; busy but personal care; also has Hongdae branch,,Day 2,37.5631,126.9858
+Korea,Amor Napoli (아모르나폴리),Food,Seoul,Fire-baked salt bread (화덕 소금빵); crispy outside chewy inside; wood-fired,,Flexible,37.5665,126.978
+Korea,Apgujeong (압구정),Neighbourhood,Seoul,Worksout streetwear store located here (mentioned in comments),,Day 7-8,37.527,127.0286
+Korea,Archive PKE,Shopping,Shinsegae Gangnam 5F,Street casual Korean brand,gangnam,Day 7-8,37.4979,127.0276
+Korea,Avekcheri,Food,Seoul,Trending café. @avekcheri,,Day 3-4,37.5665,126.978
+Korea,Beaker Seongsu Flagship Store,Shopping,Seongsu,Multi-brand select shop,seongsu,Day 5-6,37.5447,127.0558
+Korea,Beglowny,Shopping,Shinsegae Gangnam 5F,Romantic and stylish — popular with young Koreans,gangnam,Day 7-8,37.4979,127.0276
+Korea,Belief Coffee Roasters (빌리프커피로스터스),Food,Seoul,Apple cream bread — sells out instantly; pastry with custard cream and crunchy apple; check baking times before visiting,,Flexible,37.5665,126.978
+Korea,Bibiang Fragrances (비비앙),Shopping,Seoul,"Korean niche fragrance brand. Flagship carries Colline, Gureum, and Rondo24 — Rondo24 specifically called a repeat-buy. @bibiang_official.",,Day 5-6,37.5665,126.978
+Korea,Bijeonstrol Yeonhui Roastery (비전스트롤 연희로스터리),Food,Yeonhui Seoul,Seasonal toast with butter and jam; coffee pairing,,Flexible,37.568,126.922
+Korea,Blue Elephant Seongsu Flagship,Shopping,Seongsu,Flagship concept space,seongsu,Day 5-6,37.5447,127.0558
+Korea,Body + Color Analysis Korea,Skincare,Seoul,"Highly recommended experience — tells you exact body/color type and what styles, collar shapes, suit jacket vents suit you. Results can change over time with complexion. Book via Korean clinics or sty",,Day 7-8,37.5665,126.978
+Korea,Brownyard,Shopping,Shinsegae Gangnam 8F,Between basic and trendy; comfy everyday items,gangnam,Day 7-8,37.4979,127.0276
+Korea,Busan (부산),DayTrip,South Gyeongsang,Days 13–15 on 2-week Korea itinerary; seaside city; markets; beaches; parks,busan,Day 10-11,35.1796,129.0756
+Korea,Busan — Hwangnyeong-san Lookout,DayTrip,Busan,"Hwangnyeongsan Beacon (황령산 봉수대) — grab an Uber most of the way up, then a short walk to the lookout. Book Uber 10-15 mins before you want to leave. Best single thing to do in Busan.",busan,Flexible,35.141,129.0498
+Korea,Cat & F (캣앤에프),Food,Seoul,Corn-shaped corn salt bread; Gangwon corn cream filling,,Flexible,37.5665,126.978
+Korea,Central Park Hotel Songdo,Accommodation,Incheon Songdo,'SO PEAK and cheap' for Incheon/Songdo visits. @central_park_hotel_songdo. Great if visiting Songdo as a day trip or arriving/departing from Incheon.,,Day 1,37.3832,126.6568
+Korea,Cheongnyangni Market (청량리역 시장),Food,Cheongnyangni Seoul,Packed with Koreans of all ages — zero tourist energy. Caption deliberately vague (doesn't even name it). DM @cutthelandline 'seoul eats' for exact address.,,Day 9,37.58,127.0472
+Korea,Chester Travel Chingu — Custom Itinerary,Culture,Seoul,Personalised Seoul itinerary planning service — good option if you want a guide tailored to past trips rather than a generic list.,,Flexible,37.5665,126.978
+Korea,Chungmuro Neighbourhood Tip,Neighbourhood,Chungmuro Seoul,@dianainseoul recommends staying in Chungmuro — between Myeongdong and Dongdaemun on lines 3/4. Bustling but non-tourist. Good transit hub for both sides of the city.,,Day 1-2,37.5607,126.9943
+Korea,Citybreeze Seoul Flagship,Shopping,Hannam,Seoul lifestyle concept store,hannam,Day 5-6,37.534,126.994
+Korea,Customellow Seongsu Prints,Shopping,Seongsu,Custom prints concept store,seongsu,Day 5-6,37.5447,127.0558
+Korea,DNA Skin Clinic (@dnaskin12 / @dnaskin_lab),Skincare,Seoul,Skin treatments; microneedling; RF; airjet; English-speaking; visited 6+ times by poster,,Day 7-8,37.5665,126.978
+Korea,DUNST,Shopping,Shinsegae Gangnam 5F,Trendy understated daily wear,gangnam,Day 7-8,37.4979,127.0276
+Korea,Discover Seoul Pass (June promo),Transport,Seoul,"Multi-attraction pass. June promo code GENESIA-SEOULPASS for extra ₩5,000 off. Covers: Lotte World, N Seoul Tower, Nami Island, Gyeongbokgung + Hanbok, Seoul Aquarium, Realworld Seongsu.",,Flexible,37.5665,126.978
+Korea,Discover Seoul Pass (code SYLVIA-SEOULPASS),Transport,Seoul,"Best tourism pass for Seoul — ₩5,000 off with code SYLVIA-SEOULPASS (valid to June 2026). Covers major attractions + transport.",,Day 1,37.5665,126.978
+Korea,Double Lovers Seongsu Flagship,Shopping,Seongsu,Flagship concept store,seongsu,Day 5-6,37.5447,127.0558
+Korea,Emis,Shopping,Shinsegae Gangnam 8F,Famous for stylish hats; modern women's clothing,gangnam,Day 7-8,37.4979,127.0276
+Korea,Euljiro (을지로),Neighbourhood,Seoul,Walkable from Myeongdong; cool spots; mentioned as great area to stay,,Day 1-2,37.564,126.995
+Korea,Fenek Hongdae Showroom,Shopping,Hongdae,Independent Korean brand showroom,hongdae,Day 3-4,37.5559,126.9231
+Korea,Gangnam (강남),Neighbourhood,Seoul,Upscale area; Shinsegae Gangnam department store 5th & 8th floor for Korean fashion brands,gangnam,Day 7-8,37.4979,127.0276
+Korea,Gangneung (강릉),DayTrip,Gangwon,Days 8–9 on 2-week Korea itinerary; beaches; historic homes; nature; 2 hrs from Seoul by KTX,,Day 11,37.7519,128.8762
+Korea,Gentle Monster Multi-Floor Flagship,Shopping,Seoul,Multi-storey Gentle Monster concept store. @gentlemonster — get the full art installation + eyewear experience.,,Day 5-6,37.5447,127.0558
+Korea,Glasses / Optical shops,Transport,Seoul (any area),Get new glasses in 10 minutes. No reservation or prescription needed. Much cheaper than home. Any optical shop works — look for them near major streets.,,Flexible,37.5665,126.978
+Korea,Granhand (그랑핸드),Shopping,Hanok Village Seoul,Custom perfumery; choose scent and personalise label with your name; multiple locations; Hanok Village branch most atmospheric,,Day 5-6,37.578,126.984
+Korea,Granhand Marine Orchid fragrance,Shopping,Hanok Village Seoul,Granhand Marine Orchid — specifically called out as a standout fragrance in the lineup. @granhand_official,,Day 5-6,37.578,126.984
+Korea,Gwangjang Market (광장시장),Food,Seoul,Steps from a featured loft rental (LiveAnywhere); iconic traditional market,,Day 9,37.57,127.0088
+Korea,Gyeongdong Market (Walking Tour with @wookeunshin),Culture,Jongno Seoul,"Walking tour of Gyeongdong market with local guide Wook Eun Shin. Authentic neighbourhood market, Korean BBQ, and real Seoul history. Much less touristy than Gwangjang.",,Flexible,37.574,127.023
+Korea,Gyeongju (경주),DayTrip,North Gyeongsang,Days 10–12 on 2-week Korea itinerary; ancient temples; royal tombs; mossy paths; history,,Day 12-13,35.8562,129.2247
+Korea,HATCHINGROOM Seongsu,Shopping,Seongsu,Independent Korean brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,Hannam (한남),Neighbourhood,Seoul,Tied for coolest neighbourhood; upscale boutiques; Citybreeze Seoul; Fucking Awesome Seoul; Mardi Mercredi,hannam,Day 5,37.534,126.994
+Korea,Hanok Village (한옥마을),Culture,Seoul,Location of Granhand perfumery; winding historic streets; souvenir shopping,,Day 14,37.5779,126.9844
+Korea,Hongdae (홍대),Neighbourhood,Seoul,#3 area to stay — nightlife; restaurants; ÅLAND and MUSINSA flagship stores; younger crowd,hongdae,Day 3,37.5563,126.9236
+Korea,Hwangnyeongsan (황령산),DayTrip,Busan,Hwangnyeongsan Beacon 황령산봉수대 — best view in Busan; take Uber most of the way up; sunset city lights,busan,Day 10-11,35.141,129.0498
+Korea,INSILENCE Seongsu Flagship,Shopping,Seongsu,Korean streetwear brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,Ikovo Coffee Studio,Food,Seoul,Trending café. @ikovoxcoffeestudio,,Day 3-4,37.5665,126.978
+Korea,Incheon Immigration Queue Skip,Transport,Incheon,@phatlifeproject's hack to clear Incheon immigration in 15 min instead of 1–1.5hrs.,,Day 1,37.4696,126.4502
+Korea,Incheon International Airport,Transport,Incheon,Take Airport Limousine bus — best way into Seoul from airport; also has Smart Pass facial recognition to skip queues,,Day 1,37.4696,126.4502
+Korea,Insadong (인사동),Neighbourhood,Seoul,Shopping and cultural area; mentioned as activity in Seoul itinerary; Granhand perfumery nearby (Hanok Village),,Day 1-2,37.574,126.988
+Korea,Itaewon (이태원),Neighbourhood,Seoul,Expat-friendly area; Citybreeze Seoul Flagship; Fucking Awesome Seoul; Mardi Mercredi,,Flexible,37.534,126.994
+Korea,Jeju (제주),DayTrip,Jeju,Mentioned as alternative itinerary stop; dreamy beach houses via LiveAnywhere platform,jeju,Day 12-13,33.4996,126.5312
+Korea,Jeju Coastal Itinerary,DayTrip,Jeju,"Hidden coastlines, dreamy cafes, volcanic views. Designed around the parts of Jeju that feel unreal.",jeju,Flexible,33.4996,126.5312
+Korea,Jeju Hiking Trail,DayTrip,Jeju,Essential Jeju outdoor activity — volcanic hiking. Add this to any Jeju itinerary.,jeju,Flexible,33.4996,126.5312
+Korea,Jeju — Full Guide (@jun_hanok),DayTrip,Jeju,"Deep dive Jeju guide: stay in Aewol (west, sunset side) or Hallim/Hyeopjae (beach, quieter). Hike Hallasan, sea kayak Hamdeok, drive the Olle Trail.",jeju,Flexible,33.4996,126.5312
+Korea,Jeju — Waterfalls & Highlights,DayTrip,Jeju,"Oeadolgae Rock, Cheonjiyeon & Jeongbang Waterfalls in Seogwipo, Daepo Jusangjeolli Cliff, Camellia Hill Botanical Garden, Seongsan Ilchulbong sunrise peak.",jeju,Flexible,33.4996,126.5312
+Korea,Jjimjilbang Tip — Modern Busan,Skincare,Busan,@anj.mejia_ — jjimjilbang described as the most therapeutic thing. Modern version in Busan recommended over traditional. Search 찜질방 in Naver Maps when in Busan.,busan,Day 10-11,35.1796,129.0756
+Korea,Joa Pilates (@joapilates),Skincare,Seoul,Ear seeding / ear therapy treatment; book via IG DM; uses @byava products,,Day 7-8,37.5665,126.978
+Korea,Jongno (종로),Neighbourhood,Seoul,#1 area to stay for first-timers — real Korea vibe; transit hub; historic,,Day 1-2,37.57,126.9782
+Korea,Joygryson,Shopping,Shinsegae Gangnam 5F,Simple chic women's workwear,gangnam,Day 7-8,37.4979,127.0276
+Korea,Korea Apps Guide,Transport,Seoul,"@haeinholi's guide to apps you actually need in Korea. Key tip: get an eSIM with a Korean phone number — needed for food delivery apps, restaurant waitlists, and booking confirmations.",,Day 1,37.5665,126.978
+Korea,Korea Bakery World Cup Winner's Bakery,Food,Daejeon,Bakery run by team leader of Korea's Bakery World Cup winning team. Incredible textures and flavours. Worth a day trip from Seoul.,,Day 10 (day trip),36.3504,127.3845
+Korea,Korean Pantry Souvenirs,Shopping,Supermarkets across Seoul,"Must-buy: Sesame oil (참기름), rice syrup (조청), plum extract (매실청), coin broth (코인육수). Available at E-mart / Lotte Mart / Homeplus. Premium versions at department stores and traditional markets.",,Day 14,37.5665,126.978
+Korea,Korean Travel Apps,Transport,Seoul,"Apps that actually work for navigating Korea: covers transport, maps, translation tools.",,Day 1,37.5665,126.978
+Korea,Leedorim Seoul,Food,Seoul,Trending café. @leedorim.seoul,,Day 3-4,37.5665,126.978
+Korea,LiveAnywhere Korea (@liveanywhere.korea),Accommodation,Nationwide (Seoul + Jeju),Short-term rental app for stays 1 week+; loft near Gwangjang Market featured; also Jeju beach houses,jeju,Day 12-13,37.5665,126.978
+Korea,Lookast,Shopping,Shinsegae Gangnam 8F,Street and modern mix; younger crowd,gangnam,Day 7-8,37.4979,127.0276
+Korea,MUSINSA EMPTY Seongsu,Shopping,Seongsu,Curated MUSINSA concept space,seongsu,Day 5-6,37.5447,127.0558
+Korea,Maison Loeuvre,Shopping,Shinsegae Gangnam 5F,Most famous Korean bag brand; minimal and elegant,gangnam,Day 7-8,37.4979,127.0276
+Korea,Manhwa-bang / Comic Book Café,Culture,Seoul (near subway stations),"Private pods with curtains, blankets, pillows, leg massagers. Order ramyeon/tteokbokki to your pod. ~₩3,000–4,000/hr. Chains: Nolsoop (놀숲) and Beoltoon (벌툰). Package deal = 1hr + drink best value.",,Flexible,37.5665,126.978
+Korea,Mardi Mercredi (Gangnam),Shopping,Shinsegae Gangnam 8F,Casual creative standout designs,gangnam,Day 7-8,37.4979,127.0276
+Korea,Mardi Mercredi (Hannam),Shopping,Hannam,Casual creative Korean brand; also in Shinsegae Gangnam,hannam,Day 5-6,37.534,126.994
+Korea,Mijainseoul Naver Map,Culture,Seoul (citywide),"Curated Naver Map of ALL Mija's Seoul recommendations — restaurants, spas, shops. Direct link: naver.me/FNtroVSQ",,Flexible,37.5665,126.978
+Korea,Miseki Seoul,Shopping,Seoul,Korean designer boutique,,Flexible,37.5665,126.978
+Korea,Myeongdong (명동),Neighbourhood,Seoul,#2 area to stay — safe for night walks; street food; L7 Hotel rooftop; airport bus stop; close to Namdaemun market,,Day 1-2,37.5631,126.9858
+Korea,NOMANUAL Flagship Store,Shopping,Seongsu,Elevated Korean streetwear; highly rated by poster,seongsu,Day 5-6,37.5447,127.0558
+Korea,NOT4NERD Seongsu Flagship,Shopping,Seongsu,Eyewear and accessories brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,Nami Island (남이섬),DayTrip,Gyeonggi,Bookable day trip via Klook,,Day 9 (day trip),37.7913,127.5139
+Korea,Namsan,Culture,Seoul,Close to featured rental loft; mentioned as central landmark,,Flexible,37.5513,126.9882
+Korea,ODLYWORKSHOP,Shopping,Seoul,Independent workshop concept store,,Flexible,37.5665,126.978
+Korea,Optima Wellness Museum Pharmacy (@owm.pharm.official),Skincare,Gangnam area,Near Gangnam; pharmacy-style skincare treatments,gangnam,Day 7,37.5004,127.0246
+Korea,RAWROW Worldwide Seoul,Shopping,Seongsu,Bag and accessories brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,Recto,Shopping,Shinsegae Gangnam 8F,Sleek office and casual unisex,gangnam,Day 7-8,37.4979,127.0276
+Korea,Relieve Clinic (릴리브 클리닉),Skincare,Seoul,Acne/breakout treatment clinic. @relieve_clinic_ — 3rd visit review = genuine use. Bundle treatment for active breakouts.,,Day 7-8,37.5665,126.978
+Korea,Rest & Recreation Seongsu,Shopping,Seongsu,Streetwear concept store,seongsu,Day 5-6,37.5447,127.0558
+Korea,Rockfish,Shopping,Shinsegae Gangnam 8F,Trendy accessories and casual wear,gangnam,Day 7-8,37.4979,127.0276
+Korea,Roman & You Seongsu (로맨드유),Shopping,Seongsu Seoul,Roman&You makeup brand's pop-up Pink Office in Seongsu. @romandyou — worth a visit if the pop-up is running.,seongsu,Day 5-6,37.5447,127.0558
+Korea,Roofcat Cat Café (루프캣),Culture,Hongdae Seoul,Cat café in Hongdae. Admission includes unlimited self-serve tea and coffee. Snacks available to feed cats. @roofcatme_hongdae,hongdae,Day 3-4,37.5559,126.9231
+Korea,Révdou (레브두),Food,Seoul,Moon croissant — multi-layer vanilla tahiti cream croissant; very popular,,Flexible,37.5665,126.978
+Korea,Salt Bread (소금빵) — Jayeondo,Food,Seoul,"The real salt bread — buttery and crisp, nothing like the name implies. Jayeondo Sogeumppang (자연도소금빵) is the original. Will ruin you for other bread.",,Flexible,37.5665,126.978
+Korea,Sandbeige,Shopping,Shinsegae Gangnam 8F,Soft tones; minimal aesthetics; great basics,gangnam,Day 7-8,37.4979,127.0276
+Korea,Scooper Gelato (스쿠퍼젤라또),Food,Seoul,Top trending café on Korean social media. @scooper_gelato,,Day 3-4,37.5665,126.978
+Korea,Seongsu (성수),Neighbourhood,Seoul,Coolest neighbourhood in Seoul (tied with Hannam & Yeonam); packed with concept stores and flagship boutiques,seongsu,Day 5,37.5447,127.0558
+Korea,Seoul Cafe Circuit (@minywander),Culture,Seoul,6 curated cafes worth visiting in Seoul — all vetted by a regular visitor.,,Flexible,37.5665,126.978
+Korea,Seoul Day Trips Planning Guide,DayTrip,Seoul,Key insight: plan day trips by distance and transit time or you'll waste hours. Framework for adding the right trips without over-scheduling.,,Flexible,37.5665,126.978
+Korea,Seoul Menswear Shopping Circuit (@rogerwh0),Shopping,Seoul,Best men's clothing spots in Seoul according to @rogerwh0 — includes Llege Official among others.,,Flexible,37.5665,126.978
+Korea,Seoul Vinyl Bar Circuit (@riyaplam),Culture,Seoul,"Bars that play vinyl records or have DJs: Silly Aperitivo, Osem Seoul, Culsec Seoul, Nega Iso, Hills and Europa, FFF Samgakji.",,Evenings,37.5665,126.978
+Korea,Seoulistique Skin (@seoulistique.skin),Skincare,Aeogae (애오개),Skin analysis + 8-step Astrodome facial; glowing results; book via DM,,Day 7-8,37.55,126.96
+Korea,Shinsegae Gangnam,Shopping,Gangnam,5th & 8th floors have 15 Korean fashion brands local Seoulites shop at instead of Myeongdong,gangnam,Day 7-8,37.4979,127.0276
+Korea,Sinchon (신촌),Neighbourhood,Seoul,Near Hongdae; cheaper food and great bars; recommended as underrated area,,Day 4 (night),37.5596,126.9368
+Korea,Skip Myeongdong,Culture,Myeongdong Seoul,"You will simply never catch them in Myeongdong again — skip it, spend that time elsewhere.",,Flexible,37.5631,126.9858
+Korea,Sokcho (속초),DayTrip,Gangwon,Days 6–7 on 2-week Korea itinerary; coastal city near Seoraksan,,Day 10,38.207,128.5918
+Korea,TETO Objet Seongsu,Shopping,Seongsu,Lifestyle and objet concept store,seongsu,Day 5-6,37.5447,127.0558
+Korea,THREE TO EIGHTY,Shopping,Seongsu,Korean designer multi-brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,TREEMINGBIRD Seongsu Store,Shopping,Seongsu,Korean casual brand,seongsu,Day 5-6,37.5447,127.0558
+Korea,Tamburins Flagship Seongsu,Shopping,Seongsu Seoul,Korean fragrance + beauty brand flagship. 📍316-7 Seongsu-dong 2(i)-ga Seongdong-gu Seoul.,seongsu,Day 5-6,37.5447,127.0558
+Korea,Tennat,Shopping,Shinsegae Gangnam 5F,Modern sleek bag brand,gangnam,Day 7-8,37.4979,127.0276
+Korea,The Truffle Bakery (더트러플베이커리),Food,Seoul,Tissue bread — peel-apart crispy outside fluffy inside,,Flexible,37.5665,126.978
+Korea,Till.idie,Shopping,Shinsegae Gangnam 8F,Hip streetwear; hoodies and tees a must,gangnam,Day 7-8,37.4979,127.0276
+Korea,Umer,Shopping,Shinsegae Gangnam 5F,Minimal stylish women's clothing,gangnam,Day 7-8,37.4979,127.0276
+Korea,Weave Living — Weave Suite Seoyu Parkside,Accommodation,Seoyu (선유),Premium serviced apartment; steps from Seoyu Station; Han River terrace view; co-working space; yoga studio; golf range; weekly housekeeping,,Day 1,37.531,126.8961
+Korea,Weave Suites Sunyu Parkside,Accommodation,Seoyu Seoul,Confirmed great stay. @weave_suites via @liveanywhere.korea @liveanywhere.me. Serviced apartment with Han River views.,,Day 1,37.531,126.8961
+Korea,Worksout,Shopping,Apgujeong,Streetwear store in Apgujeong — recommended in comments,,Day 7-8,37.527,127.0286
+Korea,Yeonam (연남),Neighbourhood,Seoul,Tied for coolest neighbourhood — quieter alternative to Hongdae; cafés and local restaurants,,Day 3,37.565,126.927
+Korea,Yonsei Pain Clinic (연세안통증클리닉),Skincare,Seoul,"@yonseian.painclinic — ANS test, X-ray, 3D AI posture analysis, massage/physical therapy. Multiple saves pointing here. Specialists in back/neck pain. Reached out to creators for sponsored reviews but",,Day 7-8,37.5575,126.9368
+Korea,thisisneverthat Seongsu Flagship,Shopping,Seongsu,Korean streetwear — top brand discovered in Korea per comments,seongsu,Day 5-6,37.5447,127.0558
+Korea,라스트춘선 홍대 (Last Chunseon Hongdae),Culture,Hongdae Seoul,Bar in Hongdae. @lastchunsun_hongdae — in @shoutoutluka's verified Seoul nightlife list.,hongdae,Day 4 (night),37.5559,126.9231
+Korea,숲속한방랜드 (Forest Korean Bath),Culture,Sinchon Seoul,Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest location.,,Day 3-4,37.5596,126.9368
+Korea,신사형통정형외과 Sinsa Hyeong Tong Clinic,Skincare,Sinsa Gangnam Seoul,"X-ray, body scan on treadmill, posture/balance analysis, back and neck treatment. Used by @reikim.artist who returns annually for back treatment post-childbirth.",gangnam,Day 7,37.5171,127.021
+Korea,Yonsei AN Pain Clinic (Back/Spine),Skincare,Seoul,"Manual massage therapy + physical therapy for chronic back pain. @yonseian.painclinic reached out to creator @jiragn — placebo or not, she felt better. Worth checking out for injury rehab.","clinic,back pain,physical therapy,wellness",Flexible,37.5575,126.9368
+Korea,Seoul Donut Spot,Food,Seoul,Creator @bridgetteugarte called this one of the best bites of her life. Exact location unclear from caption — search the creator's page for the pin.,"donuts,must eat,seoul",Flexible,37.5665,126.978
+Korea,Namdaemun Market — Shopping Guide,Shopping,Namdaemun Seoul,"Korea travel tips for non-K-pop fans: kitchenware market (unique pottery at wholesale), baby/kids fashion street from Hoehyeon Station Exit 6, fashion accessories wholesale. Most street shops in Korea source from here. @mijainseoul's guide.","namdaemun,market,wholesale,kitchenware,fashion accessories",Flexible,37.5589,126.9778
+Korea,Seoul Shopping Neighbourhoods — @kaynamiee,Shopping,Seoul,"Three neighbourhoods worth returning to: Hannam-dong (uptown Hannam = quieter, curated, wander-worthy), Seongsu-dong (go even if crowded — new places keep opening), and a third. @kaynamiee's personal list.","shopping,hannam,seongsu,neighbourhood guide",Flexible,37.534,126.994
+Korea,Seoul Hot Spots — One-Sentence Guide,Culture,Seoul,@karenyuu_ summarizes every major Seoul area in one sentence each. Good orientation resource for first-timers.,"guide,areas,overview,seoul",Flexible,37.515,127.0165
+Korea,Korea Travel Tips — Chungmuro & Gangnam (@dianainseoul),Culture,Yeonam Seoul,Practical Korea travel tips from @dianainseoul — covers Chungmuro and Gangnam Unni area.,"tips,chungmuro,gangnam,practical",Flexible,37.5595,126.9248
+Korea,Always August Cafe (alwaysau8ust),Food,Seoul,Cozy cafe popular for all-day hangouts. Creator @nadiaxcoffee spends all day and night here. Tag: @alwaysau8ust on Instagram.,"cafe,all-day,seoul",Flexible,37.5665,126.978
+Korea,AK Plaza Hongdae — Anime Shopping,Shopping,Hongdae Seoul,"Multi-floor anime shopping destination in Hongdae — Animate, character stores, official collabs. Good spot for One Piece, K-anime merch. @_themayway_ recommendation.","anime,hongdae,shopping,character goods",Flexible,37.5559,126.9231
+Korea,thisisneverthat Hongdae Flagship,Shopping,Hongdae Seoul,"thisisneverthat flagship in Hongdae — Mapo-gu, Jandari-ro 32, 1층 101호. @elysnapshot calls it a must-visit for Seoul shopping.","thisisneverthat,korean brand,hongdae,flagship",Flexible,37.5559,126.9231
+Korea,Gangnam Square Pharmacy (강남스퀘어약국),Skincare,Gangnam Seoul,Gangnam's #1 pharmacy right in front of Gangnam Station. @mijainseoul's pharmacy shopping recommendation for non-K-pop travellers. @gangnampharm_en on Instagram.,"pharmacy,gangnam,skincare,k-beauty",Flexible,37.4964,127.0284
+Korea,Duna Clinic — Posture & Tech Neck (Seongsu),Skincare,Seongsu Seoul,Posture correction treatment focused on relieving tech neck and upper back tension. Creator @kushin felt results immediately. @dunaclinicglobal on Instagram.,"clinic,posture,tech neck,seongsu,wellness",Flexible,37.5447,127.0558
+Korea,Moclock Hair & Scalp Clinic (Gangnam),Skincare,Gangnam Seoul,Top-rated hair loss and scalp care clinic in Gangnam. @dreamlvrr3 calls it one of the best services she's had in Korea. @moclock_gangnam on Instagram.,"hair loss,scalp care,gangnam,clinic",Flexible,37.515,127.0165
+Korea,"Essential Korea Apps — NaverMaps, Kuli Kuli, Kakao T",Transport,Seoul,"3 apps that make Korea trips smooth: 1. Naver Maps (not Google/Apple), 2. Kuli Kuli for translating menus/handwritten notes in original format, 3. Kakao T for taxis. @actuallydamy guide.","apps,tip,naver,kakao,translation",Day 1,37.5665,126.978
+Korea,Korean Pharmacy K-Beauty Shopping Guide (@nathan.wu),Skincare,Seoul,Pharmacy school grad @nathan.wu's evidence-based picks for Korean medications and K-beauty products worth buying. Tested and vetted list — not just hype.,"pharmacy,k-beauty,evidence-based,skincare",Flexible,37.5665,126.978
+Korea,Unni App — Korea Clinic Booking,Transport,Seoul,App for safely booking Korean clinics — helps avoid 'shadow doctors'. @mayaya.kimmm recommends downloading before your trip for verified clinic listings.,"unni,app,clinic booking,safety,tip",Day 1,37.5665,126.978
+Korea,Climate Card — Unlimited Seoul Public Transit,Transport,Seoul,Climate Card gives unlimited public transport for the duration of your stay. Use Naver or Kakao Maps (not Google). @phatlifeproject tip for first timers.,"transport,climate card,tip,public transit,first timer",Day 1,37.5665,126.978
+Korea,Skip Airbnb Korea — Use Local Alternatives,Accommodation,Seoul,"Many Korean Airbnb listings are technically illegal under local regulations, which can cause trip problems. Use Korea-specific accommodation platforms instead. @marykayinmyeongdong explains.","accommodation,tip,airbnb,warning",Flexible,37.5665,126.978
+Korea,Baemin — Korea Food Delivery App,Transport,Seoul,Use Baemin app for food delivery in your accommodation — live your K-variety mukbang dreams. @iwantalmonds has a 2-part tutorial pinned on their profile. Game changer for rainy days.,"baemin,food delivery,app,tip,rainy day",Flexible,37.5665,126.978
+Korea,KakaoTalk & Korea App Stack,Transport,Seoul,"Essential Korea app stack: KakaoTalk (all reservations/confirmations come here, not WhatsApp), Naver Maps (not Google), Kakao T (not Uber for ridesharing). @mijainseoul's tip — Korea runs on these.","kakao,kakaotalk,apps,tip,transport",Day 1,37.5665,126.978
+Korea,Seoul Neighbourhood Guide — Where to Stay,Neighbourhood,Seoul,"Top neighbourhood recs from @madeinkorea_____: also considers Yeonhui-dong, Yeonnam-dong, Yeouido as alternatives to the main options.","neighbourhood,where to stay,yeonhui,yeonnam,yeouido",Flexible,37.5665,126.978
+Korea,Apgujeong Sanghoe (압구정상회),Food,Apgujeong Seoul,"Fried chicken restaurant called the best thing @jasmineeleong had in Seoul. Address visible in video: 655-2 Sinsa-dong, Gangnam-gu, Seoul. Serves crispy fried chicken with dipping sauces. ""23kg checked luggage of fried chicken"" according to a comme","fried chicken,apgujeong,must eat,gangnam",Flexible,37.527,127.0286
+Korea,Gukjaejeonja Center (국제전자센타) — Anime Shopping,Shopping,Seoul,"Hidden gem for serious anime shopping in Seoul — floors of figures, gacha machines, collectibles. The kind of finds you'll wish you packed an extra suitcase for. @_themayway_ recommendation alongside AK Plaza Hongdae.","anime,figures,gacha,collectibles,hidden gem",Flexible,37.5665,126.978
+Korea,JW Marriott Seoul (Dongdaemun),Accommodation,Dongdaemun Seoul,"@madeinkorea_____ hotel rec for staying near Insadong. Central to Gyeongbokgung, Cheonggyecheon, Samcheongdong, Anguk, Ikseondong, Jogyesa Temple. Hyundai Dept Store, Shinsegae, The Galleria, COEX all accessible.","hotel,accommodation,insadong,central,jw marriott",Flexible,37.5675,127.0092
+Korea,Josun Palace Seoul Gangnam,Accommodation,Gangnam Seoul,@madeinkorea_____ hotel rec — luxury option for Seoul stay. Mentioned alongside JW Marriott as specific hotels for those wanting 'a little nicer' option.,"hotel,accommodation,luxury,josun,gangnam",Flexible,37.5079,127.0533
+Korea,Jean Frigo,Culture,Seoul,"Secret bar you'd walk straight past — enter through a refrigerator, order through a phone booth. One of the most unexpected places in Seoul. @shannonfarhoud pick.","bar,hidden,secret bar,seoul,unique",Evenings,37.5665,126.978
+Korea,Haebangchon (HBC),Neighbourhood,Haebangchon Seoul,"@itszdaniitravels' favourite neighbourhood in all of Seoul. Rooftop cafés with Namsan Tower views, jazz nights, European food, hidden bars. Sinheung Market on Sinheung-ro. Very different vibe from Hongdae/Itaewon.","neighbourhood,rooftop,jazz,hidden bars,namsan",Flexible,37.5392,126.982
+Korea,Boogie Woogie (HBC Jazz Bar),Culture,Haebangchon Seoul,Jazz nights at Boogie Woogie in Haebangchon — mentioned by @itszdaniitravels as a highlight of the neighbourhood.,"jazz,bar,live music,haebangchon",Evenings,37.5392,126.982
+Korea,Charlie's Grocery (HBC),Food,Haebangchon Seoul,European food finds at Charlie's Grocery in Haebangchon. Part of @itszdaniitravels' Seoul summer bucket list.,"food,european,haebangchon,grocery",Flexible,37.5392,126.982
+Korea,Mil Toast House (밀토스트하우스),Food,Seoul,Café known for bread/toast — @whyidocardio posted with caption @miltoasthouse. Korean bakery-café.,"cafe,bread,toast,bakery",Flexible,37.5665,126.978
+Korea,Haeundae Beach (해운대해수욕장) — Night,DayTrip,Busan,"One of the most famous beaches in Korea — beautiful at night. Grab convenience store snacks, sit by the beach. @itszdaniitravels pt.2 night list.","busan,beach,night,haeundae",Evenings,35.1587,129.1603
+Korea,Gwangalli Beach (광안리해수욕장) — Night,DayTrip,Busan,Gwangalli Beach at night — iconic Busan bridge view. Part of @itszdaniitravels' '11 places to visit at night in Korea' list.,"busan,beach,night,gwangalli,bridge view",Evenings,35.1502,129.1188
+Korea,Juuneedu (쥬니두),Shopping,Seoul,Korean loungewear / pyjama brand store in Seoul. @baochitravel pick.,"shopping,loungewear,pyjamas,korean brand",Flexible,37.5665,126.978
+Korea,Sooa Clinic (소아 클리닉) — Yongsan,Skincare,Yongsan Seoul,"Korean traditional medicine clinic in Yongsan — tongue diagnosis to find root causes of chronic issues (neck tension, leg stiffness, fatigue). @jooiooy went for root-cause analysis rather than symptom treatment.","clinic,korean medicine,yongsan,wellness,root cause",Flexible,37.534,126.994
+Korea,Mil Toast House,Food,Seoul,Fluffy steamed breads. Part of @vernahungrybanana's 3 food spots to save in Seoul.,"bread,steamed bun,bakery,seoul",Flexible,37.5665,126.978
+Korea,Nohd Global Clinic (Gangnam),Skincare,Gangnam Seoul,"Personalised jaw/face slimming clinic in Gangnam — @hybeereviews chose from dozens of clinics that reached out, specifically for personalized care. @nohdglobal_official on Instagram.","clinic,jaw,face slimming,gangnam,skincare",Flexible,37.5004,127.0246
+Korea,Seoul Museum of Craft Art,Culture,Jongno-gu Seoul,"#2 in @dojisook's top 5 Seoul museums. Ceramics, woodwork, traditional craft techniques. Learning how to insert metal wires (금속선 감입). Free or low entry.","museum,craft,jongno,ceramics,free",Flexible,37.5786,126.983
+Korea,Seokchon Lake (석촌호수),DayTrip,Songpa Seoul,"Prettiest lake in Seoul — stunning solo or date spot. Walk around the lake then explore Lotte World Mall, Lotte Mart and Baekjegobun-ro 43-gil (wine bars, vinyl cafés). @itszdaniitravels pick.","lake,date spot,lotte world,songpa,night",Flexible,37.5072,127.1047
+Korea,Baekjegobun-ro 43-gil (백제고분로43길),Culture,Songpa Seoul,"Wine bars, vinyl cafés and cosy restaurants near Seokchon Lake. Beautiful evening/night area. @itszdaniitravels' pick for after the lake walk.","wine bar,vinyl cafe,night,songpa,date spot",Evenings,37.5072,127.1047
+Korea,XX2 Club — Hongdae,Culture,Hongdae Seoul,"Best club in Hongdae for old school American hip hop and R&B. @itszdaniitravels top pick — also mentions Mongs, Rollie, La Bamba.","club,nightlife,hongdae,hip hop,r&b",Evenings,37.5563,126.9236
+Korea,Namsan Botanical Garden,Culture,Namsan Seoul,"One of Seoul's most underrated spots — quiet, relaxing, surrounded by nature. Perfect break from the city. Near Haebangchon.","nature,garden,underrated,namsan,quiet",Flexible,37.5497,126.9847
+Korea,Mama Ethiopian Restaurant,Food,Seoul,@itszdaniitravels' favourite restaurant in Seoul — introduces Korean friends to Ethiopian food here. On the Seoul summer bucket list.,"ethiopian,food,restaurant,unique",Flexible,37.5665,126.978
+Korea,Cow Tteokbokki (카우 떡볶이),Food,Seongsu / Ewha Seoul,"Huge vegan menu: vegan rose tteokbokki, vegan mala, vegan jajang, rice balls. Two branches — Ewha and Seongsu. @itszdaniitravels pick.","vegan,tteokbokki,seongsu,ewha,korean food",Flexible,37.5447,127.0558
+Korea,Mangwon Market (망원시장),Food,Mangwon Seoul,"Street food, hotteok, vintage stores nearby. Browse the area and check out the basketball courts near the river. @itszdaniitravels pick.","market,street food,hotteok,vintage,mangwon",Flexible,37.556,126.9047
+Korea,Seler Mari,Food,Seoul,Mushroom pesto gimbap with extra pesto sauce — @itszdaniitravels says you MUST try it. Specific dish makes this worth the visit.,"gimbap,mushroom pesto,must eat,seoul",Flexible,37.5665,126.978
+Korea,Ilsan Lake Park (일산호수공원),DayTrip,Ilsan Goyang,"Huge lake, beautiful walking paths, cycling tracks, picnic spots. Check the water fountain schedule — super pretty at night. @itszdaniitravels night list.","lake,park,ilsan,night,fountain",Flexible,37.659,126.769
+Korea,Yeonnam-dong Railway Path (연트럴파크),Culture,Yeonnam Seoul,"Walk from Hongdae through Yeonnam-dong — cafés, bakeries, buskers, people sitting outside. Get hotteok by Hongdae subway exit 3. AKA Yeonntral Park.","yeonnam,railway path,walk,cafes,hongdae",Flexible,37.5629,126.926
+Korea,Old Railway Track — Hongdae to Sinchon,DayTrip,Sinchon Seoul,Gorgeous night walk along the old railway track connecting Hongdae to Sinchon. @itszdaniitravels calls it one of the most beautiful spots.,"walk,night,railway,sinchon,hongdae",Evenings,37.5596,126.9368
+Korea,Sinchon (신촌) — Night,Culture,Sinchon Seoul,"Lively at night — skateboarding area, student energy, bars and clubs. @itszdaniitravels night list entry.","sinchon,night,skateboarding,nightlife",Evenings,37.5596,126.9368
+Korea,Bolero — Itaewon,Culture,Itaewon Seoul,Super popular club in Itaewon for hip hop nights. Mentioned alongside XX2 in Hongdae as main Seoul clubbing options. @itszdaniitravels.,"club,nightlife,itaewon,hip hop",Evenings,37.534,126.994
+Korea,Gwangjang Hotteok (광장 호떡),Food,Gwangjang Market Seoul,"Sugar-filled Korean pancake at Gwangjang Market — 155 reviews, recommended by @chestertravelchingu in the 1-day first-timer Seoul itinerary. Stop between Insadong/Ikseondong and dinner.","hotteok,pancake,gwangjang,street food,first timer",Flexible,37.57,127.0088
+Korea,Gwanghwamun Mijin (광화문 미진),Food,Gwanghwamun Seoul,"Michelin Guide Seoul 2026, 4.39 stars, 16K reviews. Korean food near Gwanghwamun — walk-in waitlist via Tabling app. @chestertravelchingu's dinner rec on the 1-day first-timer Seoul itinerary.","michelin,korean food,gwanghwamun,must eat,2026,waitlist",Flexible,37.572,126.9768
+Korea,Akiba Fukurou Owl Cafe,Culture,"Akihabara, Tokyo","Animal cafe where you can hold and interact with owls. Memorable, low-key experience in Akihabara.","animal cafe,owl,tokyo",Flexible,35.6995,139.7720
+Korea,Montbell Tokyo,Shopping,Tokyo,"Japanese outdoor/hiking brand - ultra-light jackets, travel clothes, high quality gear. Local favourite, often missed by tourists.","outdoor,hiking gear,japan brand",Flexible,35.7022,139.7456
+Korea,Kamishikimi Kumanoimasu Shrine,Culture,"Takamori, Kumamoto (Kyushu)","Shrine nestled in a lush forest, ~300 steps up to the Ugeto-iwa Cave at the top. Featured in the anime/film Hotarubi no Mori e. Go early on a weekday to avoid crowds, comfy shoes needed.","shrine,kyushu,anime,hiking",Flexible,32.8203,131.0628
+Korea,Okinawa,DayTrip,Okinawa,"Tropical island getaway - beaches, snorkeling, island vibes. Very different pace from mainland Japan.","beach,island,tropical",Flexible,26.4271,127.8290
+Korea,Mt. Yoshino,Culture,Nara,"Iconic cherry blossom mountain in Nara, perfect day trip from Osaka/Kyoto (~2hr train to Yoshino Station + uphill bus). Walk down through layers of sakura - locals do the same walk. ~4hrs at a relaxed pace.","sakura,cherry blossom,hiking,day trip",Flexible,34.3608,135.8694
+Korea,Suwa Lake / Tateishi Park,DayTrip,Nagano,"Quiet, emotional, local Japan - the lake that inspired Kimi no Na Wa (Your Name). Go up to Tateishi Park at sunset, bring a snack, and just watch.","anime,lake,sunset,nagano",Flexible,36.0397,138.0989
+Korea,Kusatsu Onsen,Culture,Gunma,"One of the best onsen towns in Japan - mountains, cold air, hot water, tradition everywhere. Stay at least one night and try different baths.","onsen,hot spring,gunma,relax",Flexible,36.6195,138.5969
+Korea,Takachiho Gorge,DayTrip,Kyushu,"Absolutely unreal gorge - turquoise water, dramatic cliffs, mythology. One of the standout Kyushu stops.","gorge,kyushu,nature,scenic",Flexible,32.7167,131.3000
+Korea,Shirakawa-go,Culture,Gifu,"UNESCO village - straight out of a fairytale in winter. Snow-covered farmhouses, quiet nights. Stay overnight if possible; once day-trippers leave it's magic.","unesco,winter,traditional village",Flexible,36.2611,136.9064
+Korea,Kamikochi,DayTrip,Nagano,"Some of the best nature in Japan - crystal rivers, alpine views, fresh mountain air. Go early and walk beyond the main bridge for quieter spots.","nagano,hiking,alpine,nature",Flexible,36.2486,137.6383
+Korea,Kiso Valley (Nakasendo Trail),DayTrip,Nagano,"Old Japan at its best - historic post towns (Tsumago/Magome), forests, and history you can feel walking the old Nakasendo trail.","old town,hiking,history,nagano",Flexible,35.5325,137.5836
+Korea,Nishikawa Daimaru Shinsaibashi (Custom Pillow),Shopping,"Shinsaibashi, Osaka","Custom pillow service by sleep experts - full posture/sleep assessment, test different heights/materials, pillow made on the spot. ¥33,000-44,000. Book a private consultation ahead.","custom pillow,sleep,osaka,wellness",Flexible,34.6730,135.5010
+Korea,Descente Tokyo,Shopping,"Harajuku, Tokyo",Japanese outerwear engineered with decades of precision - puffer jackets and technical wear. 7 min walk from Meiji-Jingumae Station exit 7.,"outerwear,japan brand,harajuku",Flexible,35.6700,139.7090
+Korea,Nanga Shop Harajuku,Shopping,"Harajuku, Tokyo","Down jacket specialist, located in the WAT building near Meiji-Jingumae Station exit 7 (~6 min walk). Pairs well with a Descente visit nearby.","down jackets,harajuku,japan brand",Flexible,35.6705,139.7095
+Korea,Nakano Broadway,Shopping,"Nakano, Tokyo","Treasure trove for vintage Rolex and luxury watch hunting - huge selection, English/Mandarin-speaking staff. A must for watch collectors.","vintage watches,rolex,nakano,shopping",Flexible,35.7092,139.6661
+Korea,Otter Cafe Kyoto,Culture,Kyoto,"Animal cafe with otters - a fun, low-key activity to break up temple-hopping in Kyoto.","animal cafe,otter,kyoto",Flexible,35.0037,135.7717
+Korea,Snow Monkey Park (Jigokudani),DayTrip,Nagano,Watch wild snow monkeys soak in hot springs - iconic Nagano day trip.,"nagano,monkeys,onsen,wildlife",Flexible,36.7042,137.8358
+Korea,Omotesando,Shopping,Tokyo,Upscale fashion shopping street near Harajuku - flagship stores and coat/outerwear shopping.,"shopping street,fashion,tokyo",Flexible,35.6654,139.7126
+Korea,Kyushu (region),DayTrip,Kyushu,"Two weeks here barely scratches the surface - uncrowded alternative to the main Tokyo/Kyoto/Osaka route. Cherry blossoms with no crowds, great for autumn foliage too.","region,road trip,uncrowded",Flexible,33.5963,130.3974
+Korea,Eryanping Trail,DayTrip,"Alishan, Chiayi",Early 5am wake-up hiking trail - worth it for the sunrise views over Alishan.,"hiking,sunrise,chiayi,alishan",Flexible,23.4652,120.6899
+Korea,Sotetsu Grand Fresa Ximen,Accommodation,"Ximen, Taipei","Japanese hotel chain right above Ximen Station (exit 2/3). Huge clean rooms, amenities bar in lobby, vacuum-wrap & luggage delivery service, water refill station each floor. Across from Ximending's attractions including The Red House.","hotel,ximen,taipei,japanese chain",Flexible,25.0418,121.5087
+Korea,Qingjing Farm,DayTrip,Nantou,"""Little Switzerland"" - try local Yunnan-inspired dishes, see sheep roaming green meadows with European-style farmhouses. Pairs well with Hehuanshan.","farm,sheep,scenery,nantou",Flexible,24.0443,121.1570
+Korea,Hehuanshan,DayTrip,Nantou,"Breathtaking mountain views, standing above the clouds with alpine air. Hike side trails or drive to the top. Best for sunrise - consider staying overnight nearby and renting a car for flexibility.","mountain,sunrise,hiking,nantou",Flexible,24.1419,121.2783
+Korea,Taigrance,Skincare,"Da'an, Taipei",Niche Asian perfumery - fragrances inspired by familiar flavours alongside scents you won't find elsewhere. Must-visit for niche perfume fans.,"perfume,niche fragrance,taipei",Flexible,25.0330,121.5436
+Korea,Alishan National Forest Recreation Area,DayTrip,Chiayi,"Misty forests, 1000+ year old cypress trees, the iconic Alishan Forest Railway, sea of clouds, and fairytale sunrise views. Entrance ~NT$300. Stay overnight to beat the crowds and get the full atmosphere - HSR to Chiayi then bus/railway, or bus direct from Chiayi Station (~2.5hrs).","forest,sunrise,railway,chiayi,cypress",Flexible,23.5109,120.8034
+Korea,Zhang A Mei's Farm,Food,Yilan,Stop on a 48hr Yilan itinerary - local farm experience.,"farm,yilan",Flexible,24.6964,121.7967
+Korea,Su Ao Fish Port (蘇澳漁港),Food,Yilan,Fresh sashimi lunch straight off the boats at this fishing port.,"seafood,sashimi,yilan,fish port",Flexible,24.5958,121.8581
+Korea,Tofu Cape (豆腐岬),DayTrip,Yilan,Quick cliffside stop near Su'ao - distinctive tofu-block-shaped rock formations along the coast.,"cliff,coast,yilan",Flexible,24.5928,121.8589
+Korea,Xingshui Black Sand Beach,DayTrip,Yilan,Black sand beach stop on the Yilan coastal route.,"beach,black sand,yilan",Flexible,24.6000,121.8300
+Korea,Luodong Night Market,Food,Yilan,Popular night market to cap off a Yilan day trip.,"night market,food,yilan",Flexible,24.6775,121.7672
+Korea,Bishkek,Neighbourhood,Bishkek,Capital city and great intro to Kyrgyzstan — local museums and try beshbarmak at Navat restaurant.,"capital,museums,beshbarmak,food",Flexible,42.8746,74.5698
+Korea,Song-Kul Lake,DayTrip,Naryn Region,"3-4 day horseback trek — immersive nomadic experience. Loop via Kyzart: ride to lake, cold dip, yurt with log burner, back through stunning mountains. ★ top pick.","horseback,yurt stay,alpine lake,nomadic experience,★ top pick",Flexible,42.8861,74.6139
+Korea,Kyzart Village,Accommodation,Naryn Region,Starting point for Song-Kul horseback treks. Multi-course lunch with lots of tea at the stables on arrival.,"yurt,trek start,horses",Flexible,41.9667,75.1167
+Korea,Issyk-Kul Lake,DayTrip,Issyk-Kul Region,Kyrgyzstan's largest lake. Look out for eagle hunting demonstrations.,"lake,scenic,eagle hunting",Flexible,42.4500,77.2000
+Korea,Altyn Arashan,DayTrip,Karakol / Issyk-Kul Region,Hot springs valley near Karakol — a must-visit. Often combined with Ala-Kul trek.,"hot springs,karakol,hiking,horseback",Flexible,42.4167,78.3667
+Korea,Ala-Kul Lake,DayTrip,Karakol / Issyk-Kul Region,"High-altitude turquoise lake near Karakol, frequently paired with Altyn Arashan. ★ top pick.","alpine lake,trekking,karakol,★ top pick",Flexible,42.4628,78.3262
+Korea,Kel-Suu Lake,DayTrip,Naryn Region (near China border),"Remote, treacherous journey — plan 3 full days. One of the most striking and least-visited alpine lakes in the country.","remote,alpine lake,multi-day,off the beaten path",Flexible,39.9667,78.1667
+Japan,Akiba Fukurou Owl Cafe,Culture,"Akihabara, Tokyo","Animal cafe where you can hold and interact with owls. Memorable, low-key experience in Akihabara.","animal cafe,owl,tokyo",Flexible,35.6995,139.7720
+Japan,Montbell Tokyo,Shopping,Tokyo,"Japanese outdoor/hiking brand - ultra-light jackets, travel clothes, high quality gear. Local favourite, often missed by tourists.","outdoor,hiking gear,japan brand",Flexible,35.7022,139.7456
+Japan,Kamishikimi Kumanoimasu Shrine,Culture,"Takamori, Kumamoto (Kyushu)","Shrine nestled in a lush forest, ~300 steps up to the Ugeto-iwa Cave at the top. Featured in the anime/film Hotarubi no Mori e. Go early on a weekday to avoid crowds, comfy shoes needed.","shrine,kyushu,anime,hiking",Flexible,32.8203,131.0628
+Japan,Okinawa,DayTrip,Okinawa,"Tropical island getaway - beaches, snorkeling, island vibes. Very different pace from mainland Japan.","beach,island,tropical",Flexible,26.4271,127.8290
+Japan,Mt. Yoshino,Culture,Nara,"Iconic cherry blossom mountain in Nara, perfect day trip from Osaka/Kyoto (~2hr train to Yoshino Station + uphill bus). Walk down through layers of sakura - locals do the same walk. ~4hrs at a relaxed pace.","sakura,cherry blossom,hiking,day trip",Flexible,34.3608,135.8694
+Japan,Suwa Lake / Tateishi Park,DayTrip,Nagano,"Quiet, emotional, local Japan - the lake that inspired Kimi no Na Wa (Your Name). Go up to Tateishi Park at sunset, bring a snack, and just watch.","anime,lake,sunset,nagano",Flexible,36.0397,138.0989
+Japan,Kusatsu Onsen,Culture,Gunma,"One of the best onsen towns in Japan - mountains, cold air, hot water, tradition everywhere. Stay at least one night and try different baths.","onsen,hot spring,gunma,relax",Flexible,36.6195,138.5969
+Japan,Takachiho Gorge,DayTrip,Kyushu,"Absolutely unreal gorge - turquoise water, dramatic cliffs, mythology. One of the standout Kyushu stops.","gorge,kyushu,nature,scenic",Flexible,32.7167,131.3000
+Japan,Shirakawa-go,Culture,Gifu,"UNESCO village - straight out of a fairytale in winter. Snow-covered farmhouses, quiet nights. Stay overnight if possible; once day-trippers leave it's magic.","unesco,winter,traditional village",Flexible,36.2611,136.9064
+Japan,Kamikochi,DayTrip,Nagano,"Some of the best nature in Japan - crystal rivers, alpine views, fresh mountain air. Go early and walk beyond the main bridge for quieter spots.","nagano,hiking,alpine,nature",Flexible,36.2486,137.6383
+Japan,Kiso Valley (Nakasendo Trail),DayTrip,Nagano,"Old Japan at its best - historic post towns (Tsumago/Magome), forests, and history you can feel walking the old Nakasendo trail.","old town,hiking,history,nagano",Flexible,35.5325,137.5836
+Japan,Nishikawa Daimaru Shinsaibashi (Custom Pillow),Shopping,"Shinsaibashi, Osaka","Custom pillow service by sleep experts - full posture/sleep assessment, test different heights/materials, pillow made on the spot. ¥33,000-44,000. Book a private consultation ahead.","custom pillow,sleep,osaka,wellness",Flexible,34.6730,135.5010
+Japan,Descente Tokyo,Shopping,"Harajuku, Tokyo",Japanese outerwear engineered with decades of precision - puffer jackets and technical wear. 7 min walk from Meiji-Jingumae Station exit 7.,"outerwear,japan brand,harajuku",Flexible,35.6700,139.7090
+Japan,Nanga Shop Harajuku,Shopping,"Harajuku, Tokyo","Down jacket specialist, located in the WAT building near Meiji-Jingumae Station exit 7 (~6 min walk). Pairs well with a Descente visit nearby.","down jackets,harajuku,japan brand",Flexible,35.6705,139.7095
+Japan,Nakano Broadway,Shopping,"Nakano, Tokyo","Treasure trove for vintage Rolex and luxury watch hunting - huge selection, English/Mandarin-speaking staff. A must for watch collectors.","vintage watches,rolex,nakano,shopping",Flexible,35.7092,139.6661
+Japan,Otter Cafe Kyoto,Culture,Kyoto,"Animal cafe with otters - a fun, low-key activity to break up temple-hopping in Kyoto.","animal cafe,otter,kyoto",Flexible,35.0037,135.7717
+Japan,Snow Monkey Park (Jigokudani),DayTrip,Nagano,Watch wild snow monkeys soak in hot springs - iconic Nagano day trip.,"nagano,monkeys,onsen,wildlife",Flexible,36.7042,137.8358
+Japan,Omotesando,Shopping,Tokyo,Upscale fashion shopping street near Harajuku - flagship stores and coat/outerwear shopping.,"shopping street,fashion,tokyo",Flexible,35.6654,139.7126
+Japan,Kyushu (region),DayTrip,Kyushu,"Two weeks here barely scratches the surface - uncrowded alternative to the main Tokyo/Kyoto/Osaka route. Cherry blossoms with no crowds, great for autumn foliage too.","region,road trip,uncrowded",Flexible,33.5963,130.3974
+Taiwan,Eryanping Trail,DayTrip,"Alishan, Chiayi",Early 5am wake-up hiking trail - worth it for the sunrise views over Alishan.,"hiking,sunrise,chiayi,alishan",Flexible,23.4652,120.6899
+Taiwan,Sotetsu Grand Fresa Ximen,Accommodation,"Ximen, Taipei","Japanese hotel chain right above Ximen Station (exit 2/3). Huge clean rooms, amenities bar in lobby, vacuum-wrap & luggage delivery service, water refill station each floor. Across from Ximending's attractions including The Red House.","hotel,ximen,taipei,japanese chain",Flexible,25.0418,121.5087
+Taiwan,Qingjing Farm,DayTrip,Nantou,"""Little Switzerland"" - try local Yunnan-inspired dishes, see sheep roaming green meadows with European-style farmhouses. Pairs well with Hehuanshan.","farm,sheep,scenery,nantou",Flexible,24.0443,121.1570
+Taiwan,Hehuanshan,DayTrip,Nantou,"Breathtaking mountain views, standing above the clouds with alpine air. Hike side trails or drive to the top. Best for sunrise - consider staying overnight nearby and renting a car for flexibility.","mountain,sunrise,hiking,nantou",Flexible,24.1419,121.2783
+Taiwan,Taigrance,Skincare,"Da'an, Taipei",Niche Asian perfumery - fragrances inspired by familiar flavours alongside scents you won't find elsewhere. Must-visit for niche perfume fans.,"perfume,niche fragrance,taipei",Flexible,25.0330,121.5436
+Taiwan,Alishan National Forest Recreation Area,DayTrip,Chiayi,"Misty forests, 1000+ year old cypress trees, the iconic Alishan Forest Railway, sea of clouds, and fairytale sunrise views. Entrance ~NT$300. Stay overnight to beat the crowds and get the full atmosphere - HSR to Chiayi then bus/railway, or bus direct from Chiayi Station (~2.5hrs).","forest,sunrise,railway,chiayi,cypress",Flexible,23.5109,120.8034
+Taiwan,Zhang A Mei's Farm,Food,Yilan,Stop on a 48hr Yilan itinerary - local farm experience.,"farm,yilan",Flexible,24.6964,121.7967
+Taiwan,Su Ao Fish Port (蘇澳漁港),Food,Yilan,Fresh sashimi lunch straight off the boats at this fishing port.,"seafood,sashimi,yilan,fish port",Flexible,24.5958,121.8581
+Taiwan,Tofu Cape (豆腐岬),DayTrip,Yilan,Quick cliffside stop near Su'ao - distinctive tofu-block-shaped rock formations along the coast.,"cliff,coast,yilan",Flexible,24.5928,121.8589
+Taiwan,Xingshui Black Sand Beach,DayTrip,Yilan,Black sand beach stop on the Yilan coastal route.,"beach,black sand,yilan",Flexible,24.6000,121.8300
+Taiwan,Luodong Night Market,Food,Yilan,Popular night market to cap off a Yilan day trip.,"night market,food,yilan",Flexible,24.6775,121.7672
+Kyrgyzstan,Bishkek,Neighbourhood,Bishkek,Capital city and great intro to Kyrgyzstan — local museums and try beshbarmak at Navat restaurant.,"capital,museums,beshbarmak,food",Flexible,42.8746,74.5698
+Kyrgyzstan,Song-Kul Lake,DayTrip,Naryn Region,"3-4 day horseback trek — immersive nomadic experience. Loop via Kyzart: ride to lake, cold dip, yurt with log burner, back through stunning mountains. ★ top pick.","horseback,yurt stay,alpine lake,nomadic experience,★ top pick",Flexible,42.8861,74.6139
+Kyrgyzstan,Kyzart Village,Accommodation,Naryn Region,Starting point for Song-Kul horseback treks. Multi-course lunch with lots of tea at the stables on arrival.,"yurt,trek start,horses",Flexible,41.9667,75.1167
+Kyrgyzstan,Issyk-Kul Lake,DayTrip,Issyk-Kul Region,Kyrgyzstan's largest lake. Look out for eagle hunting demonstrations.,"lake,scenic,eagle hunting",Flexible,42.4500,77.2000
+Kyrgyzstan,Altyn Arashan,DayTrip,Karakol / Issyk-Kul Region,Hot springs valley near Karakol — a must-visit. Often combined with Ala-Kul trek.,"hot springs,karakol,hiking,horseback",Flexible,42.4167,78.3667
+Kyrgyzstan,Ala-Kul Lake,DayTrip,Karakol / Issyk-Kul Region,"High-altitude turquoise lake near Karakol, frequently paired with Altyn Arashan. ★ top pick.","alpine lake,trekking,karakol,★ top pick",Flexible,42.4628,78.3262
+Kyrgyzstan,Kel-Suu Lake,DayTrip,Naryn Region (near China border),"Remote, treacherous journey — plan 3 full days. One of the most striking and least-visited alpine lakes in the country.","remote,alpine lake,multi-day,off the beaten path",Flexible,39.9667,78.1667

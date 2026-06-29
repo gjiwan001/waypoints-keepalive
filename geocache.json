@@ -1,0 +1,1518 @@
+{
+  "Jongno": {
+    "lat": 37.57,
+    "lng": 126.9782
+  },
+  "Myeongdong": {
+    "lat": 37.5631,
+    "lng": 126.9858
+  },
+  "Hongdae": {
+    "lat": 37.5563,
+    "lng": 126.9236
+  },
+  "Gangnam": {
+    "lat": 37.4979,
+    "lng": 127.0276
+  },
+  "Itaewon": {
+    "lat": 37.5347,
+    "lng": 126.9947
+  },
+  "Seongsu": {
+    "lat": 37.5448,
+    "lng": 127.0557
+  },
+  "Hannam": {
+    "lat": 37.5341,
+    "lng": 127.0003
+  },
+  "Yeonam": {
+    "lat": 37.5614,
+    "lng": 126.9279
+  },
+  "Euljiro": {
+    "lat": 37.5663,
+    "lng": 126.9905
+  },
+  "Sinchon": {
+    "lat": 37.555,
+    "lng": 126.9374
+  },
+  "Apgujeong": {
+    "lat": 37.5276,
+    "lng": 127.0286
+  },
+  "Incheon Airport": {
+    "lat": 37.4602,
+    "lng": 126.4407
+  },
+  "Seoul Station": {
+    "lat": 37.5547,
+    "lng": 126.9706
+  },
+  "National Museum of Korea": {
+    "lat": 37.5245,
+    "lng": 126.98
+  },
+  "Hanok Village / Bukchon": {
+    "lat": 37.5787,
+    "lng": 126.9846
+  },
+  "Gwangjang Market": {
+    "lat": 37.5697,
+    "lng": 126.999
+  },
+  "Weave Suite Seoyu Parkside": {
+    "lat": 37.5382,
+    "lng": 126.9024
+  },
+  "LiveAnywhere Loft": {
+    "lat": 37.5697,
+    "lng": 126.9995
+  },
+  "DNA Skin Clinic": {
+    "lat": 37.5019,
+    "lng": 127.0262
+  },
+  "Optima Wellness Museum Pharmacy": {
+    "lat": 37.4979,
+    "lng": 127.03
+  },
+  "Seoulistique Skin": {
+    "lat": 37.5499,
+    "lng": 126.9543
+  },
+  "Abijou Myeongdong": {
+    "lat": 37.5631,
+    "lng": 126.9828
+  },
+  "Abijou Hongdae": {
+    "lat": 37.5553,
+    "lng": 126.9215
+  },
+  "Joa Pilates (ear seeding)": {
+    "lat": 37.515,
+    "lng": 127.035
+  },
+  "NOMANUAL Flagship": {
+    "lat": 37.5435,
+    "lng": 127.0575
+  },
+  "thisisneverthat Seongsu": {
+    "lat": 37.5445,
+    "lng": 127.0565
+  },
+  "Musinsa Standard Seongsu": {
+    "lat": 37.544,
+    "lng": 127.058
+  },
+  "LOW CLASSIC Seongsu": {
+    "lat": 37.545,
+    "lng": 127.056
+  },
+  "Beaker Seongsu": {
+    "lat": 37.5438,
+    "lng": 127.057
+  },
+  "ÅLAND Hongdae": {
+    "lat": 37.556,
+    "lng": 126.923
+  },
+  "MUSINSA Hongdae": {
+    "lat": 37.5557,
+    "lng": 126.9225
+  },
+  "Citybreeze Seoul": {
+    "lat": 37.5335,
+    "lng": 127.0007
+  },
+  "Fucking Awesome Seoul": {
+    "lat": 37.5343,
+    "lng": 127.0013
+  },
+  "Mardi Mercredi Hannam": {
+    "lat": 37.5338,
+    "lng": 127.0018
+  },
+  "Granhand Perfumery": {
+    "lat": 37.5787,
+    "lng": 126.985
+  },
+  "Shinsegae Gangnam (5F & 8F)": {
+    "lat": 37.505,
+    "lng": 127.0049
+  },
+  "Worksout Apgujeong": {
+    "lat": 37.528,
+    "lng": 127.029
+  },
+  "Révdou (Moon Croissant)": {
+    "lat": 37.5565,
+    "lng": 126.9247
+  },
+  "The Truffle Bakery": {
+    "lat": 37.558,
+    "lng": 126.98
+  },
+  "Bijeonstrol Yeonhui Roastery": {
+    "lat": 37.5692,
+    "lng": 126.9201
+  },
+  "Amor Napoli": {
+    "lat": 37.552,
+    "lng": 126.922
+  },
+  "Belief Coffee Roasters": {
+    "lat": 37.554,
+    "lng": 126.925
+  },
+  "Sokcho": {
+    "lat": 38.207,
+    "lng": 128.5918
+  },
+  "Seoraksan National Park": {
+    "lat": 38.1194,
+    "lng": 128.4656
+  },
+  "Gangneung": {
+    "lat": 37.7519,
+    "lng": 128.876
+  },
+  "Gyeongju": {
+    "lat": 35.8561,
+    "lng": 129.2245
+  },
+  "Busan": {
+    "lat": 35.1796,
+    "lng": 129.0756
+  },
+  "Hwangnyeongsan Beacon": {
+    "lat": 35.1535,
+    "lng": 129.0755
+  },
+  "DMZ": {
+    "lat": 37.9532,
+    "lng": 126.6612
+  },
+  "Nami Island": {
+    "lat": 37.7916,
+    "lng": 127.5244
+  },
+  "Heyri Art Village": {
+    "lat": 37.766,
+    "lng": 126.7289
+  },
+  "Jeju Island": {
+    "lat": 33.4996,
+    "lng": 126.5312
+  },
+  "The Air House Festival": {
+    "lat": 37.7916,
+    "lng": 127.5244
+  },
+  "Cimer at Paradise City": {
+    "lat": 37.4959,
+    "lng": 126.4876
+  },
+  "숲속한방랜드 Forest Korean Bath": {
+    "lat": 37.555,
+    "lng": 126.9374
+  },
+  "아쿠아필드 Aquafield": {
+    "lat": 37.665,
+    "lng": 126.76
+  },
+  "Reclow Myeongdong Flagship": {
+    "lat": 37.5605,
+    "lng": 126.985
+  },
+  "Sam Sam Sam (쓰리쓰리쓰리)": {
+    "lat": 37.5748,
+    "lng": 126.9769
+  },
+  "Kyobo Book Centre (교보문고)": {
+    "lat": 37.571,
+    "lng": 126.9769
+  },
+  "NYUNYU (뉴뉴)": {
+    "lat": 37.5628,
+    "lng": 126.984
+  },
+  "Manhwa-bang / Comic Café (놀숲 Nolsoop)": {
+    "lat": 37.556,
+    "lng": 126.9236
+  },
+  "Yonghada Korean Medicine Clinic (용하다 한의원)": {
+    "lat": 37.5608,
+    "lng": 126.9856
+  },
+  "Rolling Jay Hair Salon": {
+    "lat": 37.55,
+    "lng": 126.925
+  },
+  "Vands Clinic Hongdae": {
+    "lat": 37.557,
+    "lng": 126.922
+  },
+  "Vands Clinic Myeongdong": {
+    "lat": 37.5608,
+    "lng": 126.9856
+  },
+  "Eraser Clinic (Dr. Eraser)": {
+    "lat": 37.521,
+    "lng": 127.022
+  },
+  "Jeil Grand Pharmacy (제일그랑약국)": {
+    "lat": 37.5,
+    "lng": 127.025
+  },
+  "Olive Young — Free Skin Analysis": {
+    "lat": 37.5631,
+    "lng": 126.9858
+  },
+  "애리꼼닭발 (Aeri's Chicken Feet)": {
+    "lat": 37.5597,
+    "lng": 127.0373
+  },
+  "Rain Report Café": {
+    "lat": 37.563,
+    "lng": 126.983
+  },
+  "Korea Bakery World Cup Winner Bakery": {
+    "lat": 36.3219,
+    "lng": 127.4194
+  },
+  "Scooper Gelato": {
+    "lat": 37.55,
+    "lng": 127.04
+  },
+  "Pachamama Bakery": {
+    "lat": 37.554,
+    "lng": 126.925
+  },
+  "House of Vinyl Yeonhui": {
+    "lat": 37.5692,
+    "lng": 126.9201
+  },
+  "Crepeboy Seoul": {
+    "lat": 37.55,
+    "lng": 126.922
+  },
+  "Friends and Yard": {
+    "lat": 37.556,
+    "lng": 126.925
+  },
+  "WAA Seoul": {
+    "lat": 37.545,
+    "lng": 127.057
+  },
+  "Roofcat Cat Café Hongdae": {
+    "lat": 37.557,
+    "lng": 126.924
+  },
+  "Seoul Baseball (KBO League)": {
+    "lat": 37.5122,
+    "lng": 127.0719
+  },
+  "Workshop by Baskin Robbins": {
+    "lat": 37.5185,
+    "lng": 127.034
+  },
+  "Jangsan Mountain Park (장산산림욕장)": {
+    "lat": 35.21,
+    "lng": 129.12
+  },
+  "Discover Seoul Pass": {
+    "lat": 37.57,
+    "lng": 126.982
+  },
+  "Lotte Hotel Seoul": {
+    "lat": 37.5637,
+    "lng": 126.9822
+  },
+  "JW Marriott Jeju": {
+    "lat": 33.254,
+    "lng": 126.412
+  },
+  "Eastern Medicine Hospital (한의원)": {
+    "lat": 37.556,
+    "lng": 126.924
+  },
+  "Hair of Seoul": {
+    "lat": 37.55,
+    "lng": 126.982
+  },
+  "Park Jun Hair Salon (박준뷰티랩)": {
+    "lat": 37.556,
+    "lng": 126.982
+  },
+  "Glowny": {
+    "lat": 37.535,
+    "lng": 127.001
+  },
+  "Loeuvre (Hannam)": {
+    "lat": 37.5345,
+    "lng": 127.0015
+  },
+  "Folnua": {
+    "lat": 37.534,
+    "lng": 127.002
+  },
+  "Muut": {
+    "lat": 37.5345,
+    "lng": 127.0005
+  },
+  "Roman & You Seongsu": {
+    "lat": 37.5445,
+    "lng": 127.056
+  },
+  "Yonsei Pain Clinic": {
+    "lat": 37.5505,
+    "lng": 126.925
+  },
+  "신사형통정형외과 Sinsa Hyeong Tong": {
+    "lat": 37.5248,
+    "lng": 127.0198
+  },
+  "Stretch U Care": {
+    "lat": 37.4967,
+    "lng": 127.0442
+  },
+  "Medione Medical Global": {
+    "lat": 37.5,
+    "lng": 127.035
+  },
+  "Relieve Clinic": {
+    "lat": 37.558,
+    "lng": 126.925
+  },
+  "APM Place (에이피엠)": {
+    "lat": 37.5668,
+    "lng": 127.0085
+  },
+  "Tongin Market (통인시장)": {
+    "lat": 37.5793,
+    "lng": 126.97
+  },
+  "Cheongnyangni Market": {
+    "lat": 37.5804,
+    "lng": 127.0479
+  },
+  "Chungmuro Neighbourhood": {
+    "lat": 37.5598,
+    "lng": 126.9973
+  },
+  "Bibiang Fragrances": {
+    "lat": 37.55,
+    "lng": 126.922
+  },
+  "Gentle Monster Flagship": {
+    "lat": 37.5215,
+    "lng": 127.0266
+  },
+  "GOTO Mall Hongdae (고투몰)": {
+    "lat": 37.5563,
+    "lng": 126.9236
+  },
+  "Hyundai Seoul Department Store": {
+    "lat": 37.5261,
+    "lng": 126.9269
+  },
+  "Tamburins Seongsu": {
+    "lat": 37.5448,
+    "lng": 127.0566
+  },
+  "Elorea": {
+    "lat": 37.5335,
+    "lng": 127.0013
+  },
+  "Youssoful Hannam": {
+    "lat": 37.534,
+    "lng": 127.0025
+  },
+  "Cosmic Mansion": {
+    "lat": 37.5793,
+    "lng": 126.9745
+  },
+  "Nonfiction Seongsu": {
+    "lat": 37.544,
+    "lng": 127.0555
+  },
+  "COMPILE": {
+    "lat": 37.5578,
+    "lng": 126.9211
+  },
+  "ZuhZuh (저저)": {
+    "lat": 37.556,
+    "lng": 126.9198
+  },
+  "라스트춘선 홍대": {
+    "lat": 37.5555,
+    "lng": 126.9205
+  },
+  "Bar Eum": {
+    "lat": 37.556,
+    "lng": 126.9215
+  },
+  "HIGHWAY Men's Hair": {
+    "lat": 37.5558,
+    "lng": 126.9222
+  },
+  "Buramsan Mountain (불암산)": {
+    "lat": 37.658,
+    "lng": 127.098
+  },
+  "Body + Color Analysis": {
+    "lat": 37.526,
+    "lng": 127.028
+  },
+  "Incheon International Airport": {
+    "lat": 37.4563,
+    "lng": 126.7052
+  },
+  "Shinsegae Gangnam": {
+    "lat": 37.498,
+    "lng": 127.0276
+  },
+  "Sokcho (속초)": {
+    "lat": 38.207,
+    "lng": 128.5919
+  },
+  "Gangneung (강릉)": {
+    "lat": 38.207,
+    "lng": 128.5919
+  },
+  "Gyeongju (경주)": {
+    "lat": 35.8562,
+    "lng": 129.2248
+  },
+  "Busan (부산)": {
+    "lat": 35.1796,
+    "lng": 129.0756
+  },
+  "Nami Island (남이섬)": {
+    "lat": 37.4138,
+    "lng": 127.5183
+  },
+  "Optima Wellness Museum Pharmacy (@owm.pharm.official)": {
+    "lat": 37.498,
+    "lng": 127.0276
+  },
+  "Seoulistique Skin (@seoulistique.skin)": {
+    "lat": 37.5564,
+    "lng": 126.9594
+  },
+  "Weave Living — Weave Suite Seoyu Parkside": {
+    "lat": 37.5392,
+    "lng": 126.9017
+  },
+  "NOMANUAL Flagship Store": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "THREE TO EIGHTY": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Customellow Seongsu Prints": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Blue Elephant Seongsu Flagship": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "RAWROW Worldwide Seoul": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Rest & Recreation Seongsu": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Double Lovers Seongsu Flagship": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "TETO Objet Seongsu": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "HATCHINGROOM Seongsu": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "MUSINSA EMPTY Seongsu": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "INSILENCE Seongsu Flagship": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "thisisneverthat Seongsu Flagship": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Beaker Seongsu Flagship Store": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "ACME DE LA VIE Seongsu Showroom": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "NOT4NERD Seongsu Flagship": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "TREEMINGBIRD Seongsu Store": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Fenek Hongdae Showroom": {
+    "lat": 37.557,
+    "lng": 126.9244
+  },
+  "Citybreeze Seoul Flagship": {
+    "lat": 37.5349,
+    "lng": 126.9997
+  },
+  "Mardi Mercredi (Hannam)": {
+    "lat": 37.5349,
+    "lng": 126.9997
+  },
+  "Worksout": {
+    "lat": 37.527,
+    "lng": 127.0289
+  },
+  "Maison Loeuvre": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Tennat": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Archive PKE": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "DUNST": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Joygryson": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Umer": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Beglowny": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Lookast": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Till.idie": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Recto": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Sandbeige": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Rockfish": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Emis": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Mardi Mercredi (Gangnam)": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Brownyard": {
+    "lat": 37.5009,
+    "lng": 127.007
+  },
+  "Bijeonstrol Yeonhui Roastery (비전스트롤 연희로스터리)": {
+    "lat": 37.565,
+    "lng": 126.9323
+  },
+  "숲속한방랜드 (Forest Korean Bath)": {
+    "lat": 37.5551,
+    "lng": 126.9369
+  },
+  "Korea Bakery World Cup Winner's Bakery": {
+    "lat": 36.3504,
+    "lng": 127.3845
+  },
+  "Roman & You Seongsu (로맨드유)": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Roofcat Cat Café (루프캣)": {
+    "lat": 37.557,
+    "lng": 126.9244
+  },
+  "신사형통정형외과 Sinsa Hyeong Tong Clinic": {
+    "lat": 37.521,
+    "lng": 127.0222
+  },
+  "Cheongnyangni Market (청량리역 시장)": {
+    "lat": 37.581,
+    "lng": 127.0456
+  },
+  "Chungmuro Neighbourhood Tip": {
+    "lat": 37.5603,
+    "lng": 126.9963
+  },
+  "Tamburins Flagship Seongsu": {
+    "lat": 37.5447,
+    "lng": 127.0567
+  },
+  "Jjimjilbang Tip — Modern Busan": {
+    "lat": 35.1796,
+    "lng": 129.0756
+  },
+  "Weave Suites Sunyu Parkside": {
+    "lat": 37.5392,
+    "lng": 126.9017
+  },
+  "Central Park Hotel Songdo": {
+    "lat": 37.3828,
+    "lng": 126.6557
+  },
+  "Akiba Fukurou Owl Cafe": {
+    "lat": 35.7021,
+    "lng": 139.7744
+  },
+  "Montbell Tokyo": {
+    "lat": 35.6762,
+    "lng": 139.6503
+  },
+  "Kamishikimi Kumanoimasu Shrine": {
+    "lat": 32.5168,
+    "lng": 131.0652
+  },
+  "Okinawa": {
+    "lat": 26.2124,
+    "lng": 127.6809
+  },
+  "Mt. Yoshino": {
+    "lat": 34.6851,
+    "lng": 135.8048
+  },
+  "Suwa Lake / Tateishi Park": {
+    "lat": 36.6513,
+    "lng": 138.181
+  },
+  "Kusatsu Onsen": {
+    "lat": 36.3906,
+    "lng": 139.0602
+  },
+  "Takachiho Gorge": {
+    "lat": 32.7503,
+    "lng": 130.7018
+  },
+  "Shirakawa-go": {
+    "lat": 35.3912,
+    "lng": 136.7223
+  },
+  "Kamikochi": {
+    "lat": 36.6513,
+    "lng": 138.181
+  },
+  "Kiso Valley (Nakasendo Trail)": {
+    "lat": 36.6513,
+    "lng": 138.181
+  },
+  "Nishikawa Daimaru Shinsaibashi (Custom Pillow)": {
+    "lat": 34.6727,
+    "lng": 135.5009
+  },
+  "Descente Tokyo": {
+    "lat": 35.6693,
+    "lng": 139.7026
+  },
+  "Nanga Shop Harajuku": {
+    "lat": 35.6693,
+    "lng": 139.7026
+  },
+  "Nakano Broadway": {
+    "lat": 35.703,
+    "lng": 139.6644
+  },
+  "Otter Cafe Kyoto": {
+    "lat": 35.0116,
+    "lng": 135.7681
+  },
+  "Snow Monkey Park (Jigokudani)": {
+    "lat": 36.6513,
+    "lng": 138.181
+  },
+  "Omotesando": {
+    "lat": 35.6762,
+    "lng": 139.6503
+  },
+  "Kyushu (region)": {
+    "lat": 32.7503,
+    "lng": 130.7018
+  },
+  "Eryanping Trail": {
+    "lat": 23.5136,
+    "lng": 120.7964
+  },
+  "Sotetsu Grand Fresa Ximen": {
+    "lat": 25.0415,
+    "lng": 121.5082
+  },
+  "Qingjing Farm": {
+    "lat": 23.9158,
+    "lng": 120.6736
+  },
+  "Hehuanshan": {
+    "lat": 23.9158,
+    "lng": 120.6736
+  },
+  "Taigrance": {
+    "lat": 25.0268,
+    "lng": 121.5432
+  },
+  "Alishan National Forest Recreation Area": {
+    "lat": 23.48,
+    "lng": 120.4491
+  },
+  "Zhang A Mei's Farm": {
+    "lat": 24.7021,
+    "lng": 121.7374
+  },
+  "Su Ao Fish Port (蘇澳漁港)": {
+    "lat": 24.7021,
+    "lng": 121.7374
+  },
+  "Tofu Cape (豆腐岬)": {
+    "lat": 24.7021,
+    "lng": 121.7374
+  },
+  "Xingshui Black Sand Beach": {
+    "lat": 24.7021,
+    "lng": 121.7374
+  },
+  "Luodong Night Market": {
+    "lat": 24.7021,
+    "lng": 121.7374
+  },
+  "Bishkek": {
+    "lat": 42.8746,
+    "lng": 74.5698
+  },
+  "Song-Kul Lake": {
+    "lat": 41.4286,
+    "lng": 76.0104
+  },
+  "Kyzart Village": {
+    "lat": 41.4286,
+    "lng": 76.0104
+  },
+  "Issyk-Kul Lake": {
+    "lat": 42.49,
+    "lng": 77.416
+  },
+  "Altyn Arashan": {
+    "lat": 42.49,
+    "lng": 78.3956
+  },
+  "Ala-Kul Lake": {
+    "lat": 42.49,
+    "lng": 78.3956
+  },
+  "Kel-Suu Lake": {
+    "lat": 41.08,
+    "lng": 78.8
+  },
+  "Jongno (종로)": {
+    "lat": 37.5704405,
+    "lng": 126.9923242
+  },
+  "Myeongdong (명동)": {
+    "lat": 37.5608977,
+    "lng": 126.9863762
+  },
+  "Hongdae (홍대)": {
+    "lat": 37.55792,
+    "lng": 126.926135
+  },
+  "Gangnam (강남)": {
+    "lat": 37.5177,
+    "lng": 127.0473
+  },
+  "Itaewon (이태원)": {
+    "lat": 37.5406712,
+    "lng": 126.9954012
+  },
+  "Seongsu (성수)": {
+    "lat": 37.5445688,
+    "lng": 127.0561016
+  },
+  "Hannam (한남)": {
+    "lat": 37.5358612,
+    "lng": 127.0117095
+  },
+  "Insadong (인사동)": {
+    "lat": 37.5716543,
+    "lng": 126.9864242
+  },
+  "Euljiro (을지로)": {
+    "lat": 37.5694727,
+    "lng": 126.9950416
+  },
+  "Sinchon (신촌)": {
+    "lat": 37.567836,
+    "lng": 126.9393747
+  },
+  "Apgujeong (압구정)": {
+    "lat": 37.5261847,
+    "lng": 127.0284989
+  },
+  "Gwangjang Market (광장시장)": {
+    "lat": 37.570909,
+    "lng": 126.9997715
+  },
+  "Namsan": {
+    "lat": 37.5600752,
+    "lng": 126.9865453
+  },
+  "Hanok Village (한옥마을)": {
+    "lat": 37.5728498,
+    "lng": 126.9895151
+  },
+  "Hwangnyeongsan (황령산)": {
+    "lat": 35.1573354,
+    "lng": 129.0819088
+  },
+  "Jeju (제주)": {
+    "lat": 33.4998289,
+    "lng": 126.5313902
+  },
+  "LiveAnywhere Korea (@liveanywhere.korea)": {
+    "lat": 33.489,
+    "lng": 126.4983
+  },
+  "Cat & F (캣앤에프)": {
+    "lat": 37.5434683,
+    "lng": 127.0527346
+  },
+  "Spa Gogyeol (스파고결)": {
+    "lat": 37.51824,
+    "lng": 127.0422303
+  },
+  "Eunpyeong Hanok Village": {
+    "lat": 37.6403575,
+    "lng": 126.9391281
+  },
+  "Jeju Hiking Trail": {
+    "lat": 33.489,
+    "lng": 126.4983
+  },
+  "Noryangjin Fish Market": {
+    "lat": 37.513453,
+    "lng": 126.9382027
+  },
+  "Jeju — Full Guide (@jun_hanok)": {
+    "lat": 33.489,
+    "lng": 126.4983
+  },
+  "Jeju — Waterfalls & Highlights": {
+    "lat": 33.489,
+    "lng": 126.4983
+  },
+  "Jeju Coastal Itinerary": {
+    "lat": 33.489,
+    "lng": 126.4983
+  },
+  "Busan — Hwangnyeong-san Lookout": {
+    "lat": 35.1796,
+    "lng": 129.0756
+  },
+  "Yeonam (연남)": {
+    "lat": 37.5596971,
+    "lng": 126.9215025
+  },
+  "Abijou Myeongdong Branch (명동점)": {
+    "lat": 37.5625375,
+    "lng": 126.9851719
+  },
+  "The Truffle Bakery (더트러플베이커리)": {
+    "lat": 37.535085,
+    "lng": 127.0005191
+  },
+  "Amor Napoli (아모르나폴리)": {
+    "lat": 37.5289861,
+    "lng": 126.9648297
+  },
+  "Belief Coffee Roasters (빌리프커피로스터스)": {
+    "lat": 37.5523204,
+    "lng": 126.9139963
+  },
+  "Scooper Gelato (스쿠퍼젤라또)": {
+    "lat": 37.5783481,
+    "lng": 126.9712127
+  },
+  "라스트춘선 홍대 (Last Chunseon Hongdae)": {
+    "lat": 37.5503141,
+    "lng": 126.9205913
+  },
+  "Salt Bread (소금빵) — Jayeondo": {
+    "lat": 37.5736939,
+    "lng": 126.9897269
+  },
+  "Alpaca World": {
+    "lat": 37.8253472,
+    "lng": 127.8834011
+  },
+  "Gangnam Kyoja (강남교자)": {
+    "lat": 37.5014578,
+    "lng": 127.0241135
+  },
+  "DNA Skin Clinic (@dnaskin12 / @dnaskin_lab)": {
+    "lat": 37.568257,
+    "lng": 126.976806,
+    "source": "html"
+  },
+  "Abijou Hongdae Branch": {
+    "lat": 37.549058,
+    "lng": 126.974261,
+    "source": "html"
+  },
+  "Joa Pilates (@joapilates)": {
+    "lat": 37.573714,
+    "lng": 126.975863,
+    "source": "html"
+  },
+  "Granhand (그랑핸드)": {
+    "lat": 37.580581,
+    "lng": 126.98786,
+    "source": "html"
+  },
+  "ODLYWORKSHOP": {
+    "lat": 37.56495,
+    "lng": 126.975745,
+    "source": "html"
+  },
+  "Miseki Seoul": {
+    "lat": 37.566821,
+    "lng": 126.987192,
+    "source": "html"
+  },
+  "Révdou (레브두)": {
+    "lat": 37.576805,
+    "lng": 126.976016,
+    "source": "html"
+  },
+  "Manhwa-bang / Comic Book Café": {
+    "lat": 37.564517,
+    "lng": 126.988909,
+    "source": "html"
+  },
+  "Glasses / Optical shops": {
+    "lat": 37.555487,
+    "lng": 126.96506,
+    "source": "html"
+  },
+  "Korean Pantry Souvenirs": {
+    "lat": 37.579787,
+    "lng": 126.980679,
+    "source": "html"
+  },
+  "Mijainseoul Naver Map": {
+    "lat": 37.570311,
+    "lng": 126.989005,
+    "source": "html"
+  },
+  "Inko Seoul (잉코서울)": {
+    "lat": 37.564179,
+    "lng": 126.977114,
+    "source": "html"
+  },
+  "Leedorim Seoul": {
+    "lat": 37.57655,
+    "lng": 126.986493,
+    "source": "html"
+  },
+  "Avekcheri": {
+    "lat": 37.575569,
+    "lng": 126.97381,
+    "source": "html"
+  },
+  "Ikovo Coffee Studio": {
+    "lat": 37.565269,
+    "lng": 126.985204,
+    "source": "html"
+  },
+  "Granhand Marine Orchid fragrance": {
+    "lat": 37.562982,
+    "lng": 126.984995,
+    "source": "html"
+  },
+  "Yonsei Pain Clinic (연세안통증클리닉)": {
+    "lat": 37.556682,
+    "lng": 126.983993,
+    "source": "html"
+  },
+  "Relieve Clinic (릴리브 클리닉)": {
+    "lat": 37.555151,
+    "lng": 126.966925,
+    "source": "html"
+  },
+  "Bibiang Fragrances (비비앙)": {
+    "lat": 37.572859,
+    "lng": 126.986752,
+    "source": "html"
+  },
+  "Gentle Monster Multi-Floor Flagship": {
+    "lat": 37.572226,
+    "lng": 126.976228,
+    "source": "html"
+  },
+  "Body + Color Analysis Korea": {
+    "lat": 37.56609,
+    "lng": 126.978841,
+    "source": "html"
+  },
+  "Korea Apps Guide": {
+    "lat": 37.576931,
+    "lng": 126.982214,
+    "source": "html"
+  },
+  "Incheon Immigration Queue Skip": {
+    "lat": 37.581096,
+    "lng": 126.975688,
+    "source": "html"
+  },
+  "Discover Seoul Pass (June promo)": {
+    "lat": 37.55081,
+    "lng": 126.973619,
+    "source": "html"
+  },
+  "Gyeongdong Market (Walking Tour with @wookeunshin)": {
+    "lat": 37.563972,
+    "lng": 126.96763,
+    "source": "html"
+  },
+  "Yonsei AN Pain Clinic": {
+    "lat": 37.574499,
+    "lng": 126.978686,
+    "source": "html"
+  },
+  "Seoul Menswear Shopping Circuit (@rogerwh0)": {
+    "lat": 37.56675,
+    "lng": 126.966069,
+    "source": "html"
+  },
+  "Seoul Cafe Circuit (@minywander)": {
+    "lat": 37.554702,
+    "lng": 126.972423,
+    "source": "html"
+  },
+  "Ttareungyi Seoul Public Bike": {
+    "lat": 37.564961,
+    "lng": 126.96428,
+    "source": "html"
+  },
+  "Seoul Day Trips Planning Guide": {
+    "lat": 37.571713,
+    "lng": 126.99248,
+    "source": "html"
+  },
+  "Namsan Sky Forest Trail": {
+    "lat": 37.570419,
+    "lng": 126.989577,
+    "source": "html"
+  },
+  "Discover Seoul Pass (code SYLVIA-SEOULPASS)": {
+    "lat": 37.571655,
+    "lng": 126.971964,
+    "source": "html"
+  },
+  "Seoul Vinyl Bar Circuit (@riyaplam)": {
+    "lat": 37.57247,
+    "lng": 126.986278,
+    "source": "html"
+  },
+  "Bukhansan Mountain Hike": {
+    "lat": 37.549674,
+    "lng": 126.977148,
+    "source": "html"
+  },
+  "Unni Guide Clinic Center": {
+    "lat": 37.573891,
+    "lng": 126.980896,
+    "source": "html"
+  },
+  "AREX Train — Incheon to Seoul": {
+    "lat": 37.554434,
+    "lng": 126.987495,
+    "source": "html"
+  },
+  "Skip Myeongdong": {
+    "lat": 37.564963,
+    "lng": 126.972974,
+    "source": "html"
+  },
+  "Gonlun Mountain Hang Gliding — Pohang": {
+    "lat": 37.554507,
+    "lng": 126.968184,
+    "source": "html"
+  },
+  "Chester Travel Chingu — Custom Itinerary": {
+    "lat": 37.564335,
+    "lng": 126.966429,
+    "source": "html"
+  },
+  "Korean Travel Apps": {
+    "lat": 37.563458,
+    "lng": 126.972856,
+    "source": "html"
+  },
+  "Yonsei AN Pain Clinic (Back/Spine)": {
+    "lat": 37.563155,
+    "lng": 126.986239,
+    "source": "html"
+  },
+  "Seoul Donut Spot": {
+    "lat": 37.564089,
+    "lng": 126.979293,
+    "source": "html"
+  },
+  "Namdaemun Market — Shopping Guide": {
+    "lat": 37.564323,
+    "lng": 126.980567,
+    "source": "html"
+  },
+  "Seoul Shopping Neighbourhoods — @kaynamiee": {
+    "lat": 37.583926,
+    "lng": 126.976659,
+    "source": "html"
+  },
+  "Seoul Hot Spots — One-Sentence Guide": {
+    "lat": 37.573874,
+    "lng": 126.978309,
+    "source": "html"
+  },
+  "Korea Travel Tips — Chungmuro & Gangnam (@dianainseoul)": {
+    "lat": 37.563576,
+    "lng": 126.97533,
+    "source": "html"
+  },
+  "Gyeongdong Market": {
+    "lat": 37.568147,
+    "lng": 126.986096,
+    "source": "approx",
+    "approx": true
+  },
+  "Seoul Menswear Spots (@rogerwh0)": {
+    "lat": 37.573418,
+    "lng": 126.974181,
+    "source": "approx",
+    "approx": true
+  },
+  "Salt Bread — Jayeondo Sogeumppang": {
+    "lat": 37.572981,
+    "lng": 126.993493,
+    "source": "approx",
+    "approx": true
+  },
+  "Vinyl Bar Circuit — Seoul": {
+    "lat": 37.563603,
+    "lng": 126.975629,
+    "source": "approx",
+    "approx": true
+  },
+  "AREX All-Stop Train — Incheon": {
+    "lat": 37.572954,
+    "lng": 126.963298,
+    "source": "approx",
+    "approx": true
+  },
+  "Hwangnyeong-san Lookout — Busan": {
+    "lat": 35.165738,
+    "lng": 129.068628,
+    "source": "approx",
+    "approx": true
+  },
+  "Seoul Medical Tourism Circuit": {
+    "lat": 37.561303,
+    "lng": 126.983515,
+    "source": "approx",
+    "approx": true
+  },
+  "Always August Cafe (alwaysau8ust)": {
+    "lat": 37.564698,
+    "lng": 126.972795,
+    "source": "approx",
+    "approx": true
+  },
+  "AK Plaza Hongdae — Anime Shopping": {
+    "lat": 37.554657,
+    "lng": 126.98506,
+    "source": "approx",
+    "approx": true
+  },
+  "thisisneverthat Hongdae Flagship": {
+    "lat": 37.56714,
+    "lng": 126.964425,
+    "source": "approx",
+    "approx": true
+  },
+  "Gangnam Square Pharmacy (강남스퀘어약국)": {
+    "lat": 37.562529,
+    "lng": 126.969823,
+    "source": "approx",
+    "approx": true
+  },
+  "Duna Clinic — Posture & Tech Neck (Seongsu)": {
+    "lat": 37.5445688,
+    "lng": 127.0561016,
+    "source": "nominatim"
+  },
+  "Moclock Hair & Scalp Clinic (Gangnam)": {
+    "lat": 37.4964624,
+    "lng": 127.0282667,
+    "source": "nominatim"
+  },
+  "Essential Korea Apps — NaverMaps, Kuli Kuli, Kakao T": {
+    "lat": 37.572006,
+    "lng": 126.969837,
+    "source": "approx",
+    "approx": true
+  },
+  "Korean Pharmacy K-Beauty Shopping Guide (@nathan.wu)": {
+    "lat": 37.570509,
+    "lng": 126.971804,
+    "source": "approx",
+    "approx": true
+  },
+  "Unni App — Korea Clinic Booking": {
+    "lat": 37.564199,
+    "lng": 126.989948,
+    "source": "approx",
+    "approx": true
+  },
+  "Climate Card — Unlimited Seoul Public Transit": {
+    "lat": 37.580442,
+    "lng": 126.979935,
+    "source": "approx",
+    "approx": true
+  },
+  "Skip Airbnb Korea — Use Local Alternatives": {
+    "lat": 37.555942,
+    "lng": 126.980438,
+    "source": "approx",
+    "approx": true
+  },
+  "Baemin — Korea Food Delivery App": {
+    "lat": 37.559051,
+    "lng": 126.984075,
+    "source": "approx",
+    "approx": true
+  },
+  "KakaoTalk & Korea App Stack": {
+    "lat": 37.563835,
+    "lng": 126.979646,
+    "source": "approx",
+    "approx": true
+  },
+  "Seoul Neighbourhood Guide — Where to Stay": {
+    "lat": 37.555112,
+    "lng": 126.970884,
+    "source": "approx",
+    "approx": true
+  },
+  "Apgujeong Sanghoe (압구정상회)": {
+    "lat": 37.573996,
+    "lng": 126.974568,
+    "source": "approx",
+    "approx": true
+  },
+  "Gukjaejeonja Center (국제전자센타) — Anime Shopping": {
+    "lat": 37.571326,
+    "lng": 126.970596,
+    "source": "approx",
+    "approx": true
+  },
+  "JW Marriott Seoul (Dongdaemun)": {
+    "lat": 37.5880378,
+    "lng": 127.0323927,
+    "source": "nominatim"
+  },
+  "Josun Palace Seoul Gangnam": {
+    "lat": 37.503382,
+    "lng": 127.0415998,
+    "source": "nominatim"
+  },
+  "Jean Frigo": {
+    "lat": 37.57067,
+    "lng": 126.966225,
+    "source": "approx",
+    "approx": true
+  },
+  "Haebangchon (HBC)": {
+    "lat": 37.570933,
+    "lng": 126.99206,
+    "source": "approx",
+    "approx": true
+  },
+  "Boogie Woogie (HBC Jazz Bar)": {
+    "lat": 37.566595,
+    "lng": 126.978051,
+    "source": "approx",
+    "approx": true
+  },
+  "Charlie's Grocery (HBC)": {
+    "lat": 37.562564,
+    "lng": 126.981697,
+    "source": "approx",
+    "approx": true
+  },
+  "Mil Toast House (밀토스트하우스)": {
+    "lat": 37.569946,
+    "lng": 126.983014,
+    "source": "approx",
+    "approx": true
+  },
+  "Haeundae Beach (해운대해수욕장) — Night": {
+    "lat": 35.1592859,
+    "lng": 129.1586091,
+    "source": "nominatim"
+  },
+  "Gwangalli Beach (광안리해수욕장) — Night": {
+    "lat": 35.1508879,
+    "lng": 129.1167806,
+    "source": "nominatim"
+  },
+  "Juuneedu (쥬니두)": {
+    "lat": 37.5631554,
+    "lng": 126.9841039,
+    "source": "nominatim"
+  },
+  "Sooa Clinic (소아 클리닉) — Yongsan": {
+    "lat": 37.56595,
+    "lng": 126.976154,
+    "source": "approx",
+    "approx": true
+  },
+  "Mil Toast House": {
+    "lat": 37.565294,
+    "lng": 126.973014,
+    "source": "approx",
+    "approx": true
+  },
+  "Nohd Global Clinic (Gangnam)": {
+    "lat": 37.4964624,
+    "lng": 127.0282667,
+    "source": "nominatim"
+  },
+  "Seoul Museum of Craft Art": {
+    "lat": 37.5765519,
+    "lng": 126.9834467,
+    "source": "nominatim"
+  },
+  "Seokchon Lake (석촌호수)": {
+    "lat": 37.5100884,
+    "lng": 127.1040775,
+    "source": "nominatim"
+  },
+  "Baekjegobun-ro 43-gil (백제고분로43길)": {
+    "lat": 37.507875,
+    "lng": 127.1102145,
+    "source": "nominatim"
+  },
+  "XX2 Club — Hongdae": {
+    "lat": 37.581203,
+    "lng": 126.983178,
+    "source": "approx",
+    "approx": true
+  },
+  "Namsan Botanical Garden": {
+    "lat": 37.581362,
+    "lng": 126.981927,
+    "source": "approx",
+    "approx": true
+  },
+  "Mama Ethiopian Restaurant": {
+    "lat": 37.563907,
+    "lng": 126.9777,
+    "source": "approx",
+    "approx": true
+  },
+  "Cow Tteokbokki (카우 떡볶이)": {
+    "lat": 37.575241,
+    "lng": 126.980066,
+    "source": "approx",
+    "approx": true
+  },
+  "Mangwon Market (망원시장)": {
+    "lat": 37.5566206,
+    "lng": 126.9060503,
+    "source": "nominatim"
+  },
+  "Seler Mari": {
+    "lat": 37.55976,
+    "lng": 126.992195,
+    "source": "approx",
+    "approx": true
+  },
+  "Ilsan Lake Park (일산호수공원)": {
+    "lat": 37.56713,
+    "lng": 126.981398,
+    "source": "approx",
+    "approx": true
+  },
+  "Yeonnam-dong Railway Path (연트럴파크)": {
+    "lat": 37.5621661,
+    "lng": 126.9226492,
+    "source": "nominatim"
+  },
+  "Old Railway Track — Hongdae to Sinchon": {
+    "lat": 37.561959,
+    "lng": 126.992403,
+    "source": "approx",
+    "approx": true
+  },
+  "Sinchon (신촌) — Night": {
+    "lat": 37.5551517,
+    "lng": 126.9369084,
+    "source": "nominatim"
+  },
+  "Bolero — Itaewon": {
+    "lat": 37.549527,
+    "lng": 126.976873,
+    "source": "approx",
+    "approx": true
+  },
+  "Gwangjang Hotteok (광장 호떡)": {
+    "lat": 37.565194,
+    "lng": 126.978928,
+    "source": "approx",
+    "approx": true
+  },
+  "Gwanghwamun Mijin (광화문 미진)": {
+    "lat": 37.562389,
+    "lng": 126.985208,
+    "source": "approx",
+    "approx": true
+  }
+}

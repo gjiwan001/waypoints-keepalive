@@ -56,6 +56,8 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 #hleft{display:flex;align-items:center;gap:10px;}
 .hright{display:flex;align-items:center;gap:8px;justify-content:flex-end;}
 .hpill{font-family:var(--ui);font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:2px 9px;border-radius:20px;background:rgba(58,12,24,.1);color:#3A0C18;border:1px solid rgba(58,12,24,.22);}
+#qadd-btn{background:rgba(184,151,74,.15) !important;color:var(--gold) !important;border:1px solid rgba(184,151,74,.35) !important;}
+#qadd-btn:hover{background:rgba(184,151,74,.28) !important;}
 #suggest-btn{background:#3A0C18 !important;color:#DDBCB4 !important;border:none !important;}
 #suggest-btn:hover{background:#500A22 !important;}
 #theme-btn{background:transparent !important;border:1px solid rgba(58,12,24,.28) !important;color:rgba(58,12,24,.65) !important;}
@@ -120,7 +122,7 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
   .cm-item{padding:8px 12px;font-size:12px;}
 }
 #theme-btn{border-radius:2px;padding:3px 10px;font-family:var(--ui);font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .15s;}
-#suggest-btn{border-radius:2px;padding:4px 14px;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .15s;}
+#suggest-btn,#qadd-btn{border-radius:2px;padding:4px 14px;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .15s;}
 #hcount{font-family:var(--ui);font-size:9px;letter-spacing:.08em;}
 
 /* ── SUGGEST MODAL (left panel) ── */
@@ -335,16 +337,14 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 
 /* ── PANEL BAR ── */
 #panel-bar{height:36px;min-height:36px;display:flex;align-items:stretch;padding:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-shrink:0;}
-#pd-tabs{display:flex;align-items:stretch;gap:0;overflow-x:auto;flex:1;scrollbar-width:none;}
-#pd-tabs::-webkit-scrollbar{display:none;}
-.pdt{font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;padding:0 12px;border:none;background:none;position:relative;height:100%;display:inline-flex;align-items:center;gap:5px;transition:color .15s;border-right:1px solid var(--line);}
-.pdt::after{content:'';position:absolute;bottom:0;left:12px;right:12px;height:1.5px;background:var(--acc);transform:scaleX(0);transition:transform .2s cubic-bezier(.25,.46,.45,.94);}
-.pdt.on{color:var(--hi);}
-.pdt.on::after{transform:scaleX(1);}
-.pdt:hover{color:var(--text);}
-.pdt-cnt{font-size:8px;color:var(--muted);background:var(--bg3);padding:1px 5px;border-radius:10px;}
-.pdt.on .pdt-cnt{background:color-mix(in srgb,var(--acc) 20%,transparent);color:var(--acc);}
-.pdt-prog{width:20px;height:2px;background:var(--bg4);border-radius:1px;overflow:hidden;}
+#pd-tabs{display:flex;align-items:center;justify-content:center;gap:0;flex:1;border-right:1px solid var(--line);min-width:0;position:relative;padding:0 8px;}
+.pdt-nav{display:inline-flex;align-items:center;gap:0;background:var(--bg3);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+.pdt-arrow{font-family:var(--ui);font-size:13px;color:var(--muted);cursor:pointer;padding:0 7px;border:none;background:none;height:22px;display:flex;align-items:center;transition:color .12s;flex-shrink:0;line-height:1;}
+.pdt-arrow:hover:not(:disabled){color:var(--hi);background:var(--bg4);}
+.pdt-arrow:disabled{color:var(--bg4);cursor:default;}
+.pdt-label{font-family:var(--ui);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--hi);white-space:nowrap;display:flex;align-items:center;gap:5px;padding:0 8px;border-left:1px solid var(--line);border-right:1px solid var(--line);height:22px;}
+.pdt-cnt{font-size:7px;color:var(--acc);background:color-mix(in srgb,var(--acc) 18%,transparent);padding:1px 5px;border-radius:8px;font-weight:700;letter-spacing:.04em;}
+.pdt-prog-bar{height:2px;background:var(--bg4);border-radius:1px;position:absolute;bottom:0;left:0;right:0;}
 .pdt-prog-fill{height:100%;background:var(--green);border-radius:1px;transition:width .3s;}
 #pd-mode{display:flex;align-items:center;gap:2px;padding:0 8px;flex-shrink:0;border-left:1px solid var(--line);}
 .pdmb{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:3px 8px;border-radius:2px;border:none;background:none;transition:all .12s;}
@@ -353,6 +353,9 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 .pdtod{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:3px 7px;border-radius:2px;border:none;background:none;transition:all .12s;}
 .pdtod.on{color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,transparent);}
 .pdmb:hover:not(.on){color:var(--text);}
+#mg-tab-btn{color:#1a1209;background:#e8a020;border:none;border-radius:3px;padding:3px 10px;}
+#mg-tab-btn:hover:not(.on){background:#f0b030;color:#1a1209;}
+#mg-tab-btn.on{background:#f5b800;color:#1a1209;box-shadow:0 0 8px rgba(245,184,0,.5);}
 /* ── BROWSE MODE ── */
 .pt-area-hdr{font-family:var(--ui);font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:6px 14px 4px;background:var(--bg2);border-bottom:1px solid var(--line);border-top:1px solid var(--line);position:sticky;top:0;z-index:10;}
 .pt-area-hdr:first-child{border-top:none;}
@@ -363,9 +366,86 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
 .pt-name{flex:1;font-family:var(--disp);font-size:13px;font-style:italic;color:var(--hi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .pt-cat{font-family:var(--ui);font-size:9px;color:var(--muted);flex-shrink:0;letter-spacing:.04em;}
 .pt-day{font-family:var(--ui);font-size:8px;color:var(--gold);flex-shrink:0;padding:1px 6px;border-radius:20px;background:rgba(196,162,74,.1);border:1px solid rgba(196,162,74,.2);}
+.pt-day-pick{font-family:var(--ui);font-size:8px;color:var(--gold);flex-shrink:0;padding:1px 4px 1px 6px;border-radius:20px;background:rgba(196,162,74,.1);border:1px solid rgba(196,162,74,.2);cursor:pointer;outline:none;max-width:90px;appearance:none;-webkit-appearance:none;}
+.pt-day-pick.overridden{background:rgba(196,162,74,.28);border-color:var(--gold);}
+.tp-day-pick{font-family:var(--ui);font-size:9px;color:var(--gold);padding:2px 6px;border-radius:20px;background:rgba(196,162,74,.1);border:1px solid rgba(196,162,74,.2);cursor:pointer;outline:none;margin-top:4px;appearance:none;-webkit-appearance:none;}
+.tp-day-pick.overridden{background:rgba(196,162,74,.28);border-color:var(--gold);}
 .pt-check{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);background:none;color:transparent;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;transition:all .15s;font-family:var(--ui);line-height:1;}
 .pt-check:hover{border-color:var(--green);color:var(--green);}
 .pt-row.pt-visited .pt-check{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,transparent);}
+.pt-mg-btn{font-family:var(--ui);font-size:7px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:20px;background:none;padding:1px 6px;cursor:pointer;flex-shrink:0;transition:all .15s;white-space:nowrap;line-height:1.4;}
+.pt-mg-btn:hover{border-color:rgba(196,162,74,.6);color:var(--gold);}
+.pt-mg-btn.on{color:var(--gold);border-color:var(--gold);background:rgba(196,162,74,.12);}
+.tp-mg-btn{font-family:var(--ui);font-size:7px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:20px;background:none;padding:1px 6px;cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1.4;vertical-align:middle;margin-left:4px;}
+.tp-mg-btn:hover{border-color:rgba(196,162,74,.6);color:var(--gold);}
+.tp-mg-btn.on{color:var(--gold);border-color:var(--gold);background:rgba(196,162,74,.12);}
+.mg-remove-btn{font-family:var(--ui);font-size:7px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(196,162,74,.35);border-radius:20px;background:rgba(196,162,74,.08);padding:1px 7px;cursor:pointer;flex-shrink:0;white-space:nowrap;line-height:1.4;transition:all .12s;}
+.mg-remove-btn:hover{background:rgba(196,162,74,.2);border-color:var(--gold);}
+/* ── ROUTE BUTTON on rows ── */
+.pt-route-btn{font-family:var(--ui);font-size:7px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:20px;background:none;padding:1px 6px;cursor:pointer;flex-shrink:0;transition:all .15s;white-space:nowrap;line-height:1.4;}
+.pt-route-btn:hover{border-color:rgba(200,114,74,.6);color:#c8724a;}
+.pt-route-btn.in-route{color:#c8724a;border-color:#c8724a;background:rgba(200,114,74,.12);}
+.tp-route-btn{font-family:var(--ui);font-size:7px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:20px;background:none;padding:1px 6px;cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1.4;vertical-align:middle;margin-left:4px;}
+.tp-route-btn:hover{border-color:rgba(200,114,74,.6);color:#c8724a;}
+.tp-route-btn.in-route{color:#c8724a;border-color:#c8724a;background:rgba(200,114,74,.12);}
+/* ── NOTES in info card ── */
+#inotes-wrap{margin-bottom:8px;}
+#inotes{width:100%;box-sizing:border-box;background:var(--bg3);border:1px solid var(--line);border-radius:4px;color:var(--text);font-family:"DM Sans",sans-serif;font-size:11px;line-height:1.6;padding:6px 8px;resize:none;outline:none;min-height:52px;transition:border-color .15s;}
+#inotes:focus{border-color:var(--muted);}
+#inotes::placeholder{color:var(--muted);font-style:italic;}
+.inote-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;opacity:.8;}
+/* ── STRUCTURED FIELDS chips in info card ── */
+#ifields{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
+.if-chip{font-family:"DM Mono",monospace;font-size:8px;padding:2px 7px;background:var(--bg3);border:1px solid var(--line);border-radius:20px;color:var(--mid);display:flex;align-items:center;gap:4px;white-space:nowrap;}
+.if-chip a{color:var(--acc);text-decoration:none;}
+.if-chip a:hover{text-decoration:underline;}
+.if-lbl{color:var(--muted);margin-right:2px;}
+/* ── TODAY button in panel bar ── */
+#today-btn{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:none;background:none;cursor:pointer;padding:0 8px;flex-shrink:0;border-left:1px solid var(--line);height:100%;transition:all .12s;}
+#today-btn:hover{background:color-mix(in srgb,var(--acc) 10%,transparent);}
+/* ── TRIP START popover (attached to Today button) ── */
+#tripstart-popover{display:none;position:absolute;bottom:calc(100% + 6px);right:0;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;z-index:9999;min-width:180px;box-shadow:0 4px 16px rgba(0,0,0,.4);}
+#tripstart-popover.open{display:block;}
+#tripstart-popover label{font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;}
+#tripstart-popover input[type=date]{width:100%;background:var(--bg3);border:1px solid var(--line);border-radius:4px;color:var(--hi);font-family:var(--ui);font-size:12px;padding:5px 8px;box-sizing:border-box;color-scheme:dark;}
+#tripstart-popover .dp-btns{display:flex;gap:6px;margin-top:8px;}
+#tripstart-popover .dp-btn{flex:1;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 0;border-radius:3px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;}
+#tripstart-popover .dp-btn.save{background:var(--acc);border-color:var(--acc);color:#fff;}
+/* ── QUICK-ADD overlay ── */
+#qadd-overlay{position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;}
+#qadd-overlay.vis{display:flex;}
+#qadd-modal{background:var(--bg2);border:1px solid var(--line);border-radius:8px;width:340px;max-width:92vw;max-height:85vh;overflow-y:auto;padding:18px 18px 14px;}
+#qadd-modal h3{font-family:"DM Serif Display",serif;font-size:17px;color:var(--hi);margin:0 0 4px;}
+#qadd-modal .qsub{font-family:var(--ui);font-size:9px;color:var(--muted);letter-spacing:.06em;margin-bottom:14px;}
+#qadd-modal .mfield{margin-bottom:10px;}
+#qadd-modal label{font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px;}
+#qadd-modal input,#qadd-modal select,#qadd-modal textarea{width:100%;box-sizing:border-box;background:var(--bg3);border:1px solid var(--line);border-radius:4px;color:var(--hi);font-family:"DM Sans",sans-serif;font-size:12px;padding:6px 8px;outline:none;}
+#qadd-modal textarea{min-height:62px;resize:none;}
+#qadd-modal .mrow{display:flex;gap:8px;}
+#qadd-modal .mrow .mfield{flex:1;}
+#qadd-actions{display:flex;gap:8px;margin-top:12px;}
+#qadd-cancel{flex:1;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px;border-radius:4px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;}
+#qadd-submit{flex:2;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px;border-radius:4px;border:none;background:var(--acc);color:#fff;cursor:pointer;}
+#qadd-msg{font-family:var(--ui);font-size:9px;color:var(--acc);margin-top:6px;text-align:center;min-height:14px;}
+/* ── PANEL ROW hover-highlight pulse ── */
+.pt-row.map-hovered,.tp-row.map-hovered{background:color-mix(in srgb,var(--acc) 6%,var(--bg3)) !important;}
+/* Must Go pill in the top pill bar */
+#mg-filter-pill{color:rgba(58,12,24,.5) !important;}
+#mg-filter-pill.on{color:#3A0C18 !important;}
+/* ── MUST GO panel ── */
+.mg-hdr{font-family:var(--ui);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:8px 14px 6px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg);z-index:5;}
+.mg-count{color:var(--muted);font-weight:400;}
+.mg-row{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,.06);cursor:pointer;transition:background .1s;}
+.mg-row:hover{background:var(--bg3);}
+.mg-row.mg-done .mg-name{text-decoration:line-through;color:var(--muted);}
+.mg-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.mg-name{flex:1;font-family:var(--disp);font-size:13px;font-style:italic;color:var(--hi);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mg-area{font-family:var(--ui);font-size:9px;color:var(--muted);flex-shrink:0;}
+.mg-day{font-family:var(--ui);font-size:8px;color:var(--gold);padding:1px 6px;border-radius:20px;background:rgba(196,162,74,.1);border:1px solid rgba(196,162,74,.2);flex-shrink:0;}
+.mg-unstar{font-size:13px;background:none;border:none;cursor:pointer;color:var(--gold);padding:2px;line-height:1;flex-shrink:0;opacity:.7;transition:opacity .12s;}
+.mg-unstar:hover{opacity:1;}
+.mg-empty{padding:40px 14px;text-align:center;color:var(--muted);font-size:12px;font-family:var(--ui);line-height:1.9;}
+.mg-empty strong{display:block;font-family:var(--disp);font-style:italic;font-size:15px;color:var(--text);margin-bottom:6px;}
 /* ── TRIP MODE ── */
 .tp-progress{padding:7px 14px;font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);}
 .tp-row{display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;transition:background .12s;}
@@ -804,6 +884,36 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
   #pill-bar{padding:5px 8px;}
 }
 
+/* ── REMOVED PLACES MODAL ── */
+#removed-overlay{position:fixed;top:90px;left:0;bottom:0;width:390px;z-index:2000;display:none;pointer-events:none;}
+#removed-overlay.vis{display:block;}
+#removed-modal{background:var(--bg2);border-right:1px solid var(--line);width:100%;height:100%;overflow-y:auto;padding:20px 22px;pointer-events:all;box-shadow:6px 0 28px rgba(0,0,0,.35);}
+#removed-modal::-webkit-scrollbar{width:4px;}
+#removed-modal::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px;}
+.rm-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;}
+.rm-title{font-family:var(--disp);font-style:italic;font-size:18px;color:var(--hi);}
+.rm-sub{font-size:11px;color:var(--muted);margin-bottom:16px;line-height:1.5;}
+.rm-row{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:var(--bg3);border:1px solid var(--line);border-radius:2px;margin-bottom:8px;}
+.rm-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:5px;}
+.rm-info{flex:1;min-width:0;}
+.rm-name{font-family:var(--disp);font-style:italic;font-size:13px;color:var(--hi);}
+.rm-meta{font-family:var(--ui);font-size:9px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px;}
+.rm-day-badge{font-family:var(--ui);font-size:8px;color:var(--gold);padding:1px 6px;border-radius:20px;background:rgba(196,162,74,.1);border:1px solid rgba(196,162,74,.2);display:inline-block;margin-top:4px;}
+.rm-dismiss-btn{font-family:var(--ui);font-size:8px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:2px;padding:2px 8px;cursor:pointer;flex-shrink:0;white-space:nowrap;}
+.rm-dismiss-btn:hover{border-color:var(--muted);color:var(--hi);}
+.rm-footer{display:flex;gap:8px;margin-top:16px;}
+.rm-btn{font-family:var(--ui);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:2px;cursor:pointer;transition:all .15s;}
+.rm-btn.primary{background:var(--acc);color:#fff;border:none;}
+.rm-btn.secondary{background:none;color:var(--muted);border:1px solid var(--line);}
+.rm-btn.primary:hover{background:var(--acc2);}
+.rm-empty{padding:28px 0;text-align:center;color:var(--muted);font-family:var(--ui);font-size:11px;line-height:1.7;}
+#removed-btn{display:none !important;}
+#removed-btn.has-items{display:inline-flex !important;background:rgba(185,80,60,.12) !important;color:#b04030 !important;border:1px solid rgba(185,80,60,.28) !important;}
+@media(max-width:600px){
+  #removed-overlay{width:100%;top:90px;}
+  #removed-modal{width:100%;padding:16px;}
+}
+
 </style>
 </head>
 <body>
@@ -840,6 +950,8 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
     <div id="hwordmark">Waypoints</div>
     <div class="hright">
       <span id="hcount"></span>
+      <button id="removed-btn" class="hpill" onclick="openRemovedModal()" title="Places removed from your CSV"></button>
+      <button id="qadd-btn" onclick="openQuickAdd()" title="Privately add a place (saved to your Supabase)">+ Add</button>
       <button id="suggest-btn" onclick="openSuggestModal()">+ Suggest</button>
       <button id="theme-btn" onclick="toggleTheme()">Dark</button>
     </div>
@@ -921,6 +1033,10 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
         <div id="iday"></div>
         <div id="idesc"></div>
         <div id="itags"></div>
+        <div id="ifields"></div>
+        <div id="inotes-wrap">
+          <textarea id="inotes" placeholder="Add a note about this place…" maxlength="500" oninput="saveNoteDeb(this)"></textarea>
+        </div>
         <div id="iacts">
           <button class="ia" id="iroute">+ Day Plan</button>
           <a class="ia g" id="inaver" href="#" target="_blank">🗺 Naver</a>
@@ -950,9 +1066,21 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
         <button class="pdtod on" onclick="setPanelTod('all')">All</button>
         <button class="pdtod" onclick="setPanelTod('night')">Night</button>
       </div>
+      <div style="position:relative;display:flex;flex-shrink:0;">
+        <button id="today-btn" onclick="clickTodayBtn(event)" title="Jump to today's trip day">Today</button>
+        <div id="tripstart-popover">
+          <label>Trip start date</label>
+          <input type="date" id="tripstart-input">
+          <div class="dp-btns">
+            <button class="dp-btn" onclick="closeTripStartPopover()">Cancel</button>
+            <button class="dp-btn save" onclick="saveTripStart()">Save</button>
+          </div>
+        </div>
+      </div>
       <div id="pd-mode">
         <button class="pdmb on" onclick="setPanelViewMode('browse')">Browse</button>
         <button class="pdmb" onclick="setPanelViewMode('trip')">Trip</button>
+        <button class="pdmb" id="mg-tab-btn" onclick="setPanelViewMode('mustgo')">Must Go</button>
       </div>
     </div>
 
@@ -989,7 +1117,72 @@ body{font-family:"DM Sans",sans-serif;font-size:13px;background:#0a0907;color:#c
   <button onclick="cancelPinMode()">Cancel</button>
 </div>
 
+<!-- ── REMOVED PLACES REVIEW MODAL ── -->
+<div id="removed-overlay">
+  <div id="removed-modal">
+    <div class="rm-hdr">
+      <div class="rm-title">Removed Places</div>
+      <button class="rm-dismiss-btn" onclick="closeRemovedModal()" style="font-size:12px;padding:3px 10px;">✕ Close</button>
+    </div>
+    <div class="rm-sub">These places were in your previous CSV but are no longer in the current one. Your day assignments and visited marks for them are still saved in case they come back.</div>
+    <div id="rm-list"></div>
+    <div class="rm-footer">
+      <button class="rm-btn primary" onclick="dismissAllRemoved()">Dismiss All</button>
+      <button class="rm-btn secondary" onclick="closeRemovedModal()">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── SUGGEST A PLACE MODAL ── -->
+<div id="qadd-overlay">
+  <div id="qadd-modal">
+    <h3>Add a place</h3>
+    <div class="qsub">Private — saves directly to your map, no CSV edit needed.</div>
+    <div class="mfield">
+      <label>Place name</label>
+      <input type="text" id="qa-name" placeholder="e.g. Onion Café" maxlength="100">
+    </div>
+    <div class="mrow">
+      <div class="mfield">
+        <label>Category</label>
+        <select id="qa-category">
+          <option value="Food" selected>Food</option>
+          <option value="Skincare">Skincare</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Culture">Culture</option>
+          <option value="Neighbourhood">Neighbourhood</option>
+          <option value="Transport">Transport</option>
+          <option value="Stay">Stay</option>
+          <option value="DayTrip">Day Trip</option>
+        </select>
+      </div>
+      <div class="mfield">
+        <label>Day</label>
+        <select id="qa-day">
+          <option value="Flexible" selected>Flexible</option>
+        </select>
+      </div>
+    </div>
+    <div class="mfield">
+      <label>Neighbourhood / Area</label>
+      <input type="text" id="qa-area" placeholder="e.g. Seongsu" maxlength="80">
+    </div>
+    <div class="mfield">
+      <label>Notes / Description</label>
+      <textarea id="qa-desc" placeholder="Why visit? Any tips, links, @handles…" maxlength="500"></textarea>
+    </div>
+    <div class="mfield">
+      <label>Tags (comma separated)</label>
+      <input type="text" id="qa-tags" placeholder="e.g. cafe, dessert, quiet" maxlength="150">
+    </div>
+    <div id="qadd-actions">
+      <button id="qadd-cancel" onclick="closeQuickAdd()">Cancel</button>
+      <button id="qadd-submit" onclick="submitQuickAdd()">Add to map</button>
+    </div>
+    <div id="qadd-msg"></div>
+  </div>
+</div>
+
 <div id="modal-overlay">
   <div id="modal">
     <h2>Suggest a place</h2>
@@ -1092,221 +1285,355 @@ let communityRecs = []; // populated on load from Supabase
 let pendingPin = null;  // {lat, lng} while suggest modal is open
 
 const P_KR=[
-  {n:"Jongno",c:"Neighbourhood",lat:37.5700,lng:126.9782,area:"Seoul",d:"#1 area for first-timers. Real Korea vibe. Historic transit hub. Quiet nights.",tags:["stay","historic","transit"],day:"Day 1-2"},
-  {n:"Myeongdong",c:"Neighbourhood",lat:37.5631,lng:126.9858,area:"Seoul",d:"Tourist central. Street food. Airport bus stop. Safe at night. L7 Hotel rooftop.",tags:["stay","street food","tourist"],day:"Day 1-2"},
-  {n:"Hongdae",c:"Neighbourhood",lat:37.5563,lng:126.9236,area:"Seoul",d:"Young, energetic. Nightlife, restaurants, stores. ÅLAND & MUSINSA nearby. ★ Top pick.",tags:["stay","nightlife","★ top pick"],day:"Day 3-4"},
-  {n:"Gangnam",c:"Neighbourhood",lat:37.4979,lng:127.0276,area:"Seoul",d:"Upscale. Shinsegae dept store, skincare clinics, fashion brands.",tags:["stay","upscale","shopping"],day:"Day 7-8"},
-  {n:"Itaewon",c:"Neighbourhood",lat:37.5347,lng:126.9947,area:"Seoul",d:"Expat-friendly. International dining. Boutique shopping. Close to Hannam.",tags:["stay","expat","dining"],day:"Flexible"},
-  {n:"Seongsu",c:"Neighbourhood",lat:37.5448,lng:127.0557,area:"Seoul",d:"THE coolest neighbourhood. Concept stores, creative energy. ★ Top pick.",tags:["stay","trendy","★ top pick"],day:"Day 5-6"},
-  {n:"Hannam",c:"Neighbourhood",lat:37.5341,lng:127.0003,area:"Seoul",d:"Upscale boutiques. Citybreeze, Mardi Mercredi. ★ Top pick.",tags:["stay","upscale","boutique"],day:"Day 5-6"},
-  {n:"Yeonam",c:"Neighbourhood",lat:37.5614,lng:126.9279,area:"Seoul",d:"Quiet alternative to Hongdae. Local cafés, cheaper food.",tags:["stay","quiet","cafes"],day:"Day 3-4"},
-  {n:"Euljiro",c:"Neighbourhood",lat:37.5663,lng:126.9905,area:"Seoul",d:"Walkable from Myeongdong. Trendy, great restaurants.",tags:["stay","trendy"],day:"Day 1-2"},
-  {n:"Sinchon",c:"Neighbourhood",lat:37.5550,lng:126.9374,area:"Seoul",d:"Near Hongdae. Cheaper food and great bars.",tags:["stay","budget","bars","night"],day:"Day 3-4"},
-  {n:"Apgujeong",c:"Neighbourhood",lat:37.5276,lng:127.0286,area:"Seoul",d:"Luxury and streetwear hub. Worksout store.",tags:["stay","luxury","streetwear"],day:"Day 7-8"},
-  {n:"Incheon Airport",c:"Transport",lat:37.4602,lng:126.4407,area:"Incheon",d:"Main airport. Airport Limousine bus to Seoul. Smart Pass to skip queues.",tags:["airport","entry"],day:"Flexible"},
-  {n:"Seoul Station",c:"Transport",lat:37.5547,lng:126.9706,area:"Seoul",d:"AREX express from Incheon ~45 min nonstop.",tags:["transit","train","arex"],day:"Day 1-2"},
-  {n:"National Museum of Korea",c:"Culture",lat:37.5245,lng:126.9800,area:"Yongsan",d:"Ichon Station Exit 2. Free entry (fee from 2027). Best souvenir shop in Seoul.",tags:["museum","free","history"],day:"Flexible"},
-  {n:"Hanok Village / Bukchon",c:"Culture",lat:37.5787,lng:126.9846,area:"Jongno",d:"Historic winding streets. Granhand perfumery here. Beautiful walks.",tags:["historic","walking","souvenir"],day:"Flexible"},
-  {n:"Gwangjang Market",c:"Culture",lat:37.5697,lng:126.9990,area:"Jongno",d:"Iconic traditional market. Street food and textiles.",tags:["market","food","culture"],day:"Day 9"},
-  {n:"Weave Suite Seoyu Parkside",c:"Accommodation",lat:37.5382,lng:126.9024,area:"Seoyu",d:"Premium serviced apartment. Han River terrace view. Co-working, yoga, housekeeping.",tags:["longstay","serviced","han river"],day:"Day 1-2"},
-  {n:"LiveAnywhere Loft",c:"Accommodation",lat:37.5697,lng:126.9995,area:"Jongno",d:"Near Gwangjang Market. 1 week+ stays. Seoul studios + Jeju beach houses.",tags:["shortterm","rental","1week+"],day:"Flexible"},
-  {n:"DNA Skin Clinic",c:"Skincare",lat:37.5019,lng:127.0262,area:"Gangnam",d:"Microneedling, RF, airjet treatments. English-speaking. Highly recommended.",tags:["clinic","skin","english"],day:"Day 7-8"},
-  {n:"Optima Wellness Museum Pharmacy",c:"Skincare",lat:37.4979,lng:127.0300,area:"Gangnam",d:"Pharmacy heaven near Gangnam. Skincare treatments.",tags:["pharmacy","skincare"],day:"Day 7-8"},
-  {n:"Seoulistique Skin",c:"Skincare",lat:37.5499,lng:126.9543,area:"Aeogae",d:"Skin analysis + 8-step Astrodome facial. Book via Instagram DM.",tags:["clinic","analysis","facial"],day:"Day 7-8"},
-  {n:"Abijou Myeongdong",c:"Skincare",lat:37.5631,lng:126.9828,area:"Myeongdong",d:"Affordable skin clinic. Great for foreigners. Personal care.",tags:["clinic","affordable"],day:"Day 1-2"},
-  {n:"Abijou Hongdae",c:"Skincare",lat:37.5553,lng:126.9215,area:"Hongdae",d:"Less crowded Hongdae branch of Abijou.",tags:["clinic","hongdae"],day:"Day 3-4"},
-  {n:"Joa Pilates (ear seeding)",c:"Skincare",lat:37.5150,lng:127.0350,area:"Seoul",d:"Ear seeding therapy. Book via Instagram DM.",tags:["wellness","ear seeding"],day:"Flexible"},
-  {n:"NOMANUAL Flagship",c:"Shopping",lat:37.5435,lng:127.0575,area:"Seongsu",d:"Elevated Korean streetwear. Top pick.",tags:["streetwear","seongsu"],day:"Day 5-6"},
-  {n:"thisisneverthat Seongsu",c:"Shopping",lat:37.5445,lng:127.0565,area:"Seongsu",d:"Best Korean streetwear brand — multiple sources agree.",tags:["streetwear","seongsu","★"],day:"Day 5-6"},
-  {n:"Musinsa Standard Seongsu",c:"Shopping",lat:37.5440,lng:127.0580,area:"Seongsu",d:"MUSINSA basics line flagship.",tags:["musinsa","seongsu"],day:"Day 5-6"},
-  {n:"LOW CLASSIC Seongsu",c:"Shopping",lat:37.5450,lng:127.0560,area:"Seongsu",d:"Minimalist Korean womenswear.",tags:["minimalist","seongsu"],day:"Day 5-6"},
-  {n:"Beaker Seongsu",c:"Shopping",lat:37.5438,lng:127.0570,area:"Seongsu",d:"Multi-brand select shop.",tags:["multibrand","seongsu"],day:"Day 5-6"},
-  {n:"ÅLAND Hongdae",c:"Shopping",lat:37.5560,lng:126.9230,area:"Hongdae",d:"Multi-brand concept store.",tags:["multibrand","hongdae"],day:"Day 3-4"},
-  {n:"MUSINSA Hongdae",c:"Shopping",lat:37.5557,lng:126.9225,area:"Hongdae",d:"Korean streetwear platform flagship.",tags:["streetwear","musinsa","hongdae"],day:"Day 3-4"},
-  {n:"Citybreeze Seoul",c:"Shopping",lat:37.5335,lng:127.0007,area:"Hannam",d:"Seoul lifestyle concept store.",tags:["lifestyle","hannam"],day:"Day 5-6"},
-  {n:"Fucking Awesome Seoul",c:"Shopping",lat:37.5343,lng:127.0013,area:"Hannam",d:"Skate / streetwear brand flagship.",tags:["skate","streetwear","hannam"],day:"Day 5-6"},
-  {n:"Mardi Mercredi Hannam",c:"Shopping",lat:37.5338,lng:127.0018,area:"Hannam",d:"Casual creative Korean fashion brand.",tags:["fashion","hannam"],day:"Flexible"},
-  {n:"Granhand Perfumery",c:"Shopping",lat:37.5787,lng:126.9850,area:"Hanok Village",d:"Custom perfumery. Name your bottle. Best Seoul souvenir.",tags:["souvenir","perfume","custom"],day:"Day 7-8"},
-  {n:"Shinsegae Gangnam (5F & 8F)",c:"Shopping",lat:37.5050,lng:127.0049,area:"Gangnam",d:"15 Korean fashion brands locals shop. Floors 5 & 8. Skip Myeongdong.",tags:["dept store","local brands"],day:"Day 7-8"},
-  {n:"Worksout Apgujeong",c:"Shopping",lat:37.5280,lng:127.0290,area:"Apgujeong",d:"Streetwear store. Highly recommended.",tags:["streetwear","apgujeong"],day:"Day 7-8"},
-  {n:"Révdou (Moon Croissant)",c:"Food",lat:37.5565,lng:126.9247,area:"Seoul",d:"Multi-layer vanilla tahiti cream croissant. Hottest croissant in Seoul.",tags:["bakery","croissant"],day:"Flexible"},
-  {n:"The Truffle Bakery",c:"Food",lat:37.5580,lng:126.9800,area:"Seoul",d:"Tissue bread — peel-apart crispy outside fluffy inside.",tags:["bakery","bread"],day:"Flexible"},
-  {n:"Bijeonstrol Yeonhui Roastery",c:"Food",lat:37.5692,lng:126.9201,area:"Yeonhui",d:"Seasonal toast with butter. Great with coffee.",tags:["bakery","toast"],day:"Flexible"},
-  {n:"Amor Napoli",c:"Food",lat:37.5520,lng:126.9220,area:"Seoul",d:"Fire-baked salt bread. Wood-fired. Crispy + chewy.",tags:["bakery","salt bread"],day:"Flexible"},
-  {n:"Belief Coffee Roasters",c:"Food",lat:37.5540,lng:126.9250,area:"Seoul",d:"Apple cream bread — sells out instantly. Check baking schedule.",tags:["bakery","coffee"],day:"Flexible"},
-  {n:"Sokcho",c:"DayTrip",lat:38.2070,lng:128.5918,area:"Gangwon",d:"Days 6-7. Gateway to Seoraksan National Park. Coastal city.",tags:["itinerary","coastal"],day:"Day 10-11"},
-  {n:"Seoraksan National Park",c:"DayTrip",lat:38.1194,lng:128.4656,area:"Gangwon",d:"Dramatic mountain scenery. Day trip or overnight.",tags:["nature","mountain","hiking"],day:"Day 10-11"},
-  {n:"Gangneung",c:"DayTrip",lat:37.7519,lng:128.8760,area:"Gangwon",d:"Days 8-9. Beaches, historic homes. 2 hrs by KTX.",tags:["beach","historic","ktx"],day:"Day 10-11"},
-  {n:"Gyeongju",c:"DayTrip",lat:35.8561,lng:129.2245,area:"N. Gyeongsang",d:"Days 10-12. Ancient temples, royal tombs. Korea's ancient capital.",tags:["ancient","temples","history"],day:"Day 12-13"},
-  {n:"Busan",c:"DayTrip",lat:35.1796,lng:129.0756,area:"S. Gyeongsang",d:"Days 13-15. Seaside city, markets, beaches, parks.",tags:["beach","market","city"],day:"Day 10-11"},
-  {n:"Hwangnyeongsan Beacon",c:"DayTrip",lat:35.1535,lng:129.0755,area:"Busan",d:"Best viewpoint in Busan. Take Uber up. Burning red sunset city lights.",tags:["viewpoint","busan","sunset"],day:"Flexible"},
-  {n:"DMZ",c:"DayTrip",lat:37.9532,lng:126.6612,area:"Gyeonggi border",d:"Demilitarized Zone tour. Book via Klook. Recommended last day.",tags:["tour","history","klook"],day:"Day 12-13"},
-  {n:"Nami Island",c:"DayTrip",lat:37.7916,lng:127.5244,area:"Gyeonggi",d:"Day trip bookable on Klook.",tags:["daytrip","nature","day trip"],day:"Day 9"},
-  {n:"Heyri Art Village",c:"DayTrip",lat:37.7660,lng:126.7289,area:"Gyeonggi",d:"Half-day trip. Museums and Korean Folk Museum.",tags:["art","museum","halfday","day trip"],day:"Day 9"},
-  {n:"Jeju Island",c:"DayTrip",lat:33.4996,lng:126.5312,area:"Jeju",d:"Dreamy beach houses via LiveAnywhere. Side trip option.",tags:["beach","island"],day:"Flexible"},
-  // ── From @mijainseoul ──────────────────────────────────────────────────
-  {n:"The Air House Festival",c:"Culture",lat:37.7916,lng:127.5244,area:"Nami Island",d:"Eco-friendly house music festival in nature. May annually. 30+ friendly, kid/pet/vegan/foreigner-friendly. Sauna bus, yoga, live bands, disco aerobics, karaoke, camping. @the_airhouse",tags:["festival","music","30+","nami island"],day:"Flexible"},
-  {n:"Cimer at Paradise City",c:"Skincare",lat:37.4959,lng:126.4876,area:"Incheon",d:"Foreigner & tattoo-friendly spa complex near Incheon Airport. 100% stress-free jjimjilbang experience. Great pre/post-flight.",tags:["jjimjilbang","tattoo-friendly","incheon","spa"],day:"Flexible"},
-  {n:"숲속한방랜드 Forest Korean Bath",c:"Skincare",lat:37.5550,lng:126.9374,area:"Sinchon Seoul",d:"Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest.",tags:["jjimjilbang","sauna","sinchon","outdoor"],day:"Flexible"},
-  {n:"아쿠아필드 Aquafield",c:"Skincare",lat:37.6650,lng:126.7600,area:"Goyang (suburban Seoul)",d:"Luxury jjimjilbang experience outside central Seoul. Worth the trip.",tags:["jjimjilbang","luxury","suburban"],day:"Flexible"},
-  {n:"Reclow Myeongdong Flagship",c:"Shopping",lat:37.5605,lng:126.9850,area:"Myeongdong Seoul",d:"Trendy affordable accessories — folding sunglasses, bags, rain boots. Open daily 10:30–23:00. 12 Myeong-dong 8-na-gil.",tags:["accessories","sunglasses","bags","myeongdong","affordable"],day:"Day 1-2"},
-  {n:"Sam Sam Sam (쓰리쓰리쓰리)",c:"Food",lat:37.5748,lng:126.9769,area:"Gwanghwamun Seoul",d:"American-style cozy bistro from Samcheong-dong, now in Gwanghwamun. Creative dishes only found in Korea. Naver: naver.me/Goivggyk",tags:["restaurant","bistro","gwanghwamun","creative"],day:"Flexible"},
-  {n:"Kyobo Book Centre (교보문고)",c:"Culture",lat:37.5710,lng:126.9769,area:"Gwanghwamun Seoul",d:"Korea's largest bookstore. K-stationery, stickers, music, unique souvenirs. Easy to lose hours here.",tags:["bookstore","souvenir","stationery","gwanghwamun"],day:"Day 9"},
-  {n:"NYUNYU (뉴뉴)",c:"Shopping",lat:37.5628,lng:126.9840,area:"Myeongdong Seoul",d:"Multi-story accessory heaven — thousands of earrings, necklaces, bags, hats at very affordable prices. Open late.",tags:["accessories","affordable","myeongdong","open late"],day:"Day 1-2"},
-  {n:"Manhwa-bang / Comic Café (놀숲 Nolsoop)",c:"Culture",lat:37.5560,lng:126.9236,area:"Hongdae Seoul",d:"Private pods with curtains, blankets, pillows. Order ramyeon to your pod. ~₩3,000–4,000/hr. Nolsoop (놀숲) & Beoltoon (벌툰) are the main chains. Near subway stations city-wide.",tags:["hidden gem","comic cafe","pods","manhwabang","relax"],day:"Flexible"},
-  {n:"Yonghada Korean Medicine Clinic (용하다 한의원)",c:"Skincare",lat:37.5608,lng:126.9856,area:"Myeongdong Seoul",d:"Myeongdong Station Exit 2. English/Japanese/Chinese/Spanish speaking. Cupping, acupuncture, ginseng injection, chuna therapy, facial lifting. Check-up ₩132,000. Healing Course C ₩242,000. @yonghadaclinic_en",tags:["clinic","acupuncture","cupping","ginseng","multilingual","myeongdong"],day:"Day 7-8"},
-  {n:"Rolling Jay Hair Salon",c:"Accommodation",lat:37.5500,lng:126.9250,area:"Seoul",d:"Celebrity-level hair stylist. @rollingjay_siwon__ (women) & @rollingjay_siwon__men. Book via DM, Kakao ID: ruddo462, or Naver. naver.me/F9N4yI6L",tags:["hair salon","celebrity stylist","beauty","book via kakao"],day:"Flexible"},
-  // ── From Liked Posts Export ────────────────────────────────────────────
-  {n:"Vands Clinic Hongdae",c:"Skincare",lat:37.5570,lng:126.9220,area:"Hongdae Seoul",d:"Foreign-friendly clinic — rejuran, filler, botox. First stop for many on arrival. Also Myeongdong + Gangnam branches. @vands_myeongdong",tags:["clinic","rejuran","foreigner-friendly","hongdae"],day:"Day 3-4"},
-  {n:"Vands Clinic Myeongdong",c:"Skincare",lat:37.5608,lng:126.9856,area:"Myeongdong Seoul",d:"Foreign-friendly injectable clinic. Popular 30s crowd. @vands_myeongdong | Gangnam: @vands_myeongdong_gangnam_eng",tags:["clinic","filler","botox","myeongdong"],day:"Day 1-2"},
-  {n:"Eraser Clinic (Dr. Eraser)",c:"Skincare",lat:37.5210,lng:127.0220,area:"Sinsa Gangnam Seoul",d:"Tune Liner — jawline contouring, no bruising, instant results. @dreraserclinic. Sinsa-dong Gangnam.",tags:["clinic","jawline","tune liner","gangnam"],day:"Day 7-8"},
-  {n:"Inko Seoul (잉코서울)",c:"Skincare",lat:37.5665,lng:126.9780,area:"Seoul",d:"FREE skin analysis before Olive Young shopping. Skin age + type + 6 characteristics + customised routine. @inkoseoul_official",tags:["skin analysis","free","olive young","routine"],day:"Day 7-8"},
-  {n:"Jeil Grand Pharmacy (제일그랑약국)",c:"Skincare",lat:37.5000,lng:127.0250,area:"Gangnam Seoul",d:"Curated Korean pharmacy in Gangnam near clinics. @jeilgrand_pharmacy_global. Carries USOLAB + clinical skincare.",tags:["pharmacy","gangnam","skincare"],day:"Day 7-8"},
-  {n:"Olive Young — Free Skin Analysis",c:"Skincare",lat:37.5631,lng:126.9858,area:"Myeongdong Seoul",d:"Free in-store skin analysis. Measurements + skin type + 6 characteristics + customised routine. Multiple Seoul locations.",tags:["skin analysis","free","olive young","myeongdong"],day:"Day 7-8"},
-  {n:"애리꼼닭발 (Aeri's Chicken Feet)",c:"Food",lat:37.5597,lng:127.0373,area:"Wangsimni Seoul",d:"Viral spicy chicken feet. Wait ~1hr — grab ticket and come back. 📍3 Wangsimni-ro 22-gil, Doseon-dong, Seongdong-gu",tags:["restaurant","chicken feet","viral","local"],day:"Day 3-4"},
-  {n:"Rain Report Café",c:"Food",lat:37.5630,lng:126.9830,area:"Seoul",d:"Concept café where it rains 24/7 inside. Cosy any season. @rain.report",tags:["cafe","concept","rain","unique"],day:"Day 3-4"},
-  {n:"Korea Bakery World Cup Winner Bakery",c:"Food",lat:36.3219,lng:127.4194,area:"Daejeon",d:"Bakery by Korea's Bakery World Cup team leader. Incredible textures and flavours. Day trip from Seoul.",tags:["bakery","daejeon","world cup","day trip"],day:"Day 10-11"},
-  {n:"Scooper Gelato",c:"Food",lat:37.5500,lng:127.0400,area:"Seoul",d:"Top trending café on Korean social media. @scooper_gelato",tags:["cafe","gelato","trending"],day:"Day 3-4"},
-  {n:"Pachamama Bakery",c:"Food",lat:37.5540,lng:126.9250,area:"Seoul",d:"Trending café on Korean social media. @pachamama.bakery",tags:["cafe","bakery","trending"],day:"Day 3-4"},
-  {n:"House of Vinyl Yeonhui",c:"Food",lat:37.5692,lng:126.9201,area:"Yeonhui Seoul",d:"Trending café. @houseofvinyl_yeonhui — Yeonhui near Hongdae.",tags:["cafe","vinyl","yeonhui","trending"],day:"Day 3-4"},
-  {n:"Crepeboy Seoul",c:"Food",lat:37.5500,lng:126.9220,area:"Seoul",d:"Trending café. @crepeboyseoul",tags:["cafe","crepe","trending"],day:"Day 3-4"},
-  {n:"Friends and Yard",c:"Food",lat:37.5560,lng:126.9250,area:"Seoul",d:"Trending café. @friends.and.yard",tags:["cafe","trending"],day:"Day 3-4"},
-  {n:"WAA Seoul",c:"Food",lat:37.5450,lng:127.0570,area:"Seongsu Seoul",d:"Trending café on Korean social media. @waa.seoul",tags:["cafe","trending","seongsu"],day:"Day 3-4"},
-  {n:"Roofcat Cat Café Hongdae",c:"Culture",lat:37.5570,lng:126.9240,area:"Hongdae Seoul",d:"Cat café in Hongdae. Admission includes unlimited self-serve tea + coffee. @roofcatme_hongdae",tags:["cat cafe","hongdae","unique"],day:"Flexible"},
-  {n:"Seoul Baseball (KBO League)",c:"Culture",lat:37.5122,lng:127.0719,area:"Jamsil Seoul",d:"KBO baseball = full-on party. Beer, fried chicken, intense cheering. Nothing like it. DM @hungrypursuit 'SEOUL BASEBALL' for how to book.",tags:["baseball","kbo","party","jamsil","local"],day:"Day 1-2"},
-  {n:"Workshop by Baskin Robbins",c:"Culture",lat:37.5185,lng:127.0340,area:"Nonhyeon-ro Gangnam Seoul",d:"World's first AI ice cream shop + lab. Flavours: wasabi, Cheetos, truffle. 📍201 Nonhyeon-ro, Gangnam. @baskinrobbinskorea",tags:["ice cream","ai","gangnam","unique"],day:"Day 7-8"},
-  {n:"Jangsan Mountain Park (장산산림욕장)",c:"DayTrip",lat:35.2100,lng:129.1200,area:"Busan",d:"Very local park foreigners rarely visit. Walk or intense hike. Authentic Busan neighbourhood life.",tags:["park","hiking","busan","local"],day:"Day 10-11"},
-  {n:"Discover Seoul Pass",c:"Transport",lat:37.5700,lng:126.9820,area:"Seoul",d:"Multi-attraction + transit pass. Code KAY-SEOULPASS for ₩5,000 discount.",tags:["pass","transit","discount","tip"],day:"Flexible"},
-  {n:"Lotte Hotel Seoul",c:"Accommodation",lat:37.5637,lng:126.9822,area:"Myeongdong Seoul",d:"5-star hotel in Myeongdong. Great for first-timers. @lottehotelseoul",tags:["hotel","5-star","myeongdong","luxury"],day:"Day 1-2"},
-  {n:"JW Marriott Jeju",c:"Accommodation",lat:33.2540,lng:126.4120,area:"Jeju Island",d:"Luxury hotel on Jeju. @JWmarriotjeju",tags:["hotel","luxury","jeju","marriott"],day:"Day 12-13"},
-  {n:"Eastern Medicine Hospital (한의원)",c:"Skincare",lat:37.5560,lng:126.9240,area:"Seoul",d:"Traditional Korean medicine — cupping, herbal, acupuncture. Under $45/visit. Find via Naver Maps: 한의원",tags:["traditional medicine","cupping","acupuncture","affordable"],day:"Day 7-8"},
-  {n:"Hair of Seoul",c:"Skincare",lat:37.5500,lng:126.9820,area:"Seoul",d:"Hair clinic/salon. Cheaper than Turkey. @hairofseoul — DM/Kakao/Instagram for bookings.",tags:["hair","salon","affordable"],day:"Flexible"},
-  {n:"Park Jun Hair Salon (박준뷰티랩)",c:"Skincare",lat:37.5560,lng:126.9820,area:"Seoul",d:"15-step Korean hair spa. @parkjun2342 for booking.",tags:["hair","salon","hair spa","luxury"],day:"Flexible"},
-  {n:"Glowny",c:"Shopping",lat:37.5350,lng:127.0010,area:"Hannam Seoul",d:"Contemporary independent boutique in Hannam-dong.",tags:["boutique","hannam","fashion"],day:"Day 5-6"},
-  {n:"Loeuvre (Hannam)",c:"Shopping",lat:37.5345,lng:127.0015,area:"Hannam Seoul",d:"Independent boutique in Hannam-dong.",tags:["boutique","hannam"],day:"Day 5-6"},
-  {n:"Folnua",c:"Shopping",lat:37.5340,lng:127.0020,area:"Hannam Seoul",d:"Independent boutique in Hannam-dong.",tags:["boutique","hannam"],day:"Day 5-6"},
-  {n:"Muut",c:"Shopping",lat:37.5345,lng:127.0005,area:"Hannam Seoul",d:"Independent boutique in Hannam-dong.",tags:["boutique","hannam"],day:"Day 5-6"},
-  {n:"Roman & You Seongsu",c:"Shopping",lat:37.5445,lng:127.0560,area:"Seongsu Seoul",d:"Roman&You makeup Pink Office pop-up in Seongsu. @romandyou — check if running.",tags:["popup","seongsu","makeup"],day:"Day 5-6"},
-  // ── June 2026 sweep ───────────────────────────────────────────────────
-  {n:"Yonsei Pain Clinic",c:"Skincare",lat:37.5505,lng:126.9250,area:"Mapo Seoul",d:"@yonseian.painclinic — ANS test, X-ray, 3D AI posture, massage. Multiple creators for back/neck pain.",tags:["clinic","posture","back","neck"],day:"Day 7-8"},
-  {n:"신사형통정형외과 Sinsa Hyeong Tong",c:"Skincare",lat:37.5248,lng:127.0198,area:"Sinsa Gangnam",d:"X-ray, treadmill body scan, posture analysis, back/neck treatment. Annual visits by one creator.",tags:["clinic","back","posture","gangnam"],day:"Day 7-8"},
-  {n:"Stretch U Care",c:"Skincare",lat:37.4967,lng:127.0442,area:"Dogok Gangnam",d:"90-min full-body stretch. Completely resets you. @stretch_u_care_global. 📍408 510 Dogok-ro, Gangnam.",tags:["stretch","wellness","gangnam"],day:"Day 7-8"},
-  {n:"Medione Medical Global",c:"Skincare",lat:37.5000,lng:127.0350,area:"Gangnam Seoul",d:"Full body MRI scan. @medione_medical_global.",tags:["mri","medical tourism","full body"],day:"Day 7-8"},
-  {n:"Relieve Clinic",c:"Skincare",lat:37.5580,lng:126.9250,area:"Seoul",d:"Acne/breakout treatment. @relieve_clinic_ — 3rd visit, genuine use.",tags:["clinic","acne","breakout"],day:"Day 7-8"},
-  {n:"APM Place (에이피엠)",c:"Shopping",lat:37.5668,lng:127.0085,area:"Dongdaemun Seoul",d:"8-storey wholesale clothing. Open until 5am. Vendors ignore foreigners on wholesale floors — use Mimiline or NYUNYU inside instead (foreigner-friendly, card OK, tax-free).",tags:["shopping","wholesale","5am","dongdaemun","evening"],day:"Day 9"},
-  {n:"Tongin Market (통인시장)",c:"Food",lat:37.5793,lng:126.9700,area:"Jongno Seoul",d:"Best street food. Coin-based tray system — exchange cash for coins, fill tray from multiple stalls. Solo-friendly. Near Gyeongbokgung.",tags:["market","streetfood","coins","jongno"],day:"Day 1-2"},
-  {n:"Cheongnyangni Market",c:"Food",lat:37.5804,lng:127.0479,area:"Cheongnyangni Seoul",d:"Packed with locals, zero tourist energy. Deliberately hard to find on Google. DM @cutthelandline 'seoul eats' for exact address.",tags:["market","local","hidden","authentic"],day:"Day 9"},
-  {n:"Chungmuro Neighbourhood",c:"Neighbourhood",lat:37.5598,lng:126.9973,area:"Jung-gu Seoul",d:"@dianainseoul recommends staying here. Between Myeongdong and Dongdaemun lines 3/4. Bustling, non-tourist, great transit hub.",tags:["neighbourhood","stay","transit","local"],day:"Day 1-2"},
-  {n:"Bibiang Fragrances",c:"Shopping",lat:37.5500,lng:126.9220,area:"Hongdae Seoul",d:"Korean niche fragrance. Colline, Gureum, Rondo24 — Rondo24 is a repeat-buy. @bibiang_official",tags:["fragrance","rondo24","korean"],day:"Day 5-6"},
-  {n:"Gentle Monster Flagship",c:"Shopping",lat:37.5215,lng:127.0266,area:"Apgujeong Seoul",d:"Multi-storey Gentle Monster concept store. Art installation + eyewear experience.",tags:["gentlemonster","flagship","art","eyewear"],day:"Flexible"},
-  {n:"GOTO Mall Hongdae (고투몰)",c:"Shopping",lat:37.5563,lng:126.9236,area:"Hongdae Seoul",d:"Underground mall beneath Hongdae. Affordable fashion, open late.",tags:["underground","mall","hongdae","affordable"],day:"Day 3-4"},
-  {n:"Hyundai Seoul Department Store",c:"Shopping",lat:37.5261,lng:126.9269,area:"Yeouido Seoul",d:"Curated Korean brands. Less touristy than Myeongdong stores.",tags:["department store","yeouido","local brands"],day:"Day 5-6"},
-  {n:"Tamburins Seongsu",c:"Shopping",lat:37.5448,lng:127.0566,area:"Seongsu Seoul",d:"Korean fragrance + beauty brand. 📍316-7 Seongsu-dong 2-ga Seongdong-gu Seoul",tags:["tamburins","fragrance","seongsu"],day:"Flexible"},
-  {n:"Elorea",c:"Shopping",lat:37.5335,lng:127.0013,area:"Hannam Seoul",d:"Korean niche fragrance. 📍737-1 Hannam-dong Yongsan-gu Seoul",tags:["fragrance","hannam"],day:"Day 5-6"},
-  {n:"Youssoful Hannam",c:"Shopping",lat:37.5340,lng:127.0025,area:"Hannam Seoul",d:"Korean niche fragrance boutique. 📍744-4 Hannam-dong Yongsan-gu Seoul",tags:["fragrance","hannam"],day:"Day 5-6"},
-  {n:"Cosmic Mansion",c:"Shopping",lat:37.5793,lng:126.9745,area:"Jongno Seoul",d:"Korean niche fragrance. 📍153-1 Changseong-dong Jongno-gu Seoul",tags:["fragrance","jongno"],day:"Day 1-2"},
-  {n:"Nonfiction Seongsu",c:"Shopping",lat:37.5440,lng:127.0555,area:"Seongsu Seoul",d:"Korean niche fragrance. 📍16-33 Seongsu-dong 1-ga Seongdong-gu Seoul",tags:["fragrance","seongsu"],day:"Day 5-6"},
-  {n:"COMPILE",c:"Culture",lat:37.5578,lng:126.9211,area:"Hongdae Seoul",d:"Nightlife venue. @01compile",tags:["bar","nightlife","hongdae"],day:"Evenings"},
-  {n:"ZuhZuh (저저)",c:"Culture",lat:37.5560,lng:126.9198,area:"Hongdae Seoul",d:"Bar/nightlife. @zuhzuh.kr",tags:["bar","nightlife","hongdae"],day:"Evenings"},
-  {n:"라스트춘선 홍대",c:"Culture",lat:37.5555,lng:126.9205,area:"Hongdae Seoul",d:"Bar in Hongdae. @lastchunsun_hongdae",tags:["bar","nightlife","hongdae","night"],day:"Day 3-4"},
-  {n:"Bar Eum",c:"Culture",lat:37.5560,lng:126.9215,area:"Hongdae Seoul",d:"Bar/music venue. @ongroundmusicbar",tags:["bar","music","nightlife"],day:"Evenings"},
-  {n:"HIGHWAY Men's Hair",c:"Skincare",lat:37.5558,lng:126.9222,area:"Hongdae Seoul",d:"Men's hair salon. @highway_menshair",tags:["hair","salon","men","hongdae"],day:"Flexible"},
-  {n:"Buramsan Mountain (불암산)",c:"DayTrip",lat:37.6580,lng:127.0980,area:"Nowon Seoul",d:"Best sunset viewpoint in Seoul per a Korean local. 40min hike. 📍Deokneung-ro 94-gil 73. Transit: Sanggye Station Exit 1.",tags:["hiking","sunset","viewpoint","local","nature"],day:"Day 7-8"},
-  {n:"Body + Color Analysis",c:"Culture",lat:37.5260,lng:127.0280,area:"Gangnam Seoul",d:"Personal style analysis — body type, color season, what collar/cut suits you. Book via Gangnam stylists/clinics.",tags:["style","color analysis","body type","personal"],day:"Day 7-8"},
-,
-  {n:"Incheon International Airport",c:"Transport",lat:37.4563,lng:126.7052,area:"Incheon",d:"Airport Limousine bus is fastest into Seoul. Smart Pass app: pre-register passport for facial recognition to skip queues.",tags:[],day:"Day 1-2"},
-  {n:"Jongno (종로)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"#1 area to stay for first-timers — real Korea vibe; transit hub; historic",tags:[],day:"Day 1-2"},
-  {n:"Myeongdong (명동)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"#2 area to stay — safe for night walks; street food; L7 Hotel rooftop; airport bus stop; close to Namdaemun market",tags:[],day:"Day 1-2"},
-  {n:"Hongdae (홍대)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"#3 area to stay — nightlife; restaurants; ÅLAND and MUSINSA flagship stores; younger crowd",tags:[],day:"Day 3-4"},
-  {n:"Gangnam (강남)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Upscale area; Shinsegae Gangnam department store 5th & 8th floor for Korean fashion brands",tags:[],day:"Day 7-8"},
-  {n:"Itaewon (이태원)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Expat-friendly area; Citybreeze Seoul Flagship; Fucking Awesome Seoul; Mardi Mercredi",tags:[],day:"Flexible"},
-  {n:"Seongsu (성수)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Coolest neighbourhood in Seoul (tied with Hannam & Yeonam); packed with concept stores and flagship boutiques",tags:[],day:"Day 5-6"},
-  {n:"Hannam (한남)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Tied for coolest neighbourhood; upscale boutiques; Citybreeze Seoul; Fucking Awesome Seoul; Mardi Mercredi",tags:[],day:"Day 5-6"},
-  {n:"Yeonam (연남)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Tied for coolest neighbourhood — quieter alternative to Hongdae; cafés and local restaurants",tags:[],day:"Day 3-4"},
-  {n:"Insadong (인사동)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Shopping and cultural area; mentioned as activity in Seoul itinerary; Granhand perfumery nearby (Hanok Village)",tags:[],day:"Day 1-2"},
-  {n:"Euljiro (을지로)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Walkable from Myeongdong; cool spots; mentioned as great area to stay",tags:[],day:"Day 1-2"},
-  {n:"Sinchon (신촌)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Near Hongdae; cheaper food and great bars; recommended as underrated area",tags:["night"],day:"Day 3-4"},
-  {n:"Apgujeong (압구정)",c:"Neighbourhood",lat:37.5665,lng:126.978,area:"Seoul",d:"Worksout streetwear store located here (mentioned in comments)",tags:[],day:"Day 7-8"},
-  {n:"Gwangjang Market (광장시장)",c:"Shopping",lat:37.5665,lng:126.978,area:"Seoul",d:"Steps from a featured loft rental (LiveAnywhere); iconic traditional market",tags:[],day:"Day 9"},
-  {n:"Namsan",c:"Culture",lat:37.5665,lng:126.978,area:"Seoul",d:"Close to featured rental loft; mentioned as central landmark",tags:[],day:"Flexible"},
-  {n:"Hanok Village (한옥마을)",c:"Culture",lat:37.5665,lng:126.978,area:"Seoul",d:"Location of Granhand perfumery; winding historic streets; souvenir shopping",tags:[],day:"Day 14"},
-  {n:"Shinsegae Gangnam",c:"Shopping",lat:37.498,lng:127.0276,area:"Gangnam",d:"5th & 8th floors have 15 Korean fashion brands local Seoulites shop at instead of Myeongdong",tags:[],day:"Day 7-8"},
-  {n:"Sokcho (속초)",c:"Neighbourhood",lat:38.207,lng:128.5919,area:"Gangwon",d:"Days 6–7 on 2-week Korea itinerary; coastal city near Seoraksan",tags:[],day:"Day 10-11"},
-  {n:"Gangneung (강릉)",c:"Neighbourhood",lat:38.207,lng:128.5919,area:"Gangwon",d:"Days 8–9 on 2-week Korea itinerary; beaches; historic homes; nature; 2 hrs from Seoul by KTX",tags:[],day:"Day 10-11"},
-  {n:"Gyeongju (경주)",c:"Neighbourhood",lat:35.8562,lng:129.2248,area:"North Gyeongsang",d:"Days 10–12 on 2-week Korea itinerary; ancient temples; royal tombs; mossy paths; history",tags:[],day:"Day 12-13"},
-  {n:"Busan (부산)",c:"Neighbourhood",lat:35.1796,lng:129.0756,area:"South Gyeongsang",d:"Days 13–15 on 2-week Korea itinerary; seaside city; markets; beaches; parks",tags:[],day:"Day 10-11"},
-  {n:"Nami Island (남이섬)",c:"DayTrip",lat:37.4138,lng:127.5183,area:"Gyeonggi",d:"Bookable day trip via Klook",tags:["day trip"],day:"Day 9"},
-  {n:"DNA Skin Clinic (@dnaskin12 / @dnaskin_lab)",c:"Skincare",lat:37.5665,lng:126.978,area:"Seoul",d:"Skin treatments; microneedling; RF; airjet; English-speaking; visited 6+ times by poster",tags:[],day:"Day 7-8"},
-  {n:"Optima Wellness Museum Pharmacy (@owm.pharm.official)",c:"Skincare",lat:37.498,lng:127.0276,area:"Gangnam area",d:"Near Gangnam; pharmacy-style skincare treatments",tags:[],day:"Day 7-8"},
-  {n:"Seoulistique Skin (@seoulistique.skin)",c:"Skincare",lat:37.5564,lng:126.9594,area:"Aeogae (애오개)",d:"Skin analysis + 8-step Astrodome facial; glowing results; book via DM",tags:[],day:"Day 7-8"},
-  {n:"Joa Pilates (@joapilates)",c:"Culture",lat:37.5665,lng:126.978,area:"Seoul",d:"Ear seeding / ear therapy treatment; book via IG DM; uses @byava products",tags:[],day:"Day 7-8"},
-  {n:"Weave Living — Weave Suite Seoyu Parkside",c:"Accommodation",lat:37.5392,lng:126.9017,area:"Seoyu (선유)",d:"Premium serviced apartment; steps from Seoyu Station; Han River terrace view; co-working space; yoga studio; golf range; weekly housekeeping",tags:[],day:"Day 1-2"},
-  {n:"LiveAnywhere Korea (@liveanywhere.korea)",c:"Accommodation",lat:37.5665,lng:126.978,area:"Nationwide (Seoul + Jeju)",d:"Short-term rental app for stays 1 week+; loft near Gwangjang Market featured; also Jeju beach houses",tags:[],day:"Day 12-13"},
-  {n:"NOMANUAL Flagship Store",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Elevated Korean streetwear; highly rated by poster",tags:[],day:"Day 5-6"},
-  {n:"THREE TO EIGHTY",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Korean designer multi-brand",tags:[],day:"Day 5-6"},
-  {n:"Customellow Seongsu Prints",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Custom prints concept store",tags:[],day:"Day 5-6"},
-  {n:"Blue Elephant Seongsu Flagship",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Flagship concept space",tags:[],day:"Day 5-6"},
-  {n:"RAWROW Worldwide Seoul",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Bag and accessories brand",tags:[],day:"Day 5-6"},
-  {n:"Rest & Recreation Seongsu",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Streetwear concept store",tags:[],day:"Day 5-6"},
-  {n:"Double Lovers Seongsu Flagship",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Flagship concept store",tags:[],day:"Day 5-6"},
-  {n:"TETO Objet Seongsu",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Lifestyle and objet concept store",tags:[],day:"Day 5-6"},
-  {n:"HATCHINGROOM Seongsu",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Independent Korean brand",tags:[],day:"Day 5-6"},
-  {n:"MUSINSA EMPTY Seongsu",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Curated MUSINSA concept space",tags:[],day:"Day 5-6"},
-  {n:"INSILENCE Seongsu Flagship",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Korean streetwear brand",tags:[],day:"Day 5-6"},
-  {n:"thisisneverthat Seongsu Flagship",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Korean streetwear — top brand discovered in Korea per comments",tags:[],day:"Day 5-6"},
-  {n:"ODLYWORKSHOP",c:"Shopping",lat:37.5665,lng:126.978,area:"Seoul",d:"Independent workshop concept store",tags:[],day:"Flexible"},
-  {n:"Beaker Seongsu Flagship Store",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Multi-brand select shop",tags:[],day:"Day 5-6"},
-  {n:"ACME DE LA VIE Seongsu Showroom",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Premium Korean streetwear showroom",tags:[],day:"Day 5-6"},
-  {n:"NOT4NERD Seongsu Flagship",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Eyewear and accessories brand",tags:[],day:"Day 5-6"},
-  {n:"TREEMINGBIRD Seongsu Store",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Korean casual brand",tags:[],day:"Day 5-6"},
-  {n:"Fenek Hongdae Showroom",c:"Shopping",lat:37.557,lng:126.9244,area:"Hongdae",d:"Independent Korean brand showroom",tags:[],day:"Day 3-4"},
-  {n:"Citybreeze Seoul Flagship",c:"Shopping",lat:37.5349,lng:126.9997,area:"Hannam",d:"Seoul lifestyle concept store",tags:[],day:"Day 5-6"},
-  {n:"Miseki Seoul",c:"Shopping",lat:37.5665,lng:126.978,area:"Seoul",d:"Korean designer boutique",tags:[],day:"Flexible"},
-  {n:"Mardi Mercredi (Hannam)",c:"Shopping",lat:37.5349,lng:126.9997,area:"Hannam",d:"Casual creative Korean brand; also in Shinsegae Gangnam",tags:[],day:"Day 5-6"},
-  {n:"Worksout",c:"Shopping",lat:37.527,lng:127.0289,area:"Apgujeong",d:"Streetwear store in Apgujeong — recommended in comments",tags:[],day:"Day 7-8"},
-  {n:"Maison Loeuvre",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Most famous Korean bag brand; minimal and elegant",tags:[],day:"Day 7-8"},
-  {n:"Tennat",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Modern sleek bag brand",tags:[],day:"Day 7-8"},
-  {n:"Archive PKE",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Street casual Korean brand",tags:[],day:"Day 7-8"},
-  {n:"DUNST",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Trendy understated daily wear",tags:[],day:"Day 7-8"},
-  {n:"Joygryson",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Simple chic women's workwear",tags:[],day:"Day 7-8"},
-  {n:"Umer",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Minimal stylish women's clothing",tags:[],day:"Day 7-8"},
-  {n:"Beglowny",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 5F",d:"Romantic and stylish — popular with young Koreans",tags:[],day:"Day 7-8"},
-  {n:"Lookast",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Street and modern mix; younger crowd",tags:[],day:"Day 7-8"},
-  {n:"Till.idie",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Hip streetwear; hoodies and tees a must",tags:[],day:"Day 7-8"},
-  {n:"Recto",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Sleek office and casual unisex",tags:[],day:"Day 7-8"},
-  {n:"Sandbeige",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Soft tones; minimal aesthetics; great basics",tags:[],day:"Day 7-8"},
-  {n:"Rockfish",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Trendy accessories and casual wear",tags:[],day:"Day 7-8"},
-  {n:"Emis",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Famous for stylish hats; modern women's clothing",tags:[],day:"Day 7-8"},
-  {n:"Mardi Mercredi (Gangnam)",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Casual creative standout designs",tags:[],day:"Day 7-8"},
-  {n:"Brownyard",c:"Shopping",lat:37.5009,lng:127.007,area:"Shinsegae Gangnam 8F",d:"Between basic and trendy; comfy everyday items",tags:[],day:"Day 7-8"},
-  {n:"Révdou (레브두)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Moon croissant — multi-layer vanilla tahiti cream croissant; very popular",tags:[],day:"Flexible"},
-  {n:"The Truffle Bakery (더트러플베이커리)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Tissue bread — peel-apart crispy outside fluffy inside",tags:[],day:"Flexible"},
-  {n:"Bijeonstrol Yeonhui Roastery (비전스트롤 연희로스터리)",c:"Food",lat:37.565,lng:126.9323,area:"Yeonhui",d:"Seasonal toast with butter and jam; coffee pairing",tags:[],day:"Flexible"},
-  {n:"Amor Napoli (아모르나폴리)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Fire-baked salt bread (화덕 소금빵); crispy outside chewy inside; wood-fired",tags:[],day:"Flexible"},
-  {n:"Cat & F (캣앤에프)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Corn-shaped corn salt bread; Gangwon corn cream filling",tags:[],day:"Flexible"},
-  {n:"Belief Coffee Roasters (빌리프커피로스터스)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Apple cream bread — sells out instantly; pastry with custard cream and crunchy apple; check baking times before visiting",tags:[],day:"Flexible"},
-  {n:"숲속한방랜드 (Forest Korean Bath)",c:"Culture",lat:37.5551,lng:126.9369,area:"Sinchon",d:"Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest location.",tags:[],day:"Day 3-4"},
-  {n:"Manhwa-bang / Comic Book Café",c:"Culture",lat:37.5665,lng:126.978,area:"Seoul (near subway stations)",d:"Private pods with curtains, blankets, pillows, leg massagers. Order ramyeon/tteokbokki to your pod. ~₩3,000–4,000/hr. Chains: Nolsoop (놀숲) and Beoltoon (벌툰). Package deal = 1hr + drink best value.",tags:[],day:"Flexible"},
-  {n:"Korean Pantry Souvenirs",c:"Shopping",lat:37.5665,lng:126.978,area:"Supermarkets across",d:"Must-buy: Sesame oil (참기름), rice syrup (조청), plum extract (매실청), coin broth (코인육수). Available at E-mart / Lotte Mart / Homeplus. Premium versions at department stores and traditional markets.",tags:[],day:"Day 14"},
-  {n:"Korea Bakery World Cup Winner's Bakery",c:"Food",lat:36.3504,lng:127.3845,area:"Daejeon",d:"Bakery run by team leader of Korea's Bakery World Cup winning team. Incredible textures and flavours. Worth a day trip from Seoul.",tags:["day trip"],day:"Day 10-11"},
-  {n:"Scooper Gelato (스쿠퍼젤라또)",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Top trending café on Korean social media. @scooper_gelato",tags:[],day:"Day 3-4"},
-  {n:"Leedorim Seoul",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Trending café. @leedorim.seoul",tags:[],day:"Day 3-4"},
-  {n:"Avekcheri",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Trending café. @avekcheri",tags:[],day:"Day 3-4"},
-  {n:"Ikovo Coffee Studio",c:"Food",lat:37.5665,lng:126.978,area:"Seoul",d:"Trending café. @ikovoxcoffeestudio",tags:[],day:"Day 3-4"},
-  {n:"Roman & You Seongsu (로맨드유)",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Roman&You makeup brand's pop-up Pink Office in Seongsu. @romandyou — worth a visit if the pop-up is running.",tags:[],day:"Day 5-6"},
-  {n:"Roofcat Cat Café (루프캣)",c:"Culture",lat:37.557,lng:126.9244,area:"Hongdae",d:"Cat café in Hongdae. Admission includes unlimited self-serve tea and coffee. Snacks available to feed cats. @roofcatme_hongdae",tags:[],day:"Day 3-4"},
-  {n:"Yonsei Pain Clinic (연세안통증클리닉)",c:"Skincare",lat:37.5665,lng:126.978,area:"Seoul",d:"@yonseian.painclinic — ANS test, X-ray, 3D AI posture analysis, massage/physical therapy. Multiple saves pointing here. Specialists in back/neck pain. Reached out to creators for sponsored reviews but genuine results reported.",tags:[],day:"Day 7-8"},
-  {n:"신사형통정형외과 Sinsa Hyeong Tong Clinic",c:"Skincare",lat:37.521,lng:127.0222,area:"Sinsa Gangnam",d:"X-ray, body scan on treadmill, posture/balance analysis, back and neck treatment. Used by @reikim.artist who returns annually for back treatment post-childbirth.",tags:[],day:"Day 7-8"},
-  {n:"Relieve Clinic (릴리브 클리닉)",c:"Skincare",lat:37.5665,lng:126.978,area:"Seoul",d:"Acne/breakout treatment clinic. @relieve_clinic_ — 3rd visit review = genuine use. Bundle treatment for active breakouts.",tags:[],day:"Day 7-8"},
-  {n:"Cheongnyangni Market (청량리역 시장)",c:"Food",lat:37.581,lng:127.0456,area:"Cheongnyangni",d:"Packed with Koreans of all ages — zero tourist energy. Caption deliberately vague (doesn't even name it). DM @cutthelandline 'seoul eats' for exact address.",tags:[],day:"Day 9"},
-  {n:"Chungmuro Neighbourhood Tip",c:"Neighbourhood",lat:37.5603,lng:126.9963,area:"Chungmuro",d:"@dianainseoul recommends staying in Chungmuro — between Myeongdong and Dongdaemun on lines 3/4. Bustling but non-tourist. Good transit hub for both sides of the city.",tags:[],day:"Day 1-2"},
-  {n:"Bibiang Fragrances (비비앙)",c:"Shopping",lat:37.5665,lng:126.978,area:"Seoul",d:"Korean niche fragrance brand. Flagship carries Colline, Gureum, and Rondo24 — Rondo24 specifically called a repeat-buy. @bibiang_official.",tags:[],day:"Day 5-6"},
-  {n:"Gentle Monster Multi-Floor Flagship",c:"Shopping",lat:37.5665,lng:126.978,area:"Seoul",d:"Multi-storey Gentle Monster concept store. @gentlemonster — get the full art installation + eyewear experience.",tags:[],day:"Day 5-6"},
-  {n:"Tamburins Flagship Seongsu",c:"Shopping",lat:37.5447,lng:127.0567,area:"Seongsu",d:"Korean fragrance + beauty brand flagship. 📍316-7 Seongsu-dong 2(i)-ga Seongdong-gu Seoul.",tags:[],day:"Day 5-6"},
-  {n:"Jjimjilbang Tip — Modern Busan",c:"Culture",lat:35.1796,lng:129.0756,area:"Busan",d:"@anj.mejia_ — jjimjilbang described as the most therapeutic thing. Modern version in Busan recommended over traditional. Search 찜질방 in Naver Maps when in Busan.",tags:[],day:"Day 10-11"},
-  {n:"Weave Suites Sunyu Parkside",c:"Accommodation",lat:37.5392,lng:126.9017,area:"Seoyu",d:"Confirmed great stay. @weave_suites via @liveanywhere.korea @liveanywhere.me. Serviced apartment with Han River views.",tags:[],day:"Day 1-2"},
-  {n:"Central Park Hotel Songdo",c:"Accommodation",lat:37.3828,lng:126.6557,area:"Incheon Songdo",d:"'SO PEAK and cheap' for Incheon/Songdo visits. @central_park_hotel_songdo. Great if visiting Songdo as a day trip or arriving/departing from Incheon.",tags:[],day:"Day 1-2"}
+  {n:"Jongno",c:"Neighbourhood",lat:37.570000,lng:126.978200,area:"Seoul",d:"#1 area for first-timers. Real Korea vibe. Historic transit hub. Quiet nights.",tags:["stay"],day:"Day 1-2"},
+  {n:"Myeongdong",c:"Neighbourhood",lat:37.563100,lng:126.985800,area:"Seoul",d:"Tourist central. Street food. Airport bus stop. Safe at night. L7 Hotel rooftop.",tags:["stay"],day:"Day 1-2"},
+  {n:"Hongdae",c:"Neighbourhood",lat:37.556300,lng:126.923600,area:"Seoul",d:"Young, energetic. Nightlife, restaurants, stores. ÅLAND & MUSINSA nearby. ★ Top pick.",tags:["stay", "★ top pick"],day:"Day 3"},
+  {n:"Gangnam",c:"Neighbourhood",lat:37.497900,lng:127.027600,area:"Seoul",d:"Upscale. Shinsegae dept store, skincare clinics, fashion brands.",tags:["stay"],day:"Day 7-8"},
+  {n:"Itaewon",c:"Neighbourhood",lat:37.534700,lng:126.994700,area:"Seoul",d:"Expat-friendly. International dining. Boutique shopping. Close to Hannam.",tags:["stay"],day:"Flexible"},
+  {n:"Seongsu",c:"Neighbourhood",lat:37.544800,lng:127.055700,area:"Seoul",d:"THE coolest neighbourhood. Concept stores, creative energy. ★ Top pick.",tags:["stay", "★ top pick"],day:"Day 5"},
+  {n:"Hannam",c:"Neighbourhood",lat:37.534100,lng:127.000300,area:"Seoul",d:"Upscale boutiques. Citybreeze, Mardi Mercredi. ★ Top pick.",tags:["stay", "★ top pick"],day:"Day 5"},
+  {n:"Yeonam",c:"Neighbourhood",lat:37.561400,lng:126.927900,area:"Seoul",d:"Quiet alternative to Hongdae. Local cafés, cheaper food.",tags:["stay"],day:"Day 3"},
+  {n:"Euljiro",c:"Neighbourhood",lat:37.566300,lng:126.990500,area:"Seoul",d:"Walkable from Myeongdong. Trendy, great restaurants.",tags:["stay"],day:"Day 1-2"},
+  {n:"Sinchon",c:"Neighbourhood",lat:37.555000,lng:126.937400,area:"Seoul",d:"Near Hongdae. Cheaper food and great bars.",tags:["stay"],day:"Day 4 (night)"},
+  {n:"Apgujeong",c:"Neighbourhood",lat:37.527600,lng:127.028600,area:"Seoul",d:"Luxury and streetwear hub. Worksout store.",tags:["stay"],day:"Day 7-8"},
+  {n:"Incheon Airport",c:"Transport",lat:37.460200,lng:126.440700,area:"Incheon",d:"Main airport. Airport Limousine bus to Seoul. Smart Pass to skip queues.",tags:[],day:"Flexible"},
+  {n:"Seoul Station",c:"Transport",lat:37.554700,lng:126.970600,area:"Seoul",d:"AREX express from Incheon ~45 min nonstop.",tags:[],day:"Day 1"},
+  {n:"National Museum of Korea",c:"Culture",lat:37.524500,lng:126.980000,area:"Yongsan",d:"Ichon Station Exit 2. Free entry (fee from 2027). Best souvenir shop in Seoul.",tags:["★ top pick", "free"],day:"Day 5, Flexible"},
+  {n:"Hanok Village / Bukchon",c:"Culture",lat:37.578700,lng:126.984600,area:"Jongno",d:"Historic winding streets. Granhand perfumery here. Beautiful walks.",tags:[],day:"Flexible"},
+  {n:"Gwangjang Market",c:"Culture",lat:37.569700,lng:126.999000,area:"Jongno",d:"Iconic traditional market. Street food and textiles.",tags:[],day:"Day 9"},
+  {n:"Weave Suite Seoyu Parkside",c:"Accommodation",lat:37.538200,lng:126.902400,area:"Seoyu",d:"Premium serviced apartment. Han River terrace view. Co-working, yoga, housekeeping.",tags:[],day:"Day 1"},
+  {n:"LiveAnywhere Loft",c:"Accommodation",lat:37.569700,lng:126.999500,area:"Jongno",d:"Near Gwangjang Market. 1 week+ stays. Seoul studios + Jeju beach houses.",tags:[],day:"Flexible"},
+  {n:"DNA Skin Clinic",c:"Skincare",lat:37.501900,lng:127.026200,area:"Gangnam",d:"Microneedling, RF, airjet treatments. English-speaking. Highly recommended.",tags:["wellness", "english friendly"],day:"Day 7-8"},
+  {n:"Optima Wellness Museum Pharmacy",c:"Skincare",lat:37.497900,lng:127.030000,area:"Gangnam",d:"Pharmacy heaven near Gangnam. Skincare treatments.",tags:["wellness"],day:"Day 7"},
+  {n:"Seoulistique Skin",c:"Skincare",lat:37.549900,lng:126.954300,area:"Aeogae",d:"Skin analysis + 8-step Astrodome facial. Book via Instagram DM.",tags:["wellness"],day:"Day 7-8"},
+  {n:"Abijou Myeongdong",c:"Skincare",lat:37.563100,lng:126.982800,area:"Myeongdong",d:"Affordable skin clinic. Great for foreigners. Personal care.",tags:["wellness"],day:"Day 2"},
+  {n:"Abijou Hongdae",c:"Skincare",lat:37.555300,lng:126.921500,area:"Hongdae",d:"Less crowded Hongdae branch of Abijou.",tags:["wellness"],day:"Day 3-4"},
+  {n:"Joa Pilates (ear seeding)",c:"Skincare",lat:37.515000,lng:127.035000,area:"Seoul",d:"Ear seeding therapy. Book via Instagram DM.",tags:["wellness"],day:"Flexible"},
+  {n:"NOMANUAL Flagship",c:"Shopping",lat:37.543500,lng:127.057500,area:"Seongsu",d:"Elevated Korean streetwear. Top pick.",tags:["shopping", "★ top pick"],day:"Day 5-6"},
+  {n:"thisisneverthat Seongsu",c:"Shopping",lat:37.544500,lng:127.056500,area:"Seongsu",d:"Best Korean streetwear brand — multiple sources agree.",tags:["shopping", "★ top pick"],day:"Day 5-6"},
+  {n:"Musinsa Standard Seongsu",c:"Shopping",lat:37.544000,lng:127.058000,area:"Seongsu",d:"MUSINSA basics line flagship.",tags:["shopping"],day:"Day 5-6"},
+  {n:"LOW CLASSIC Seongsu",c:"Shopping",lat:37.545000,lng:127.056000,area:"Seongsu",d:"Minimalist Korean womenswear.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Beaker Seongsu",c:"Shopping",lat:37.543800,lng:127.057000,area:"Seongsu",d:"Multi-brand select shop.",tags:["shopping"],day:"Day 5-6"},
+  {n:"ÅLAND Hongdae",c:"Shopping",lat:37.556000,lng:126.923000,area:"Hongdae",d:"Multi-brand concept store.",tags:["shopping"],day:"Day 3-4"},
+  {n:"MUSINSA Hongdae",c:"Shopping",lat:37.555700,lng:126.922500,area:"Hongdae",d:"Korean streetwear platform flagship.",tags:["shopping"],day:"Day 3-4"},
+  {n:"Citybreeze Seoul",c:"Shopping",lat:37.533500,lng:127.000700,area:"Hannam",d:"Seoul lifestyle concept store.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Fucking Awesome Seoul",c:"Shopping",lat:37.534300,lng:127.001300,area:"Hannam",d:"Skate / streetwear brand flagship.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Mardi Mercredi Hannam",c:"Shopping",lat:37.533800,lng:127.001800,area:"Hannam",d:"Casual creative Korean fashion brand.",tags:["shopping"],day:"Flexible"},
+  {n:"Granhand Perfumery",c:"Shopping",lat:37.578700,lng:126.985000,area:"Hanok Village",d:"Custom perfumery. Name your bottle. Best Seoul souvenir.",tags:["shopping", "★ top pick"],day:"Day 7-8"},
+  {n:"Shinsegae Gangnam (5F & 8F)",c:"Shopping",lat:37.505000,lng:127.004900,area:"Gangnam",d:"15 Korean fashion brands locals shop. Floors 5 & 8. Skip Myeongdong.",tags:["shopping"],day:"Day 7-8"},
+  {n:"Worksout Apgujeong",c:"Shopping",lat:37.528000,lng:127.029000,area:"Apgujeong",d:"Streetwear store. Highly recommended.",tags:["shopping"],day:"Day 7-8"},
+  {n:"Révdou (Moon Croissant)",c:"Food",lat:37.556500,lng:126.924700,area:"Seoul",d:"Multi-layer vanilla tahiti cream croissant. Hottest croissant in Seoul.",tags:["food"],day:"Flexible"},
+  {n:"The Truffle Bakery",c:"Food",lat:37.558000,lng:126.980000,area:"Seoul",d:"Tissue bread — peel-apart crispy outside fluffy inside.",tags:["food"],day:"Flexible"},
+  {n:"Bijeonstrol Yeonhui Roastery",c:"Food",lat:37.569200,lng:126.920100,area:"Yeonhui",d:"Seasonal toast with butter. Great with coffee.",tags:["food"],day:"Flexible"},
+  {n:"Amor Napoli",c:"Food",lat:37.552000,lng:126.922000,area:"Seoul",d:"Fire-baked salt bread. Wood-fired. Crispy + chewy.",tags:["food"],day:"Flexible"},
+  {n:"Belief Coffee Roasters",c:"Food",lat:37.554000,lng:126.925000,area:"Seoul",d:"Apple cream bread — sells out instantly. Check baking schedule.",tags:["food"],day:"Flexible"},
+  {n:"Sokcho",c:"DayTrip",lat:38.207000,lng:128.591800,area:"Gangwon",d:"Days 6-7. Gateway to Seoraksan National Park. Coastal city.",tags:["daytrip"],day:"Day 10"},
+  {n:"Seoraksan National Park",c:"DayTrip",lat:38.119400,lng:128.465600,area:"Gangwon",d:"Dramatic mountain scenery. Day trip or overnight.",tags:["daytrip"],day:"Day 10"},
+  {n:"Gangneung",c:"DayTrip",lat:37.751900,lng:128.876000,area:"Gangwon",d:"Days 8-9. Beaches, historic homes. 2 hrs by KTX.",tags:["daytrip"],day:"Day 11"},
+  {n:"Gyeongju",c:"DayTrip",lat:35.856100,lng:129.224500,area:"N. Gyeongsang",d:"Days 10-12. Ancient temples, royal tombs. Korea's ancient capital.",tags:["daytrip"],day:"Day 12-13"},
+  {n:"Busan",c:"DayTrip",lat:35.179600,lng:129.075600,area:"S. Gyeongsang",d:"Days 13-15. Seaside city, markets, beaches, parks.",tags:["daytrip"],day:"Day 10-11"},
+  {n:"Hwangnyeongsan Beacon",c:"DayTrip",lat:35.153500,lng:129.075500,area:"Busan",d:"Best viewpoint in Busan. Take Uber up. Burning red sunset city lights.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"DMZ",c:"DayTrip",lat:37.953200,lng:126.661200,area:"Gyeonggi border",d:"Demilitarized Zone tour. Book via Klook. Recommended last day.",tags:["daytrip"],day:"Day 13"},
+  {n:"Nami Island",c:"DayTrip",lat:37.791600,lng:127.524400,area:"Gyeonggi",d:"Day trip bookable on Klook.",tags:["daytrip"],day:"Day 9 (day trip)"},
+  {n:"Heyri Art Village",c:"DayTrip",lat:37.766000,lng:126.728900,area:"Gyeonggi",d:"Half-day trip. Museums and Korean Folk Museum.",tags:["daytrip"],day:"Day 9 (day trip)"},
+  {n:"Jeju Island",c:"DayTrip",lat:33.499600,lng:126.531200,area:"Jeju",d:"Dreamy beach houses via LiveAnywhere. Side trip option.",tags:["daytrip"],day:"Flexible"},
+  {n:"The Air House Festival",c:"Culture",lat:37.791428,lng:127.524299,area:"Nami Island",d:"Eco-friendly house music festival in nature. May annually. 30+ friendly, kid/pet/vegan/foreigner-friendly. Sauna bus, yoga, live bands, disco aerobics, karaoke, camping. @the_airhouse",tags:[],day:"Flexible"},
+  {n:"Cimer at Paradise City",c:"Skincare",lat:37.495900,lng:126.487600,area:"Incheon",d:"Foreigner & tattoo-friendly spa complex near Incheon Airport. 100% stress-free jjimjilbang experience. Great pre/post-flight.",tags:["wellness", "free"],day:"Flexible"},
+  {n:"숲속한방랜드 Forest Korean Bath",c:"Skincare",lat:37.555191,lng:126.937460,area:"Sinchon",d:"Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest.",tags:["wellness"],day:"Flexible"},
+  {n:"아쿠아필드 Aquafield",c:"Skincare",lat:37.665000,lng:126.760000,area:"Goyang (suburban Seoul)",d:"Luxury jjimjilbang experience outside central Seoul. Worth the trip.",tags:["wellness"],day:"Flexible"},
+  {n:"Reclow Myeongdong Flagship",c:"Shopping",lat:37.560500,lng:126.985000,area:"Myeongdong",d:"Trendy affordable accessories — folding sunglasses, bags, rain boots. Open daily 10:30–23:00. 12 Myeong-dong 8-na-gil.",tags:["shopping"],day:"Day 2"},
+  {n:"Sam Sam Sam (쓰리쓰리쓰리)",c:"Food",lat:37.574800,lng:126.976900,area:"Gwanghwamun",d:"American-style cozy bistro from Samcheong-dong, now in Gwanghwamun. Creative dishes only found in Korea. Naver: naver.me/Goivggyk",tags:["food"],day:"Flexible"},
+  {n:"Kyobo Book Centre (교보문고)",c:"Culture",lat:37.571000,lng:126.976900,area:"Gwanghwamun",d:"Korea's largest bookstore. K-stationery, stickers, music, unique souvenirs. Easy to lose hours here.",tags:[],day:"Day 9"},
+  {n:"NYUNYU (뉴뉴)",c:"Shopping",lat:37.562800,lng:126.984000,area:"Myeongdong",d:"Multi-story accessory heaven — thousands of earrings, necklaces, bags, hats at very affordable prices. Open late.",tags:["shopping"],day:"Day 2"},
+  {n:"Manhwa-bang / Comic Café (놀숲 Nolsoop)",c:"Culture",lat:37.556000,lng:126.923600,area:"Hongdae",d:"Private pods with curtains, blankets, pillows. Order ramyeon to your pod. ~₩3,000–4,000/hr. Nolsoop (놀숲) & Beoltoon (벌툰) are the main chains. Near subway stations city-wide.",tags:[],day:"Flexible"},
+  {n:"Yonghada Korean Medicine Clinic (용하다 한의원)",c:"Skincare",lat:37.560800,lng:126.985600,area:"Myeongdong",d:"Myeongdong Station Exit 2. English/Japanese/Chinese/Spanish speaking. Cupping, acupuncture, ginseng injection, chuna therapy, facial lifting. Check-up ₩132,000. Healing Course C ₩242,000. @yonghadaclinic_en",tags:["wellness", "english friendly"],day:"Day 7-8"},
+  {n:"Rolling Jay Hair Salon",c:"Accommodation",lat:37.550000,lng:126.925000,area:"Seoul",d:"Celebrity-level hair stylist. @rollingjay_siwon__ (women) & @rollingjay_siwon__men. Book via DM, Kakao ID: ruddo462, or Naver. naver.me/F9N4yI6L",tags:[],day:"Flexible"},
+  {n:"Vands Clinic Hongdae",c:"Skincare",lat:37.557000,lng:126.922000,area:"Hongdae",d:"Foreign-friendly clinic — rejuran, filler, botox. First stop for many on arrival. Also Myeongdong + Gangnam branches. @vands_myeongdong",tags:["wellness"],day:"Day 3-4"},
+  {n:"Vands Clinic Myeongdong",c:"Skincare",lat:37.560998,lng:126.985630,area:"Myeongdong",d:"Foreign-friendly injectable clinic. Popular 30s crowd. @vands_myeongdong | Gangnam: @vands_myeongdong_gangnam_eng",tags:["wellness"],day:"Day 2"},
+  {n:"Eraser Clinic (Dr. Eraser)",c:"Skincare",lat:37.521000,lng:127.022000,area:"Sinsa Gangnam",d:"Tune Liner — jawline contouring, no bruising, instant results. @dreraserclinic. Sinsa-dong Gangnam.",tags:["wellness"],day:"Day 7"},
+  {n:"Inko Seoul (잉코서울)",c:"Skincare",lat:37.564179,lng:126.977114,area:"Seoul",d:"FREE skin analysis before Olive Young shopping. Skin age + type + 6 characteristics + customised routine. @inkoseoul_official",tags:["wellness", "free"],day:"Day 7-8"},
+  {n:"Jeil Grand Pharmacy (제일그랑약국)",c:"Skincare",lat:37.500000,lng:127.025000,area:"Gangnam",d:"Curated Korean pharmacy in Gangnam near clinics. @jeilgrand_pharmacy_global. Carries USOLAB + clinical skincare.",tags:["wellness"],day:"Day 7"},
+  {n:"Olive Young — Free Skin Analysis",c:"Skincare",lat:37.563300,lng:126.985791,area:"Myeongdong",d:"Free in-store skin analysis. Measurements + skin type + 6 characteristics + customised routine. Multiple Seoul locations.",tags:["wellness", "free"],day:"Day 7-8"},
+  {n:"애리꼼닭발 (Aeri's Chicken Feet)",c:"Food",lat:37.559700,lng:127.037300,area:"Wangsimni",d:"Viral spicy chicken feet. Wait ~1hr — grab ticket and come back. 📍3 Wangsimni-ro 22-gil, Doseon-dong, Seongdong-gu",tags:["food"],day:"Day 3-4"},
+  {n:"Rain Report Café",c:"Food",lat:37.563000,lng:126.983000,area:"Seoul",d:"Concept café where it rains 24/7 inside. Cosy any season. @rain.report",tags:["food"],day:"Day 3-4"},
+  {n:"Korea Bakery World Cup Winner Bakery",c:"Food",lat:36.321900,lng:127.419400,area:"Daejeon",d:"Bakery by Korea's Bakery World Cup team leader. Incredible textures and flavours. Day trip from Seoul.",tags:["food"],day:"Day 10 (day trip)"},
+  {n:"Scooper Gelato",c:"Food",lat:37.550000,lng:127.040000,area:"Seoul",d:"Top trending café on Korean social media. @scooper_gelato",tags:["food"],day:"Day 3-4"},
+  {n:"Pachamama Bakery",c:"Food",lat:37.554095,lng:126.924824,area:"Seoul",d:"Trending café on Korean social media. @pachamama.bakery",tags:["food"],day:"Day 3-4"},
+  {n:"House of Vinyl Yeonhui",c:"Food",lat:37.569250,lng:126.920294,area:"Yeonhui",d:"Trending café. @houseofvinyl_yeonhui — Yeonhui near Hongdae.",tags:["food"],day:"Day 3-4"},
+  {n:"Crepeboy Seoul",c:"Food",lat:37.550000,lng:126.922000,area:"Seoul",d:"Trending café. @crepeboyseoul",tags:["food"],day:"Day 3-4"},
+  {n:"Friends and Yard",c:"Food",lat:37.556000,lng:126.925000,area:"Seoul",d:"Trending café. @friends.and.yard",tags:["food"],day:"Day 3-4"},
+  {n:"WAA Seoul",c:"Food",lat:37.545000,lng:127.057000,area:"Seongsu",d:"Trending café on Korean social media. @waa.seoul",tags:["food"],day:"Day 3-4"},
+  {n:"Roofcat Cat Café Hongdae",c:"Culture",lat:37.557000,lng:126.924000,area:"Hongdae",d:"Cat café in Hongdae. Admission includes unlimited self-serve tea + coffee. @roofcatme_hongdae",tags:[],day:"Flexible"},
+  {n:"Seoul Baseball (KBO League)",c:"Culture",lat:37.512200,lng:127.071900,area:"Jamsil",d:"KBO baseball = full-on party. Beer, fried chicken, intense cheering. Nothing like it. DM @hungrypursuit 'SEOUL BASEBALL' for how to book.",tags:[],day:"Day 2-3"},
+  {n:"Workshop by Baskin Robbins",c:"Culture",lat:37.518500,lng:127.034000,area:"Nonhyeon-ro Gangnam",d:"World's first AI ice cream shop + lab. Flavours: wasabi, Cheetos, truffle. 📍201 Nonhyeon-ro, Gangnam. @baskinrobbinskorea",tags:[],day:"Day 7-8"},
+  {n:"Jangsan Mountain Park (장산산림욕장)",c:"DayTrip",lat:35.210000,lng:129.120000,area:"Busan",d:"Very local park foreigners rarely visit. Walk or intense hike. Authentic Busan neighbourhood life.",tags:["daytrip"],day:"Day 10-11"},
+  {n:"Discover Seoul Pass",c:"Transport",lat:37.570000,lng:126.982000,area:"Seoul",d:"Multi-attraction + transit pass. Code KAY-SEOULPASS for ₩5,000 discount.",tags:[],day:"Day 1, Flexible"},
+  {n:"Lotte Hotel Seoul",c:"Accommodation",lat:37.563700,lng:126.982200,area:"Myeongdong",d:"5-star hotel in Myeongdong. Great for first-timers. @lottehotelseoul",tags:[],day:"Day 1-2"},
+  {n:"JW Marriott Jeju",c:"Accommodation",lat:33.254000,lng:126.412000,area:"Jeju Island",d:"Luxury hotel on Jeju. @JWmarriotjeju",tags:[],day:"Day 12-13"},
+  {n:"Eastern Medicine Hospital (한의원)",c:"Skincare",lat:37.556000,lng:126.924000,area:"Seoul",d:"Traditional Korean medicine — cupping, herbal, acupuncture. Under $45/visit. Find via Naver Maps: 한의원",tags:["wellness"],day:"Day 7-8"},
+  {n:"Hair of Seoul",c:"Skincare",lat:37.550000,lng:126.982000,area:"Seoul",d:"Hair clinic/salon. Cheaper than Turkey. @hairofseoul — DM/Kakao/Instagram for bookings.",tags:["wellness"],day:"Flexible"},
+  {n:"Park Jun Hair Salon (박준뷰티랩)",c:"Skincare",lat:37.556000,lng:126.982000,area:"Seoul",d:"15-step Korean hair spa. @parkjun2342 for booking.",tags:["wellness"],day:"Flexible"},
+  {n:"Glowny",c:"Shopping",lat:37.535000,lng:127.001000,area:"Hannam",d:"Contemporary independent boutique in Hannam-dong.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Loeuvre (Hannam)",c:"Shopping",lat:37.534500,lng:127.001500,area:"Hannam",d:"Independent boutique in Hannam-dong.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Folnua",c:"Shopping",lat:37.534000,lng:127.002000,area:"Hannam",d:"Independent boutique in Hannam-dong.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Muut",c:"Shopping",lat:37.534500,lng:127.000500,area:"Hannam",d:"Independent boutique in Hannam-dong.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Roman & You Seongsu",c:"Shopping",lat:37.544500,lng:127.056000,area:"Seongsu",d:"Roman&You makeup Pink Office pop-up in Seongsu. @romandyou — check if running.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Yonsei Pain Clinic",c:"Skincare",lat:37.550500,lng:126.925000,area:"Mapo",d:"@yonseian.painclinic — ANS test, X-ray, 3D AI posture, massage. Multiple creators for back/neck pain.",tags:["wellness"],day:"Day 7-8"},
+  {n:"신사형통정형외과 Sinsa Hyeong Tong",c:"Skincare",lat:37.524800,lng:127.019800,area:"Sinsa Gangnam",d:"X-ray, treadmill body scan, posture analysis, back/neck treatment. Annual visits by one creator.",tags:["wellness"],day:"Day 7"},
+  {n:"Stretch U Care",c:"Skincare",lat:37.496700,lng:127.044200,area:"Dogok Gangnam",d:"90-min full-body stretch. Completely resets you. @stretch_u_care_global. 📍408 510 Dogok-ro, Gangnam.",tags:["wellness"],day:"Day 7"},
+  {n:"Medione Medical Global",c:"Skincare",lat:37.500000,lng:127.035000,area:"Gangnam",d:"Full body MRI scan. @medione_medical_global.",tags:["wellness"],day:"Day 7-8"},
+  {n:"Relieve Clinic",c:"Skincare",lat:37.558000,lng:126.925000,area:"Seoul",d:"Acne/breakout treatment. @relieve_clinic_ — 3rd visit, genuine use.",tags:["wellness"],day:"Day 7-8"},
+  {n:"APM Place (에이피엠)",c:"Shopping",lat:37.566800,lng:127.008500,area:"Dongdaemun",d:"8-storey wholesale clothing. Open until 5am. Vendors ignore foreigners on wholesale floors — use Mimiline or NYUNYU inside instead (foreigner-friendly, card OK, tax-free).",tags:["shopping", "free"],day:"Day 9 (evening)"},
+  {n:"Tongin Market (통인시장)",c:"Food",lat:37.579300,lng:126.970000,area:"Jongno",d:"Best street food. Coin-based tray system — exchange cash for coins, fill tray from multiple stalls. Solo-friendly. Near Gyeongbokgung.",tags:["food", "★ top pick"],day:"Day 2"},
+  {n:"Cheongnyangni Market",c:"Food",lat:37.580400,lng:127.047900,area:"Cheongnyangni",d:"Packed with locals, zero tourist energy. Deliberately hard to find on Google. DM @cutthelandline 'seoul eats' for exact address.",tags:["food"],day:"Day 9"},
+  {n:"Chungmuro Neighbourhood",c:"Neighbourhood",lat:37.559800,lng:126.997300,area:"Jung-gu",d:"@dianainseoul recommends staying here. Between Myeongdong and Dongdaemun lines 3/4. Bustling, non-tourist, great transit hub.",tags:["stay"],day:"Day 1-2"},
+  {n:"Bibiang Fragrances",c:"Shopping",lat:37.550181,lng:126.922086,area:"Hongdae",d:"Korean niche fragrance. Colline, Gureum, Rondo24 — Rondo24 is a repeat-buy. @bibiang_official",tags:["shopping"],day:"Day 5-6"},
+  {n:"Gentle Monster Flagship",c:"Shopping",lat:37.521500,lng:127.026600,area:"Apgujeong",d:"Multi-storey Gentle Monster concept store. Art installation + eyewear experience.",tags:["shopping"],day:"Flexible"},
+  {n:"GOTO Mall Hongdae (고투몰)",c:"Shopping",lat:37.556433,lng:126.923750,area:"Hongdae",d:"Underground mall beneath Hongdae. Affordable fashion, open late.",tags:["shopping"],day:"Day 3-4"},
+  {n:"Hyundai Seoul Department Store",c:"Shopping",lat:37.526100,lng:126.926900,area:"Yeouido",d:"Curated Korean brands. Less touristy than Myeongdong stores.",tags:["shopping"],day:"Day 6"},
+  {n:"Tamburins Seongsu",c:"Shopping",lat:37.544800,lng:127.056600,area:"Seongsu",d:"Korean fragrance + beauty brand. 📍316-7 Seongsu-dong 2-ga Seongdong-gu Seoul",tags:["shopping"],day:"Flexible"},
+  {n:"Elorea",c:"Shopping",lat:37.533500,lng:127.001300,area:"Hannam",d:"Korean niche fragrance. 📍737-1 Hannam-dong Yongsan-gu Seoul",tags:["shopping"],day:"Day 5-6"},
+  {n:"Youssoful Hannam",c:"Shopping",lat:37.534000,lng:127.002500,area:"Hannam",d:"Korean niche fragrance boutique. 📍744-4 Hannam-dong Yongsan-gu Seoul",tags:["shopping"],day:"Day 5-6"},
+  {n:"Cosmic Mansion",c:"Shopping",lat:37.579300,lng:126.974500,area:"Jongno",d:"Korean niche fragrance. 📍153-1 Changseong-dong Jongno-gu Seoul",tags:["shopping"],day:"Day 2"},
+  {n:"Nonfiction Seongsu",c:"Shopping",lat:37.544000,lng:127.055500,area:"Seongsu",d:"Korean niche fragrance. 📍16-33 Seongsu-dong 1-ga Seongdong-gu Seoul",tags:["shopping"],day:"Day 5-6"},
+  {n:"COMPILE",c:"Culture",lat:37.557800,lng:126.921100,area:"Hongdae",d:"Nightlife venue. @01compile",tags:[],day:"Evenings"},
+  {n:"ZuhZuh (저저)",c:"Culture",lat:37.556000,lng:126.919800,area:"Hongdae",d:"Bar/nightlife. @zuhzuh.kr",tags:[],day:"Evenings"},
+  {n:"라스트춘선 홍대",c:"Culture",lat:37.555500,lng:126.920500,area:"Hongdae",d:"Bar in Hongdae. @lastchunsun_hongdae",tags:[],day:"Day 4 (night)"},
+  {n:"Bar Eum",c:"Culture",lat:37.556000,lng:126.921500,area:"Hongdae",d:"Bar/music venue. @ongroundmusicbar",tags:[],day:"Evenings"},
+  {n:"HIGHWAY Men's Hair",c:"Skincare",lat:37.555800,lng:126.922200,area:"Hongdae",d:"Men's hair salon. @highway_menshair",tags:["wellness"],day:"Flexible"},
+  {n:"Buramsan Mountain (불암산)",c:"DayTrip",lat:37.658000,lng:127.098000,area:"Nowon",d:"Best sunset viewpoint in Seoul per a Korean local. 40min hike. 📍Deokneung-ro 94-gil 73. Transit: Sanggye Station Exit 1.",tags:["daytrip", "★ top pick"],day:"Day 8"},
+  {n:"Body + Color Analysis",c:"Culture",lat:37.526000,lng:127.028000,area:"Gangnam",d:"Personal style analysis — body type, color season, what collar/cut suits you. Book via Gangnam stylists/clinics.",tags:[],day:"Day 7-8"},
+  {n:"Gyeongdong Market",c:"Culture",lat:37.568147,lng:126.986096,area:"Jongno",d:"Walking tour with local guide @wookeunshin. Authentic neighbourhood market, Korean BBQ, real Seoul history. Much less touristy than Gwangjang.",tags:[],day:"Flexible"},
+  {n:"Spa Gogyeol (스파고결)",c:"Skincare",lat:37.518240,lng:127.042230,area:"Seoul",d:"Korean lymphatic drainage facial — they absolutely snatch you up here. Immediate, intense results.",tags:["wellness"],day:"Flexible"},
+  {n:"Yonsei AN Pain Clinic",c:"Skincare",lat:37.574499,lng:126.978686,area:"Seoul",d:"Non-skincare health assessment — full body wellness evaluation. Worth doing if interested in Korean medical tourism beyond aesthetics.",tags:["wellness"],day:"Flexible"},
+  {n:"Seoul Menswear Spots (@rogerwh0)",c:"Shopping",lat:37.573418,lng:126.974181,area:"Seoul",d:"Best men's clothing spots in Seoul — includes Llege Official. Strong list from a creator who goes twice a year.",tags:["shopping", "★ top pick"],day:"Flexible"},
+  {n:"Salt Bread — Jayeondo Sogeumppang",c:"Food",lat:37.572981,lng:126.993493,area:"Seoul",d:"The original salt bread — buttery and crisp, nothing like the name implies. Will ruin you for other bread.",tags:["food"],day:"Flexible"},
+  {n:"Alpaca World",c:"DayTrip",lat:37.825347,lng:127.883401,area:"Gangwon-do",d:"Magical afternoon with alpacas in Gangwon-do. Perfect escape from Seoul in a mountain setting.",tags:["daytrip"],day:"Flexible"},
+  {n:"Gangnam Kyoja (강남교자)",c:"Food",lat:37.501458,lng:127.024113,area:"Gangnam",d:"Perennial favourite revisited twice a year. Known for kalguksu and mandu. Always worth the wait.",tags:["food"],day:"Flexible"},
+  {n:"Ttareungyi Seoul Public Bike",c:"Transport",lat:37.564961,lng:126.964280,area:"Seoul",d:"Seoul public bike — 'Seoul Bike' app, ~₩1,000 per rental, international cards OK. 1-hour hack: return within the hour for flat rate.",tags:[],day:"Flexible"},
+  {n:"Eunpyeong Hanok Village",c:"Culture",lat:37.640358,lng:126.939128,area:"Eunpyeong",d:"Free premium hanbok rental (1.5hrs) at Neonadeuri Center — skip expensive Bukchon rentals. Hidden, far less crowded. Walk-in works.",tags:["free"],day:"Day 9"},
+  {n:"Namsan Sky Forest Trail",c:"DayTrip",lat:37.570419,lng:126.989577,area:"Namsan",d:"Easy paved trail to N Seoul Tower — bus takes you to the start. Great for dates, solo runs, families. Go in the morning.",tags:["daytrip"],day:"Flexible"},
+  {n:"Vinyl Bar Circuit — Seoul",c:"Culture",lat:37.563603,lng:126.975629,area:"Seoul",d:"Bars playing vinyl records or scheduled DJs: Silly Aperitivo, Osem Seoul, Culsec Seoul, Nega Iso, Hills and Europa, FFF Samgakji.",tags:[],day:"Evenings"},
+  {n:"Noryangjin Fish Market",c:"Food",lat:37.513453,lng:126.938203,area:"Noryangjin",d:"Better than Gwangjang according to locals — crispy fried peppers and fresh seafood you will still be thinking about.",tags:["food"],day:"Flexible"},
+  {n:"Bukhansan Mountain Hike",c:"DayTrip",lat:37.549674,lng:126.977148,area:"Bukhansan",d:"Challenging hike with stunning views over Seoul. Budget a full day. One of the best outdoor experiences within the city limits.",tags:["daytrip"],day:"Flexible"},
+  {n:"Unni Guide Clinic Center",c:"Skincare",lat:37.573891,lng:126.980896,area:"Gangnam",d:"Korean-local pricing guaranteed (4M+ reviews via Unni app). Free Anua gift set when booking ahead. 498 Gangnam-daero.",tags:["wellness", "free"],day:"Flexible"},
+  {n:"AREX All-Stop Train — Incheon",c:"Transport",lat:37.572954,lng:126.963298,area:"Incheon",d:"Take the All-Stop (not Express): 66 min, ₩4,950, stops at Hongdae where most travelers stay. Express is 43 min to Seoul Station only.",tags:[],day:"Day 1"},
+  {n:"Hwangnyeong-san Lookout — Busan",c:"DayTrip",lat:35.165738,lng:129.068628,area:"Busan",d:"Best single thing to do in Busan — Hwangnyeongsan Beacon (황령산 봉수대). Uber most of the way up, short walk to the lookout. ★ Top pick.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"Gonlun Mountain Hang Gliding — Pohang",c:"DayTrip",lat:37.554507,lng:126.968184,area:"Pohang",d:"Gollyunsan Mountain hang gliding site. Unique activity outside the Seoul/Busan circuit.",tags:["daytrip"],day:"Flexible"},
+  {n:"Seoul Medical Tourism Circuit",c:"Skincare",lat:37.561303,lng:126.983515,area:"Gangnam",d:"Full cost breakdown with no gatekeeping: Yonsei AN Pain Clinic, Medione Full Body MRI Scan, V&S Clinic Global (Rejuran, Juvelook, Thermage).",tags:["wellness"],day:"Flexible"},
+  {n:"ACME DE LA VIE Seongsu Showroom",c:"Shopping",lat:37.544700,lng:127.056700,area:"Seongsu",d:"Premium Korean streetwear showroom",tags:["shopping"],day:"Day 5-6"},
+  {n:"AREX Train — Incheon to Seoul",c:"Transport",lat:37.554434,lng:126.987495,area:"Incheon",d:"Two trains from airport: Express (43 min, ₩11,000, Seoul Station only) vs All-Stop (66 min, ₩4,950, stops at Hongdae). Most solo travelers should take the All-Stop to Hongdae.",tags:[],day:"Day 1"},
+  {n:"Abijou Hongdae Branch",c:"Skincare",lat:37.549058,lng:126.974261,area:"Hongdae",d:"Less crowded than Myeongdong branch; less personal but still good service",tags:["wellness"],day:"Day 3-4"},
+  {n:"Abijou Myeongdong Branch (명동점)",c:"Skincare",lat:37.562537,lng:126.985172,area:"Myeongdong",d:"Affordable skin clinic; great for foreigners; busy but personal care; also has Hongdae branch",tags:["wellness"],day:"Day 2"},
+  {n:"Amor Napoli (아모르나폴리)",c:"Food",lat:37.528986,lng:126.964830,area:"Seoul",d:"Fire-baked salt bread (화덕 소금빵); crispy outside chewy inside; wood-fired",tags:["food"],day:"Flexible"},
+  {n:"Apgujeong (압구정)",c:"Neighbourhood",lat:37.526185,lng:127.028499,area:"Seoul",d:"Worksout streetwear store located here (mentioned in comments)",tags:["stay"],day:"Day 7-8"},
+  {n:"Archive PKE",c:"Shopping",lat:37.500900,lng:127.007000,area:"Shinsegae Gangnam 5F",d:"Street casual Korean brand",tags:["shopping"],day:"Day 7-8"},
+  {n:"Avekcheri",c:"Food",lat:37.575569,lng:126.973810,area:"Seoul",d:"Trending café. @avekcheri",tags:["food"],day:"Day 3-4"},
+  {n:"Beaker Seongsu Flagship Store",c:"Shopping",lat:37.544894,lng:127.056653,area:"Seongsu",d:"Multi-brand select shop",tags:["shopping"],day:"Day 5-6"},
+  {n:"Beglowny",c:"Shopping",lat:37.500746,lng:127.007127,area:"Shinsegae Gangnam 5F",d:"Romantic and stylish — popular with young Koreans",tags:["shopping"],day:"Day 7-8"},
+  {n:"Belief Coffee Roasters (빌리프커피로스터스)",c:"Food",lat:37.552320,lng:126.913996,area:"Seoul",d:"Apple cream bread — sells out instantly; pastry with custard cream and crunchy apple; check baking times before visiting",tags:["food"],day:"Flexible"},
+  {n:"Bibiang Fragrances (비비앙)",c:"Shopping",lat:37.572859,lng:126.986752,area:"Seoul",d:"Korean niche fragrance brand. Flagship carries Colline, Gureum, and Rondo24 — Rondo24 specifically called a repeat-buy. @bibiang_official.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Bijeonstrol Yeonhui Roastery (비전스트롤 연희로스터리)",c:"Food",lat:37.565000,lng:126.932300,area:"Yeonhui",d:"Seasonal toast with butter and jam; coffee pairing",tags:["food"],day:"Flexible"},
+  {n:"Blue Elephant Seongsu Flagship",c:"Shopping",lat:37.544503,lng:127.056664,area:"Seongsu",d:"Flagship concept space",tags:["shopping"],day:"Day 5-6"},
+  {n:"Body + Color Analysis Korea",c:"Skincare",lat:37.566090,lng:126.978841,area:"Seoul",d:"Highly recommended experience — tells you exact body/color type and what styles, collar shapes, suit jacket vents suit you. Results can change over time with complexion. Book via Korean clinics or sty",tags:["wellness"],day:"Day 7-8"},
+  {n:"Brownyard",c:"Shopping",lat:37.500960,lng:127.006809,area:"Shinsegae Gangnam 8F",d:"Between basic and trendy; comfy everyday items",tags:["shopping"],day:"Day 7-8"},
+  {n:"Busan (부산)",c:"DayTrip",lat:35.179567,lng:129.075797,area:"South Gyeongsang",d:"Days 13–15 on 2-week Korea itinerary; seaside city; markets; beaches; parks",tags:["daytrip"],day:"Day 10-11"},
+  {n:"Busan — Hwangnyeong-san Lookout",c:"DayTrip",lat:35.179623,lng:129.075401,area:"Busan",d:"Hwangnyeongsan Beacon (황령산 봉수대) — grab an Uber most of the way up, then a short walk to the lookout. Book Uber 10-15 mins before you want to leave. Best single thing to do in Busan.",tags:["daytrip"],day:"Flexible"},
+  {n:"Cat & F (캣앤에프)",c:"Food",lat:37.543468,lng:127.052735,area:"Seoul",d:"Corn-shaped corn salt bread; Gangwon corn cream filling",tags:["food"],day:"Flexible"},
+  {n:"Central Park Hotel Songdo",c:"Accommodation",lat:37.382800,lng:126.655700,area:"Incheon Songdo",d:"'SO PEAK and cheap' for Incheon/Songdo visits. @central_park_hotel_songdo. Great if visiting Songdo as a day trip or arriving/departing from Incheon.",tags:[],day:"Day 1"},
+  {n:"Cheongnyangni Market (청량리역 시장)",c:"Food",lat:37.581000,lng:127.045600,area:"Cheongnyangni",d:"Packed with Koreans of all ages — zero tourist energy. Caption deliberately vague (doesn't even name it). DM @cutthelandline 'seoul eats' for exact address.",tags:["food"],day:"Day 9"},
+  {n:"Chester Travel Chingu — Custom Itinerary",c:"Culture",lat:37.564335,lng:126.966429,area:"Seoul",d:"Personalised Seoul itinerary planning service — good option if you want a guide tailored to past trips rather than a generic list.",tags:[],day:"Flexible"},
+  {n:"Chungmuro Neighbourhood Tip",c:"Neighbourhood",lat:37.560300,lng:126.996300,area:"Chungmuro",d:"@dianainseoul recommends staying in Chungmuro — between Myeongdong and Dongdaemun on lines 3/4. Bustling but non-tourist. Good transit hub for both sides of the city.",tags:["stay"],day:"Day 1-2"},
+  {n:"Citybreeze Seoul Flagship",c:"Shopping",lat:37.534900,lng:126.999700,area:"Hannam",d:"Seoul lifestyle concept store",tags:["shopping"],day:"Day 5-6"},
+  {n:"Customellow Seongsu Prints",c:"Shopping",lat:37.544637,lng:127.056510,area:"Seongsu",d:"Custom prints concept store",tags:["shopping"],day:"Day 5-6"},
+  {n:"DNA Skin Clinic (@dnaskin12 / @dnaskin_lab)",c:"Skincare",lat:37.568257,lng:126.976806,area:"Seoul",d:"Skin treatments; microneedling; RF; airjet; English-speaking; visited 6+ times by poster",tags:["wellness", "english friendly"],day:"Day 7-8"},
+  {n:"DUNST",c:"Shopping",lat:37.501283,lng:127.007117,area:"Shinsegae Gangnam 5F",d:"Trendy understated daily wear",tags:["shopping"],day:"Day 7-8"},
+  {n:"Discover Seoul Pass (June promo)",c:"Transport",lat:37.550810,lng:126.973619,area:"Seoul",d:"Multi-attraction pass. June promo code GENESIA-SEOULPASS for extra ₩5,000 off. Covers: Lotte World, N Seoul Tower, Nami Island, Gyeongbokgung + Hanbok, Seoul Aquarium, Realworld Seongsu.",tags:[],day:"Flexible"},
+  {n:"Discover Seoul Pass (code SYLVIA-SEOULPASS)",c:"Transport",lat:37.571655,lng:126.971964,area:"Seoul",d:"Best tourism pass for Seoul — ₩5,000 off with code SYLVIA-SEOULPASS (valid to June 2026). Covers major attractions + transport.",tags:["★ top pick"],day:"Day 1"},
+  {n:"Double Lovers Seongsu Flagship",c:"Shopping",lat:37.544827,lng:127.056546,area:"Seongsu",d:"Flagship concept store",tags:["shopping"],day:"Day 5-6"},
+  {n:"Emis",c:"Shopping",lat:37.500547,lng:127.007188,area:"Shinsegae Gangnam 8F",d:"Famous for stylish hats; modern women's clothing",tags:["shopping"],day:"Day 7-8"},
+  {n:"Euljiro (을지로)",c:"Neighbourhood",lat:37.569473,lng:126.995042,area:"Seoul",d:"Walkable from Myeongdong; cool spots; mentioned as great area to stay",tags:["stay"],day:"Day 1-2"},
+  {n:"Fenek Hongdae Showroom",c:"Shopping",lat:37.557000,lng:126.924400,area:"Hongdae",d:"Independent Korean brand showroom",tags:["shopping"],day:"Day 3-4"},
+  {n:"Gangnam (강남)",c:"Neighbourhood",lat:37.517700,lng:127.047300,area:"Seoul",d:"Upscale area; Shinsegae Gangnam department store 5th & 8th floor for Korean fashion brands",tags:["stay"],day:"Day 7-8"},
+  {n:"Gangneung (강릉)",c:"DayTrip",lat:38.207000,lng:128.591900,area:"Gangwon",d:"Days 8–9 on 2-week Korea itinerary; beaches; historic homes; nature; 2 hrs from Seoul by KTX",tags:["daytrip"],day:"Day 11"},
+  {n:"Gentle Monster Multi-Floor Flagship",c:"Shopping",lat:37.572226,lng:126.976228,area:"Seoul",d:"Multi-storey Gentle Monster concept store. @gentlemonster — get the full art installation + eyewear experience.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Glasses / Optical shops",c:"Transport",lat:37.555487,lng:126.965060,area:"Seoul (any area)",d:"Get new glasses in 10 minutes. No reservation or prescription needed. Much cheaper than home. Any optical shop works — look for them near major streets.",tags:[],day:"Flexible"},
+  {n:"Granhand (그랑핸드)",c:"Shopping",lat:37.580581,lng:126.987860,area:"Hanok Village",d:"Custom perfumery; choose scent and personalise label with your name; multiple locations; Hanok Village branch most atmospheric",tags:["shopping"],day:"Day 5-6"},
+  {n:"Granhand Marine Orchid fragrance",c:"Shopping",lat:37.562982,lng:126.984995,area:"Hanok Village",d:"Granhand Marine Orchid — specifically called out as a standout fragrance in the lineup. @granhand_official",tags:["shopping"],day:"Day 5-6"},
+  {n:"Gwangjang Market (광장시장)",c:"Food",lat:37.570909,lng:126.999771,area:"Seoul",d:"Steps from a featured loft rental (LiveAnywhere); iconic traditional market",tags:["food"],day:"Day 9"},
+  {n:"Gyeongdong Market (Walking Tour with @wookeunshin)",c:"Culture",lat:37.563972,lng:126.967630,area:"Jongno",d:"Walking tour of Gyeongdong market with local guide Wook Eun Shin. Authentic neighbourhood market, Korean BBQ, and real Seoul history. Much less touristy than Gwangjang.",tags:[],day:"Flexible"},
+  {n:"Gyeongju (경주)",c:"DayTrip",lat:35.856200,lng:129.224800,area:"North Gyeongsang",d:"Days 10–12 on 2-week Korea itinerary; ancient temples; royal tombs; mossy paths; history",tags:["daytrip"],day:"Day 12-13"},
+  {n:"HATCHINGROOM Seongsu",c:"Shopping",lat:37.544633,lng:127.056889,area:"Seongsu",d:"Independent Korean brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"Hannam (한남)",c:"Neighbourhood",lat:37.535861,lng:127.011709,area:"Seoul",d:"Tied for coolest neighbourhood; upscale boutiques; Citybreeze Seoul; Fucking Awesome Seoul; Mardi Mercredi",tags:["stay"],day:"Day 5"},
+  {n:"Hanok Village (한옥마을)",c:"Culture",lat:37.572850,lng:126.989515,area:"Seoul",d:"Location of Granhand perfumery; winding historic streets; souvenir shopping",tags:[],day:"Day 14"},
+  {n:"Hongdae (홍대)",c:"Neighbourhood",lat:37.557920,lng:126.926135,area:"Seoul",d:"#3 area to stay — nightlife; restaurants; ÅLAND and MUSINSA flagship stores; younger crowd",tags:["stay"],day:"Day 3"},
+  {n:"Hwangnyeongsan (황령산)",c:"DayTrip",lat:35.157335,lng:129.081909,area:"Busan",d:"Hwangnyeongsan Beacon 황령산봉수대 — best view in Busan; take Uber most of the way up; sunset city lights",tags:["daytrip", "★ top pick"],day:"Day 10-11"},
+  {n:"INSILENCE Seongsu Flagship",c:"Shopping",lat:37.544747,lng:127.056894,area:"Seongsu",d:"Korean streetwear brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"Ikovo Coffee Studio",c:"Food",lat:37.565269,lng:126.985204,area:"Seoul",d:"Trending café. @ikovoxcoffeestudio",tags:["food"],day:"Day 3-4"},
+  {n:"Incheon Immigration Queue Skip",c:"Transport",lat:37.581096,lng:126.975688,area:"Incheon",d:"@phatlifeproject's hack to clear Incheon immigration in 15 min instead of 1–1.5hrs.",tags:[],day:"Day 1"},
+  {n:"Incheon International Airport",c:"Transport",lat:37.456300,lng:126.705200,area:"Incheon",d:"Take Airport Limousine bus — best way into Seoul from airport; also has Smart Pass facial recognition to skip queues",tags:["★ top pick"],day:"Day 1"},
+  {n:"Insadong (인사동)",c:"Neighbourhood",lat:37.571654,lng:126.986424,area:"Seoul",d:"Shopping and cultural area; mentioned as activity in Seoul itinerary; Granhand perfumery nearby (Hanok Village)",tags:["stay"],day:"Day 1-2"},
+  {n:"Itaewon (이태원)",c:"Neighbourhood",lat:37.540671,lng:126.995401,area:"Seoul",d:"Expat-friendly area; Citybreeze Seoul Flagship; Fucking Awesome Seoul; Mardi Mercredi",tags:["stay"],day:"Flexible"},
+  {n:"Jeju (제주)",c:"DayTrip",lat:33.499829,lng:126.531390,area:"Jeju",d:"Mentioned as alternative itinerary stop; dreamy beach houses via LiveAnywhere platform",tags:["daytrip"],day:"Day 12-13"},
+  {n:"Jeju Coastal Itinerary",c:"DayTrip",lat:33.489000,lng:126.498300,area:"Jeju",d:"Hidden coastlines, dreamy cafes, volcanic views. Designed around the parts of Jeju that feel unreal.",tags:["daytrip"],day:"Flexible"},
+  {n:"Jeju Hiking Trail",c:"DayTrip",lat:33.488898,lng:126.498128,area:"Jeju",d:"Essential Jeju outdoor activity — volcanic hiking. Add this to any Jeju itinerary.",tags:["daytrip"],day:"Flexible"},
+  {n:"Jeju — Full Guide (@jun_hanok)",c:"DayTrip",lat:33.489140,lng:126.498443,area:"Jeju",d:"Deep dive Jeju guide: stay in Aewol (west, sunset side) or Hallim/Hyeopjae (beach, quieter). Hike Hallasan, sea kayak Hamdeok, drive the Olle Trail.",tags:["daytrip"],day:"Flexible"},
+  {n:"Jeju — Waterfalls & Highlights",c:"DayTrip",lat:33.489023,lng:126.498499,area:"Jeju",d:"Oeadolgae Rock, Cheonjiyeon & Jeongbang Waterfalls in Seogwipo, Daepo Jusangjeolli Cliff, Camellia Hill Botanical Garden, Seongsan Ilchulbong sunrise peak.",tags:["daytrip"],day:"Flexible"},
+  {n:"Jjimjilbang Tip — Modern Busan",c:"Skincare",lat:35.179692,lng:129.075777,area:"Busan",d:"@anj.mejia_ — jjimjilbang described as the most therapeutic thing. Modern version in Busan recommended over traditional. Search 찜질방 in Naver Maps when in Busan.",tags:["wellness"],day:"Day 10-11"},
+  {n:"Joa Pilates (@joapilates)",c:"Skincare",lat:37.573714,lng:126.975863,area:"Seoul",d:"Ear seeding / ear therapy treatment; book via IG DM; uses @byava products",tags:["wellness"],day:"Day 7-8"},
+  {n:"Jongno (종로)",c:"Neighbourhood",lat:37.570440,lng:126.992324,area:"Seoul",d:"#1 area to stay for first-timers — real Korea vibe; transit hub; historic",tags:["stay"],day:"Day 1-2"},
+  {n:"Joygryson",c:"Shopping",lat:37.500767,lng:127.007150,area:"Shinsegae Gangnam 5F",d:"Simple chic women's workwear",tags:["shopping"],day:"Day 7-8"},
+  {n:"Korea Apps Guide",c:"Transport",lat:37.576931,lng:126.982214,area:"Seoul",d:"@haeinholi's guide to apps you actually need in Korea. Key tip: get an eSIM with a Korean phone number — needed for food delivery apps, restaurant waitlists, and booking confirmations.",tags:[],day:"Day 1"},
+  {n:"Korea Bakery World Cup Winner's Bakery",c:"Food",lat:36.350400,lng:127.384500,area:"Daejeon",d:"Bakery run by team leader of Korea's Bakery World Cup winning team. Incredible textures and flavours. Worth a day trip from Seoul.",tags:["food"],day:"Day 10 (day trip)"},
+  {n:"Korean Pantry Souvenirs",c:"Shopping",lat:37.579787,lng:126.980679,area:"Supermarkets across",d:"Must-buy: Sesame oil (참기름), rice syrup (조청), plum extract (매실청), coin broth (코인육수). Available at E-mart / Lotte Mart / Homeplus. Premium versions at department stores and traditional markets.",tags:["shopping"],day:"Day 14"},
+  {n:"Korean Travel Apps",c:"Transport",lat:37.563458,lng:126.972856,area:"Seoul",d:"Apps that actually work for navigating Korea: covers transport, maps, translation tools.",tags:[],day:"Day 1"},
+  {n:"Leedorim Seoul",c:"Food",lat:37.576550,lng:126.986493,area:"Seoul",d:"Trending café. @leedorim.seoul",tags:["food"],day:"Day 3-4"},
+  {n:"LiveAnywhere Korea (@liveanywhere.korea)",c:"Accommodation",lat:33.488846,lng:126.498173,area:"Nationwide (Seoul + Jeju)",d:"Short-term rental app for stays 1 week+; loft near Gwangjang Market featured; also Jeju beach houses",tags:[],day:"Day 12-13"},
+  {n:"Lookast",c:"Shopping",lat:37.500853,lng:127.007194,area:"Shinsegae Gangnam 8F",d:"Street and modern mix; younger crowd",tags:["shopping"],day:"Day 7-8"},
+  {n:"MUSINSA EMPTY Seongsu",c:"Shopping",lat:37.544531,lng:127.056807,area:"Seongsu",d:"Curated MUSINSA concept space",tags:["shopping"],day:"Day 5-6"},
+  {n:"Maison Loeuvre",c:"Shopping",lat:37.501197,lng:127.006732,area:"Shinsegae Gangnam 5F",d:"Most famous Korean bag brand; minimal and elegant",tags:["shopping"],day:"Day 7-8"},
+  {n:"Manhwa-bang / Comic Book Café",c:"Culture",lat:37.564517,lng:126.988909,area:"Seoul (near subway stations)",d:"Private pods with curtains, blankets, pillows, leg massagers. Order ramyeon/tteokbokki to your pod. ~₩3,000–4,000/hr. Chains: Nolsoop (놀숲) and Beoltoon (벌툰). Package deal = 1hr + drink best value.",tags:[],day:"Flexible"},
+  {n:"Mardi Mercredi (Gangnam)",c:"Shopping",lat:37.501273,lng:127.006857,area:"Shinsegae Gangnam 8F",d:"Casual creative standout designs",tags:["shopping"],day:"Day 7-8"},
+  {n:"Mardi Mercredi (Hannam)",c:"Shopping",lat:37.535094,lng:126.999653,area:"Hannam",d:"Casual creative Korean brand; also in Shinsegae Gangnam",tags:["shopping"],day:"Day 5-6"},
+  {n:"Mijainseoul Naver Map",c:"Culture",lat:37.570311,lng:126.989005,area:"Seoul (citywide)",d:"Curated Naver Map of ALL Mija's Seoul recommendations — restaurants, spas, shops. Direct link: naver.me/FNtroVSQ",tags:[],day:"Flexible"},
+  {n:"Miseki Seoul",c:"Shopping",lat:37.566821,lng:126.987192,area:"Seoul",d:"Korean designer boutique",tags:["shopping"],day:"Flexible"},
+  {n:"Myeongdong (명동)",c:"Neighbourhood",lat:37.560898,lng:126.986376,area:"Seoul",d:"#2 area to stay — safe for night walks; street food; L7 Hotel rooftop; airport bus stop; close to Namdaemun market",tags:["stay"],day:"Day 1-2"},
+  {n:"NOMANUAL Flagship Store",c:"Shopping",lat:37.544465,lng:127.056376,area:"Seongsu",d:"Elevated Korean streetwear; highly rated by poster",tags:["shopping"],day:"Day 5-6"},
+  {n:"NOT4NERD Seongsu Flagship",c:"Shopping",lat:37.544835,lng:127.056847,area:"Seongsu",d:"Eyewear and accessories brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"Nami Island (남이섬)",c:"DayTrip",lat:37.413800,lng:127.518300,area:"Gyeonggi",d:"Bookable day trip via Klook",tags:["daytrip"],day:"Day 9 (day trip)"},
+  {n:"Namsan",c:"Culture",lat:37.560075,lng:126.986545,area:"Seoul",d:"Close to featured rental loft; mentioned as central landmark",tags:[],day:"Flexible"},
+  {n:"ODLYWORKSHOP",c:"Shopping",lat:37.564950,lng:126.975745,area:"Seoul",d:"Independent workshop concept store",tags:["shopping"],day:"Flexible"},
+  {n:"Optima Wellness Museum Pharmacy (@owm.pharm.official)",c:"Skincare",lat:37.498000,lng:127.027600,area:"Gangnam area",d:"Near Gangnam; pharmacy-style skincare treatments",tags:["wellness"],day:"Day 7"},
+  {n:"RAWROW Worldwide Seoul",c:"Shopping",lat:37.544657,lng:127.056505,area:"Seongsu",d:"Bag and accessories brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"Recto",c:"Shopping",lat:37.500378,lng:127.006705,area:"Shinsegae Gangnam 8F",d:"Sleek office and casual unisex",tags:["shopping"],day:"Day 7-8"},
+  {n:"Relieve Clinic (릴리브 클리닉)",c:"Skincare",lat:37.555151,lng:126.966925,area:"Seoul",d:"Acne/breakout treatment clinic. @relieve_clinic_ — 3rd visit review = genuine use. Bundle treatment for active breakouts.",tags:["wellness"],day:"Day 7-8"},
+  {n:"Rest & Recreation Seongsu",c:"Shopping",lat:37.544398,lng:127.056438,area:"Seongsu",d:"Streetwear concept store",tags:["shopping"],day:"Day 5-6"},
+  {n:"Rockfish",c:"Shopping",lat:37.501299,lng:127.007021,area:"Shinsegae Gangnam 8F",d:"Trendy accessories and casual wear",tags:["shopping"],day:"Day 7-8"},
+  {n:"Roman & You Seongsu (로맨드유)",c:"Shopping",lat:37.544529,lng:127.056596,area:"Seongsu",d:"Roman&You makeup brand's pop-up Pink Office in Seongsu. @romandyou — worth a visit if the pop-up is running.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Roofcat Cat Café (루프캣)",c:"Culture",lat:37.557101,lng:126.924228,area:"Hongdae",d:"Cat café in Hongdae. Admission includes unlimited self-serve tea and coffee. Snacks available to feed cats. @roofcatme_hongdae",tags:[],day:"Day 3-4"},
+  {n:"Révdou (레브두)",c:"Food",lat:37.576805,lng:126.976016,area:"Seoul",d:"Moon croissant — multi-layer vanilla tahiti cream croissant; very popular",tags:["food"],day:"Flexible"},
+  {n:"Salt Bread (소금빵) — Jayeondo",c:"Food",lat:37.573694,lng:126.989727,area:"Seoul",d:"The real salt bread — buttery and crisp, nothing like the name implies. Jayeondo Sogeumppang (자연도소금빵) is the original. Will ruin you for other bread.",tags:["food"],day:"Flexible"},
+  {n:"Sandbeige",c:"Shopping",lat:37.500494,lng:127.006558,area:"Shinsegae Gangnam 8F",d:"Soft tones; minimal aesthetics; great basics",tags:["shopping"],day:"Day 7-8"},
+  {n:"Scooper Gelato (스쿠퍼젤라또)",c:"Food",lat:37.578348,lng:126.971213,area:"Seoul",d:"Top trending café on Korean social media. @scooper_gelato",tags:["food"],day:"Day 3-4"},
+  {n:"Seongsu (성수)",c:"Neighbourhood",lat:37.544569,lng:127.056102,area:"Seoul",d:"Coolest neighbourhood in Seoul (tied with Hannam & Yeonam); packed with concept stores and flagship boutiques",tags:["stay"],day:"Day 5"},
+  {n:"Seoul Cafe Circuit (@minywander)",c:"Culture",lat:37.554702,lng:126.972423,area:"Seoul",d:"6 curated cafes worth visiting in Seoul — all vetted by a regular visitor.",tags:[],day:"Flexible"},
+  {n:"Seoul Day Trips Planning Guide",c:"DayTrip",lat:37.571713,lng:126.992480,area:"Seoul",d:"Key insight: plan day trips by distance and transit time or you'll waste hours. Framework for adding the right trips without over-scheduling.",tags:["daytrip"],day:"Flexible"},
+  {n:"Seoul Menswear Shopping Circuit (@rogerwh0)",c:"Shopping",lat:37.566750,lng:126.966069,area:"Seoul",d:"Best men's clothing spots in Seoul according to @rogerwh0 — includes Llege Official among others.",tags:["shopping", "★ top pick"],day:"Flexible"},
+  {n:"Seoul Vinyl Bar Circuit (@riyaplam)",c:"Culture",lat:37.572470,lng:126.986278,area:"Seoul",d:"Bars that play vinyl records or have DJs: Silly Aperitivo, Osem Seoul, Culsec Seoul, Nega Iso, Hills and Europa, FFF Samgakji.",tags:[],day:"Evenings"},
+  {n:"Seoulistique Skin (@seoulistique.skin)",c:"Skincare",lat:37.556400,lng:126.959400,area:"Aeogae (애오개)",d:"Skin analysis + 8-step Astrodome facial; glowing results; book via DM",tags:["wellness"],day:"Day 7-8"},
+  {n:"Shinsegae Gangnam",c:"Shopping",lat:37.498116,lng:127.027437,area:"Gangnam",d:"5th & 8th floors have 15 Korean fashion brands local Seoulites shop at instead of Myeongdong",tags:["shopping"],day:"Day 7-8"},
+  {n:"Sinchon (신촌)",c:"Neighbourhood",lat:37.567836,lng:126.939375,area:"Seoul",d:"Near Hongdae; cheaper food and great bars; recommended as underrated area",tags:["stay"],day:"Day 4 (night)"},
+  {n:"Skip Myeongdong",c:"Culture",lat:37.564963,lng:126.972974,area:"Myeongdong",d:"You will simply never catch them in Myeongdong again — skip it, spend that time elsewhere.",tags:[],day:"Flexible"},
+  {n:"Sokcho (속초)",c:"DayTrip",lat:38.207157,lng:128.591775,area:"Gangwon",d:"Days 6–7 on 2-week Korea itinerary; coastal city near Seoraksan",tags:["daytrip"],day:"Day 10"},
+  {n:"TETO Objet Seongsu",c:"Shopping",lat:37.544553,lng:127.056565,area:"Seongsu",d:"Lifestyle and objet concept store",tags:["shopping"],day:"Day 5-6"},
+  {n:"THREE TO EIGHTY",c:"Shopping",lat:37.544302,lng:127.056735,area:"Seongsu",d:"Korean designer multi-brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"TREEMINGBIRD Seongsu Store",c:"Shopping",lat:37.544875,lng:127.057059,area:"Seongsu",d:"Korean casual brand",tags:["shopping"],day:"Day 5-6"},
+  {n:"Tamburins Flagship Seongsu",c:"Shopping",lat:37.544557,lng:127.057073,area:"Seongsu",d:"Korean fragrance + beauty brand flagship. 📍316-7 Seongsu-dong 2(i)-ga Seongdong-gu Seoul.",tags:["shopping"],day:"Day 5-6"},
+  {n:"Tennat",c:"Shopping",lat:37.500729,lng:127.006896,area:"Shinsegae Gangnam 5F",d:"Modern sleek bag brand",tags:["shopping"],day:"Day 7-8"},
+  {n:"The Truffle Bakery (더트러플베이커리)",c:"Food",lat:37.535085,lng:127.000519,area:"Seoul",d:"Tissue bread — peel-apart crispy outside fluffy inside",tags:["food"],day:"Flexible"},
+  {n:"Till.idie",c:"Shopping",lat:37.500300,lng:127.007016,area:"Shinsegae Gangnam 8F",d:"Hip streetwear; hoodies and tees a must",tags:["shopping"],day:"Day 7-8"},
+  {n:"Umer",c:"Shopping",lat:37.501069,lng:127.007107,area:"Shinsegae Gangnam 5F",d:"Minimal stylish women's clothing",tags:["shopping"],day:"Day 7-8"},
+  {n:"Weave Living — Weave Suite Seoyu Parkside",c:"Accommodation",lat:37.539200,lng:126.901700,area:"Seoyu (선유)",d:"Premium serviced apartment; steps from Seoyu Station; Han River terrace view; co-working space; yoga studio; golf range; weekly housekeeping",tags:[],day:"Day 1"},
+  {n:"Weave Suites Sunyu Parkside",c:"Accommodation",lat:37.539270,lng:126.901887,area:"Seoyu",d:"Confirmed great stay. @weave_suites via @liveanywhere.korea @liveanywhere.me. Serviced apartment with Han River views.",tags:[],day:"Day 1"},
+  {n:"Worksout",c:"Shopping",lat:37.527000,lng:127.028900,area:"Apgujeong",d:"Streetwear store in Apgujeong — recommended in comments",tags:["shopping"],day:"Day 7-8"},
+  {n:"Yeonam (연남)",c:"Neighbourhood",lat:37.559697,lng:126.921503,area:"Seoul",d:"Tied for coolest neighbourhood — quieter alternative to Hongdae; cafés and local restaurants",tags:["stay"],day:"Day 3"},
+  {n:"Yonsei Pain Clinic (연세안통증클리닉)",c:"Skincare",lat:37.556682,lng:126.983993,area:"Seoul",d:"@yonseian.painclinic — ANS test, X-ray, 3D AI posture analysis, massage/physical therapy. Multiple saves pointing here. Specialists in back/neck pain. Reached out to creators for sponsored reviews but",tags:["wellness"],day:"Day 7-8"},
+  {n:"thisisneverthat Seongsu Flagship",c:"Shopping",lat:37.544398,lng:127.056963,area:"Seongsu",d:"Korean streetwear — top brand discovered in Korea per comments",tags:["shopping"],day:"Day 5-6"},
+  {n:"라스트춘선 홍대 (Last Chunseon Hongdae)",c:"Culture",lat:37.550314,lng:126.920591,area:"Hongdae",d:"Bar in Hongdae. @lastchunsun_hongdae — in @shoutoutluka's verified Seoul nightlife list.",tags:[],day:"Day 4 (night)"},
+  {n:"숲속한방랜드 (Forest Korean Bath)",c:"Culture",lat:37.555100,lng:126.936900,area:"Sinchon",d:"Outdoor charcoal sauna near Sinchon. Search 찜질방 in Naver Maps for nearest location.",tags:[],day:"Day 3-4"},
+  {n:"신사형통정형외과 Sinsa Hyeong Tong Clinic",c:"Skincare",lat:37.521000,lng:127.022200,area:"Sinsa Gangnam",d:"X-ray, body scan on treadmill, posture/balance analysis, back and neck treatment. Used by @reikim.artist who returns annually for back treatment post-childbirth.",tags:["wellness"],day:"Day 7"},
+  {n:"Yonsei AN Pain Clinic (Back/Spine)",c:"Skincare",lat:37.563155,lng:126.986239,area:"Seoul",d:"Manual massage therapy + physical therapy for chronic back pain. @yonseian.painclinic reached out to creator @jiragn — placebo or not, she felt better. Worth checking out for injury rehab.",tags:["wellness"],day:"Flexible"},
+  {n:"Seoul Donut Spot",c:"Food",lat:37.564089,lng:126.979293,area:"Seoul",d:"Creator @bridgetteugarte called this one of the best bites of her life. Exact location unclear from caption — search the creator's page for the pin.",tags:["food", "★ top pick"],day:"Flexible"},
+  {n:"Namdaemun Market — Shopping Guide",c:"Shopping",lat:37.564323,lng:126.980567,area:"Namdaemun",d:"Korea travel tips for non-K-pop fans: kitchenware market (unique pottery at wholesale), baby/kids fashion street from Hoehyeon Station Exit 6, fashion accessories wholesale. Most street shops in Korea source from here. @mijainseoul's guide.",tags:["shopping"],day:"Flexible"},
+  {n:"Seoul Shopping Neighbourhoods — @kaynamiee",c:"Shopping",lat:37.583926,lng:126.976659,area:"Seoul",d:"Three neighbourhoods worth returning to: Hannam-dong (uptown Hannam = quieter, curated, wander-worthy), Seongsu-dong (go even if crowded — new places keep opening), and a third. @kaynamiee's personal list.",tags:["shopping"],day:"Flexible"},
+  {n:"Seoul Hot Spots — One-Sentence Guide",c:"Culture",lat:37.573874,lng:126.978309,area:"Seoul",d:"@karenyuu_ summarizes every major Seoul area in one sentence each. Good orientation resource for first-timers.",tags:[],day:"Flexible"},
+  {n:"Korea Travel Tips — Chungmuro & Gangnam (@dianainseoul)",c:"Culture",lat:37.563576,lng:126.975330,area:"Yeonam",d:"Practical Korea travel tips from @dianainseoul — covers Chungmuro and Gangnam Unni area.",tags:[],day:"Flexible"},
+  {n:"Always August Cafe (alwaysau8ust)",c:"Food",lat:37.564698,lng:126.972795,area:"Seoul",d:"Cozy cafe popular for all-day hangouts. Creator @nadiaxcoffee spends all day and night here. Tag: @alwaysau8ust on Instagram.",tags:["food"],day:"Flexible"},
+  {n:"AK Plaza Hongdae — Anime Shopping",c:"Shopping",lat:37.554657,lng:126.985060,area:"Hongdae",d:"Multi-floor anime shopping destination in Hongdae — Animate, character stores, official collabs. Good spot for One Piece, K-anime merch. @_themayway_ recommendation.",tags:["shopping"],day:"Flexible"},
+  {n:"thisisneverthat Hongdae Flagship",c:"Shopping",lat:37.567140,lng:126.964425,area:"Hongdae",d:"thisisneverthat flagship in Hongdae — Mapo-gu, Jandari-ro 32, 1층 101호. @elysnapshot calls it a must-visit for Seoul shopping.",tags:["shopping"],day:"Flexible"},
+  {n:"Gangnam Square Pharmacy (강남스퀘어약국)",c:"Skincare",lat:37.562529,lng:126.969823,area:"Gangnam",d:"Gangnam's #1 pharmacy right in front of Gangnam Station. @mijainseoul's pharmacy shopping recommendation for non-K-pop travellers. @gangnampharm_en on Instagram.",tags:["wellness"],day:"Flexible"},
+  {n:"Duna Clinic — Posture & Tech Neck (Seongsu)",c:"Skincare",lat:37.544406,lng:127.056218,area:"Seongsu",d:"Posture correction treatment focused on relieving tech neck and upper back tension. Creator @kushin felt results immediately. @dunaclinicglobal on Instagram.",tags:["wellness"],day:"Flexible"},
+  {n:"Moclock Hair & Scalp Clinic (Gangnam)",c:"Skincare",lat:37.496462,lng:127.028267,area:"Gangnam",d:"Top-rated hair loss and scalp care clinic in Gangnam. @dreamlvrr3 calls it one of the best services she's had in Korea. @moclock_gangnam on Instagram.",tags:["wellness"],day:"Flexible"},
+  {n:"Essential Korea Apps — NaverMaps, Kuli Kuli, Kakao T",c:"Transport",lat:37.572006,lng:126.969837,area:"Seoul",d:"3 apps that make Korea trips smooth: 1. Naver Maps (not Google/Apple), 2. Kuli Kuli for translating menus/handwritten notes in original format, 3. Kakao T for taxis. @actuallydamy guide.",tags:[],day:"Day 1"},
+  {n:"Korean Pharmacy K-Beauty Shopping Guide (@nathan.wu)",c:"Skincare",lat:37.570509,lng:126.971804,area:"Seoul",d:"Pharmacy school grad @nathan.wu's evidence-based picks for Korean medications and K-beauty products worth buying. Tested and vetted list — not just hype.",tags:["wellness"],day:"Flexible"},
+  {n:"Unni App — Korea Clinic Booking",c:"Transport",lat:37.564199,lng:126.989948,area:"Seoul",d:"App for safely booking Korean clinics — helps avoid 'shadow doctors'. @mayaya.kimmm recommends downloading before your trip for verified clinic listings.",tags:[],day:"Day 1"},
+  {n:"Climate Card — Unlimited Seoul Public Transit",c:"Transport",lat:37.580442,lng:126.979935,area:"Seoul",d:"Climate Card gives unlimited public transport for the duration of your stay. Use Naver or Kakao Maps (not Google). @phatlifeproject tip for first timers.",tags:[],day:"Day 1"},
+  {n:"Skip Airbnb Korea — Use Local Alternatives",c:"Accommodation",lat:37.555942,lng:126.980438,area:"Seoul",d:"Many Korean Airbnb listings are technically illegal under local regulations, which can cause trip problems. Use Korea-specific accommodation platforms instead. @marykayinmyeongdong explains.",tags:[],day:"Flexible"},
+  {n:"Baemin — Korea Food Delivery App",c:"Transport",lat:37.559051,lng:126.984075,area:"Seoul",d:"Use Baemin app for food delivery in your accommodation — live your K-variety mukbang dreams. @iwantalmonds has a 2-part tutorial pinned on their profile. Game changer for rainy days.",tags:[],day:"Flexible"},
+  {n:"KakaoTalk & Korea App Stack",c:"Transport",lat:37.563835,lng:126.979646,area:"Seoul",d:"Essential Korea app stack: KakaoTalk (all reservations/confirmations come here, not WhatsApp), Naver Maps (not Google), Kakao T (not Uber for ridesharing). @mijainseoul's tip — Korea runs on these.",tags:[],day:"Day 1"},
+  {n:"Seoul Neighbourhood Guide — Where to Stay",c:"Neighbourhood",lat:37.555112,lng:126.970884,area:"Seoul",d:"Top neighbourhood recs from @madeinkorea_____: also considers Yeonhui-dong, Yeonnam-dong, Yeouido as alternatives to the main options.",tags:["stay"],day:"Flexible"},
+  {n:"Apgujeong Sanghoe (압구정상회)",c:"Food",lat:37.573996,lng:126.974568,area:"Apgujeong",d:"Fried chicken restaurant called the best thing @jasmineeleong had in Seoul. Address visible in video: 655-2 Sinsa-dong, Gangnam-gu, Seoul. Serves crispy fried chicken with dipping sauces. \"23kg checked luggage of fried chicken\" according to a comme",tags:["food", "★ top pick"],day:"Flexible"},
+  {n:"Gukjaejeonja Center (국제전자센타) — Anime Shopping",c:"Shopping",lat:37.571326,lng:126.970596,area:"Seoul",d:"Hidden gem for serious anime shopping in Seoul — floors of figures, gacha machines, collectibles. The kind of finds you'll wish you packed an extra suitcase for. @_themayway_ recommendation alongside AK Plaza Hongdae.",tags:["shopping"],day:"Flexible"},
+  {n:"JW Marriott Seoul (Dongdaemun)",c:"Accommodation",lat:37.588038,lng:127.032393,area:"Dongdaemun",d:"@madeinkorea_____ hotel rec for staying near Insadong. Central to Gyeongbokgung, Cheonggyecheon, Samcheongdong, Anguk, Ikseondong, Jogyesa Temple. Hyundai Dept Store, Shinsegae, The Galleria, COEX all accessible.",tags:[],day:"Flexible"},
+  {n:"Josun Palace Seoul Gangnam",c:"Accommodation",lat:37.503382,lng:127.041600,area:"Gangnam",d:"@madeinkorea_____ hotel rec — luxury option for Seoul stay. Mentioned alongside JW Marriott as specific hotels for those wanting 'a little nicer' option.",tags:[],day:"Flexible"},
+  {n:"Jean Frigo",c:"Culture",lat:37.570670,lng:126.966225,area:"Seoul",d:"Secret bar you'd walk straight past — enter through a refrigerator, order through a phone booth. One of the most unexpected places in Seoul. @shannonfarhoud pick.",tags:[],day:"Evenings"},
+  {n:"Haebangchon (HBC)",c:"Neighbourhood",lat:37.570933,lng:126.992060,area:"Haebangchon",d:"@itszdaniitravels' favourite neighbourhood in all of Seoul. Rooftop cafés with Namsan Tower views, jazz nights, European food, hidden bars. Sinheung Market on Sinheung-ro. Very different vibe from Hongdae/Itaewon.",tags:["stay"],day:"Flexible"},
+  {n:"Boogie Woogie (HBC Jazz Bar)",c:"Culture",lat:37.566595,lng:126.978051,area:"Haebangchon",d:"Jazz nights at Boogie Woogie in Haebangchon — mentioned by @itszdaniitravels as a highlight of the neighbourhood.",tags:[],day:"Evenings"},
+  {n:"Charlie's Grocery (HBC)",c:"Food",lat:37.562564,lng:126.981697,area:"Haebangchon",d:"European food finds at Charlie's Grocery in Haebangchon. Part of @itszdaniitravels' Seoul summer bucket list.",tags:["food"],day:"Flexible"},
+  {n:"Mil Toast House (밀토스트하우스)",c:"Food",lat:37.569946,lng:126.983014,area:"Seoul",d:"Café known for bread/toast — @whyidocardio posted with caption @miltoasthouse. Korean bakery-café.",tags:["food"],day:"Flexible"},
+  {n:"Haeundae Beach (해운대해수욕장) — Night",c:"DayTrip",lat:35.159286,lng:129.158609,area:"Busan",d:"One of the most famous beaches in Korea — beautiful at night. Grab convenience store snacks, sit by the beach. @itszdaniitravels pt.2 night list.",tags:["daytrip"],day:"Evenings"},
+  {n:"Gwangalli Beach (광안리해수욕장) — Night",c:"DayTrip",lat:35.150888,lng:129.116781,area:"Busan",d:"Gwangalli Beach at night — iconic Busan bridge view. Part of @itszdaniitravels' '11 places to visit at night in Korea' list.",tags:["daytrip"],day:"Evenings"},
+  {n:"Juuneedu (쥬니두)",c:"Shopping",lat:37.563155,lng:126.984104,area:"Seoul",d:"Korean loungewear / pyjama brand store in Seoul. @baochitravel pick.",tags:["shopping"],day:"Flexible"},
+  {n:"Sooa Clinic (소아 클리닉) — Yongsan",c:"Skincare",lat:37.565950,lng:126.976154,area:"Yongsan",d:"Korean traditional medicine clinic in Yongsan — tongue diagnosis to find root causes of chronic issues (neck tension, leg stiffness, fatigue). @jooiooy went for root-cause analysis rather than symptom treatment.",tags:["wellness"],day:"Flexible"},
+  {n:"Mil Toast House",c:"Food",lat:37.565294,lng:126.973014,area:"Seoul",d:"Fluffy steamed breads. Part of @vernahungrybanana's 3 food spots to save in Seoul.",tags:["food"],day:"Flexible"},
+  {n:"Nohd Global Clinic (Gangnam)",c:"Skincare",lat:37.496443,lng:127.028068,area:"Gangnam",d:"Personalised jaw/face slimming clinic in Gangnam — @hybeereviews chose from dozens of clinics that reached out, specifically for personalized care. @nohdglobal_official on Instagram.",tags:["wellness"],day:"Flexible"},
+  {n:"Seoul Museum of Craft Art",c:"Culture",lat:37.576552,lng:126.983447,area:"Jongno-gu",d:"#2 in @dojisook's top 5 Seoul museums. Ceramics, woodwork, traditional craft techniques. Learning how to insert metal wires (금속선 감입). Free or low entry.",tags:["free"],day:"Flexible"},
+  {n:"Seokchon Lake (석촌호수)",c:"DayTrip",lat:37.510088,lng:127.104078,area:"Songpa",d:"Prettiest lake in Seoul — stunning solo or date spot. Walk around the lake then explore Lotte World Mall, Lotte Mart and Baekjegobun-ro 43-gil (wine bars, vinyl cafés). @itszdaniitravels pick.",tags:["daytrip"],day:"Flexible"},
+  {n:"Baekjegobun-ro 43-gil (백제고분로43길)",c:"Culture",lat:37.507875,lng:127.110214,area:"Songpa",d:"Wine bars, vinyl cafés and cosy restaurants near Seokchon Lake. Beautiful evening/night area. @itszdaniitravels' pick for after the lake walk.",tags:[],day:"Evenings"},
+  {n:"XX2 Club — Hongdae",c:"Culture",lat:37.581203,lng:126.983178,area:"Hongdae",d:"Best club in Hongdae for old school American hip hop and R&B. @itszdaniitravels top pick — also mentions Mongs, Rollie, La Bamba.",tags:["★ top pick"],day:"Evenings"},
+  {n:"Namsan Botanical Garden",c:"Culture",lat:37.581362,lng:126.981927,area:"Namsan",d:"One of Seoul's most underrated spots — quiet, relaxing, surrounded by nature. Perfect break from the city. Near Haebangchon.",tags:[],day:"Flexible"},
+  {n:"Mama Ethiopian Restaurant",c:"Food",lat:37.563907,lng:126.977700,area:"Seoul",d:"@itszdaniitravels' favourite restaurant in Seoul — introduces Korean friends to Ethiopian food here. On the Seoul summer bucket list.",tags:["food"],day:"Flexible"},
+  {n:"Cow Tteokbokki (카우 떡볶이)",c:"Food",lat:37.575241,lng:126.980066,area:"Seongsu / Ewha",d:"Huge vegan menu: vegan rose tteokbokki, vegan mala, vegan jajang, rice balls. Two branches — Ewha and Seongsu. @itszdaniitravels pick.",tags:["food"],day:"Flexible"},
+  {n:"Mangwon Market (망원시장)",c:"Food",lat:37.556621,lng:126.906050,area:"Mangwon",d:"Street food, hotteok, vintage stores nearby. Browse the area and check out the basketball courts near the river. @itszdaniitravels pick.",tags:["food"],day:"Flexible"},
+  {n:"Seler Mari",c:"Food",lat:37.559760,lng:126.992195,area:"Seoul",d:"Mushroom pesto gimbap with extra pesto sauce — @itszdaniitravels says you MUST try it. Specific dish makes this worth the visit.",tags:["food"],day:"Flexible"},
+  {n:"Ilsan Lake Park (일산호수공원)",c:"DayTrip",lat:37.567130,lng:126.981398,area:"Ilsan Goyang",d:"Huge lake, beautiful walking paths, cycling tracks, picnic spots. Check the water fountain schedule — super pretty at night. @itszdaniitravels night list.",tags:["daytrip"],day:"Flexible"},
+  {n:"Yeonnam-dong Railway Path (연트럴파크)",c:"Culture",lat:37.562166,lng:126.922649,area:"Yeonnam",d:"Walk from Hongdae through Yeonnam-dong — cafés, bakeries, buskers, people sitting outside. Get hotteok by Hongdae subway exit 3. AKA Yeonntral Park.",tags:[],day:"Flexible"},
+  {n:"Old Railway Track — Hongdae to Sinchon",c:"DayTrip",lat:37.561959,lng:126.992403,area:"Sinchon",d:"Gorgeous night walk along the old railway track connecting Hongdae to Sinchon. @itszdaniitravels calls it one of the most beautiful spots.",tags:["daytrip"],day:"Evenings"},
+  {n:"Sinchon (신촌) — Night",c:"Culture",lat:37.555152,lng:126.936908,area:"Sinchon",d:"Lively at night — skateboarding area, student energy, bars and clubs. @itszdaniitravels night list entry.",tags:[],day:"Evenings"},
+  {n:"Bolero — Itaewon",c:"Culture",lat:37.549527,lng:126.976873,area:"Itaewon",d:"Super popular club in Itaewon for hip hop nights. Mentioned alongside XX2 in Hongdae as main Seoul clubbing options. @itszdaniitravels.",tags:[],day:"Evenings"},
+  {n:"Gwangjang Hotteok (광장 호떡)",c:"Food",lat:37.565194,lng:126.978928,area:"Gwangjang Market",d:"Sugar-filled Korean pancake at Gwangjang Market — 155 reviews, recommended by @chestertravelchingu in the 1-day first-timer Seoul itinerary. Stop between Insadong/Ikseondong and dinner.",tags:["food"],day:"Flexible"},
+  {n:"Gwanghwamun Mijin (광화문 미진)",c:"Food",lat:37.562389,lng:126.985208,area:"Gwanghwamun",d:"Michelin Guide Seoul 2026, 4.39 stars, 16K reviews. Korean food near Gwanghwamun — walk-in waitlist via Tabling app. @chestertravelchingu's dinner rec on the 1-day first-timer Seoul itinerary.",tags:["food"],day:"Flexible"},
+  {n:"Akiba Fukurou Owl Cafe",c:"Culture",lat:35.702100,lng:139.774400,area:"Akihabara",d:"Animal cafe where you can hold and interact with owls. Memorable, low-key experience in Akihabara.",tags:[],day:"Flexible"},
+  {n:"Montbell Tokyo",c:"Shopping",lat:35.676200,lng:139.650300,area:"Tokyo",d:"Japanese outdoor/hiking brand - ultra-light jackets, travel clothes, high quality gear. Local favourite, often missed by tourists.",tags:["shopping"],day:"Flexible"},
+  {n:"Kamishikimi Kumanoimasu Shrine",c:"Culture",lat:32.516800,lng:131.065200,area:"Takamori",d:"Shrine nestled in a lush forest, ~300 steps up to the Ugeto-iwa Cave at the top. Featured in the anime/film Hotarubi no Mori e. Go early on a weekday to avoid crowds, comfy shoes needed.",tags:[],day:"Flexible"},
+  {n:"Okinawa",c:"DayTrip",lat:26.212400,lng:127.680900,area:"Okinawa",d:"Tropical island getaway - beaches, snorkeling, island vibes. Very different pace from mainland Japan.",tags:["daytrip"],day:"Flexible"},
+  {n:"Mt. Yoshino",c:"Culture",lat:34.685100,lng:135.804800,area:"Nara",d:"Iconic cherry blossom mountain in Nara, perfect day trip from Osaka/Kyoto (~2hr train to Yoshino Station + uphill bus). Walk down through layers of sakura - locals do the same walk. ~4hrs at a relaxed pace.",tags:[],day:"Flexible"},
+  {n:"Suwa Lake / Tateishi Park",c:"DayTrip",lat:36.651300,lng:138.181000,area:"Nagano",d:"Quiet, emotional, local Japan - the lake that inspired Kimi no Na Wa (Your Name). Go up to Tateishi Park at sunset, bring a snack, and just watch.",tags:["daytrip"],day:"Flexible"},
+  {n:"Kusatsu Onsen",c:"Culture",lat:36.390600,lng:139.060200,area:"Gunma",d:"One of the best onsen towns in Japan - mountains, cold air, hot water, tradition everywhere. Stay at least one night and try different baths.",tags:["★ top pick"],day:"Flexible"},
+  {n:"Takachiho Gorge",c:"DayTrip",lat:32.750300,lng:130.701800,area:"Kyushu",d:"Absolutely unreal gorge - turquoise water, dramatic cliffs, mythology. One of the standout Kyushu stops.",tags:["daytrip"],day:"Flexible"},
+  {n:"Shirakawa-go",c:"Culture",lat:35.391200,lng:136.722300,area:"Gifu",d:"UNESCO village - straight out of a fairytale in winter. Snow-covered farmhouses, quiet nights. Stay overnight if possible; once day-trippers leave it's magic.",tags:[],day:"Flexible"},
+  {n:"Kamikochi",c:"DayTrip",lat:36.651237,lng:138.181190,area:"Nagano",d:"Some of the best nature in Japan - crystal rivers, alpine views, fresh mountain air. Go early and walk beyond the main bridge for quieter spots.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"Kiso Valley (Nakasendo Trail)",c:"DayTrip",lat:36.651160,lng:138.180857,area:"Nagano",d:"Old Japan at its best - historic post towns (Tsumago/Magome), forests, and history you can feel walking the old Nakasendo trail.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"Nishikawa Daimaru Shinsaibashi (Custom Pillow)",c:"Shopping",lat:34.672700,lng:135.500900,area:"Shinsaibashi",d:"Custom pillow service by sleep experts - full posture/sleep assessment, test different heights/materials, pillow made on the spot. ¥33,000-44,000. Book a private consultation ahead.",tags:["shopping"],day:"Flexible"},
+  {n:"Descente Tokyo",c:"Shopping",lat:35.669300,lng:139.702600,area:"Harajuku",d:"Japanese outerwear engineered with decades of precision - puffer jackets and technical wear. 7 min walk from Meiji-Jingumae Station exit 7.",tags:["shopping"],day:"Flexible"},
+  {n:"Nanga Shop Harajuku",c:"Shopping",lat:35.669208,lng:139.702423,area:"Harajuku",d:"Down jacket specialist, located in the WAT building near Meiji-Jingumae Station exit 7 (~6 min walk). Pairs well with a Descente visit nearby.",tags:["shopping"],day:"Flexible"},
+  {n:"Nakano Broadway",c:"Shopping",lat:35.703000,lng:139.664400,area:"Nakano",d:"Treasure trove for vintage Rolex and luxury watch hunting - huge selection, English/Mandarin-speaking staff. A must for watch collectors.",tags:["shopping", "english friendly"],day:"Flexible"},
+  {n:"Otter Cafe Kyoto",c:"Culture",lat:35.011600,lng:135.768100,area:"Kyoto",d:"Animal cafe with otters - a fun, low-key activity to break up temple-hopping in Kyoto.",tags:[],day:"Flexible"},
+  {n:"Snow Monkey Park (Jigokudani)",c:"DayTrip",lat:36.651465,lng:138.181113,area:"Nagano",d:"Watch wild snow monkeys soak in hot springs - iconic Nagano day trip.",tags:["daytrip"],day:"Flexible"},
+  {n:"Omotesando",c:"Shopping",lat:35.676147,lng:139.650107,area:"Tokyo",d:"Upscale fashion shopping street near Harajuku - flagship stores and coat/outerwear shopping.",tags:["shopping"],day:"Flexible"},
+  {n:"Kyushu (region)",c:"DayTrip",lat:32.750490,lng:130.701863,area:"Kyushu",d:"Two weeks here barely scratches the surface - uncrowded alternative to the main Tokyo/Kyoto/Osaka route. Cherry blossoms with no crowds, great for autumn foliage too.",tags:["daytrip"],day:"Flexible"},
+  {n:"Eryanping Trail",c:"DayTrip",lat:23.513600,lng:120.796400,area:"Alishan",d:"Early 5am wake-up hiking trail - worth it for the sunrise views over Alishan.",tags:["daytrip"],day:"Flexible"},
+  {n:"Sotetsu Grand Fresa Ximen",c:"Accommodation",lat:25.041500,lng:121.508200,area:"Ximen",d:"Japanese hotel chain right above Ximen Station (exit 2/3). Huge clean rooms, amenities bar in lobby, vacuum-wrap & luggage delivery service, water refill station each floor. Across from Ximending's attractions including The Red House.",tags:[],day:"Flexible"},
+  {n:"Qingjing Farm",c:"DayTrip",lat:23.915800,lng:120.673600,area:"Nantou",d:"\"Little Switzerland\" - try local Yunnan-inspired dishes, see sheep roaming green meadows with European-style farmhouses. Pairs well with Hehuanshan.",tags:["daytrip"],day:"Flexible"},
+  {n:"Hehuanshan",c:"DayTrip",lat:23.915777,lng:120.673401,area:"Nantou",d:"Breathtaking mountain views, standing above the clouds with alpine air. Hike side trails or drive to the top. Best for sunrise - consider staying overnight nearby and renting a car for flexibility.",tags:["daytrip"],day:"Flexible"},
+  {n:"Taigrance",c:"Skincare",lat:25.026800,lng:121.543200,area:"Da'an",d:"Niche Asian perfumery - fragrances inspired by familiar flavours alongside scents you won't find elsewhere. Must-visit for niche perfume fans.",tags:["wellness"],day:"Flexible"},
+  {n:"Alishan National Forest Recreation Area",c:"DayTrip",lat:23.480000,lng:120.449100,area:"Chiayi",d:"Misty forests, 1000+ year old cypress trees, the iconic Alishan Forest Railway, sea of clouds, and fairytale sunrise views. Entrance ~NT$300. Stay overnight to beat the crowds and get the full atmosphere - HSR to Chiayi then bus/railway, or bus direct from Chiayi Station (~2.5hrs).",tags:["daytrip"],day:"Flexible"},
+  {n:"Zhang A Mei's Farm",c:"Food",lat:24.702100,lng:121.737400,area:"Yilan",d:"Stop on a 48hr Yilan itinerary - local farm experience.",tags:["food"],day:"Flexible"},
+  {n:"Su Ao Fish Port (蘇澳漁港)",c:"Food",lat:24.702136,lng:121.737203,area:"Yilan",d:"Fresh sashimi lunch straight off the boats at this fishing port.",tags:["food"],day:"Flexible"},
+  {n:"Tofu Cape (豆腐岬)",c:"DayTrip",lat:24.702186,lng:121.737219,area:"Yilan",d:"Quick cliffside stop near Su'ao - distinctive tofu-block-shaped rock formations along the coast.",tags:["daytrip"],day:"Flexible"},
+  {n:"Xingshui Black Sand Beach",c:"DayTrip",lat:24.701946,lng:121.737527,area:"Yilan",d:"Black sand beach stop on the Yilan coastal route.",tags:["daytrip"],day:"Flexible"},
+  {n:"Luodong Night Market",c:"Food",lat:24.701996,lng:121.737571,area:"Yilan",d:"Popular night market to cap off a Yilan day trip.",tags:["food"],day:"Flexible"},
+  {n:"Bishkek",c:"Neighbourhood",lat:42.874600,lng:74.569800,area:"Bishkek",d:"Capital city and great intro to Kyrgyzstan — local museums and try beshbarmak at Navat restaurant.",tags:["stay"],day:"Flexible"},
+  {n:"Song-Kul Lake",c:"DayTrip",lat:41.428600,lng:76.010400,area:"Naryn Region",d:"3-4 day horseback trek — immersive nomadic experience. Loop via Kyzart: ride to lake, cold dip, yurt with log burner, back through stunning mountains. ★ top pick.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"Kyzart Village",c:"Accommodation",lat:41.428450,lng:76.010267,area:"Naryn Region",d:"Starting point for Song-Kul horseback treks. Multi-course lunch with lots of tea at the stables on arrival.",tags:[],day:"Flexible"},
+  {n:"Issyk-Kul Lake",c:"DayTrip",lat:42.490000,lng:77.416000,area:"Issyk-Kul Region",d:"Kyrgyzstan's largest lake. Look out for eagle hunting demonstrations.",tags:["daytrip"],day:"Flexible"},
+  {n:"Altyn Arashan",c:"DayTrip",lat:42.490000,lng:78.395600,area:"Karakol / Issyk-Kul Region",d:"Hot springs valley near Karakol — a must-visit. Often combined with Ala-Kul trek.",tags:["daytrip"],day:"Flexible"},
+  {n:"Ala-Kul Lake",c:"DayTrip",lat:42.490177,lng:78.395508,area:"Karakol / Issyk-Kul Region",d:"High-altitude turquoise lake near Karakol, frequently paired with Altyn Arashan. ★ top pick.",tags:["daytrip", "★ top pick"],day:"Flexible"},
+  {n:"Kel-Suu Lake",c:"DayTrip",lat:41.080000,lng:78.800000,area:"Naryn Region (near China border)",d:"Remote, treacherous journey — plan 3 full days. One of the most striking and least-visited alpine lakes in the country.",tags:["daytrip"],day:"Flexible"}
 ];
+
+// Places removed from CSV since last build — populated by build.py
+const P_REMOVED=[];
 
 const CC={
   Neighbourhood:{color:"#b85a38",r:11},
@@ -1823,6 +2150,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     let n = 0;
     allPlaces().forEach((p, i) => {
       if (!activeFilters.has(p.c)) return;
+      if (window.mustGoFilter && !isMustGo(p)) return;
       if (activeDayFilter && !placeMatchesDay(p, activeDayFilter)) return;
       const coordKey = Math.round(p.lat * 10000) + ',' + Math.round(p.lng * 10000);
       if (renderedCoords.has(coordKey)) return;
@@ -1832,10 +2160,13 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       if (q && !p.n.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q)
              && !p.d.toLowerCase().includes(q) && !p.tags.some(t => t.includes(q))) return;
       const cfg = CC[p.c] || { color: '#888', r: 7 };
+      const mg = isMustGo(p);
+      const borderColor = p.isCommunity ? '#b8974a' : (mg ? '#c9a06a' : 'rgba(255,255,255,0.15)');
+      const borderWeight = p.isCommunity ? 2.5 : (mg ? 2.5 : 1.5);
       const m = L.circleMarker([p.lat, p.lng], {
-        radius: cfg.r, fillColor: cfg.color, fillOpacity: 0.85,
-        color: p.isCommunity ? '#b8974a' : 'rgba(255,255,255,0.15)',
-        weight: p.isCommunity ? 2.5 : 1.5,
+        radius: mg ? cfg.r + 1 : cfg.r,
+        fillColor: cfg.color, fillOpacity: 0.85,
+        color: borderColor, weight: borderWeight,
         dashArray: p.isCommunity ? '2 2' : null
       }).addTo(map);
       m._p = p; m._i = i;
@@ -1845,7 +2176,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
         showTip(p, this);
       });
       m.on('mouseout', function () {
-        if (this !== selectedM) this.setStyle({ fillOpacity: 0.85, weight: p.isCommunity ? 2.5 : 1.5, color: p.isCommunity ? '#b8974a' : 'rgba(255,255,255,0.15)', radius: cfg.r, dashArray: p.isCommunity ? '2 2' : null });
+        if (this !== selectedM) this.setStyle({ fillOpacity: 0.85, weight: borderWeight, color: borderColor, radius: mg ? cfg.r + 1 : cfg.r, dashArray: p.isCommunity ? '2 2' : null });
         hideTip();
       });
       markers.push(m);
@@ -1887,7 +2218,8 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     document.getElementById('idesc').textContent = p.d;
     document.getElementById('itags').innerHTML = p.tags.map(t => '<span class="itag">' + esc(t) + '</span>').join('');
     const dayEl = document.getElementById('iday');
-    if (p.day) { dayEl.textContent = '📅 ' + p.day; dayEl.style.display = 'block'; }
+    const effDay = getEffectiveDay(p);
+    if (effDay && effDay !== 'Flexible') { dayEl.textContent = '📅 ' + effDay; dayEl.style.display = 'block'; }
     else { dayEl.style.display = 'none'; }
     const igHandle = p.d.match(/@([a-zA-Z0-9_.]{1,30})/)?.[1];
     const igEl = document.getElementById('iig');
@@ -1908,13 +2240,25 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       contribEl.className = 'icontrib';
       document.getElementById('iday').insertAdjacentElement('afterend', contribEl);
     }
-    if (p.isCommunity) {
+    if (p.isCommunity && p.contributor !== '__private__') {
       contribEl.style.display = 'flex';
       const _su = safeHref(p.source_url);
       contribEl.innerHTML = '✨ Added by ' + esc(p.contributor) + (_su ? ' · <a href="' + _su + '" target="_blank" rel="noopener noreferrer" style="color:inherit">source</a>' : '');
     } else {
       contribEl.style.display = 'none';
     }
+
+    // Notes
+    document.getElementById('inotes').value = getNoteFor(p);
+
+    // Structured fields (hours, price, url)
+    const fieldsEl = document.getElementById('ifields');
+    const chips = [];
+    if (p.hours) chips.push('<span class="if-chip"><span class="if-lbl">Hours</span>' + esc(p.hours) + '</span>');
+    if (p.price) chips.push('<span class="if-chip"><span class="if-lbl">Price</span>' + esc(p.price) + '</span>');
+    if (p.url) { const su = safeHref(p.url); chips.push('<span class="if-chip">' + (su ? '<a href="' + su + '" target="_blank" rel="noopener noreferrer">Website ↗</a>' : esc(p.url)) + '</span>'); }
+    fieldsEl.innerHTML = chips.join('');
+    fieldsEl.style.display = chips.length ? '' : 'none';
 
     document.getElementById('info').classList.add('vis');
     if(isMobile()) { document.getElementById('sheet-places').classList.remove('open'); }
@@ -1935,8 +2279,169 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     currentP = null;
   };
 
+  // ── REVERSE PANEL ↔ MAP SYNC ──────────────────────────────────────────
+  window.hoverMapPin = function(gi) {
+    const m = markers.find(m => m._i === gi);
+    if (!m || m === selectedM) return;
+    const cfg = CC[m._p?.c] || { color: '#888', r: 7 };
+    m.setStyle({ fillOpacity: 1, weight: 3, color: '#ffffff', radius: cfg.r + 3 });
+    m.bringToFront();
+  };
+  window.unhoverMapPin = function(gi) {
+    const m = markers.find(m => m._i === gi);
+    if (!m || m === selectedM) return;
+    const cfg = CC[m._p?.c] || { color: '#888', r: 7 };
+    const mg = isMustGo(m._p);
+    const isC = m._p?.isCommunity;
+    const borderColor = isC ? '#b8974a' : (mg ? '#c9a06a' : 'rgba(255,255,255,0.15)');
+    const borderWeight = isC ? 2.5 : (mg ? 2.5 : 1.5);
+    m.setStyle({ fillOpacity: 0.85, weight: borderWeight, color: borderColor, radius: mg ? cfg.r + 1 : cfg.r, dashArray: isC ? '2 2' : null });
+  };
+
+  // ── NOTES ──────────────────────────────────────────────────────────────
+  let notesMap = {};
+  function loadNotes() {
+    try { notesMap = JSON.parse(localStorage.getItem('wp_notes_' + currentCountry) || '{}'); } catch(e) { notesMap = {}; }
+  }
+  function saveNotes() {
+    try { localStorage.setItem('wp_notes_' + currentCountry, JSON.stringify(notesMap)); } catch(e) {}
+  }
+  function getNoteFor(p) { return notesMap[visitedKeyFor(p)] || ''; }
+  let _noteDeb = null;
+  window.saveNoteDeb = function(el) {
+    clearTimeout(_noteDeb);
+    _noteDeb = setTimeout(function() {
+      if (!currentP) return;
+      const txt = el.value.trim();
+      const k = visitedKeyFor(currentP);
+      if (txt) notesMap[k] = txt; else delete notesMap[k];
+      saveNotes();
+      renderItinerary();
+    }, 600);
+  };
+  loadNotes();
+
+  // ── TODAY BUTTON ───────────────────────────────────────────────────────
+  function getTripStart() {
+    return localStorage.getItem('wp_tripstart_' + currentCountry) || null;
+  }
+  function computeTodayDay() {
+    const start = getTripStart();
+    if (!start) return null;
+    const startMs = new Date(start + 'T00:00:00').getTime();
+    const todayMs = new Date().setHours(0,0,0,0);
+    const diffDays = Math.floor((todayMs - startMs) / 86400000);
+    const dayNum = diffDays + 1;
+    if (dayNum < 1) return null;
+    return 'Day ' + dayNum;
+  }
+  window.clickTodayBtn = function(e) {
+    e.stopPropagation();
+    const todayDay = computeTodayDay();
+    if (todayDay) {
+      setPanelDay(todayDay);
+      document.getElementById('tripstart-popover').classList.remove('open');
+      return;
+    }
+    const pop = document.getElementById('tripstart-popover');
+    const inp = document.getElementById('tripstart-input');
+    const stored = getTripStart();
+    inp.value = stored || new Date().toISOString().slice(0,10);
+    pop.classList.toggle('open');
+    if (pop.classList.contains('open')) {
+      setTimeout(function(){ inp.focus(); }, 50);
+      document.addEventListener('click', closeTripStartPopover, { once: true });
+    }
+  };
+  window.closeTripStartPopover = function() {
+    document.getElementById('tripstart-popover').classList.remove('open');
+  };
+  window.saveTripStart = function() {
+    const val = document.getElementById('tripstart-input').value;
+    if (val) {
+      localStorage.setItem('wp_tripstart_' + currentCountry, val);
+      closeTripStartPopover();
+      const d = computeTodayDay();
+      if (d) setPanelDay(d);
+    }
+  };
+
+  // ── QUICK-ADD (private to Supabase) ────────────────────────────────────
+  function populateQaDay() {
+    const sel = document.getElementById('qa-day');
+    if (!sel) return;
+    const days = COUNTRIES[currentCountry].days;
+    sel.innerHTML = '<option value="Flexible">Flexible</option>' +
+      days.map(d => '<option value="' + esc(d.v) + '">' + esc(d.l) + '</option>').join('') +
+      '<option value="Evenings">Evenings</option>';
+  }
+  window.openQuickAdd = function() {
+    populateQaDay();
+    document.getElementById('qa-name').value = '';
+    document.getElementById('qa-area').value = '';
+    document.getElementById('qa-desc').value = '';
+    document.getElementById('qa-tags').value = '';
+    document.getElementById('qadd-msg').textContent = '';
+    document.getElementById('qadd-overlay').classList.add('vis');
+  };
+  window.closeQuickAdd = function() {
+    document.getElementById('qadd-overlay').classList.remove('vis');
+  };
+  window.submitQuickAdd = async function() {
+    const name = document.getElementById('qa-name').value.trim();
+    if (!name) { document.getElementById('qadd-msg').textContent = 'Place name is required.'; return; }
+    const cat = document.getElementById('qa-category').value;
+    const day = document.getElementById('qa-day').value;
+    const area = document.getElementById('qa-area').value.trim();
+    const desc = document.getElementById('qa-desc').value.trim();
+    const tags = document.getElementById('qa-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
+    const msg = document.getElementById('qadd-msg');
+    const btn = document.getElementById('qadd-submit');
+    btn.disabled = true; btn.textContent = 'Saving…';
+    msg.textContent = '';
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/korea_recs', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=representation'
+        },
+        body: JSON.stringify({
+          country: currentCountry,
+          name: name,
+          category: cat,
+          day: day,
+          area: area,
+          description: desc,
+          tags: tags.join(','),
+          contributor: '__private__',
+          lat: null,
+          lng: null
+        })
+      });
+      if (!res.ok) throw new Error(await res.text());
+      msg.textContent = '✓ Added! Reloading places…';
+      btn.textContent = 'Add to map';
+      btn.disabled = false;
+      setTimeout(async function() {
+        await loadCommunityRecs();
+        buildMarkers(); renderList(); renderItinerary();
+        closeQuickAdd();
+      }, 1000);
+    } catch(err) {
+      msg.textContent = 'Error: ' + err.message;
+      btn.textContent = 'Add to map';
+      btn.disabled = false;
+    }
+  };
+  document.getElementById('qadd-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeQuickAdd();
+  });
+
   // ── ROUTE ──────────────────────────────────────────────────────────────
-  function toggleRoute(p) {
+  window.toggleRoute = function toggleRoute(p) {
     const idx = routeList.findIndex(r => r.n === p.n);
     if (idx >= 0) routeList.splice(idx, 1); else routeList.push(p);
     updateRouteLine();
@@ -2037,11 +2542,11 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
   // ── EVENTS ────────────────────────────────────────────────────────────
   document.getElementById('q').addEventListener('input', () => { buildMarkers(); renderList(); });
-  document.getElementById('daysel').addEventListener('change', e => { activeDayFilter = e.target.value; buildMarkers(); renderList(); });
+  document.getElementById('daysel').addEventListener('change', e => { setPanelDay(e.target.value || 'all'); });
   document.getElementById('areasel').addEventListener('change', e => { activeAreaFilter = e.target.value; buildMarkers(); renderList(); if (window._renderListMobile) window._renderListMobile(); });
   map.on('click', () => hideTip());
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { closeInfo(); hideTip(); closeSuggestModal(); }
+    if (e.key === 'Escape') { closeInfo(); hideTip(); closeSuggestModal(); closeQuickAdd(); closeTripStartPopover(); }
     if (e.key === '/' && !document.getElementById('modal-overlay').classList.contains('vis')) {
       e.preventDefault(); document.getElementById('q').focus();
     }
@@ -2115,6 +2620,11 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     P = COUNTRIES[code].P;
     ZONES = COUNTRIES[code].ZONES;
     try { window.visitedSet = new Set(JSON.parse(localStorage.getItem('wp_visited_' + code) || '[]')); } catch(e) { window.visitedSet = new Set(); }
+    try { window.mustGoSet  = new Set(JSON.parse(localStorage.getItem('wp_mustgo_'  + code) || '[]')); } catch(e) { window.mustGoSet = new Set(); }
+    window.mustGoFilter = false;
+    const mgPill = document.getElementById('mg-filter-pill');
+    if (mgPill) mgPill.classList.remove('on');
+    updateMustGoTab();
     window.todayRunDay = null;
 
     // Update header
@@ -2152,6 +2662,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     buildNeighbourhoodLabels();
     buildMonuments();
     if (typeof window._renderListMobile === 'function') window._renderListMobile();
+    updateRemovedBtn();
 
     // Sync journal pills with activeFilters
     document.querySelectorAll('.jpill[data-jcat]').forEach(p => {
@@ -2165,6 +2676,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
     // Reload community recs scoped to this country
     loadCommunityRecs();
+    loadNotes();
+    _syncEnabled = null; // retest on next sync call for new country
+    loadStateFromSupabase();
   };
 
   // Close country dropdown when clicking outside
@@ -2309,13 +2823,13 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   window.panelTod = 'all';
 
   function isNightPlace(p) {
-    return p.day === 'Evenings' ||
+    return getEffectiveDay(p) === 'Evenings' ||
       (p.tags && (p.tags.includes('night') || p.tags.includes('evening')));
   }
 
   function passesTodFilter(p) {
     if (window.panelTod === 'night') return isNightPlace(p);
-    return p.day !== 'Evenings';
+    return getEffectiveDay(p) !== 'Evenings';
   }
 
   window.setPanelTod = function(tod) {
@@ -2335,14 +2849,217 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
   function visitedKeyFor(p) { return p.n + '||' + (p.area || ''); }
   function isVisited(p) { return window.visitedSet ? window.visitedSet.has(visitedKeyFor(p)) : false; }
+  function isMustGo(p)  { return window.mustGoSet  ? window.mustGoSet.has(visitedKeyFor(p))  : false; }
+
+  // ── SUPABASE STATE SYNC (must-go + day overrides) ─────────────────────
+  // Requires a user_state table:
+  //   CREATE TABLE user_state (country TEXT, key TEXT, value TEXT, updated_at TIMESTAMPTZ DEFAULT NOW(), PRIMARY KEY (country, key));
+  //   ALTER TABLE user_state ENABLE ROW LEVEL SECURITY;
+  //   CREATE POLICY "anon all" ON user_state FOR ALL TO anon USING (true) WITH CHECK (true);
+  let _syncEnabled = null; // null = untested, true = works, false = table missing
+  async function syncState(stateKey, value) {
+    if (_syncEnabled === false) return;
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/user_state', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates'
+        },
+        body: JSON.stringify({ country: currentCountry, key: stateKey, value: JSON.stringify(value), updated_at: new Date().toISOString() })
+      });
+      if (res.status === 404 || res.status === 400) { _syncEnabled = false; return; }
+      _syncEnabled = true;
+    } catch(e) { _syncEnabled = false; }
+  }
+  async function loadStateFromSupabase() {
+    if (_syncEnabled === false) return;
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/user_state?country=eq.' + currentCountry + '&key=in.(mustgo,dayov)', {
+        headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+      });
+      if (!res.ok) { _syncEnabled = false; return; }
+      const rows = await res.json();
+      if (!Array.isArray(rows) || !rows.length) return;
+      _syncEnabled = true;
+      rows.forEach(function(row) {
+        try {
+          const v = JSON.parse(row.value);
+          if (row.key === 'mustgo') {
+            window.mustGoSet = new Set(v);
+            try { localStorage.setItem('wp_mustgo_' + currentCountry, row.value); } catch(e) {}
+            updateMustGoTab();
+          } else if (row.key === 'dayov') {
+            try { localStorage.setItem('wp_dayov_' + currentCountry, row.value); } catch(e) {}
+          }
+        } catch(e) {}
+      });
+      buildMarkers(); renderItinerary();
+    } catch(e) {}
+  }
+
+  window.toggleMustGo = function(gi, e) {
+    if (e) e.stopPropagation();
+    const p = allPlaces()[gi];
+    if (!p) return;
+    const key = visitedKeyFor(p);
+    if (!window.mustGoSet) window.mustGoSet = new Set();
+    if (window.mustGoSet.has(key)) window.mustGoSet.delete(key);
+    else window.mustGoSet.add(key);
+    const arr = [...window.mustGoSet];
+    try { localStorage.setItem('wp_mustgo_' + currentCountry, JSON.stringify(arr)); } catch(err) {}
+    syncState('mustgo', arr);
+    updateMustGoTab();
+    buildMarkers();
+    renderItinerary();
+  };
+
+  function updateMustGoTab() {
+    const btn = document.getElementById('mg-tab-btn');
+    if (btn) {
+      const n = window.mustGoSet ? window.mustGoSet.size : 0;
+      btn.textContent = n > 0 ? 'Must Go (' + n + ')' : 'Must Go';
+    }
+    const pill = document.getElementById('mg-filter-pill');
+    if (pill) {
+      const n = window.mustGoSet ? window.mustGoSet.size : 0;
+      pill.textContent = n > 0 ? 'Must Go (' + n + ')' : 'Must Go';
+    }
+  }
+
+  window.mustGoFilter = false;
+  window.toggleMustGoFilter = function() {
+    window.mustGoFilter = !window.mustGoFilter;
+    const pill = document.getElementById('mg-filter-pill');
+    if (pill) pill.classList.toggle('on', window.mustGoFilter);
+    buildMarkers();
+    renderItinerary();
+  };
+
+  // ── DAY OVERRIDES (user-assigned days, stored in localStorage) ────────────
+  function getDayOverrides() {
+    try { return JSON.parse(localStorage.getItem('wp_dayov_' + currentCountry) || '{}'); } catch(e) { return {}; }
+  }
+  function getEffectiveDay(p) {
+    const ov = getDayOverrides()[visitedKeyFor(p)];
+    return ov || p.day || 'Flexible';
+  }
+  window.setDayOverride = function(gi, val, e) {
+    if (e) e.stopPropagation();
+    const p = allPlaces()[gi];
+    if (!p) return;
+    const key = visitedKeyFor(p);
+    const overrides = getDayOverrides();
+    if (!val || val === '__orig__') {
+      delete overrides[key];
+    } else {
+      overrides[key] = val;
+    }
+    try { localStorage.setItem('wp_dayov_' + currentCountry, JSON.stringify(overrides)); } catch(err) {}
+    syncState('dayov', overrides);
+    buildMarkers(); renderItinerary();
+  };
+  function dayPickerHtml(gi, p, cls) {
+    cls = cls || 'pt-day-pick';
+    const effDay = getEffectiveDay(p);
+    const hasOv = !!getDayOverrides()[visitedKeyFor(p)];
+    const n = getTripDays() || 14;
+    const stdDays = [];
+    for (var i = 1; i <= n; i++) stdDays.push('Day ' + i);
+    stdDays.push('Evenings', 'Flexible');
+    let opts = '';
+    // If current CSV value isn't in standard list, show it as the initial label
+    if (!stdDays.includes(effDay)) {
+      opts += '<option value="" selected>' + esc(effDay) + '</option>';
+    }
+    stdDays.forEach(function(v) {
+      opts += '<option value="' + v + '"' + (effDay === v ? ' selected' : '') + '>' + v + '</option>';
+    });
+    if (hasOv) opts += '<option value="__orig__">↩ Reset (CSV: ' + esc(p.day || 'Flexible') + ')</option>';
+    return '<select class="' + cls + (hasOv ? ' overridden' : '') + '" title="Assign to day" onclick="event.stopPropagation()" onchange="setDayOverride(' + gi + ',this.value,event)">' + opts + '</select>';
+  }
+
+  // ── REMOVED PLACES REVIEW ──────────────────────────────────────────────
+  function getRemovedDismissed() {
+    try { return JSON.parse(localStorage.getItem('wp_removed_dismissed_' + currentCountry) || '[]'); } catch(e) { return []; }
+  }
+  function getActiveRemoved() {
+    if (!P_REMOVED || !P_REMOVED.length) return [];
+    const dismissed = getRemovedDismissed();
+    return P_REMOVED.filter(p => !dismissed.includes(p.n + '||' + (p.area || '')));
+  }
+  function updateRemovedBtn() {
+    const btn = document.getElementById('removed-btn');
+    if (!btn) return;
+    const active = getActiveRemoved();
+    if (active.length > 0) {
+      btn.textContent = active.length + (active.length === 1 ? ' removed' : ' removed');
+      btn.classList.add('has-items');
+    } else {
+      btn.classList.remove('has-items');
+    }
+  }
+  window.openRemovedModal = function() {
+    const active = getActiveRemoved();
+    const list = document.getElementById('rm-list');
+    if (!list) return;
+    if (active.length === 0) {
+      list.innerHTML = '<div class="rm-empty">All caught up — no removed places to review.</div>';
+    } else {
+      list.innerHTML = active.map(p => {
+        const color = (CC[p.c] || {}).color || 'var(--muted)';
+        const key = p.n + '||' + (p.area || '');
+        const effDay = getDayOverrides()[visitedKeyFor(p)] || p.day || 'Flexible';
+        const wasVisited = isVisited(p) ? ' · <span style="color:var(--green)">✓ visited</span>' : '';
+        return '<div class="rm-row">' +
+          '<div class="rm-dot" style="background:' + color + '"></div>' +
+          '<div class="rm-info">' +
+            '<div class="rm-name">' + esc(p.n) + '</div>' +
+            '<div class="rm-meta">' + esc(p.area || '') + ' · ' + esc(p.c) + (p.removedAt ? ' · removed ' + p.removedAt : '') + wasVisited + '</div>' +
+            (p.day && p.day !== 'Flexible' ? '<span class="rm-day-badge">' + esc(effDay) + '</span>' : '') +
+          '</div>' +
+          '<button class="rm-dismiss-btn" onclick="dismissRemoved(' + JSON.stringify(key) + ')">Dismiss</button>' +
+        '</div>';
+      }).join('');
+    }
+    document.getElementById('removed-overlay').classList.add('vis');
+  };
+  window.closeRemovedModal = function() {
+    document.getElementById('removed-overlay').classList.remove('vis');
+  };
+  window.dismissRemoved = function(key) {
+    const dismissed = getRemovedDismissed();
+    if (!dismissed.includes(key)) dismissed.push(key);
+    try { localStorage.setItem('wp_removed_dismissed_' + currentCountry, JSON.stringify(dismissed)); } catch(e) {}
+    updateRemovedBtn();
+    window.openRemovedModal();
+  };
+  window.dismissAllRemoved = function() {
+    const active = getActiveRemoved();
+    const dismissed = getRemovedDismissed();
+    active.forEach(p => {
+      const key = p.n + '||' + (p.area || '');
+      if (!dismissed.includes(key)) dismissed.push(key);
+    });
+    try { localStorage.setItem('wp_removed_dismissed_' + currentCountry, JSON.stringify(dismissed)); } catch(e) {}
+    updateRemovedBtn();
+    window.closeRemovedModal();
+  };
 
   function placeMatchesDay(p, dayTab) {
     if (dayTab === 'all') return true;
-    const d = p.day || 'Flexible';
+    const d = getEffectiveDay(p);
     if (dayTab === 'Evenings') return d === 'Evenings';
     if (dayTab === 'Flexible') return d === 'Flexible';
     const tabNum = parseInt(dayTab.replace('Day ', ''));
     if (!tabNum) return false;
+    // Comma-separated = discrete days from build.py (e.g. "Day 3, Day 7")
+    if (d.includes(',')) {
+      return d.split(',').some(function(part) {
+        return parseInt(part.trim().replace('Day ', '')) === tabNum;
+      });
+    }
+    // Hyphen range or single day (e.g. "Day 3-5", "Day 3")
     const nums = d.match(/\d+/g);
     if (!nums) return false;
     if (nums.length >= 2) {
@@ -2351,16 +3068,21 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     return parseInt(nums[0]) === tabNum;
   }
 
-  function buildPanelDayTabs() {
-    const tabs = document.getElementById('pd-tabs');
-    if (!tabs) return;
+  function buildDayList() {
     const places = allPlaces().filter(function(p) { return activeFilters.has(p.c); });
     const numSet = new Set();
     var hasEvenings = false, hasFlexible = false;
     places.forEach(function(p) {
-      const d = p.day || 'Flexible';
+      const d = getEffectiveDay(p);
       if (d === 'Evenings') { hasEvenings = true; return; }
       if (d === 'Flexible') { hasFlexible = true; return; }
+      if (d.includes(',')) {
+        d.split(',').forEach(function(part) {
+          var n = parseInt(part.trim().replace('Day ', ''));
+          if (n) numSet.add(n);
+        });
+        return;
+      }
       const nums = d.match(/\d+/g);
       if (!nums) return;
       if (nums.length >= 2) {
@@ -2371,35 +3093,60 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     });
     const tripDays = getTripDays();
     const dayNums = [...numSet].sort(function(a,b){return a-b;}).filter(function(n){ return !tripDays || n <= tripDays; });
-    const allVis = places.filter(function(p) { return isVisited(p); }).length;
-    const allPct = places.length ? Math.round(allVis / places.length * 100) : 0;
-    const cur = window.panelDay;
-    let html = '<button class="pdt' + (cur === 'all' ? ' on' : '') + '" onclick="setPanelDay(\'all\')">' +
-      'All <span class="pdt-cnt">' + places.length + '</span>' +
-      '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + allPct + '%"></div></div></button>';
-    dayNums.forEach(function(n) {
-      const label = 'Day ' + n;
-      const dp = places.filter(function(p){ return placeMatchesDay(p, label); });
-      const vis = dp.filter(function(p){ return isVisited(p); }).length;
-      const pct = dp.length ? Math.round(vis / dp.length * 100) : 0;
-      html += '<button class="pdt' + (cur === label ? ' on' : '') + '" onclick="setPanelDay(\'' + label + '\')">' +
-        label + ' <span class="pdt-cnt">' + dp.length + '</span>' +
-        '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
-    });
-    if (hasFlexible) {
-      const dp = places.filter(function(p){ return p.day === 'Flexible' || !p.day; });
-      const vis = dp.filter(function(p){ return isVisited(p); }).length;
-      const pct = dp.length ? Math.round(vis / dp.length * 100) : 0;
-      html += '<button class="pdt' + (cur === 'Flexible' ? ' on' : '') + '" onclick="setPanelDay(\'Flexible\')">' +
-        'Flexible <span class="pdt-cnt">' + dp.length + '</span>' +
-        '<div class="pdt-prog"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div></button>';
-    }
-    tabs.innerHTML = html;
+    const list = ['all'].concat(dayNums.map(function(n){ return 'Day ' + n; }));
+    if (hasEvenings) list.push('Evenings');
+    if (hasFlexible) list.push('Flexible');
+    return { list: list, places: places };
   }
+
+  function buildPanelDayTabs() {
+    const tabs = document.getElementById('pd-tabs');
+    if (!tabs) return;
+    const { list, places } = buildDayList();
+    const cur = window.panelDay;
+    const idx = list.indexOf(cur);
+    const safeIdx = idx < 0 ? 0 : idx;
+    const label = list[safeIdx];
+
+    // Count places for current selection
+    let cnt, vis;
+    if (label === 'all') {
+      cnt = places.length;
+      vis = places.filter(function(p){ return isVisited(p); }).length;
+    } else {
+      const dp = places.filter(function(p){ return placeMatchesDay(p, label); });
+      cnt = dp.length;
+      vis = dp.filter(function(p){ return isVisited(p); }).length;
+    }
+    const pct = cnt ? Math.round(vis / cnt * 100) : 0;
+    const dispLabel = label === 'all' ? 'All Days' : label;
+
+    tabs.innerHTML =
+      '<div class="pdt-nav">' +
+        '<button class="pdt-arrow" onclick="stepPanelDay(-1)" title="Previous day"' + (safeIdx === 0 ? ' disabled' : '') + '>‹</button>' +
+        '<span class="pdt-label">' + dispLabel + '<span class="pdt-cnt">' + cnt + '</span></span>' +
+        '<button class="pdt-arrow" onclick="stepPanelDay(1)" title="Next day"' + (safeIdx === list.length - 1 ? ' disabled' : '') + '>›</button>' +
+      '</div>' +
+      '<div class="pdt-prog-bar"><div class="pdt-prog-fill" style="width:' + pct + '%"></div></div>';
+  }
+
+  window.stepPanelDay = function(dir) {
+    const { list } = buildDayList();
+    const cur = window.panelDay;
+    const idx = list.indexOf(cur);
+    const safeIdx = idx < 0 ? 0 : idx;
+    const next = Math.max(0, Math.min(list.length - 1, safeIdx + dir));
+    setPanelDay(list[next]);
+  };
 
   window.setPanelDay = function(day) {
     window.panelDay = day;
     activeDayFilter = (day === 'all') ? '' : day;
+    // Keep #daysel in sync
+    const ds = document.getElementById('daysel');
+    if (ds) ds.value = activeDayFilter;
+    const dsm = document.getElementById('daysel-m');
+    if (dsm) dsm.value = activeDayFilter;
     buildMarkers();
     renderList();
     renderItinerary();
@@ -2407,8 +3154,12 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
 
   window.setPanelViewMode = function(mode) {
     window.panelViewMode = mode;
+    const labels = { browse: 'Browse', trip: 'Trip' };
     document.querySelectorAll('.pdmb').forEach(function(b) {
-      b.classList.toggle('on', b.textContent.trim() === (mode === 'browse' ? 'Browse' : 'Trip'));
+      const isOn = mode === 'mustgo'
+        ? b.id === 'mg-tab-btn'
+        : b.textContent.trim() === (labels[mode] || 'Browse');
+      b.classList.toggle('on', isOn);
     });
     renderItinerary();
   };
@@ -2417,9 +3168,14 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     buildPanelDayTabs();
     const el = document.getElementById('journal-inner');
     if (!el) return;
+    if (window.panelViewMode === 'mustgo') {
+      renderMustGoMode(el);
+      return;
+    }
     const q = ((document.getElementById('q') || {}).value || '').toLowerCase();
     const places = allPlaces().filter(function(p) {
       if (!activeFilters.has(p.c)) return false;
+      if (window.mustGoFilter && !isMustGo(p)) return false;
       if (q && !p.n.toLowerCase().includes(q) && !(p.area||'').toLowerCase().includes(q)
               && !(p.d||'').toLowerCase().includes(q)) return false;
       return true;
@@ -2432,6 +3188,43 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     } else {
       renderBrowseMode(el, filtered);
     }
+  }
+
+  function renderMustGoMode(el) {
+    const all = allPlaces();
+    const flagged = all.filter(p => isMustGo(p));
+    if (!flagged.length) {
+      el.innerHTML = '<div class="mg-empty"><strong>No places flagged yet</strong>Tap "Must Go" on any place in Browse or Trip mode<br>to add it to your list.</div>';
+      return;
+    }
+    function mgSortVal(p) {
+      const d = getEffectiveDay(p);
+      if (d === 'Flexible') return 9999;
+      if (d === 'Evenings') return 9998;
+      const m = d.match(/\d+/);
+      return m ? parseInt(m[0]) : 9997;
+    }
+    const sorted = flagged.slice().sort((a, b) => mgSortVal(a) - mgSortVal(b));
+    const visCount = sorted.filter(p => isVisited(p)).length;
+    el.innerHTML =
+      '<div class="mg-hdr"><span>Must Go</span>' +
+      '<span class="mg-count">' + visCount + ' / ' + sorted.length + ' visited</span></div>' +
+      sorted.map(function(p) {
+        const gi = all.indexOf(p);
+        const cfg = CC[p.c] || { color: '#888' };
+        const effDay = getEffectiveDay(p);
+        const done = isVisited(p);
+        const hasNoteMg = !!getNoteFor(p);
+        const inRtMg = routeList.some(r => r.n === p.n);
+        return '<div class="mg-row' + (done ? ' mg-done' : '') + '" onclick="focusJCard(' + gi + ')" onmouseenter="hoverMapPin(' + gi + ')" onmouseleave="unhoverMapPin(' + gi + ')">' +
+          '<div class="mg-dot" style="background:' + cfg.color + '"></div>' +
+          '<span class="mg-name">' + esc(p.n) + (hasNoteMg ? ' <span class="inote-dot" title="Has note"></span>' : '') + '</span>' +
+          '<span class="mg-area">' + esc(p.area || '') + '</span>' +
+          (effDay !== 'Flexible' ? '<span class="mg-day">' + esc(effDay) + '</span>' : '') +
+          '<button class="pt-route-btn' + (inRtMg ? ' in-route' : '') + '" onclick="event.stopPropagation();toggleRoute(allPlaces()[' + gi + '])" title="Add to day plan">Route</button>' +
+          '<button class="mg-remove-btn" onclick="toggleMustGo(' + gi + ',event)">Remove</button>' +
+        '</div>';
+      }).join('');
   }
 
   function renderBrowseMode(el, places) {
@@ -2453,11 +3246,16 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
           const gi = allPlaces().indexOf(p);
           const cfg = CC[p.c] || { color: '#888' };
           const vis = isVisited(p);
-          return '<div class="pt-row' + (vis ? ' pt-visited' : '') + '" onclick="focusJCard(' + gi + ')">' +
+          const mg = isMustGo(p);
+          const hasNote = !!getNoteFor(p);
+          const inRt = routeList.some(r => r.n === p.n);
+          return '<div class="pt-row' + (vis ? ' pt-visited' : '') + '" onclick="focusJCard(' + gi + ')" onmouseenter="hoverMapPin(' + gi + ')" onmouseleave="unhoverMapPin(' + gi + ')">' +
             '<div class="pt-dot" style="background:' + cfg.color + '"></div>' +
-            '<span class="pt-name">' + esc(p.n) + '</span>' +
+            '<span class="pt-name">' + esc(p.n) + (hasNote ? ' <span class="inote-dot" title="Has note"></span>' : '') + '</span>' +
             '<span class="pt-cat">' + esc(p.c) + '</span>' +
-            (p.day && window.panelDay === 'all' ? '<span class="pt-day">' + esc(p.day) + '</span>' : '') +
+            dayPickerHtml(gi, p, 'pt-day-pick') +
+            '<button class="pt-route-btn' + (inRt ? ' in-route' : '') + '" onclick="event.stopPropagation();toggleRoute(allPlaces()[' + gi + '])" title="Add to day plan">Route</button>' +
+            '<button class="pt-mg-btn' + (mg ? ' on' : '') + '" onclick="toggleMustGo(' + gi + ',event)" title="Flag as must go">Must Go</button>' +
             '<button class="pt-check" onclick="toggleVisited(' + gi + ',event)">' + (vis ? '✓' : '') + '</button>' +
             '</div>';
         }).join('');
@@ -2479,11 +3277,16 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
         const gi = allPlaces().indexOf(p);
         const done = isVisited(p);
         const naverHref = 'https://map.naver.com/v5/search/' + encodeURIComponent(p.n);
-        return '<div class="tp-row' + (done ? ' tp-done' : '') + '" onclick="focusJCard(' + gi + ')">' +
+        const mg2 = isMustGo(p);
+        const inRt2 = routeList.some(r => r.n === p.n);
+        return '<div class="tp-row' + (done ? ' tp-done' : '') + '" onclick="focusJCard(' + gi + ')" onmouseenter="hoverMapPin(' + gi + ')" onmouseleave="unhoverMapPin(' + gi + ')">' +
           '<button class="tp-check" onclick="toggleVisited(' + gi + ',event)">' + (done ? '✓' : '') + '</button>' +
           '<div class="tp-info">' +
-            '<div class="tp-name">' + esc(p.n) + '</div>' +
+            '<div class="tp-name">' + esc(p.n) +
+              ' <button class="tp-route-btn' + (inRt2 ? ' in-route' : '') + '" onclick="event.stopPropagation();toggleRoute(allPlaces()[' + gi + '])" title="Add to day plan">Route</button>' +
+              ' <button class="tp-mg-btn' + (mg2 ? ' on' : '') + '" onclick="toggleMustGo(' + gi + ',event)" title="Flag as must go">Must Go</button></div>' +
             '<div class="tp-meta">' + esc(p.c) + ' · ' + esc(p.area || '') + '</div>' +
+            dayPickerHtml(gi, p, 'tp-day-pick') +
             (!done ? '<div class="tp-acts"><a class="tp-act" href="' + esc(naverHref) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">Naver Maps ↗</a></div>' : '') +
           '</div></div>';
       }).join('');
@@ -2507,7 +3310,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     const places = allPlaces().filter(function(p) { return activeFilters.has(p.c); });
     const byDay = {};
     places.forEach(function(p) {
-      const d = p.day || 'Flexible';
+      const d = getEffectiveDay(p);
       if (!byDay[d]) byDay[d] = [];
       byDay[d].push(p);
     });
@@ -2624,11 +3427,11 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     const places = allPlaces().filter(function(p) { return activeFilters.has(p.c); });
     const dayVals = [];
     const seen = {};
-    DAY_ORDER_SHARED.forEach(function(d) { if (!seen[d]) { seen[d] = true; if (places.some(function(p) { return (p.day||'Flexible') === d; })) dayVals.push(d); } });
-    places.forEach(function(p) { const d = p.day||'Flexible'; if (!seen[d]) { seen[d] = true; dayVals.push(d); } });
+    DAY_ORDER_SHARED.forEach(function(d) { if (!seen[d]) { seen[d] = true; if (places.some(function(p) { return getEffectiveDay(p) === d; })) dayVals.push(d); } });
+    places.forEach(function(p) { const d = getEffectiveDay(p); if (!seen[d]) { seen[d] = true; dayVals.push(d); } });
     if (!dayVals.length) { el.innerHTML = '<div class="dv-empty">No places to show.</div>'; return; }
     const selDay = window.todayRunDay && dayVals.includes(window.todayRunDay) ? window.todayRunDay : dayVals[0];
-    const dayPlaces = places.filter(function(p) { return (p.day || 'Flexible') === selDay; });
+    const dayPlaces = places.filter(function(p) { return getEffectiveDay(p) === selDay; });
     const CAT_PRI = ['Transport','Accommodation','Neighbourhood','Culture','Shopping','Skincare','Food','DayTrip'];
     dayPlaces.sort(function(a, b) {
       const ia = CAT_PRI.indexOf(a.c), ib = CAT_PRI.indexOf(b.c);
@@ -2685,7 +3488,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     });
     const maxCat = Math.max.apply(null, Object.values(catCounts).concat([1]));
     const dayCounts = {};
-    places.forEach(function(p) { const d = p.day || 'Flexible'; dayCounts[d] = (dayCounts[d] || 0) + 1; });
+    places.forEach(function(p) { const d = getEffectiveDay(p); dayCounts[d] = (dayCounts[d] || 0) + 1; });
     const maxDay = Math.max.apply(null, Object.values(dayCounts).concat([1]));
     const daysPlanned = Object.keys(dayCounts).filter(function(d) { return d !== 'Flexible'; }).length;
     const community = places.filter(function(p) { return p.isCommunity; }).length;
@@ -2819,6 +3622,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     if (val > 0) {
       localStorage.setItem('wp_tripdays_' + currentCountry, val);
       updateDaysCount();
+      buildPanelDayTabs();
       renderItinerary();
     }
     closeDaysPopover();
@@ -2827,6 +3631,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   window.resetTripDays = function() {
     localStorage.removeItem('wp_tripdays_' + currentCountry);
     updateDaysCount();
+    buildPanelDayTabs();
     renderItinerary();
     closeDaysPopover();
   };
@@ -2839,7 +3644,9 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
     });
   })();
 
-  window.visitedSet = new Set(JSON.parse(localStorage.getItem('wp_visited_kr') || '[]'));
+  window.visitedSet  = new Set(JSON.parse(localStorage.getItem('wp_visited_kr')  || '[]'));
+  window.mustGoSet   = new Set(JSON.parse(localStorage.getItem('wp_mustgo_kr')   || '[]'));
+  updateMustGoTab();
   document.querySelector('.cm-item[data-c="kr"]').classList.add('active');
   document.getElementById('hpill').textContent = P.length + ' places';
   updateDaysCount();
@@ -2854,6 +3661,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   toggleZones(false);
   document.getElementById('bAll').classList.add('on');
   document.getElementById('bZone').classList.remove('on');
+  updateRemovedBtn();
   window._allPlaces = allPlaces;
   window._renderDayOptions = renderDayOptions;
   window._renderAreaOptions = renderAreaOptions;
@@ -2874,6 +3682,13 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
       buildMarkers(); renderList(); renderJournal();
     };
     pillBarEl.appendChild(allJPill);
+    const mgFilterPill = document.createElement('div');
+    mgFilterPill.id = 'mg-filter-pill';
+    mgFilterPill.className = 'jpill';
+    mgFilterPill.textContent = 'Must Go';
+    mgFilterPill.onclick = () => window.toggleMustGoFilter();
+    pillBarEl.appendChild(mgFilterPill);
+    updateMustGoTab();
     Object.keys(CC).forEach(cat => {
       const div = document.createElement('div');
       div.className = 'jpill on';
@@ -2919,6 +3734,7 @@ let ZONES = COUNTRIES[currentCountry].ZONES;
   }
 
   loadCommunityRecs();
+  loadStateFromSupabase();
 
   // ── RESIZABLE MAP / JOURNAL SPLIT ─────────────────────────────────────
   (function() {
@@ -3019,7 +3835,7 @@ setTimeout(function() {
     var shown = 0;
     ap.forEach(function(p, i) {
       if (window._activeFilters && !window._activeFilters.has(p.c)) return;
-      if (dayF && p.day !== dayF) return;
+      if (dayF && !placeMatchesDay(p, dayF)) return;
       if (areaF && p.area !== areaF) return;
       if (q && !p.n.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q)
               && !p.d.toLowerCase().includes(q) && !p.tags.some(function(t){return t.includes(q);})) return;
