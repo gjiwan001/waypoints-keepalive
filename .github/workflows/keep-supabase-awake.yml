@@ -1,19 +1,33 @@
 name: Keep Supabase Awake
 
-# Runs every 3 days to prevent the free-tier Supabase project
-# (Waypoints / korea_recs) from auto-pausing after 7 days of inactivity.
-
 on:
   schedule:
-    - cron: '0 12 */3 * *'   # every 3 days at 12:00 UTC
-  workflow_dispatch:          # allows manual trigger from the Actions tab
+    - cron: '0 12 */3 * *'
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - name: Ping Supabase REST API
         run: |
-          curl -sS -o /dev/null -w "HTTP %{http_code}\n" \
+          HTTP=$(curl -sS -o /dev/null -w "%{http_code}" \
             "https://zlahhruecdfpioewbpaq.supabase.co/rest/v1/korea_recs?select=id&limit=1" \
-            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}"
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" 2>/dev/null || echo "000")
+          echo "HTTP $HTTP"
+          if [ "$HTTP" = "000" ]; then
+            echo "Supabase unreachable - project may be paused"
+          else
+            echo "Supabase responded HTTP $HTTP"
+          fi
+
+      - uses: actions/checkout@v4
+
+      - name: Prevent 60-day disable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow enable keep-supabase-awake.yml --repo ${{ github.repository }} 2>/dev/null || true
+          echo "Workflow keepalive done"
