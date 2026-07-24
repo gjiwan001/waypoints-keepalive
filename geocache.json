@@ -1514,5 +1514,75 @@
     "lng": 126.985208,
     "source": "approx",
     "approx": true
+  },
+  "Buamdong (부암동)": {
+    "lat": 37.5947521,
+    "lng": 126.9634414,
+    "source": "nominatim"
+  },
+  "Optima Wellness Museum Seongsu (옵티마웰니스뮤지엄성수)": {
+    "lat": 37.566465,
+    "lng": 126.977991,
+    "source": "approx",
+    "approx": true
+  },
+  "Taco Stand (HBC)": {
+    "lat": 37.582915,
+    "lng": 126.97354,
+    "source": "approx",
+    "approx": true
+  },
+  "Shibanouichi (시바노우치) — Shiba Inu Café": {
+    "lat": 37.555237,
+    "lng": 126.983689,
+    "source": "approx",
+    "approx": true
+  },
+  "Jeonju Hanok Village (전주한옥마을)": {
+    "lat": 35.8181831,
+    "lng": 127.1530423,
+    "source": "nominatim"
+  },
+  "Borntostandout": {
+    "lat": 37.566859,
+    "lng": 126.976698,
+    "source": "approx",
+    "approx": true
+  },
+  "Ludo Balouze": {
+    "lat": 37.569364,
+    "lng": 126.980708,
+    "source": "approx",
+    "approx": true
+  },
+  "Mongyudowon (몽유도원)": {
+    "lat": 37.55475,
+    "lng": 126.969337,
+    "source": "approx",
+    "approx": true
+  },
+  "Tamburins Flagship — Seongsu": {
+    "lat": 37.568034,
+    "lng": 126.972822,
+    "source": "approx",
+    "approx": true
+  },
+  "Catch Table App — Restaurant Booking Korea": {
+    "lat": 37.558644,
+    "lng": 126.988734,
+    "source": "approx",
+    "approx": true
+  },
+  "SES Smart Entry Service — Incheon Airport": {
+    "lat": 37.581394,
+    "lng": 126.985361,
+    "source": "approx",
+    "approx": true
+  },
+  "Tax Refund at Incheon — Kiosk Machine": {
+    "lat": 37.558732,
+    "lng": 126.993998,
+    "source": "approx",
+    "approx": true
   }
 }
