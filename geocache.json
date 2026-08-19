@@ -1584,5 +1584,333 @@
     "lng": 126.993998,
     "source": "approx",
     "approx": true
+  },
+  "Fushimi Inari Shrine": {
+    "lat": 34.9672545,
+    "lng": 135.7737731,
+    "source": "nominatim"
+  },
+  "Arashiyama Bamboo Grove": {
+    "lat": 35.0167419,
+    "lng": 135.6711482,
+    "source": "nominatim"
+  },
+  "Kiyomizu Dera Temple": {
+    "lat": 34.9978412,
+    "lng": 135.7771061,
+    "source": "nominatim"
+  },
+  "Ninenzaka + Sannenzaka Streets": {
+    "lat": 35.01137,
+    "lng": 135.76897,
+    "source": "approx",
+    "approx": true
+  },
+  "Gion District + Pontocho Alley": {
+    "lat": 35.023535,
+    "lng": 135.758157,
+    "source": "approx",
+    "approx": true
+  },
+  "Kinkakuji (Golden Pavilion)": {
+    "lat": 35.0395293,
+    "lng": 135.7295373,
+    "source": "nominatim"
+  },
+  "Philosopher's Path": {
+    "lat": 35.009318,
+    "lng": 135.783938,
+    "source": "approx",
+    "approx": true
+  },
+  "Nishiki Market": {
+    "lat": 35.0050244,
+    "lng": 135.7655699,
+    "source": "nominatim"
+  },
+  "Yasaka Pagoda": {
+    "lat": 34.9985665,
+    "lng": 135.7787643,
+    "source": "nominatim"
+  },
+  "Arashiyama Monkey Park": {
+    "lat": 35.0090864,
+    "lng": 135.6749673,
+    "source": "nominatim"
+  },
+  "Nijo Castle": {
+    "lat": 35.0140076,
+    "lng": 135.7485369,
+    "source": "nominatim"
+  },
+  "Higashiyama": {
+    "lat": 34.9970931,
+    "lng": 135.7764641,
+    "source": "nominatim"
+  },
+  "Amanohashidate": {
+    "lat": 35.5680023,
+    "lng": 135.1906382,
+    "source": "nominatim"
+  },
+  "Kichi Kichi": {
+    "lat": 35.0073786,
+    "lng": 135.7708347,
+    "source": "nominatim"
+  },
+  "Coffee to Canele": {
+    "lat": 34.995929,
+    "lng": 135.774432,
+    "source": "approx",
+    "approx": true
+  },
+  "Chao Chao Gyoza": {
+    "lat": 35.0028401,
+    "lng": 135.7695193,
+    "source": "nominatim"
+  },
+  "Thisisshizen (Kyoto)": {
+    "lat": 34.9847375,
+    "lng": 135.7576627,
+    "source": "nominatim"
+  },
+  "Panel Cafe (Fluffy Pancakes)": {
+    "lat": 35.005183,
+    "lng": 135.7726967,
+    "source": "nominatim"
+  },
+  "Starbucks Kyoto Ninenzaka": {
+    "lat": 35.014591,
+    "lng": 135.77104,
+    "source": "approx",
+    "approx": true
+  },
+  "Riverside Lunch at Hirobun": {
+    "lat": 35.016531,
+    "lng": 135.768203,
+    "source": "approx",
+    "approx": true
+  },
+  "Yakitori at Pontocho": {
+    "lat": 35.003122,
+    "lng": 135.772513,
+    "source": "approx",
+    "approx": true
+  },
+  "Osaka Castle": {
+    "lat": 34.6871828,
+    "lng": 135.5253958,
+    "source": "nominatim"
+  },
+  "Himeji Castle": {
+    "lat": 34.694936,
+    "lng": 135.494404,
+    "source": "approx",
+    "approx": true
+  },
+  "Team Lab Osaka": {
+    "lat": 34.700261,
+    "lng": 135.50139,
+    "source": "approx",
+    "approx": true
+  },
+  "Osaka Bay / Tempozan Giant Ferris Wheel": {
+    "lat": 34.679403,
+    "lng": 135.512385,
+    "source": "approx",
+    "approx": true
+  },
+  "Tombori River Cruise": {
+    "lat": 34.6691362,
+    "lng": 135.5027051,
+    "source": "nominatim"
+  },
+  "Dontobori": {
+    "lat": 34.694364,
+    "lng": 135.509596,
+    "source": "approx",
+    "approx": true
+  },
+  "Kuromon Inchiba Market": {
+    "lat": 34.69545,
+    "lng": 135.503014,
+    "source": "approx",
+    "approx": true
+  },
+  "Namba Yasaka Shrine": {
+    "lat": 34.6614819,
+    "lng": 135.4967325,
+    "source": "nominatim"
+  },
+  "Hozenji Yokocho": {
+    "lat": 34.6679653,
+    "lng": 135.5033179,
+    "source": "nominatim"
+  },
+  "Shinsekai": {
+    "lat": 34.6520901,
+    "lng": 135.5061908,
+    "source": "nominatim"
+  },
+  "Umeda Sky Building": {
+    "lat": 34.7052927,
+    "lng": 135.4905349,
+    "source": "nominatim"
+  },
+  "Den Den Town": {
+    "lat": 34.6592152,
+    "lng": 135.5058245,
+    "source": "nominatim"
+  },
+  "Tsuntentaku Tower": {
+    "lat": 34.6911,
+    "lng": 135.499032,
+    "source": "approx",
+    "approx": true
+  },
+  "Ura Namba": {
+    "lat": 34.695261,
+    "lng": 135.499461,
+    "source": "approx",
+    "approx": true
+  },
+  "Akaoni Takoyaki": {
+    "lat": 34.692568,
+    "lng": 135.504076,
+    "source": "approx",
+    "approx": true
+  },
+  "Rikuro Cheesecake": {
+    "lat": 34.6661422,
+    "lng": 135.5015054,
+    "source": "nominatim"
+  },
+  "Glänta Kyoto (Custom Rings)": {
+    "lat": 35.012166,
+    "lng": 135.774844,
+    "source": "approx",
+    "approx": true
+  },
+  "Kyushu (Alternative Japan)": {
+    "lat": 36.201028,
+    "lng": 138.246286,
+    "source": "approx",
+    "approx": true
+  },
+  "Hokuriku Region — JR Arch Pass Route": {
+    "lat": 36.204347,
+    "lng": 138.248586,
+    "source": "approx",
+    "approx": true
+  },
+  "Visit Japan Web QR Code": {
+    "lat": 36.194625,
+    "lng": 138.247693,
+    "source": "approx",
+    "approx": true
+  },
+  "Mt. Yoshino (Cherry Blossoms)": {
+    "lat": 34.5259648,
+    "lng": 135.9462865,
+    "source": "nominatim"
+  },
+  "Japan Fast Fashion Guide": {
+    "lat": 35.673466,
+    "lng": 139.648925,
+    "source": "approx",
+    "approx": true
+  },
+  "Korean Skin Treatments Guide (@jen.seoulskin)": {
+    "lat": 37.562085,
+    "lng": 126.977474,
+    "source": "approx",
+    "approx": true
+  },
+  "Healing Angels Mangwon (힐링엔젤스)": {
+    "lat": 37.568688,
+    "lng": 126.990938,
+    "source": "approx",
+    "approx": true
+  },
+  "Skin Analysis + Scalp Detox — Do This First": {
+    "lat": 37.572407,
+    "lng": 126.980291,
+    "source": "approx",
+    "approx": true
+  },
+  "Vintage Watch Shopping — Seoul": {
+    "lat": 37.568057,
+    "lng": 126.994469,
+    "source": "approx",
+    "approx": true
+  },
+  "NOSTIME (빈티지 워치)": {
+    "lat": 37.581786,
+    "lng": 126.983144,
+    "source": "approx",
+    "approx": true
+  },
+  "TopTime + Ujin Watch (Apgujeong)": {
+    "lat": 37.5261847,
+    "lng": 127.0284989,
+    "source": "nominatim"
+  },
+  "Myeongdong Fashion Brands Guide": {
+    "lat": 37.575841,
+    "lng": 126.962698,
+    "source": "approx",
+    "approx": true
+  },
+  "Skin Analysis + Olive Young Recs (Seoul)": {
+    "lat": 37.5560719,
+    "lng": 126.9723599,
+    "source": "nominatim"
+  },
+  "NOSTIME (Vintage Watches)": {
+    "lat": 37.567727,
+    "lng": 126.980222,
+    "source": "approx",
+    "approx": true
+  },
+  "TopTime & Ujin Watch (Apgujeong)": {
+    "lat": 37.5261847,
+    "lng": 127.0284989,
+    "source": "nominatim"
+  },
+  "Korean Fashion Brands — Myeongdong": {
+    "lat": 37.571192,
+    "lng": 126.97696,
+    "source": "approx",
+    "approx": true
+  },
+  "Watch Customization Workshop (Seoul)": {
+    "lat": 37.5503552,
+    "lng": 126.9254349,
+    "source": "nominatim"
+  },
+  "Mullae (문래동)": {
+    "lat": 37.5140665,
+    "lng": 126.8962249,
+    "source": "nominatim"
+  },
+  "Hapjeong (합정)": {
+    "lat": 37.5493558,
+    "lng": 126.9136561,
+    "source": "nominatim"
+  },
+  "Sindang (신당동)": {
+    "lat": 37.5653839,
+    "lng": 127.016252,
+    "source": "nominatim"
+  },
+  "Dongmyo (동묘)": {
+    "lat": 37.5723419,
+    "lng": 127.015659,
+    "source": "nominatim"
+  },
+  "Dongdaemun Design Plaza Area (DDP)": {
+    "lat": 37.5658762,
+    "lng": 127.0081569,
+    "source": "nominatim"
   }
 }
