@@ -1912,5 +1912,29 @@
     "lat": 37.5658762,
     "lng": 127.0081569,
     "source": "nominatim"
+  },
+  "Marie & Line Clinic (마리앤라인의원)": {
+    "lat": 37.566069,
+    "lng": 126.977869,
+    "source": "html",
+    "approx": true
+  },
+  "Remember Dermatology Yaksu (리멤버피부과 약수역점)": {
+    "lat": 37.569969,
+    "lng": 126.985755,
+    "source": "html",
+    "approx": true
+  },
+  "Leaders Dermatology Apgujeong (리더스피부과 압구정점)": {
+    "lat": 37.564993,
+    "lng": 126.978808,
+    "source": "html",
+    "approx": true
+  },
+  "Reberry Clinic Gangnam (리베리의원 강남점)": {
+    "lat": 37.562127,
+    "lng": 126.979767,
+    "source": "html",
+    "approx": true
   }
 }
