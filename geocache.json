@@ -1221,67 +1221,78 @@
     "lat": 37.568147,
     "lng": 126.986096,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Seoul Menswear Spots (@rogerwh0)": {
     "lat": 37.573418,
     "lng": 126.974181,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Salt Bread — Jayeondo Sogeumppang": {
     "lat": 37.572981,
     "lng": 126.993493,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Vinyl Bar Circuit — Seoul": {
     "lat": 37.563603,
     "lng": 126.975629,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "AREX All-Stop Train — Incheon": {
     "lat": 37.572954,
     "lng": 126.963298,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Hwangnyeong-san Lookout — Busan": {
     "lat": 35.165738,
     "lng": 129.068628,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Seoul Medical Tourism Circuit": {
     "lat": 37.561303,
     "lng": 126.983515,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Always August Cafe (alwaysau8ust)": {
     "lat": 37.564698,
     "lng": 126.972795,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "AK Plaza Hongdae — Anime Shopping": {
     "lat": 37.554657,
     "lng": 126.98506,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "thisisneverthat Hongdae Flagship": {
     "lat": 37.56714,
     "lng": 126.964425,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Gangnam Square Pharmacy (강남스퀘어약국)": {
     "lat": 37.562529,
     "lng": 126.969823,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Duna Clinic — Posture & Tech Neck (Seongsu)": {
     "lat": 37.5445688,
@@ -1297,61 +1308,71 @@
     "lat": 37.572006,
     "lng": 126.969837,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Korean Pharmacy K-Beauty Shopping Guide (@nathan.wu)": {
     "lat": 37.570509,
     "lng": 126.971804,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Unni App — Korea Clinic Booking": {
     "lat": 37.564199,
     "lng": 126.989948,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Climate Card — Unlimited Seoul Public Transit": {
     "lat": 37.580442,
     "lng": 126.979935,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Skip Airbnb Korea — Use Local Alternatives": {
     "lat": 37.555942,
     "lng": 126.980438,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Baemin — Korea Food Delivery App": {
     "lat": 37.559051,
     "lng": 126.984075,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "KakaoTalk & Korea App Stack": {
     "lat": 37.563835,
     "lng": 126.979646,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Seoul Neighbourhood Guide — Where to Stay": {
     "lat": 37.555112,
     "lng": 126.970884,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Apgujeong Sanghoe (압구정상회)": {
     "lat": 37.573996,
     "lng": 126.974568,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Gukjaejeonja Center (국제전자센타) — Anime Shopping": {
     "lat": 37.571326,
     "lng": 126.970596,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "JW Marriott Seoul (Dongdaemun)": {
     "lat": 37.5880378,
@@ -1367,31 +1388,36 @@
     "lat": 37.57067,
     "lng": 126.966225,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Haebangchon (HBC)": {
     "lat": 37.570933,
     "lng": 126.99206,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Boogie Woogie (HBC Jazz Bar)": {
     "lat": 37.566595,
     "lng": 126.978051,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Charlie's Grocery (HBC)": {
     "lat": 37.562564,
     "lng": 126.981697,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mil Toast House (밀토스트하우스)": {
     "lat": 37.569946,
     "lng": 126.983014,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Haeundae Beach (해운대해수욕장) — Night": {
     "lat": 35.1592859,
@@ -1412,13 +1438,15 @@
     "lat": 37.56595,
     "lng": 126.976154,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mil Toast House": {
     "lat": 37.565294,
     "lng": 126.973014,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Nohd Global Clinic (Gangnam)": {
     "lat": 37.4964624,
@@ -1444,25 +1472,29 @@
     "lat": 37.581203,
     "lng": 126.983178,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Namsan Botanical Garden": {
     "lat": 37.581362,
     "lng": 126.981927,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mama Ethiopian Restaurant": {
     "lat": 37.563907,
     "lng": 126.9777,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Cow Tteokbokki (카우 떡볶이)": {
     "lat": 37.575241,
     "lng": 126.980066,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mangwon Market (망원시장)": {
     "lat": 37.5566206,
@@ -1473,13 +1505,15 @@
     "lat": 37.55976,
     "lng": 126.992195,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Ilsan Lake Park (일산호수공원)": {
     "lat": 37.56713,
     "lng": 126.981398,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Yeonnam-dong Railway Path (연트럴파크)": {
     "lat": 37.5621661,
@@ -1490,7 +1524,8 @@
     "lat": 37.561959,
     "lng": 126.992403,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Sinchon (신촌) — Night": {
     "lat": 37.5551517,
@@ -1501,19 +1536,22 @@
     "lat": 37.549527,
     "lng": 126.976873,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Gwangjang Hotteok (광장 호떡)": {
     "lat": 37.565194,
     "lng": 126.978928,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Gwanghwamun Mijin (광화문 미진)": {
     "lat": 37.562389,
     "lng": 126.985208,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Buamdong (부암동)": {
     "lat": 37.5947521,
@@ -1524,19 +1562,22 @@
     "lat": 37.566465,
     "lng": 126.977991,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Taco Stand (HBC)": {
     "lat": 37.582915,
     "lng": 126.97354,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Shibanouichi (시바노우치) — Shiba Inu Café": {
     "lat": 37.555237,
     "lng": 126.983689,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Jeonju Hanok Village (전주한옥마을)": {
     "lat": 35.8181831,
@@ -1547,43 +1588,50 @@
     "lat": 37.566859,
     "lng": 126.976698,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Ludo Balouze": {
     "lat": 37.569364,
     "lng": 126.980708,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mongyudowon (몽유도원)": {
     "lat": 37.55475,
     "lng": 126.969337,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Tamburins Flagship — Seongsu": {
     "lat": 37.568034,
     "lng": 126.972822,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Catch Table App — Restaurant Booking Korea": {
     "lat": 37.558644,
     "lng": 126.988734,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "SES Smart Entry Service — Incheon Airport": {
     "lat": 37.581394,
     "lng": 126.985361,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Tax Refund at Incheon — Kiosk Machine": {
     "lat": 37.558732,
     "lng": 126.993998,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Fushimi Inari Shrine": {
     "lat": 34.9672545,
@@ -1604,13 +1652,15 @@
     "lat": 35.01137,
     "lng": 135.76897,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Gion District + Pontocho Alley": {
     "lat": 35.023535,
     "lng": 135.758157,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Kinkakuji (Golden Pavilion)": {
     "lat": 35.0395293,
@@ -1621,7 +1671,8 @@
     "lat": 35.009318,
     "lng": 135.783938,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Nishiki Market": {
     "lat": 35.0050244,
@@ -1662,7 +1713,8 @@
     "lat": 34.995929,
     "lng": 135.774432,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Chao Chao Gyoza": {
     "lat": 35.0028401,
@@ -1683,19 +1735,22 @@
     "lat": 35.014591,
     "lng": 135.77104,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Riverside Lunch at Hirobun": {
     "lat": 35.016531,
     "lng": 135.768203,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Yakitori at Pontocho": {
     "lat": 35.003122,
     "lng": 135.772513,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Osaka Castle": {
     "lat": 34.6871828,
@@ -1706,19 +1761,22 @@
     "lat": 34.694936,
     "lng": 135.494404,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Team Lab Osaka": {
     "lat": 34.700261,
     "lng": 135.50139,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Osaka Bay / Tempozan Giant Ferris Wheel": {
     "lat": 34.679403,
     "lng": 135.512385,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Tombori River Cruise": {
     "lat": 34.6691362,
@@ -1729,13 +1787,15 @@
     "lat": 34.694364,
     "lng": 135.509596,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Kuromon Inchiba Market": {
     "lat": 34.69545,
     "lng": 135.503014,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Namba Yasaka Shrine": {
     "lat": 34.6614819,
@@ -1766,19 +1826,22 @@
     "lat": 34.6911,
     "lng": 135.499032,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Ura Namba": {
     "lat": 34.695261,
     "lng": 135.499461,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Akaoni Takoyaki": {
     "lat": 34.692568,
     "lng": 135.504076,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Rikuro Cheesecake": {
     "lat": 34.6661422,
@@ -1789,25 +1852,29 @@
     "lat": 35.012166,
     "lng": 135.774844,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Kyushu (Alternative Japan)": {
     "lat": 36.201028,
     "lng": 138.246286,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Hokuriku Region — JR Arch Pass Route": {
     "lat": 36.204347,
     "lng": 138.248586,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Visit Japan Web QR Code": {
     "lat": 36.194625,
     "lng": 138.247693,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Mt. Yoshino (Cherry Blossoms)": {
     "lat": 34.5259648,
@@ -1818,37 +1885,43 @@
     "lat": 35.673466,
     "lng": 139.648925,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Korean Skin Treatments Guide (@jen.seoulskin)": {
     "lat": 37.562085,
     "lng": 126.977474,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Healing Angels Mangwon (힐링엔젤스)": {
     "lat": 37.568688,
     "lng": 126.990938,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Skin Analysis + Scalp Detox — Do This First": {
     "lat": 37.572407,
     "lng": 126.980291,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Vintage Watch Shopping — Seoul": {
     "lat": 37.568057,
     "lng": 126.994469,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "NOSTIME (빈티지 워치)": {
     "lat": 37.581786,
     "lng": 126.983144,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "TopTime + Ujin Watch (Apgujeong)": {
     "lat": 37.5261847,
@@ -1859,7 +1932,8 @@
     "lat": 37.575841,
     "lng": 126.962698,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Skin Analysis + Olive Young Recs (Seoul)": {
     "lat": 37.5560719,
@@ -1870,7 +1944,8 @@
     "lat": 37.567727,
     "lng": 126.980222,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "TopTime & Ujin Watch (Apgujeong)": {
     "lat": 37.5261847,
@@ -1881,7 +1956,8 @@
     "lat": 37.571192,
     "lng": 126.97696,
     "source": "approx",
-    "approx": true
+    "approx": true,
+    "approx_stable": 1
   },
   "Watch Customization Workshop (Seoul)": {
     "lat": 37.5503552,
