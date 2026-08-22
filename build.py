@@ -422,7 +422,7 @@ def main():
 
         html, n = re.subn(
             rf'const {arr_name}=\[[\s\S]*?\n\];',
-            lambda b=new_block: b,
+            lambda m, b=new_block: b,
             html
         )
         if n == 0:
@@ -435,7 +435,7 @@ def main():
         new_removed = 'const P_REMOVED=[\n' + ',\n'.join(fmt_removed_entry(e) for e in archive) + '\n];'
     else:
         new_removed = 'const P_REMOVED=[];'
-    html, n2 = re.subn(r'const P_REMOVED=\[[\s\S]*?\];', lambda b=new_removed: b, html)
+    html, n2 = re.subn(r'const P_REMOVED=\[[\s\S]*?\];', lambda m, b=new_removed: b, html)
     if n2 == 0:
         print("WARNING: P_REMOVED block not found", file=sys.stderr)
 
