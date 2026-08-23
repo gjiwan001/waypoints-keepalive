@@ -305,16 +305,15 @@ def main():
             price = row.get('Price', '').strip()
             url   = row.get('URL', '').strip()
 
-            _key = f"{country}|{name}"
-            if _key not in places:
-                places[_key] = {
+            if name not in places:
+                places[name] = {
                     'country': country, 'cat': cat, 'city': city,
                     'descs': [desc] if desc else [],
                     'days':  {day} if day else set(),
                     'tags': tags, 'hours': hours, 'price': price, 'url': url,
                 }
             else:
-                p = places[_key]
+                p = places[name]
                 if desc and desc not in p['descs']:
                     p['descs'].append(desc)
                 if day: p['days'].add(day)
@@ -374,8 +373,7 @@ def main():
 
     # 4. Build per-country entry lists
     all_entries = {country: [] for country in COUNTRY_ARRAYS}
-    for _key, info in places.items():
-        name = _key.split('|', 1)[1]
+    for name, info in places.items():
         country = info['country']
         if country not in COUNTRY_ARRAYS:
             continue
@@ -396,8 +394,8 @@ def main():
     # 5. Detect removed Korea places
     today = datetime.date.today().isoformat()
     last_build = load_last_build()
-    old_korea  = {f"{e.get('country','Korea')}|{e['name']}": e for e in last_build.get('Korea', [])}
-    new_korea_names = {f"{e['country']}|{e['name']}" for e in all_entries.get('Korea', [])}
+    old_korea  = {e['name']: e for e in last_build.get('Korea', [])}
+    new_korea_names = {e['name'] for e in all_entries.get('Korea', [])}
     newly_removed = [old_korea[n] for n in old_korea if n not in new_korea_names]
 
     archive = [e for e in load_removed() if e['name'] not in new_korea_names]
