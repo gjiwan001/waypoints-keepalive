@@ -1994,28 +1994,28 @@
     "lng": 126.977869,
     "source": "approx",
     "approx": true,
-    "approx_stable": 2
+    "approx_stable": 3
   },
   "Remember Dermatology Yaksu (리멤버피부과 약수역점)": {
     "lat": 37.569969,
     "lng": 126.985755,
     "source": "approx",
     "approx": true,
-    "approx_stable": 2
+    "approx_stable": 3
   },
   "Leaders Dermatology Apgujeong (리더스피부과 압구정점)": {
     "lat": 37.564993,
     "lng": 126.978808,
     "source": "approx",
     "approx": true,
-    "approx_stable": 2
+    "approx_stable": 3
   },
   "Reberry Clinic Gangnam (리베리의원 강남점)": {
     "lat": 37.562127,
     "lng": 126.979767,
     "source": "approx",
     "approx": true,
-    "approx_stable": 2
+    "approx_stable": 3
   },
   "Korea|Jongno": {
     "lat": 37.5746536,
@@ -5072,7 +5072,7 @@
     "lng": 126.984535,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Gyeongdong Market (경동시장)": {
     "lat": 37.5793623,
@@ -5084,21 +5084,19 @@
     "lng": 126.978406,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Yongwangsan Skywalk": {
-    "lat": 37.564954,
-    "lng": 126.989906,
-    "source": "approx",
-    "approx": true,
-    "approx_stable": 1
+    "lat": 37.5438895,
+    "lng": 126.8784978,
+    "source": "nominatim"
   },
   "Yongmasan Skywalk": {
     "lat": 37.566519,
     "lng": 126.974436,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Gwanaksan Mountain (관악산)": {
     "lat": 37.4687357,
@@ -5110,7 +5108,7 @@
     "lng": 126.991157,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Seoul Botanic Park (서울식물원)": {
     "lat": 37.5710656,
@@ -5127,21 +5125,21 @@
     "lng": 126.982134,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Seoul Museum of Photography": {
     "lat": 37.558017,
     "lng": 126.962822,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Leeum Museum of Art": {
     "lat": 37.562317,
     "lng": 126.962498,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "D Museum (디뮤지엄)": {
     "lat": 37.5438623,
@@ -5158,7 +5156,7 @@
     "lng": 126.97769,
     "source": "approx",
     "approx": true,
-    "approx_stable": 1
+    "approx_stable": 2
   },
   "Children's Grand Park (어린이대공원)": {
     "lat": 37.5475998,
@@ -5179,5 +5177,111 @@
     "lat": 37.5448219,
     "lng": 127.1193829,
     "source": "nominatim"
+  },
+  "Yeonmudae Archery (연무대)": {
+    "lat": 37.2886015,
+    "lng": 127.0240755,
+    "source": "nominatim"
+  },
+  "Hwaseong Fortress Stamp Tour": {
+    "lat": 37.57495,
+    "lng": 126.97316,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Ramen Sen-no-Kaze Kyoto": {
+    "lat": 35.004613,
+    "lng": 135.7676116,
+    "source": "nominatim"
+  },
+  "Y. & SONS Kyoto": {
+    "lat": 35.01045,
+    "lng": 135.769485,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Urban Research Kyoto": {
+    "lat": 35.010379,
+    "lng": 135.757387,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Japan Blue Jeans Kyoto": {
+    "lat": 34.999251,
+    "lng": 135.76534,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "ETF Bakery Seongsu": {
+    "lat": 37.554591,
+    "lng": 126.975879,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Ikseon Atteut (익선 애뜻)": {
+    "lat": 37.565991,
+    "lng": 126.977819,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Muguok": {
+    "lat": 37.561115,
+    "lng": 126.985984,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Pain Perdu (페인 페르뒤)": {
+    "lat": 37.56957,
+    "lng": 126.987563,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Jo&Dawson": {
+    "lat": 37.578343,
+    "lng": 126.978932,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Beekend": {
+    "lat": 37.566138,
+    "lng": 126.978883,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "MilToast": {
+    "lat": 37.556305,
+    "lng": 126.964272,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Frenco Coffee": {
+    "lat": 37.556402,
+    "lng": 126.964648,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
+  },
+  "Pokemon Center Kyoto": {
+    "lat": 35.0028798,
+    "lng": 135.7680051,
+    "source": "nominatim"
+  },
+  "Amam Dacotan Kyoto": {
+    "lat": 35.029322,
+    "lng": 135.765641,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
   }
 }
