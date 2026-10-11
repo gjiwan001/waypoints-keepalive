@@ -2267,5 +2267,12 @@
     "source": "approx",
     "approx": true,
     "approx_stable": 1
+  },
+  "Watchnian": {
+    "lat": 35.675994,
+    "lng": 139.648078,
+    "source": "approx",
+    "approx": true,
+    "approx_stable": 1
   }
 }
